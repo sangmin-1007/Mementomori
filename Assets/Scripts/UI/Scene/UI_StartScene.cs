@@ -7,7 +7,9 @@ using UnityEngine.UI;
 using Unity.VisualScripting;
 
 public class UI_StartScene : UI_Base<UI_StartScene>
-{ 
+{
+    [SerializeField] private Canvas uiCanvas;
+    [SerializeField] private ParticleSystem fireEffect;
     [SerializeField] private TextMeshProUGUI title;
     [SerializeField] private TextMeshProUGUI startText;
 
@@ -15,6 +17,8 @@ public class UI_StartScene : UI_Base<UI_StartScene>
 
     private void Start()
     {
+        uiCanvas.worldCamera = Camera.main;
+        fireEffect.Play();
         Show();
     }
 
