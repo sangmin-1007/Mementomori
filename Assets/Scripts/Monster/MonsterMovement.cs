@@ -5,6 +5,7 @@ using UnityEngine;
 public class MonsterMovement : MonoBehaviour
 {
     Transform Target;
+    [SerializeField] float distance = 5f;
     [SerializeField] float speed = 1f;
 
     SpriteRenderer CharacterSprite;
@@ -17,12 +18,24 @@ public class MonsterMovement : MonoBehaviour
 
     public void Update()
     {
-        // Player 추적
-        Vector3 direction = Target.position - transform.position;
-        transform.position += direction.normalized * speed * Time.deltaTime;
+        Movement((Target.position - transform.position).magnitude);
+        Rotation(Target.position.x - transform.position.x);
+    }
 
-        // 방향 전환
-        if (Target.position.x - transform.position.x > 0)
+    void Movement(float move)
+    {
+        // 플레이어가 일정거리 이하면 Player 추적
+        if (distance > move)
+        {
+            Vector3 direction = Target.position - transform.position;
+            transform.position += direction.normalized * speed * Time.deltaTime;
+        }
+    }
+
+    void Rotation(float rot)
+    {
+        // 플레이어 x 좌표에 따라 방향 전환
+        if (rot > 0)
             CharacterSprite.flipX = false;
         else
             CharacterSprite.flipX = true;
