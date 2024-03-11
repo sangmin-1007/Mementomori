@@ -13,115 +13,595 @@ MonoBehaviour:
   m_Name: ItemDBSheet
   m_EditorClassIdentifier: 
   Entities:
-  - _itemType: 1
-    _id: 1001
+  - _id: 10001001
     _grade: Normal
+    _type: Weapon
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uAC80"
     _description: " \uC0AC\uB0E5\uAFBC\uC758 \uAC80\uC774\uB2E4."
-    _stringPath: 
-    _value: 0
-  - _itemType: 1
-    _id: 1002
+    _spritePath: Sprite/Item/Weapon/Sword_1
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 10001002
+    _grade: Normal
+    _type: Weapon
+    _name: "\uC0AC\uB0E5\uAFBC\uC758 \uAC80(A)"
+    _description: " \uC0AC\uB0E5\uAFBC\uC758 \uAC80\uC774\uB2E4."
+    _spritePath: Sprite/Item/Weapon/Sword_1
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 10001003
+    _grade: Normal
+    _type: Weapon
+    _name: "\uC0AC\uB0E5\uAFBC\uC758 \uAC80(S)"
+    _description: " \uC0AC\uB0E5\uAFBC\uC758 \uAC80\uC774\uB2E4. \uAE30\uC874 \uB4F1\uAE09\uC5D0\uC11C
+      \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _spritePath: Sprite/Item/Weapon/Sword_1
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 10001004
     _grade: Rare
+    _type: Weapon
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC80"
     _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC80\uC774\uB2E4."
-    _stringPath: 
-    _value: 0
-  - _itemType: 1
-    _id: 1003
+    _spritePath: Sprite/Item/Weapon/Sword_2
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 10001005
+    _grade: Rare
+    _type: Weapon
+    _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC80(A)"
+    _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC80\uC774\uB2E4."
+    _spritePath: Sprite/Item/Weapon/Sword_2
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 10001006
+    _grade: Rare
+    _type: Weapon
+    _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC80(S)"
+    _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC80\uC774\uB2E4. \uAE30\uC874
+      \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _spritePath: Sprite/Item/Weapon/Sword_2
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 10001007
     _grade: Unique
+    _type: Weapon
     _name: "\uB9C8\uC2A4\uD130\uC758 \uAC80"
     _description: "\uB9C8\uC2A4\uD130\uC758 \uAC80\uC774\uB2E4."
-    _stringPath: 
-    _value: 0
-  - _itemType: 1
-    _id: 1004
+    _spritePath: Sprite/Item/Weapon/Sword_3
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 10001008
+    _grade: Unique
+    _type: Weapon
+    _name: "\uB9C8\uC2A4\uD130\uC758 \uAC80(A)"
+    _description: "\uB9C8\uC2A4\uD130\uC758 \uAC80\uC774\uB2E4."
+    _spritePath: Sprite/Item/Weapon/Sword_3
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 10001009
+    _grade: Unique
+    _type: Weapon
+    _name: "\uB9C8\uC2A4\uD130\uC758 \uAC80(S)"
+    _description: "\uB9C8\uC2A4\uD130\uC758 \uAC80\uC774\uB2E4. \uAE30\uC874 \uB4F1\uAE09\uC5D0\uC11C
+      \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _spritePath: Sprite/Item/Weapon/Sword_3
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 10001010
     _grade: Legend
+    _type: Weapon
     _name: "\uC2E0\uC758 \uAC80"
     _description: "\uC2E0\uC758 \uAC80\uC774\uB2E4."
-    _stringPath: 
-    _value: 0
-  - _itemType: 2
-    _id: 1005
+    _spritePath: Sprite/Item/Weapon/Sword_4
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 10001011
+    _grade: Legend
+    _type: Weapon
+    _name: "\uC2E0\uC758 \uAC80(A)"
+    _description: "\uC2E0\uC758 \uAC80\uC774\uB2E4."
+    _spritePath: Sprite/Item/Weapon/Sword_4
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 10001012
+    _grade: Legend
+    _type: Weapon
+    _name: "\uC2E0\uC758 \uAC80(S)"
+    _description: "\uC2E0\uC758 \uAC80\uC774\uB2E4. \uAE30\uC874 \uB4F1\uAE09\uC5D0\uC11C
+      \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _spritePath: Sprite/Item/Weapon/Sword_4
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 20001001
     _grade: Normal
+    _type: Armor
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uAC11\uC637"
     _description: "\uC0AC\uB0E5\uAFBC\uC758 \uAC11\uC637\uC774\uB2E4."
-    _stringPath: 
-    _value: 0
-  - _itemType: 2
-    _id: 1006
+    _spritePath: Sprite/Item/Armor/Armor_1
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 20001002
+    _grade: Normal
+    _type: Armor
+    _name: "\uC0AC\uB0E5\uAFBC\uC758 \uAC11\uC637(A)"
+    _description: "\uC0AC\uB0E5\uAFBC\uC758 \uAC11\uC637\uC774\uB2E4."
+    _spritePath: Sprite/Item/Armor/Armor_1
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 20001003
+    _grade: Normal
+    _type: Armor
+    _name: "\uC0AC\uB0E5\uAFBC\uC758 \uAC11\uC637(S)"
+    _description: "\uC0AC\uB0E5\uAFBC\uC758 \uAC11\uC637\uC774\uB2E4.\uAE30\uC874
+      \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _spritePath: Sprite/Item/Armor/Armor_1
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 20001004
     _grade: Rare
+    _type: Armor
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC11\uC637"
     _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC11\uC637\uC774\uB2E4."
-    _stringPath: 
-    _value: 0
-  - _itemType: 2
-    _id: 1007
+    _spritePath: Sprite/Item/Armor/Armor_2
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 20001005
+    _grade: Rare
+    _type: Armor
+    _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC11\uC637(A)"
+    _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC11\uC637\uC774\uB2E4."
+    _spritePath: Sprite/Item/Armor/Armor_2
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 20001006
+    _grade: Rare
+    _type: Armor
+    _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC11\uC637(S)"
+    _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC11\uC637\uC774\uB2E4. \uAE30\uC874
+      \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _spritePath: Sprite/Item/Armor/Armor_2
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 20001007
     _grade: Unique
+    _type: Armor
     _name: "\uB9C8\uC2A4\uD130\uC758 \uAC11\uC637"
     _description: "\uB9C8\uC2A4\uD130\uC758 \uAC11\uC637\uC774\uB2E4."
-    _stringPath: 
-    _value: 0
-  - _itemType: 2
-    _id: 1008
+    _spritePath: Sprite/Item/Armor/Armor_3
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 20001008
+    _grade: Unique
+    _type: Armor
+    _name: "\uB9C8\uC2A4\uD130\uC758 \uAC11\uC637(A)"
+    _description: "\uB9C8\uC2A4\uD130\uC758 \uAC11\uC637\uC774\uB2E4."
+    _spritePath: Sprite/Item/Armor/Armor_3
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 20001009
+    _grade: Unique
+    _type: Armor
+    _name: "\uB9C8\uC2A4\uD130\uC758 \uAC11\uC637(S)"
+    _description: "\uB9C8\uC2A4\uD130\uC758 \uAC11\uC637\uC774\uB2E4. \uAE30\uC874
+      \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _spritePath: Sprite/Item/Armor/Armor_3
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 20001010
     _grade: Legend
+    _type: Armor
     _name: "\uC2E0\uC758 \uAC11\uC637"
     _description: "\uC2E0\uC758 \uAC11\uC637\uC774\uB2E4."
-    _stringPath: 
-    _value: 0
-  - _itemType: 3
-    _id: 1009
+    _spritePath: Sprite/Item/Armor/Armor_4
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 20001011
+    _grade: Legend
+    _type: Armor
+    _name: "\uC2E0\uC758 \uAC11\uC637(A)"
+    _description: "\uC2E0\uC758 \uAC11\uC637\uC774\uB2E4."
+    _spritePath: Sprite/Item/Armor/Armor_4
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 20001012
+    _grade: Legend
+    _type: Armor
+    _name: "\uC2E0\uC758 \uAC11\uC637(S)"
+    _description: "\uC2E0\uC758 \uAC11\uC637\uC774\uB2E4. \uAE30\uC874 \uB4F1\uAE09\uC5D0\uC11C
+      \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _spritePath: Sprite/Item/Armor/Armor_4
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 30001001
     _grade: Normal
+    _type: Shield
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uBC29\uD328"
     _description: "\uC0AC\uB0E5\uAFBC\uC758 \uBC29\uD328\uC774\uB2E4."
-    _stringPath: 
-    _value: 0
-  - _itemType: 3
-    _id: 1010
+    _spritePath: Sprite/Item/Shield/Shield_1
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 30001002
+    _grade: Normal
+    _type: Shield
+    _name: "\uC0AC\uB0E5\uAFBC\uC758 \uBC29\uD328(A)"
+    _description: "\uC0AC\uB0E5\uAFBC\uC758 \uBC29\uD328\uC774\uB2E4."
+    _spritePath: Sprite/Item/Shield/Shield_1
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 30001003
+    _grade: Normal
+    _type: Shield
+    _name: "\uC0AC\uB0E5\uAFBC\uC758 \uBC29\uD328(S)"
+    _description: "\uC0AC\uB0E5\uAFBC\uC758 \uBC29\uD328\uC774\uB2E4. \uAE30\uC874
+      \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _spritePath: Sprite/Item/Shield/Shield_1
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 30001004
     _grade: Rare
+    _type: Shield
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBC29\uD328"
     _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBC29\uD328\uC774\uB2E4."
-    _stringPath: 
-    _value: 0
-  - _itemType: 3
-    _id: 1011
+    _spritePath: Sprite/Item/Shield/Shield_2
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 30001005
+    _grade: Rare
+    _type: Shield
+    _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBC29\uD328(A)"
+    _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBC29\uD328\uC774\uB2E4."
+    _spritePath: Sprite/Item/Shield/Shield_2
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 30001006
+    _grade: Rare
+    _type: Shield
+    _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBC29\uD328(S)"
+    _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBC29\uD328\uC774\uB2E4. \uAE30\uC874
+      \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _spritePath: Sprite/Item/Shield/Shield_2
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 30001007
     _grade: Unique
+    _type: Shield
     _name: "\uB9C8\uC2A4\uD130\uC758 \uBC29\uD328"
     _description: "\uB9C8\uC2A4\uD130\uC758 \uBC29\uD328\uC774\uB2E4."
-    _stringPath: 
-    _value: 0
-  - _itemType: 3
-    _id: 1012
+    _spritePath: Sprite/Item/Shield/Shield_3
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 30001008
+    _grade: Unique
+    _type: Shield
+    _name: "\uB9C8\uC2A4\uD130\uC758 \uBC29\uD328(A)"
+    _description: "\uB9C8\uC2A4\uD130\uC758 \uBC29\uD328\uC774\uB2E4."
+    _spritePath: Sprite/Item/Shield/Shield_3
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 30001009
+    _grade: Unique
+    _type: Shield
+    _name: "\uB9C8\uC2A4\uD130\uC758 \uBC29\uD328(S)"
+    _description: "\uB9C8\uC2A4\uD130\uC758 \uBC29\uD328\uC774\uB2E4. \uAE30\uC874
+      \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _spritePath: Sprite/Item/Shield/Shield_3
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 30001010
     _grade: Legend
+    _type: Shield
     _name: "\uC2E0\uC758 \uBC29\uD328"
     _description: "\uC2E0\uC758 \uBC29\uD328\uC774\uB2E4."
-    _stringPath: 
-    _value: 0
-  - _itemType: 4
-    _id: 1013
+    _spritePath: Sprite/Item/Shield/Shield_4
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 30001011
+    _grade: Legend
+    _type: Shield
+    _name: "\uC2E0\uC758 \uBC29\uD328(A)"
+    _description: "\uC2E0\uC758 \uBC29\uD328\uC774\uB2E4."
+    _spritePath: Sprite/Item/Shield/Shield_4
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 30001012
+    _grade: Legend
+    _type: Shield
+    _name: "\uC2E0\uC758 \uBC29\uD328(S)"
+    _description: "\uC2E0\uC758 \uBC29\uD328\uC774\uB2E4.\uAE30\uC874 \uB4F1\uAE09\uC5D0\uC11C
+      \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _spritePath: Sprite/Item/Shield/Shield_4
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 40001013
     _grade: Normal
+    _type: Boots
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uC2E0\uBC1C"
     _description: "\uC0AC\uB0E5\uAFBC\uC758 \uC2E0\uBC1C\uC774\uB2E4."
-    _stringPath: 
-    _value: 0
-  - _itemType: 4
-    _id: 1014
+    _spritePath: Sprite/Item/Boots/Boots_1
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 40001014
+    _grade: Normal
+    _type: Boots
+    _name: "\uC0AC\uB0E5\uAFBC\uC758 \uC2E0\uBC1C(A)"
+    _description: "\uC0AC\uB0E5\uAFBC\uC758 \uC2E0\uBC1C\uC774\uB2E4."
+    _spritePath: Sprite/Item/Boots/Boots_1
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 40001015
+    _grade: Normal
+    _type: Boots
+    _name: "\uC0AC\uB0E5\uAFBC\uC758 \uC2E0\uBC1C(S)"
+    _description: "\uC0AC\uB0E5\uAFBC\uC758 \uC2E0\uBC1C\uC774\uB2E4. \uAE30\uC874
+      \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _spritePath: Sprite/Item/Boots/Boots_1
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 40001016
     _grade: Rare
+    _type: Boots
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uC2E0\uBC1C"
     _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uC2E0\uBC1C\uC774\uB2E4."
-    _stringPath: 
-    _value: 0
-  - _itemType: 4
-    _id: 1015
+    _spritePath: Sprite/Item/Boots/Boots_2
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 40001017
+    _grade: Rare
+    _type: Boots
+    _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uC2E0\uBC1C(A)"
+    _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uC2E0\uBC1C\uC774\uB2E4."
+    _spritePath: Sprite/Item/Boots/Boots_2
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 40001018
+    _grade: Rare
+    _type: Boots
+    _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uC2E0\uBC1C(S)"
+    _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uC2E0\uBC1C\uC774\uB2E4. \uAE30\uC874
+      \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _spritePath: Sprite/Item/Boots/Boots_2
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 40001019
     _grade: Unique
+    _type: Boots
     _name: "\uB9C8\uC2A4\uD130\uC758 \uC2E0\uBC1C"
     _description: "\uB9C8\uC2A4\uD130\uC758 \uC2E0\uBC1C\uC774\uB2E4."
-    _stringPath: 
-    _value: 0
-  - _itemType: 4
-    _id: 1016
+    _spritePath: Sprite/Item/Boots/Boots_3
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 40001020
+    _grade: Unique
+    _type: Boots
+    _name: "\uB9C8\uC2A4\uD130\uC758 \uC2E0\uBC1C(A)"
+    _description: "\uB9C8\uC2A4\uD130\uC758 \uC2E0\uBC1C\uC774\uB2E4."
+    _spritePath: Sprite/Item/Boots/Boots_3
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 40001021
+    _grade: Unique
+    _type: Boots
+    _name: "\uB9C8\uC2A4\uD130\uC758 \uC2E0\uBC1C(S)"
+    _description: "\uB9C8\uC2A4\uD130\uC758 \uC2E0\uBC1C\uC774\uB2E4. \uAE30\uC874
+      \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _spritePath: Sprite/Item/Boots/Boots_3
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 40001022
     _grade: Legend
+    _type: Boots
     _name: "\uC2E0\uC758 \uC2E0\uBC1C"
     _description: "\uC2E0\uC758 \uC2E0\uBC1C\uC774\uB2E4."
-    _stringPath: 
-    _value: 0
+    _spritePath: Sprite/Item/Boots/Boots_4
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 40001023
+    _grade: Legend
+    _type: Boots
+    _name: "\uC2E0\uC758 \uC2E0\uBC1C(A)"
+    _description: "\uC2E0\uC758 \uC2E0\uBC1C\uC774\uB2E4."
+    _spritePath: Sprite/Item/Boots/Boots_4
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
+  - _id: 40001024
+    _grade: Legend
+    _type: Boots
+    _name: "\uC2E0\uC758 \uC2E0\uBC1C(S)"
+    _description: "\uC2E0\uC758 \uC2E0\uBC1C\uC774\uB2E4. \uAE30\uC874 \uB4F1\uAE09\uC5D0\uC11C
+      \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _spritePath: Sprite/Item/Boots/Boots_4
+    _value1: 0
+    _value2: 0
+    _value3: 0
+    _value4: 0
+    _value5: 0
+    _value6: 0
