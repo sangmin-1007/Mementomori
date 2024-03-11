@@ -1,3 +1,4 @@
+using Constants;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,8 +10,8 @@ public class ItemData
 
   
     [SerializeField] private int _id;
-  //[SerializeField] private ItemGrade _grade;
-   // [SerializeField] private ItemType _type;
+  [SerializeField] private ItemGrade _grade;
+    [SerializeField] private ItemType _type;
     [SerializeField] private string _name;
     [SerializeField] private string _description;
     [SerializeField] private string _spritePath;
@@ -23,8 +24,8 @@ public class ItemData
 
 
     public int Id => _id;
-   // public ItemGrade Grade => _grade;
-//public ItemType Type => _type;
+    public ItemGrade Grade => _grade;
+    public ItemType Type => _type;
     public string Name => _name;
     public string Description => _description;
 
