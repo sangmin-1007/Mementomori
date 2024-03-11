@@ -9,6 +9,14 @@ public class Managers : MonoBehaviour
 
     public static Managers Instance { get { Initilize(); return instance; } }
 
+    // Manager
+    private UI_Manager _uiManager;
+
+    // Manager Singletone
+    public static UI_Manager UI_Manager => Instance._uiManager;
+
+
+
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     public static void Excute()
     {
@@ -19,19 +27,22 @@ public class Managers : MonoBehaviour
     {
         if(instance == null)
         {
-            GameObject allManagers = GameObject.Find("@AllManagers");
+            GameObject go = GameObject.Find("@AllManagers");
 
-            if(allManagers == null)
+            if(go == null)
             {
-                allManagers = new GameObject("@AllManagers");
-                allManagers.AddComponent<Managers>();
+                go = new GameObject("@AllManagers");
+                go.AddComponent<Managers>();
             }
 
-            DontDestroyOnLoad(allManagers);
-            instance = allManagers.GetComponent<Managers>();
+            DontDestroyOnLoad(go);
+            instance = go.GetComponent<Managers>();
 
             //TODO Manager registration
-
+            if(!go.TryGetComponent(out instance._uiManager))
+            {
+                instance._uiManager = go.AddComponent<UI_Manager>();
+            }
         }
     }
 }
