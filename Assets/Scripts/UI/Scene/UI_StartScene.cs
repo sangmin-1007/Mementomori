@@ -32,7 +32,6 @@ public class UI_StartScene : UI_Base<UI_StartScene>
     public void OnDisable()
     {
         isOnText = false;
-        DestroyUI();
     }
 
     private void Show()
