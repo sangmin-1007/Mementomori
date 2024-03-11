@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -121,7 +121,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: spr_SkeletonCatIdle_strip10_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7fdce51ca6b3ee4a945649432ef7951
+      internalID: 1025881489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonCatIdle_strip10_1
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 32
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e34700cc6714e8e47bb178b3df0246c4
+      internalID: -1770991610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonCatIdle_strip10_2
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 32
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1437a4fd8a754fc4a85e02436223dd3d
+      internalID: -890951287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonCatIdle_strip10_3
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 32
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20c9356add993114788752bd168afdf1
+      internalID: 906183949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonCatIdle_strip10_4
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 32
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a4f8363698bd64aa23ed0d460d61c8
+      internalID: -901721740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonCatIdle_strip10_5
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 32
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b87ede6591756d849ac43e8a9d8e8b3d
+      internalID: 499834514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonCatIdle_strip10_6
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 32
+        width: 32
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 069b972248b94d44783ce9420eb2172f
+      internalID: 1639508503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonCatIdle_strip10_7
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 32
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d011979f40fa51d4bb43a59d67a792f0
+      internalID: -295593540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonCatIdle_strip10_8
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 32
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c51b74e5abc27cc489b5a08f4603a314
+      internalID: 782822826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonCatIdle_strip10_9
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 32
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e901512436da36344b34b60211a82271
+      internalID: 1874760064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +342,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spr_SkeletonCatIdle_strip10_0: 1025881489
+      spr_SkeletonCatIdle_strip10_1: -1770991610
+      spr_SkeletonCatIdle_strip10_2: -890951287
+      spr_SkeletonCatIdle_strip10_3: 906183949
+      spr_SkeletonCatIdle_strip10_4: -901721740
+      spr_SkeletonCatIdle_strip10_5: 499834514
+      spr_SkeletonCatIdle_strip10_6: 1639508503
+      spr_SkeletonCatIdle_strip10_7: -295593540
+      spr_SkeletonCatIdle_strip10_8: 782822826
+      spr_SkeletonCatIdle_strip10_9: 1874760064
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
