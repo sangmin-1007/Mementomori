@@ -29,14 +29,15 @@ public class UI_Manager : MonoBehaviour
         try
         {
             if (IsUIExit<T>())
-            {
-                GameObject go = Instantiate(Resources.Load<GameObject>(GetPath<T>()), parent);
+                UI_List.Remove(typeof(T).Name);
 
-                T temp = go.GetComponent<T>();
-                AddUI<T>(go);
+            GameObject go = Instantiate(Resources.Load<GameObject>(GetPath<T>()), parent);
+          
+            T temp = go.GetComponent<T>();
+            AddUI<T>(go);
 
-                return temp;
-            }
+            return temp;
+
         }
         catch (Exception ex)
         {
