@@ -70,17 +70,17 @@ public class UI_Manager : MonoBehaviour
     /// <summary>
     /// LoadingUI를 보여줍니다 (가고싶은 씬 이름)
     /// </summary>
-    public T ShowLoadingUI<T>(string loadSceneName)
+    public UI_Loading ShowLoadingUI(string loadSceneName)
     {
         sceneName = loadSceneName;
 
-        if (UI_List.ContainsKey(typeof(T).Name) && UI_List[typeof(T).Name] != null)
+        if (UI_List.ContainsKey(typeof(UI_Loading).Name) && UI_List[typeof(UI_Loading).Name] != null)
         {
-            UI_List[typeof(T).Name].SetActive(true);
-            return UI_List[typeof(T).Name].GetComponent<T>();
+            UI_List[typeof(UI_Loading).Name].SetActive(true);
+            return UI_List[typeof(UI_Loading).Name].GetComponent<UI_Loading>();
         }
         else
-            return CreateUI<T>();
+            return CreateUI<UI_Loading>();
     }
 
     public void RemoveUI<T>()
