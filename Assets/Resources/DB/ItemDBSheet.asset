@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Entities:
   - _id: 10001001
-    _grade: Normal
-    _type: Weapon
+    _grade: 0
+    _type: 0
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uAC80"
     _description: " \uC0AC\uB0E5\uAFBC\uC758 \uAC80\uC774\uB2E4."
     _spritePath: Sprite/Item/Weapon/Sword_1
@@ -26,8 +26,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 10001002
-    _grade: Normal
-    _type: Weapon
+    _grade: 0
+    _type: 0
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uAC80(A)"
     _description: " \uC0AC\uB0E5\uAFBC\uC758 \uAC80\uC774\uB2E4."
     _spritePath: Sprite/Item/Weapon/Sword_1
@@ -38,8 +38,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 10001003
-    _grade: Normal
-    _type: Weapon
+    _grade: 0
+    _type: 0
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uAC80(S)"
     _description: " \uC0AC\uB0E5\uAFBC\uC758 \uAC80\uC774\uB2E4. \uAE30\uC874 \uB4F1\uAE09\uC5D0\uC11C
       \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
@@ -51,8 +51,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 10001004
-    _grade: Rare
-    _type: Weapon
+    _grade: 1
+    _type: 0
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC80"
     _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC80\uC774\uB2E4."
     _spritePath: Sprite/Item/Weapon/Sword_2
@@ -63,8 +63,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 10001005
-    _grade: Rare
-    _type: Weapon
+    _grade: 1
+    _type: 0
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC80(A)"
     _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC80\uC774\uB2E4."
     _spritePath: Sprite/Item/Weapon/Sword_2
@@ -75,8 +75,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 10001006
-    _grade: Rare
-    _type: Weapon
+    _grade: 1
+    _type: 0
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC80(S)"
     _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC80\uC774\uB2E4. \uAE30\uC874
       \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
@@ -88,8 +88,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 10001007
-    _grade: Unique
-    _type: Weapon
+    _grade: 2
+    _type: 0
     _name: "\uB9C8\uC2A4\uD130\uC758 \uAC80"
     _description: "\uB9C8\uC2A4\uD130\uC758 \uAC80\uC774\uB2E4."
     _spritePath: Sprite/Item/Weapon/Sword_3
@@ -100,8 +100,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 10001008
-    _grade: Unique
-    _type: Weapon
+    _grade: 2
+    _type: 0
     _name: "\uB9C8\uC2A4\uD130\uC758 \uAC80(A)"
     _description: "\uB9C8\uC2A4\uD130\uC758 \uAC80\uC774\uB2E4."
     _spritePath: Sprite/Item/Weapon/Sword_3
@@ -112,8 +112,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 10001009
-    _grade: Unique
-    _type: Weapon
+    _grade: 2
+    _type: 0
     _name: "\uB9C8\uC2A4\uD130\uC758 \uAC80(S)"
     _description: "\uB9C8\uC2A4\uD130\uC758 \uAC80\uC774\uB2E4. \uAE30\uC874 \uB4F1\uAE09\uC5D0\uC11C
       \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
@@ -125,8 +125,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 10001010
-    _grade: Legend
-    _type: Weapon
+    _grade: 3
+    _type: 0
     _name: "\uC2E0\uC758 \uAC80"
     _description: "\uC2E0\uC758 \uAC80\uC774\uB2E4."
     _spritePath: Sprite/Item/Weapon/Sword_4
@@ -137,8 +137,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 10001011
-    _grade: Legend
-    _type: Weapon
+    _grade: 3
+    _type: 0
     _name: "\uC2E0\uC758 \uAC80(A)"
     _description: "\uC2E0\uC758 \uAC80\uC774\uB2E4."
     _spritePath: Sprite/Item/Weapon/Sword_4
@@ -149,8 +149,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 10001012
-    _grade: Legend
-    _type: Weapon
+    _grade: 3
+    _type: 0
     _name: "\uC2E0\uC758 \uAC80(S)"
     _description: "\uC2E0\uC758 \uAC80\uC774\uB2E4. \uAE30\uC874 \uB4F1\uAE09\uC5D0\uC11C
       \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
@@ -162,8 +162,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 20001001
-    _grade: Normal
-    _type: Armor
+    _grade: 0
+    _type: 1
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uAC11\uC637"
     _description: "\uC0AC\uB0E5\uAFBC\uC758 \uAC11\uC637\uC774\uB2E4."
     _spritePath: Sprite/Item/Armor/Armor_1
@@ -174,8 +174,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 20001002
-    _grade: Normal
-    _type: Armor
+    _grade: 0
+    _type: 1
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uAC11\uC637(A)"
     _description: "\uC0AC\uB0E5\uAFBC\uC758 \uAC11\uC637\uC774\uB2E4."
     _spritePath: Sprite/Item/Armor/Armor_1
@@ -186,8 +186,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 20001003
-    _grade: Normal
-    _type: Armor
+    _grade: 0
+    _type: 1
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uAC11\uC637(S)"
     _description: "\uC0AC\uB0E5\uAFBC\uC758 \uAC11\uC637\uC774\uB2E4.\uAE30\uC874
       \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
@@ -199,8 +199,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 20001004
-    _grade: Rare
-    _type: Armor
+    _grade: 1
+    _type: 1
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC11\uC637"
     _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC11\uC637\uC774\uB2E4."
     _spritePath: Sprite/Item/Armor/Armor_2
@@ -211,8 +211,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 20001005
-    _grade: Rare
-    _type: Armor
+    _grade: 1
+    _type: 1
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC11\uC637(A)"
     _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC11\uC637\uC774\uB2E4."
     _spritePath: Sprite/Item/Armor/Armor_2
@@ -223,8 +223,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 20001006
-    _grade: Rare
-    _type: Armor
+    _grade: 1
+    _type: 1
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC11\uC637(S)"
     _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC11\uC637\uC774\uB2E4. \uAE30\uC874
       \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
@@ -236,8 +236,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 20001007
-    _grade: Unique
-    _type: Armor
+    _grade: 2
+    _type: 1
     _name: "\uB9C8\uC2A4\uD130\uC758 \uAC11\uC637"
     _description: "\uB9C8\uC2A4\uD130\uC758 \uAC11\uC637\uC774\uB2E4."
     _spritePath: Sprite/Item/Armor/Armor_3
@@ -248,8 +248,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 20001008
-    _grade: Unique
-    _type: Armor
+    _grade: 2
+    _type: 1
     _name: "\uB9C8\uC2A4\uD130\uC758 \uAC11\uC637(A)"
     _description: "\uB9C8\uC2A4\uD130\uC758 \uAC11\uC637\uC774\uB2E4."
     _spritePath: Sprite/Item/Armor/Armor_3
@@ -260,8 +260,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 20001009
-    _grade: Unique
-    _type: Armor
+    _grade: 2
+    _type: 1
     _name: "\uB9C8\uC2A4\uD130\uC758 \uAC11\uC637(S)"
     _description: "\uB9C8\uC2A4\uD130\uC758 \uAC11\uC637\uC774\uB2E4. \uAE30\uC874
       \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
@@ -273,8 +273,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 20001010
-    _grade: Legend
-    _type: Armor
+    _grade: 3
+    _type: 1
     _name: "\uC2E0\uC758 \uAC11\uC637"
     _description: "\uC2E0\uC758 \uAC11\uC637\uC774\uB2E4."
     _spritePath: Sprite/Item/Armor/Armor_4
@@ -285,8 +285,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 20001011
-    _grade: Legend
-    _type: Armor
+    _grade: 3
+    _type: 1
     _name: "\uC2E0\uC758 \uAC11\uC637(A)"
     _description: "\uC2E0\uC758 \uAC11\uC637\uC774\uB2E4."
     _spritePath: Sprite/Item/Armor/Armor_4
@@ -297,8 +297,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 20001012
-    _grade: Legend
-    _type: Armor
+    _grade: 3
+    _type: 1
     _name: "\uC2E0\uC758 \uAC11\uC637(S)"
     _description: "\uC2E0\uC758 \uAC11\uC637\uC774\uB2E4. \uAE30\uC874 \uB4F1\uAE09\uC5D0\uC11C
       \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
@@ -310,8 +310,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 30001001
-    _grade: Normal
-    _type: Shield
+    _grade: 0
+    _type: 2
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uBC29\uD328"
     _description: "\uC0AC\uB0E5\uAFBC\uC758 \uBC29\uD328\uC774\uB2E4."
     _spritePath: Sprite/Item/Shield/Shield_1
@@ -322,8 +322,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 30001002
-    _grade: Normal
-    _type: Shield
+    _grade: 0
+    _type: 2
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uBC29\uD328(A)"
     _description: "\uC0AC\uB0E5\uAFBC\uC758 \uBC29\uD328\uC774\uB2E4."
     _spritePath: Sprite/Item/Shield/Shield_1
@@ -334,8 +334,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 30001003
-    _grade: Normal
-    _type: Shield
+    _grade: 0
+    _type: 2
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uBC29\uD328(S)"
     _description: "\uC0AC\uB0E5\uAFBC\uC758 \uBC29\uD328\uC774\uB2E4. \uAE30\uC874
       \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
@@ -347,8 +347,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 30001004
-    _grade: Rare
-    _type: Shield
+    _grade: 1
+    _type: 2
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBC29\uD328"
     _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBC29\uD328\uC774\uB2E4."
     _spritePath: Sprite/Item/Shield/Shield_2
@@ -359,8 +359,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 30001005
-    _grade: Rare
-    _type: Shield
+    _grade: 1
+    _type: 2
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBC29\uD328(A)"
     _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBC29\uD328\uC774\uB2E4."
     _spritePath: Sprite/Item/Shield/Shield_2
@@ -371,8 +371,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 30001006
-    _grade: Rare
-    _type: Shield
+    _grade: 1
+    _type: 2
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBC29\uD328(S)"
     _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBC29\uD328\uC774\uB2E4. \uAE30\uC874
       \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
@@ -384,8 +384,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 30001007
-    _grade: Unique
-    _type: Shield
+    _grade: 2
+    _type: 2
     _name: "\uB9C8\uC2A4\uD130\uC758 \uBC29\uD328"
     _description: "\uB9C8\uC2A4\uD130\uC758 \uBC29\uD328\uC774\uB2E4."
     _spritePath: Sprite/Item/Shield/Shield_3
@@ -396,8 +396,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 30001008
-    _grade: Unique
-    _type: Shield
+    _grade: 2
+    _type: 2
     _name: "\uB9C8\uC2A4\uD130\uC758 \uBC29\uD328(A)"
     _description: "\uB9C8\uC2A4\uD130\uC758 \uBC29\uD328\uC774\uB2E4."
     _spritePath: Sprite/Item/Shield/Shield_3
@@ -408,8 +408,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 30001009
-    _grade: Unique
-    _type: Shield
+    _grade: 2
+    _type: 2
     _name: "\uB9C8\uC2A4\uD130\uC758 \uBC29\uD328(S)"
     _description: "\uB9C8\uC2A4\uD130\uC758 \uBC29\uD328\uC774\uB2E4. \uAE30\uC874
       \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
@@ -421,8 +421,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 30001010
-    _grade: Legend
-    _type: Shield
+    _grade: 3
+    _type: 2
     _name: "\uC2E0\uC758 \uBC29\uD328"
     _description: "\uC2E0\uC758 \uBC29\uD328\uC774\uB2E4."
     _spritePath: Sprite/Item/Shield/Shield_4
@@ -433,8 +433,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 30001011
-    _grade: Legend
-    _type: Shield
+    _grade: 3
+    _type: 2
     _name: "\uC2E0\uC758 \uBC29\uD328(A)"
     _description: "\uC2E0\uC758 \uBC29\uD328\uC774\uB2E4."
     _spritePath: Sprite/Item/Shield/Shield_4
@@ -445,8 +445,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 30001012
-    _grade: Legend
-    _type: Shield
+    _grade: 3
+    _type: 2
     _name: "\uC2E0\uC758 \uBC29\uD328(S)"
     _description: "\uC2E0\uC758 \uBC29\uD328\uC774\uB2E4.\uAE30\uC874 \uB4F1\uAE09\uC5D0\uC11C
       \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
@@ -458,8 +458,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
   - _id: 40001013
-    _grade: Normal
-    _type: Boots
+    _grade: 0
+    _type: 3
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uC2E0\uBC1C"
     _description: "\uC0AC\uB0E5\uAFBC\uC758 \uC2E0\uBC1C\uC774\uB2E4."
     _spritePath: Sprite/Item/Boots/Boots_1
@@ -470,8 +470,8 @@ MonoBehaviour:
     _speed: 1.2
     _stamina: 100
   - _id: 40001014
-    _grade: Normal
-    _type: Boots
+    _grade: 0
+    _type: 3
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uC2E0\uBC1C(A)"
     _description: "\uC0AC\uB0E5\uAFBC\uC758 \uC2E0\uBC1C\uC774\uB2E4."
     _spritePath: Sprite/Item/Boots/Boots_1
@@ -482,8 +482,8 @@ MonoBehaviour:
     _speed: 1.2
     _stamina: 120
   - _id: 40001015
-    _grade: Normal
-    _type: Boots
+    _grade: 0
+    _type: 3
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uC2E0\uBC1C(S)"
     _description: "\uC0AC\uB0E5\uAFBC\uC758 \uC2E0\uBC1C\uC774\uB2E4. \uAE30\uC874
       \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
@@ -495,8 +495,8 @@ MonoBehaviour:
     _speed: 1.2
     _stamina: 140
   - _id: 40001016
-    _grade: Rare
-    _type: Boots
+    _grade: 1
+    _type: 3
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uC2E0\uBC1C"
     _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uC2E0\uBC1C\uC774\uB2E4."
     _spritePath: Sprite/Item/Boots/Boots_2
@@ -507,8 +507,8 @@ MonoBehaviour:
     _speed: 1.4
     _stamina: 150
   - _id: 40001017
-    _grade: Rare
-    _type: Boots
+    _grade: 1
+    _type: 3
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uC2E0\uBC1C(A)"
     _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uC2E0\uBC1C\uC774\uB2E4."
     _spritePath: Sprite/Item/Boots/Boots_2
@@ -519,8 +519,8 @@ MonoBehaviour:
     _speed: 1.4
     _stamina: 170
   - _id: 40001018
-    _grade: Rare
-    _type: Boots
+    _grade: 1
+    _type: 3
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uC2E0\uBC1C(S)"
     _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uC2E0\uBC1C\uC774\uB2E4. \uAE30\uC874
       \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
@@ -532,8 +532,8 @@ MonoBehaviour:
     _speed: 1.4
     _stamina: 190
   - _id: 40001019
-    _grade: Unique
-    _type: Boots
+    _grade: 2
+    _type: 3
     _name: "\uB9C8\uC2A4\uD130\uC758 \uC2E0\uBC1C"
     _description: "\uB9C8\uC2A4\uD130\uC758 \uC2E0\uBC1C\uC774\uB2E4."
     _spritePath: Sprite/Item/Boots/Boots_3
@@ -544,8 +544,8 @@ MonoBehaviour:
     _speed: 1.6
     _stamina: 200
   - _id: 40001020
-    _grade: Unique
-    _type: Boots
+    _grade: 2
+    _type: 3
     _name: "\uB9C8\uC2A4\uD130\uC758 \uC2E0\uBC1C(A)"
     _description: "\uB9C8\uC2A4\uD130\uC758 \uC2E0\uBC1C\uC774\uB2E4."
     _spritePath: Sprite/Item/Boots/Boots_3
@@ -556,8 +556,8 @@ MonoBehaviour:
     _speed: 1.6
     _stamina: 220
   - _id: 40001021
-    _grade: Unique
-    _type: Boots
+    _grade: 2
+    _type: 3
     _name: "\uB9C8\uC2A4\uD130\uC758 \uC2E0\uBC1C(S)"
     _description: "\uB9C8\uC2A4\uD130\uC758 \uC2E0\uBC1C\uC774\uB2E4. \uAE30\uC874
       \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
@@ -569,8 +569,8 @@ MonoBehaviour:
     _speed: 1.6
     _stamina: 240
   - _id: 40001022
-    _grade: Legend
-    _type: Boots
+    _grade: 3
+    _type: 3
     _name: "\uC2E0\uC758 \uC2E0\uBC1C"
     _description: "\uC2E0\uC758 \uC2E0\uBC1C\uC774\uB2E4."
     _spritePath: Sprite/Item/Boots/Boots_4
@@ -581,8 +581,8 @@ MonoBehaviour:
     _speed: 2
     _stamina: 250
   - _id: 40001023
-    _grade: Legend
-    _type: Boots
+    _grade: 3
+    _type: 3
     _name: "\uC2E0\uC758 \uC2E0\uBC1C(A)"
     _description: "\uC2E0\uC758 \uC2E0\uBC1C\uC774\uB2E4."
     _spritePath: Sprite/Item/Boots/Boots_4
@@ -593,8 +593,8 @@ MonoBehaviour:
     _speed: 2
     _stamina: 270
   - _id: 40001024
-    _grade: Legend
-    _type: Boots
+    _grade: 3
+    _type: 3
     _name: "\uC2E0\uC758 \uC2E0\uBC1C(S)"
     _description: "\uC2E0\uC758 \uC2E0\uBC1C\uC774\uB2E4. \uAE30\uC874 \uB4F1\uAE09\uC5D0\uC11C
       \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."

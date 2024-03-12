@@ -5,11 +5,11 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 
 
-public class ItemSlot
+public class ItemSlot 
 {
     public ItemData item;
 }
-public class Inventory : MonoBehaviour
+public class Inventory : UI_Base<Inventory>
 {
     public ItemSlotUI[] uislots;
     public ItemSlot[] slots;
@@ -84,9 +84,16 @@ public class Inventory : MonoBehaviour
         return inventoryWindow.activeInHierarchy;
     }
 
-    public void AddItem(ItemData item)
+    public void AddItem(ItemData item)  // 아이템 획득
     {
-
+        ItemSlot emptySlot = GetEmptySlot(); // 빈슬롯을 설정
+       
+        if (emptySlot != null) // 만약 비었다면
+        {
+            emptySlot.item = item; // 거기에 아이템 추가
+            UpdateUI(); // UI업데이트 한번 해주기
+            return;
+        }
     }
 
     void ThrowItem(ItemData item) // 버리기 기능있을때

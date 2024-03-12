@@ -10,7 +10,7 @@ public class ItemData
 
   
     [SerializeField] private int _id;
-  [SerializeField] private ItemGrade _grade;
+    [SerializeField] private ItemGrade _grade;
     [SerializeField] private ItemType _type;
     [SerializeField] private string _name;
     [SerializeField] private string _description;
