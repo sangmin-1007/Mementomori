@@ -1,14 +1,14 @@
 {
-    "name": "Controller 2D",
+    "name": "Cotroller 2D",
     "maps": [
         {
             "name": "Player",
-            "id": "433b4abb-ce2a-418e-815d-1aa379619ac7",
+            "id": "3d26ec98-8c56-406e-9f22-bddb30ade18c",
             "actions": [
                 {
                     "name": "Move",
                     "type": "Value",
-                    "id": "c5d28e27-82ab-4939-a9d1-e4b3c8ebfb26",
+                    "id": "6de20b7b-6d60-4cfa-b1cf-57f4c447a5f9",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -17,7 +17,7 @@
                 {
                     "name": "Look",
                     "type": "Value",
-                    "id": "f6261a5c-e851-4897-8078-63c0baafe2db",
+                    "id": "b58c9ef7-0b41-4689-8de3-e242debddc0b",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -26,7 +26,7 @@
                 {
                     "name": "Attack",
                     "type": "Value",
-                    "id": "e6de2cf8-e88a-4741-ae75-d75e84e564d9",
+                    "id": "d080e514-f7bd-46a0-a435-2c9da1a7c6d8",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -36,7 +36,7 @@
             "bindings": [
                 {
                     "name": "2D Vector",
-                    "id": "30eb8d24-e3e0-4476-a638-ff72f0dbecaa",
+                    "id": "cbd35bdd-8f95-4aff-a09f-15b2e0c25503",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
@@ -47,7 +47,7 @@
                 },
                 {
                     "name": "up",
-                    "id": "bd6fbbae-4217-4878-88c7-c5f2a072231e",
+                    "id": "7b91055f-a453-4571-99e1-49b0860d9701",
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
@@ -58,7 +58,7 @@
                 },
                 {
                     "name": "down",
-                    "id": "30fce379-e4bf-4213-a2d1-e4e12a62f393",
+                    "id": "5f8920ce-7b16-4ac0-8837-5f3bcbc618da",
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
@@ -69,7 +69,7 @@
                 },
                 {
                     "name": "left",
-                    "id": "9e6c93d3-a6be-46d3-a67c-b5c109868613",
+                    "id": "28ddc749-3726-43c3-a8d7-188fcca70314",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
@@ -80,7 +80,7 @@
                 },
                 {
                     "name": "right",
-                    "id": "3e577fb3-bc30-4a8e-af6f-f37ee23db1c8",
+                    "id": "1aac4eb9-6206-45f1-81fc-6b48bc6de7c4",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
@@ -91,22 +91,22 @@
                 },
                 {
                     "name": "",
-                    "id": "b5991128-69f4-4a0b-bab9-b47f5d2db6eb",
+                    "id": "09a2cf17-c895-498e-95aa-9592aee69d8a",
                     "path": "<Mouse>/position",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard&Mouse",
+                    "groups": "",
                     "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "5fea8fbe-9649-4220-91d4-4c93dd5b5313",
+                    "id": "f830fde3-9c98-4a3b-a9d3-8f08bfcc85a3",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard&Mouse",
+                    "groups": "",
                     "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
