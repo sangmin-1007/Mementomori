@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerTest : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
-    // Update is called once per frame
     public float moveSpeed;
 
     private bool isShop;
@@ -27,15 +26,15 @@ public class PlayerTest : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.name == "ShopTrigger")
+        if (collision.gameObject.name == "ShopTrigger")
         {
-            isShop = true;   
+            isShop = true;
         }
-        else if(collision.gameObject.name == "Storage")
+        else if (collision.gameObject.name == "Storage")
         {
             isStorage = true;
         }
-        else if(collision.gameObject.name == "DoorTrigger")
+        else if (collision.gameObject.name == "DoorTrigger")
         {
             isDoor = true;
         }
@@ -59,21 +58,21 @@ public class PlayerTest : MonoBehaviour
 
     private void OnInteraction()
     {
-        if(isShop)
+        if (isShop)
         {
-            if(Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log("¼¥");
             }
         }
-        else if(isStorage)
+        else if (isStorage)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log("Ã¢°í");
             }
         }
-        else if(isDoor)
+        else if (isDoor)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
