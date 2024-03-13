@@ -7,6 +7,11 @@ public class PlayerTest : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     // Update is called once per frame
     public float moveSpeed;
+
+    private bool isShop;
+    private bool isStorage;
+    private bool isDoor;
+
     void Update()
     {
         float hAxis = Input.GetAxisRaw("Horizontal");
@@ -15,17 +20,65 @@ public class PlayerTest : MonoBehaviour
         Vector2 inputDir = new Vector2(hAxis, vAxis).normalized;
 
         rb.velocity = inputDir * moveSpeed * Time.deltaTime;
+
+        OnInteraction();
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.name == "ShopTrigger")
         {
-            Debug.Log("shop");
+            isShop = true;   
         }
-        else
+        else if(collision.gameObject.name == "Storage")
         {
-            Debug.Log("æ¿ ¿Ãµø!");
+            isStorage = true;
+        }
+        else if(collision.gameObject.name == "DoorTrigger")
+        {
+            isDoor = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "ShopTrigger")
+        {
+            isShop = false;
+        }
+        else if (collision.gameObject.name == "Storage")
+        {
+            isStorage = false;
+        }
+        else if (collision.gameObject.name == "DoorTrigger")
+        {
+            isDoor = false;
+        }
+    }
+
+    private void OnInteraction()
+    {
+        if(isShop)
+        {
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                Debug.Log("º•");
+            }
+        }
+        else if(isStorage)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Debug.Log("√¢∞Ì");
+            }
+        }
+        else if(isDoor)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Managers.UI_Manager.ShowLoadingUI("GameScene");
+            }
         }
     }
 }
