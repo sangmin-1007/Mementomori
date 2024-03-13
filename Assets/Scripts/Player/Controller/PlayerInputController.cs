@@ -33,4 +33,12 @@ public class PlayerInputController : PlayerController
     {
         IsAttacking = value.isPressed;
     }
+
+    public void OnInventory(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            Inventory.instance.Toggle();
+        }
+    }
 }
