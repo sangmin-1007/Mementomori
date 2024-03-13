@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerTest : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
@@ -10,6 +11,10 @@ public class PlayerTest : MonoBehaviour
     private bool isShop;
     private bool isStorage;
     private bool isDoor;
+
+    private LobbyIneract interact;
+
+    private bool isInteract;
 
     void Update()
     {
@@ -20,64 +25,38 @@ public class PlayerTest : MonoBehaviour
 
         rb.velocity = inputDir * moveSpeed * Time.deltaTime;
 
-        OnInteraction();
+        Interaction();
 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "ShopTrigger")
+        if (collision.TryGetComponent<LobbyIneract>(out interact))
         {
-            isShop = true;
+            isInteract = true;
         }
-        else if (collision.gameObject.name == "Storage")
+        else
         {
-            isStorage = true;
+            isInteract = false;
         }
-        else if (collision.gameObject.name == "DoorTrigger")
-        {
-            isDoor = true;
-        }
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "ShopTrigger")
-        {
-            isShop = false;
-        }
-        else if (collision.gameObject.name == "Storage")
-        {
-            isStorage = false;
-        }
-        else if (collision.gameObject.name == "DoorTrigger")
-        {
-            isDoor = false;
-        }
+        isInteract = false;
     }
 
-    private void OnInteraction()
+    private void Interaction()
     {
-        if (isShop)
+        if(isInteract)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Debug.Log("¼¥");
+                interact.Interaction();
             }
         }
-        else if (isStorage)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                Debug.Log("Ã¢°í");
-            }
-        }
-        else if (isDoor)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                Managers.UI_Manager.ShowLoadingUI("GameScene");
-            }
-        }
+
     }
+
 }

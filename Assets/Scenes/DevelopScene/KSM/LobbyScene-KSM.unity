@@ -952,7 +952,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 284066335}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e30d2a4c3ce0d64d92c6eea0107db28, type: 3}
   m_Name: 
@@ -960,7 +960,6 @@ MonoBehaviour:
   shopTrigger: {fileID: 1926684048}
   doorTrigger: {fileID: 574338421}
   storageTrigger: {fileID: 1935020226}
-  settings: {fileID: 11400000, guid: 906e275c247cccc40912a235e91f302d, type: 2}
 --- !u!1 &373137325
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,6 +1008,7 @@ GameObject:
   - component: {fileID: 574338423}
   - component: {fileID: 574338422}
   - component: {fileID: 574338421}
+  - component: {fileID: 574338424}
   m_Layer: 0
   m_Name: DoorTrigger
   m_TagString: Untagged
@@ -1198,6 +1198,19 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &574338424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574338419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1cca751c481e4a4c95f5a4e8a696108, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactType: 2
 --- !u!1 &592686878
 GameObject:
   m_ObjectHideFlags: 0
@@ -18602,6 +18615,7 @@ GameObject:
   - component: {fileID: 1926684050}
   - component: {fileID: 1926684049}
   - component: {fileID: 1926684048}
+  - component: {fileID: 1926684051}
   m_Layer: 0
   m_Name: ShopTrigger
   m_TagString: Untagged
@@ -19331,6 +19345,19 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1926684051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926684046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1cca751c481e4a4c95f5a4e8a696108, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactType: 0
 --- !u!1 &1935020222
 GameObject:
   m_ObjectHideFlags: 0
@@ -19344,6 +19371,7 @@ GameObject:
   - component: {fileID: 1935020224}
   - component: {fileID: 1935020226}
   - component: {fileID: 1935020227}
+  - component: {fileID: 1935020228}
   m_Layer: 0
   m_Name: Storage
   m_TagString: Untagged
@@ -19568,3 +19596,16 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &1935020228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935020222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1cca751c481e4a4c95f5a4e8a696108, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactType: 1
