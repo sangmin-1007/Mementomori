@@ -30,7 +30,7 @@ MonoBehaviour:
     _type: 0
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uAC80(A)"
     _description: " \uC0AC\uB0E5\uAFBC\uC758 \uAC80\uC774\uB2E4."
-    _spritePath: Sprite/Item/Weapon/Sword_1
+    _spritePath: Sprite/Item/Weapon/Sword_1_A
     _atk: 12
     _atkSpeed: 1.2
     _hp: 0
@@ -43,7 +43,7 @@ MonoBehaviour:
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uAC80(S)"
     _description: " \uC0AC\uB0E5\uAFBC\uC758 \uAC80\uC774\uB2E4. \uAE30\uC874 \uB4F1\uAE09\uC5D0\uC11C
       \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
-    _spritePath: Sprite/Item/Weapon/Sword_1
+    _spritePath: Sprite/Item/Weapon/Sword_1_S
     _atk: 14
     _atkSpeed: 1.3
     _hp: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
     _type: 0
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC80(A)"
     _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC80\uC774\uB2E4."
-    _spritePath: Sprite/Item/Weapon/Sword_2
+    _spritePath: Sprite/Item/Weapon/Sword_2_A
     _atk: 17
     _atkSpeed: 1.4
     _hp: 0
@@ -80,7 +80,7 @@ MonoBehaviour:
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC80(S)"
     _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC80\uC774\uB2E4. \uAE30\uC874
       \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
-    _spritePath: Sprite/Item/Weapon/Sword_2
+    _spritePath: Sprite/Item/Weapon/Sword_2_S
     _atk: 19
     _atkSpeed: 1.5
     _hp: 0
@@ -104,7 +104,7 @@ MonoBehaviour:
     _type: 0
     _name: "\uB9C8\uC2A4\uD130\uC758 \uAC80(A)"
     _description: "\uB9C8\uC2A4\uD130\uC758 \uAC80\uC774\uB2E4."
-    _spritePath: Sprite/Item/Weapon/Sword_3
+    _spritePath: Sprite/Item/Weapon/Sword_3_A
     _atk: 22
     _atkSpeed: 1.6
     _hp: 0
@@ -117,7 +117,7 @@ MonoBehaviour:
     _name: "\uB9C8\uC2A4\uD130\uC758 \uAC80(S)"
     _description: "\uB9C8\uC2A4\uD130\uC758 \uAC80\uC774\uB2E4. \uAE30\uC874 \uB4F1\uAE09\uC5D0\uC11C
       \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
-    _spritePath: Sprite/Item/Weapon/Sword_3
+    _spritePath: Sprite/Item/Weapon/Sword_3_S
     _atk: 24
     _atkSpeed: 1.7
     _hp: 0
@@ -141,7 +141,7 @@ MonoBehaviour:
     _type: 0
     _name: "\uC2E0\uC758 \uAC80(A)"
     _description: "\uC2E0\uC758 \uAC80\uC774\uB2E4."
-    _spritePath: Sprite/Item/Weapon/Sword_4
+    _spritePath: Sprite/Item/Weapon/Sword_4_A
     _atk: 27
     _atkSpeed: 1.8
     _hp: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
     _name: "\uC2E0\uC758 \uAC80(S)"
     _description: "\uC2E0\uC758 \uAC80\uC774\uB2E4. \uAE30\uC874 \uB4F1\uAE09\uC5D0\uC11C
       \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
-    _spritePath: Sprite/Item/Weapon/Sword_4
+    _spritePath: Sprite/Item/Weapon/Sword_4_S
     _atk: 30
     _atkSpeed: 2
     _hp: 0
@@ -178,7 +178,7 @@ MonoBehaviour:
     _type: 1
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uAC11\uC637(A)"
     _description: "\uC0AC\uB0E5\uAFBC\uC758 \uAC11\uC637\uC774\uB2E4."
-    _spritePath: Sprite/Item/Armor/Armor_1
+    _spritePath: Sprite/Item/Armor/Armor_1_A
     _atk: 0
     _atkSpeed: 0
     _hp: 120
@@ -191,7 +191,7 @@ MonoBehaviour:
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uAC11\uC637(S)"
     _description: "\uC0AC\uB0E5\uAFBC\uC758 \uAC11\uC637\uC774\uB2E4.\uAE30\uC874
       \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
-    _spritePath: Sprite/Item/Armor/Armor_1
+    _spritePath: Sprite/Item/Armor/Armor_1_S
     _atk: 0
     _atkSpeed: 0
     _hp: 140
@@ -215,7 +215,7 @@ MonoBehaviour:
     _type: 1
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC11\uC637(A)"
     _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC11\uC637\uC774\uB2E4."
-    _spritePath: Sprite/Item/Armor/Armor_2
+    _spritePath: Sprite/Item/Armor/Armor_2_A
     _atk: 0
     _atkSpeed: 0
     _hp: 170
@@ -228,7 +228,7 @@ MonoBehaviour:
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC11\uC637(S)"
     _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC11\uC637\uC774\uB2E4. \uAE30\uC874
       \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
-    _spritePath: Sprite/Item/Armor/Armor_2
+    _spritePath: Sprite/Item/Armor/Armor_2_S
     _atk: 0
     _atkSpeed: 0
     _hp: 190
@@ -252,7 +252,7 @@ MonoBehaviour:
     _type: 1
     _name: "\uB9C8\uC2A4\uD130\uC758 \uAC11\uC637(A)"
     _description: "\uB9C8\uC2A4\uD130\uC758 \uAC11\uC637\uC774\uB2E4."
-    _spritePath: Sprite/Item/Armor/Armor_3
+    _spritePath: Sprite/Item/Armor/Armor_3_A
     _atk: 0
     _atkSpeed: 0
     _hp: 220
@@ -265,7 +265,7 @@ MonoBehaviour:
     _name: "\uB9C8\uC2A4\uD130\uC758 \uAC11\uC637(S)"
     _description: "\uB9C8\uC2A4\uD130\uC758 \uAC11\uC637\uC774\uB2E4. \uAE30\uC874
       \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
-    _spritePath: Sprite/Item/Armor/Armor_3
+    _spritePath: Sprite/Item/Armor/Armor_3_S
     _atk: 0
     _atkSpeed: 0
     _hp: 240
@@ -289,7 +289,7 @@ MonoBehaviour:
     _type: 1
     _name: "\uC2E0\uC758 \uAC11\uC637(A)"
     _description: "\uC2E0\uC758 \uAC11\uC637\uC774\uB2E4."
-    _spritePath: Sprite/Item/Armor/Armor_4
+    _spritePath: Sprite/Item/Armor/Armor_4_A
     _atk: 0
     _atkSpeed: 0
     _hp: 270
@@ -302,7 +302,7 @@ MonoBehaviour:
     _name: "\uC2E0\uC758 \uAC11\uC637(S)"
     _description: "\uC2E0\uC758 \uAC11\uC637\uC774\uB2E4. \uAE30\uC874 \uB4F1\uAE09\uC5D0\uC11C
       \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
-    _spritePath: Sprite/Item/Armor/Armor_4
+    _spritePath: Sprite/Item/Armor/Armor_4_S
     _atk: 0
     _atkSpeed: 0
     _hp: 300
@@ -326,7 +326,7 @@ MonoBehaviour:
     _type: 2
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uBC29\uD328(A)"
     _description: "\uC0AC\uB0E5\uAFBC\uC758 \uBC29\uD328\uC774\uB2E4."
-    _spritePath: Sprite/Item/Shield/Shield_1
+    _spritePath: Sprite/Item/Shield/Shield_1_A
     _atk: 0
     _atkSpeed: 0
     _hp: 0
@@ -339,7 +339,7 @@ MonoBehaviour:
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uBC29\uD328(S)"
     _description: "\uC0AC\uB0E5\uAFBC\uC758 \uBC29\uD328\uC774\uB2E4. \uAE30\uC874
       \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
-    _spritePath: Sprite/Item/Shield/Shield_1
+    _spritePath: Sprite/Item/Shield/Shield_1_S
     _atk: 0
     _atkSpeed: 0
     _hp: 0
@@ -363,7 +363,7 @@ MonoBehaviour:
     _type: 2
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBC29\uD328(A)"
     _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBC29\uD328\uC774\uB2E4."
-    _spritePath: Sprite/Item/Shield/Shield_2
+    _spritePath: Sprite/Item/Shield/Shield_2_A
     _atk: 0
     _atkSpeed: 0
     _hp: 0
@@ -376,7 +376,7 @@ MonoBehaviour:
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBC29\uD328(S)"
     _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBC29\uD328\uC774\uB2E4. \uAE30\uC874
       \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
-    _spritePath: Sprite/Item/Shield/Shield_2
+    _spritePath: Sprite/Item/Shield/Shield_2_S
     _atk: 0
     _atkSpeed: 0
     _hp: 0
@@ -400,7 +400,7 @@ MonoBehaviour:
     _type: 2
     _name: "\uB9C8\uC2A4\uD130\uC758 \uBC29\uD328(A)"
     _description: "\uB9C8\uC2A4\uD130\uC758 \uBC29\uD328\uC774\uB2E4."
-    _spritePath: Sprite/Item/Shield/Shield_3
+    _spritePath: Sprite/Item/Shield/Shield_3_A
     _atk: 0
     _atkSpeed: 0
     _hp: 0
@@ -413,7 +413,7 @@ MonoBehaviour:
     _name: "\uB9C8\uC2A4\uD130\uC758 \uBC29\uD328(S)"
     _description: "\uB9C8\uC2A4\uD130\uC758 \uBC29\uD328\uC774\uB2E4. \uAE30\uC874
       \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
-    _spritePath: Sprite/Item/Shield/Shield_3
+    _spritePath: Sprite/Item/Shield/Shield_3_S
     _atk: 0
     _atkSpeed: 0
     _hp: 0
@@ -437,7 +437,7 @@ MonoBehaviour:
     _type: 2
     _name: "\uC2E0\uC758 \uBC29\uD328(A)"
     _description: "\uC2E0\uC758 \uBC29\uD328\uC774\uB2E4."
-    _spritePath: Sprite/Item/Shield/Shield_4
+    _spritePath: Sprite/Item/Shield/Shield_4_A
     _atk: 0
     _atkSpeed: 0
     _hp: 0
@@ -450,7 +450,7 @@ MonoBehaviour:
     _name: "\uC2E0\uC758 \uBC29\uD328(S)"
     _description: "\uC2E0\uC758 \uBC29\uD328\uC774\uB2E4.\uAE30\uC874 \uB4F1\uAE09\uC5D0\uC11C
       \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
-    _spritePath: Sprite/Item/Shield/Shield_4
+    _spritePath: Sprite/Item/Shield/Shield_4_S
     _atk: 0
     _atkSpeed: 0
     _hp: 0
@@ -474,7 +474,7 @@ MonoBehaviour:
     _type: 3
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uC2E0\uBC1C(A)"
     _description: "\uC0AC\uB0E5\uAFBC\uC758 \uC2E0\uBC1C\uC774\uB2E4."
-    _spritePath: Sprite/Item/Boots/Boots_1
+    _spritePath: Sprite/Item/Boots/Boots_1_A
     _atk: 0
     _atkSpeed: 0
     _hp: 0
@@ -487,7 +487,7 @@ MonoBehaviour:
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uC2E0\uBC1C(S)"
     _description: "\uC0AC\uB0E5\uAFBC\uC758 \uC2E0\uBC1C\uC774\uB2E4. \uAE30\uC874
       \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
-    _spritePath: Sprite/Item/Boots/Boots_1
+    _spritePath: Sprite/Item/Boots/Boots_1_S
     _atk: 0
     _atkSpeed: 0
     _hp: 0
@@ -511,7 +511,7 @@ MonoBehaviour:
     _type: 3
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uC2E0\uBC1C(A)"
     _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uC2E0\uBC1C\uC774\uB2E4."
-    _spritePath: Sprite/Item/Boots/Boots_2
+    _spritePath: Sprite/Item/Boots/Boots_2_A
     _atk: 0
     _atkSpeed: 0
     _hp: 0
@@ -524,7 +524,7 @@ MonoBehaviour:
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uC2E0\uBC1C(S)"
     _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uC2E0\uBC1C\uC774\uB2E4. \uAE30\uC874
       \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
-    _spritePath: Sprite/Item/Boots/Boots_2
+    _spritePath: Sprite/Item/Boots/Boots_2_S
     _atk: 0
     _atkSpeed: 0
     _hp: 0
@@ -548,7 +548,7 @@ MonoBehaviour:
     _type: 3
     _name: "\uB9C8\uC2A4\uD130\uC758 \uC2E0\uBC1C(A)"
     _description: "\uB9C8\uC2A4\uD130\uC758 \uC2E0\uBC1C\uC774\uB2E4."
-    _spritePath: Sprite/Item/Boots/Boots_3
+    _spritePath: Sprite/Item/Boots/Boots_3_A
     _atk: 0
     _atkSpeed: 0
     _hp: 0
@@ -561,7 +561,7 @@ MonoBehaviour:
     _name: "\uB9C8\uC2A4\uD130\uC758 \uC2E0\uBC1C(S)"
     _description: "\uB9C8\uC2A4\uD130\uC758 \uC2E0\uBC1C\uC774\uB2E4. \uAE30\uC874
       \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
-    _spritePath: Sprite/Item/Boots/Boots_3
+    _spritePath: Sprite/Item/Boots/Boots_3_S
     _atk: 0
     _atkSpeed: 0
     _hp: 0
@@ -585,7 +585,7 @@ MonoBehaviour:
     _type: 3
     _name: "\uC2E0\uC758 \uC2E0\uBC1C(A)"
     _description: "\uC2E0\uC758 \uC2E0\uBC1C\uC774\uB2E4."
-    _spritePath: Sprite/Item/Boots/Boots_4
+    _spritePath: Sprite/Item/Boots/Boots_4_A
     _atk: 0
     _atkSpeed: 0
     _hp: 0
@@ -598,7 +598,7 @@ MonoBehaviour:
     _name: "\uC2E0\uC758 \uC2E0\uBC1C(S)"
     _description: "\uC2E0\uC758 \uC2E0\uBC1C\uC774\uB2E4. \uAE30\uC874 \uB4F1\uAE09\uC5D0\uC11C
       \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
-    _spritePath: Sprite/Item/Boots/Boots_4
+    _spritePath: Sprite/Item/Boots/Boots_4_S
     _atk: 0
     _atkSpeed: 0
     _hp: 0

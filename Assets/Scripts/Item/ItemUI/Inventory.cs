@@ -11,7 +11,7 @@ public class ItemSlot
 }
 public class Inventory : UI_Base<Inventory>
 {
-    public ItemSlotUI[] uislots;
+    public ItemSlotUI[] uiSlots;
     public ItemSlot[] slots;
 
     public GameObject inventoryWindow;
@@ -48,13 +48,13 @@ public class Inventory : UI_Base<Inventory>
     private void Start()
     {
         inventoryWindow.SetActive(false);
-        slots = new ItemSlot[uislots.Length];
+        slots = new ItemSlot[uiSlots.Length];
 
-        for (int i = 0; i < uislots.Length; i++)
+        for (int i = 0; i < uiSlots.Length; i++)
         {
             slots[i] = new ItemSlot();
-            uislots[i].index = i;
-            uislots[i].Clear();
+            uiSlots[i].index = i;
+            uiSlots[i].Clear();
         }
         ClearSeletecItemWindow();
     }
@@ -96,17 +96,23 @@ public class Inventory : UI_Base<Inventory>
         }
     }
 
-    void ThrowItem(ItemData item) // 버리기 기능있을때
-    {
+    //void ThrowItem(ItemData item) 버리기 기능있을때
+    //{
 
-    }
+    //}
 
     void UpdateUI()
     {
-
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (slots[i].item != null)
+                uiSlots[i].Set(slots[i]);
+            else
+                uiSlots[i].Clear();
+        }
     }
 
-    ItemSlot GetEmptySlot()
+    ItemSlot GetEmptySlot() //창고 맡길때 필요할듯,팔수있으면 상점이나?
     {
         return null;
     }
