@@ -907,7 +907,6 @@ GameObject:
   m_Component:
   - component: {fileID: 284066337}
   - component: {fileID: 284066336}
-  - component: {fileID: 284066338}
   m_Layer: 0
   m_Name: Lobby
   m_TagString: Untagged
@@ -945,21 +944,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &284066338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 284066335}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e30d2a4c3ce0d64d92c6eea0107db28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shopTrigger: {fileID: 1926684048}
-  doorTrigger: {fileID: 574338421}
-  storageTrigger: {fileID: 1935020226}
 --- !u!1 &373137325
 GameObject:
   m_ObjectHideFlags: 0
