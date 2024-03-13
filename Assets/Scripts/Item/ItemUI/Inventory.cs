@@ -1,8 +1,11 @@
+using Constants;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 
 public class ItemSlot 
@@ -59,8 +62,28 @@ public class Inventory : UI_Base<Inventory>
         ClearSeletecItemWindow();
     }
 
-     
-  
+    //아래 부분 플레이어한테 붙일필요있음
+    //void OnCollisionEnter2D(Collision2D coll)
+    //{
+
+    //    if (coll.gameObject.layer == LayerMask.NameToLayer("interactable")) // 레이어가 "interactable"인 아이템과 충돌했을 경우
+    //    {
+    //        curInteractGameobject = coll.gameObject;
+    //        curInteractable = curInteractGameobject.GetComponent<IInteractable>();
+    //        Inventory.instance.AddItem(item);
+    //    }
+
+    
+
+    //public void OnInventory(InputValue value)
+    //{
+    //    if (value.isPressed)
+    //    {
+    //        Inventory.instance.Toggle();
+    //    }
+    //}
+
+   // ======================
 
     public void Toggle()
     {
@@ -101,6 +124,21 @@ public class Inventory : UI_Base<Inventory>
 
     //}
 
+    public void RemoveSelectedItem()
+    {
+       if (uiSlots[selectedItemIndex].equipped)
+       {
+          UnEquip(selectedItemIndex);
+       }
+
+         selectedItem.item = null;
+         ClearSeletecItemWindow();
+         UpdateUI();
+
+
+      
+    }
+
     void UpdateUI()
     {
         for (int i = 0; i < slots.Length; i++)
@@ -114,17 +152,63 @@ public class Inventory : UI_Base<Inventory>
 
     ItemSlot GetEmptySlot() //창고 맡길때 필요할듯,팔수있으면 상점이나?
     {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (slots[i].item == null)
+                return slots[i];
+
+
+        }
+
         return null;
     }
 
     public void SelectItem(int index)
     {
+        if (slots[index].item == null)
+            return;
+       
+        selectedItem = slots[index];
+        selectedItemIndex = index;
 
+        selectedItemName.text = selectedItem.item.Name;
+        selectedItemDescription.text = selectedItem.item.Description;
+
+        selectedItemStatName.text = string.Empty;
+        selectedItemStatValue.text = string.Empty;
+
+        
+        //흠.. 코드가 안불러와짐
+        //for (int i = 0; i < selectedItem.item.Type; i++) 
+        //{
+        //    selectedItemStatName.text += selectedItem.item.consumables[i].type.ToString() + "\n";
+        //    selectedItemStatValue.text += selectedItem.item.consumables[i].value.ToString() + "\n";
+        //}
+
+        equipButton.SetActive(selectedItem.item.Type == ItemType.Weapon && !uiSlots[index].equipped);
+        equipButton.SetActive(selectedItem.item.Type == ItemType.Boots && !uiSlots[index].equipped);
+        equipButton.SetActive(selectedItem.item.Type == ItemType.Shield && !uiSlots[index].equipped);
+        equipButton.SetActive(selectedItem.item.Type == ItemType.Armor && !uiSlots[index].equipped);
+        unequipButton.SetActive(selectedItem.item.Type == ItemType.Weapon && uiSlots[index].equipped);
+        unequipButton.SetActive(selectedItem.item.Type == ItemType.Boots && uiSlots[index].equipped);
+        unequipButton.SetActive(selectedItem.item.Type == ItemType.Shield && uiSlots[index].equipped);
+        unequipButton.SetActive(selectedItem.item.Type == ItemType.Armor && uiSlots[index].equipped);
+       
     }
 
     private void ClearSeletecItemWindow()
     {
+        selectedItem = null;
+        selectedItemName.text = string.Empty;
+        selectedItemDescription.text = string.Empty;
 
+        selectedItemStatName.text = string.Empty;
+        selectedItemStatValue.text = string.Empty;
+
+      
+        equipButton.SetActive(false);
+        unequipButton.SetActive(false);
+      
     }
 
 
