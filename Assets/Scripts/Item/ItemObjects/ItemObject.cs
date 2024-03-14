@@ -2,16 +2,28 @@ using UnityEngine;
 
 public class ItemObject : MonoBehaviour
 {
-    public ItemData item;
+    private ItemData item;
 
-    //public void FindDB()
-    //{
-    //    for(int i =0;i< itemList.Length; i++)
-    //    {
-    //        int id = itemList[i];
-    //        ItemData item = DataBase.Item.Get(10001001);
+    public int itemId;
 
-    //        InventoryItems.Add(item);
-    //    }
-    //}
+    private SpriteRenderer spriteRenderer;
+
+
+    private void Start()
+    {
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
+       if( itemId != 0)
+        {
+            ItemSetting(itemId);
+
+        }
+    }
+
+
+    public void ItemSetting(int id)
+    {
+       item = DataBase.Item.Get(id);
+        spriteRenderer.sprite = item.Sprite;
+    }
 }

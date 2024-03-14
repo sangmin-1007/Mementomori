@@ -9,7 +9,7 @@ public class ItemDB : MonoBehaviour
 
     public ItemDB() //_items에 SO를 넣어주는 코드 
     {
-        var res = Resources.Load<ItemDBSheet>("ItemDBSheet"); // item Scriptable Object를 불러옴
+        var res = Resources.Load<ItemDBSheet>("DB/ItemDBSheet"); // item Scriptable Object를 불러옴
         var itemsSo = Object.Instantiate(res);               // 로드를 해주고 instantiate로 생성
         var entites = itemsSo.Entities;                      // Entities에 접근을 해줌, (Entities에는 Scriptable Object안에 내용들이 있다)
 
