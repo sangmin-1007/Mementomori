@@ -6,7 +6,7 @@ using UnityEngine;
 
 
 
-[Serializable]
+[System.Serializable]
 public class ItemData 
 {
 

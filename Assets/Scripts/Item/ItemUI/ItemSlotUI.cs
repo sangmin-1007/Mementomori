@@ -7,10 +7,12 @@ using UnityEngine.UI;
 
 public class ItemSlotUI : MonoBehaviour
 {
+    
     public Button button;
     public Image icon;
     private ItemSlot curSlot;
     private Outline outline;
+
 
     public int index;
     public bool equipped;
@@ -26,11 +28,11 @@ public class ItemSlotUI : MonoBehaviour
         outline.enabled = equipped;
     }
 
+    
     public void Set(ItemSlot slot)
     {
         curSlot = slot;
         icon.gameObject.SetActive(true);
-       // icon.sprite = slot.item.icon; ItemData.cs에서 만져야함
         
         if (outline != null)
         {
@@ -38,6 +40,8 @@ public class ItemSlotUI : MonoBehaviour
         }
 
     }
+
+  
     public void Clear()
     {
         curSlot = null;

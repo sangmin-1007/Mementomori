@@ -1515,7 +1515,6 @@ MonoBehaviour:
     _def: 0
     _speed: 0
     _stamina: 0
-  itemDB: {fileID: 11400000, guid: 8c0ab09205d44e64b8507395ada87e24, type: 2}
 --- !u!1 &505606022
 GameObject:
   m_ObjectHideFlags: 0
