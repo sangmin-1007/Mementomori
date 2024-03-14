@@ -8,8 +8,13 @@ using Unity.VisualScripting;
 
 public class UI_StartScene : UI_Base<UI_StartScene>
 {
+    [Header("°· Canvas")]
     [SerializeField] private Canvas uiCanvas;
+
+    [Header("°· Particle")]
     [SerializeField] private ParticleSystem fireEffect;
+
+    [Header("°· Text")]
     [SerializeField] private TextMeshProUGUI title;
     [SerializeField] private TextMeshProUGUI startText;
 
@@ -29,6 +34,7 @@ public class UI_StartScene : UI_Base<UI_StartScene>
             if (Input.anyKeyDown)
             {
                 Debug.Log("æ¿¿Ãµø");
+                Managers.UI_Manager.ShowLoadingUI("GameScene");
             }
         }
     }
@@ -36,6 +42,7 @@ public class UI_StartScene : UI_Base<UI_StartScene>
     public void OnDisable()
     {
         isOnText = false;
+        DestroyUI();
     }
 
     private void Show()
