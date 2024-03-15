@@ -7,13 +7,12 @@ public enum InteractType
 {
     Shop,
     Storage,
-    Door
+    Door,
+    GameMapReposition
 }
 public class LobbyIneract : MonoBehaviour
 {
     public InteractType interactType;
-
-
 
     public void Interaction()
     {
