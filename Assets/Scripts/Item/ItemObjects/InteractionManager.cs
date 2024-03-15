@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine;
 using UnityEngine.UI;
 using JetBrains.Annotations;
+using System.Collections;
 
 public interface IInteractable  //인터페이스
 { 
@@ -10,6 +11,7 @@ public interface IInteractable  //인터페이스
 }
 public class InteractionManager : MonoBehaviour
 {
+
 
     public LayerMask layerMask;
     private GameObject curInteractGameobject;
@@ -26,16 +28,20 @@ public class InteractionManager : MonoBehaviour
         {
             curInteractGameobject = collision.gameObject;
             curInteractable = curInteractGameobject.GetComponent<IInteractable>();
-            SetPromptText();
+            GetItem();
+            StartCoroutine(GetItemTextCourtine());
+
         }
 
     }
-    void OnTriggerExit2D(Collider2D collision) //  레이어가 "interactable"인 아이템과 충돌했을 경우
+    // 코루틴 코드 추가 필요
+
+    private IEnumerator GetItemTextCourtine()
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Item"))
-        {
-            promptText.gameObject.SetActive(false);
-        }
+        promptText.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1);
+        promptText.gameObject.SetActive(false);
+        yield break;
     }
 
     private void SetPromptText() // [space] 집어넣기 상호작용 표시 텍스트
@@ -44,16 +50,21 @@ public class InteractionManager : MonoBehaviour
 
     }
 
-    public void OnGetItem(InputValue value)  // 스페이스키, 획득이  눌렸을때 
+    private void ClosePromptText() // [space] 집어넣기 상호작용 표시 텍스트
     {
-        if (value.isPressed)
-        {
-            curInteractable.OnInteract();
-            curInteractGameobject = null;
-            curInteractable = null;
-            promptText.gameObject.SetActive(false);
+        promptText.gameObject.SetActive(false);
+
+    }
+
+    public void GetItem()  // 스페이스키, 획득이  눌렸을때 
+    {
+
+        curInteractable.OnInteract();
+        curInteractGameobject = null;
+        curInteractable = null;
+        promptText.gameObject.SetActive(false);
 
 
-        }
+
     }
 }
