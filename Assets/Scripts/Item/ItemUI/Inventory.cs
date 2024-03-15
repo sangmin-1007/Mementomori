@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using static UnityEditor.Progress;
 
 
 public class ItemSlot 
@@ -22,6 +23,7 @@ public class Inventory : UI_Base<Inventory>
     [Header("Selected Item")]
     private ItemSlot selectedItem;
     private int selectedItemIndex;
+    
     public Text selectedItemName;
     public Text selectedItemDescription;
     public Text selectedItemStatAtk;
@@ -40,10 +42,11 @@ public class Inventory : UI_Base<Inventory>
     public GameObject equipButton;
     public GameObject unequipButton;
 
-   
+  
 
 
     private SpriteRenderer spriteRenderer;
+  
 
     private int curEquipIndex;
 
@@ -58,7 +61,7 @@ public class Inventory : UI_Base<Inventory>
 
     void Awake()
     {
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+       
         instance = this;
         //private PlayerController controller; 캐릭터 InvokeEvent방식이랑 호환
         //private PlayerCondition condition; 장비창이 스탯이랑 연관있으니 캐릭터 스탯?이랑 호환해야할듯
@@ -67,6 +70,7 @@ public class Inventory : UI_Base<Inventory>
 
     private void Start()
     {
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         inventoryWindow.SetActive(false);
         slots = new ItemSlot[uiSlots.Length];
 
@@ -106,19 +110,27 @@ public class Inventory : UI_Base<Inventory>
 
     public void AddItem(ItemData item)  // 아이템 획득
     {
-        ItemSlot emptySlot = GetEmptySlot(); // 빈슬롯을 설정
        
+        ItemSlot emptySlot = GetEmptySlot(); // 빈슬롯을 설정
+        
         if (emptySlot != null) // 만약 비었다면
         {
-          
+
             emptySlot.item = item; // 거기에 아이템 추가
-          
+            spriteRenderer.sprite = item.Sprite;
+
+
+
+
             UpdateUI(); // UI업데이트 한번 해주기
             return;
+
+
         }
     }
-
    
+
+
 
     //void ThrowItem(ItemData item) 버리기 기능있을때
     //{
@@ -142,12 +154,15 @@ public class Inventory : UI_Base<Inventory>
 
     void UpdateUI()
     {
+       
         for (int i = 0; i < slots.Length; i++)
         {
+            
             if (slots[i].item != null)
             {
                 uiSlots[i].Set(slots[i]);
-              
+                
+
 
             }
                 
@@ -156,7 +171,7 @@ public class Inventory : UI_Base<Inventory>
         }
     }
 
-    ItemSlot GetEmptySlot() //창고 맡길때 필요할듯,팔수있으면 상점이나?
+    ItemSlot GetEmptySlot() 
     {
         for (int i = 0; i < slots.Length; i++)
         {
