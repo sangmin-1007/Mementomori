@@ -16,7 +16,7 @@ public class Inventory : UI_Base<Inventory>
 {
     public ItemSlotUI[] uiSlots;
     public ItemSlot[] slots;
-
+   
     public GameObject inventoryWindow;
 
     [Header("Selected Item")]
@@ -24,10 +24,26 @@ public class Inventory : UI_Base<Inventory>
     private int selectedItemIndex;
     public Text selectedItemName;
     public Text selectedItemDescription;
-    public Text selectedItemStatName;
-    public Text selectedItemStatValue;
+    public Text selectedItemStatAtk;
+    public Text selectedItemStatHp;
+    public Text selectedItemStatAtk_Speed;
+    public Text selectedItemStatDef;
+    public Text selectedItemStatSpeed;
+    public Text selectedItemStatStamina;
+    public Text selectedItemStatValue_Atk;
+    public Text selectedItemStatValue_Atk_speed;
+    public Text selectedItemStatValue_Hp;
+    public Text selectedItemStatValue_Speed;
+    public Text selectedItemStatValue_Def;
+    public Text selectedItemStatValue_Stamina;
+
     public GameObject equipButton;
     public GameObject unequipButton;
+
+   
+
+
+    private SpriteRenderer spriteRenderer;
 
     private int curEquipIndex;
 
@@ -42,6 +58,7 @@ public class Inventory : UI_Base<Inventory>
 
     void Awake()
     {
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         instance = this;
         //private PlayerController controller; 캐릭터 InvokeEvent방식이랑 호환
         //private PlayerCondition condition; 장비창이 스탯이랑 연관있으니 캐릭터 스탯?이랑 호환해야할듯
@@ -62,29 +79,9 @@ public class Inventory : UI_Base<Inventory>
         ClearSeletecItemWindow();
     }
 
-    //아래 부분 플레이어한테 붙일필요있음
-    //void OnCollisionEnter2D(Collision2D coll)
-    //{
-
-    //    if (coll.gameObject.layer == LayerMask.NameToLayer("interactable")) // 레이어가 "interactable"인 아이템과 충돌했을 경우
-    //    {
-    //        curInteractGameobject = coll.gameObject;
-    //        curInteractable = curInteractGameobject.GetComponent<IInteractable>();
-    //        Inventory.instance.AddItem(item);
-    //    }
-
+   
+   
     
-
-    //public void OnInventory(InputValue value)
-    //{
-    //    if (value.isPressed)
-    //    {
-    //        Inventory.instance.Toggle();
-    //    }
-    //}
-
-   // ======================
-
     public void Toggle()
     {
         if (inventoryWindow.activeInHierarchy)
@@ -113,11 +110,15 @@ public class Inventory : UI_Base<Inventory>
        
         if (emptySlot != null) // 만약 비었다면
         {
+          
             emptySlot.item = item; // 거기에 아이템 추가
+          
             UpdateUI(); // UI업데이트 한번 해주기
             return;
         }
     }
+
+   
 
     //void ThrowItem(ItemData item) 버리기 기능있을때
     //{
@@ -144,7 +145,12 @@ public class Inventory : UI_Base<Inventory>
         for (int i = 0; i < slots.Length; i++)
         {
             if (slots[i].item != null)
+            {
                 uiSlots[i].Set(slots[i]);
+              
+
+            }
+                
             else
                 uiSlots[i].Clear();
         }
@@ -174,16 +180,42 @@ public class Inventory : UI_Base<Inventory>
         selectedItemName.text = selectedItem.item.Name;
         selectedItemDescription.text = selectedItem.item.Description;
 
-        selectedItemStatName.text = string.Empty;
-        selectedItemStatValue.text = string.Empty;
 
-        
-        //흠.. 코드가 안불러와짐
-        //for (int i = 0; i < selectedItem.item.Type; i++) 
-        //{
-        //    selectedItemStatName.text += selectedItem.item.consumables[i].type.ToString() + "\n";
-        //    selectedItemStatValue.text += selectedItem.item.consumables[i].value.ToString() + "\n";
-        //}
+        if (selectedItem.item.Atk > 0) // 아이템이 검일때 검은 공격력/공격속도만 보여준다.
+        {
+            Debug.Log("크다!");
+            selectedItemStatAtk.gameObject.SetActive(true);
+            selectedItemStatValue_Atk.gameObject.SetActive(true);
+            selectedItemStatValue_Atk.text += selectedItem.item.Atk.ToString() + "\n";
+            selectedItemStatAtk_Speed.gameObject.SetActive(true);
+            selectedItemStatValue_Atk_speed.gameObject.SetActive(true);
+            selectedItemStatValue_Atk_speed.text += selectedItem.item.AtkSpeed.ToString() + "\n";
+
+        }
+
+        if(selectedItem.item.Hp > 0) // 갑옷 = 체력
+        {
+            selectedItemStatHp.gameObject.SetActive(true);
+            selectedItemStatValue_Hp.gameObject.SetActive(true);
+            selectedItemStatValue_Hp.text += selectedItem.item.Hp.ToString() + "\n";
+        }
+
+        if(selectedItem.item.Def > 0) // 방패 = 방어력
+        {
+            selectedItemStatDef.gameObject.SetActive(true);
+            selectedItemStatValue_Def.gameObject.SetActive(true);
+            selectedItemStatValue_Def.text += selectedItem.item.Def.ToString() + "\n";
+        }
+
+        if(selectedItem.item.Speed > 0) // 신발 = 스태미나 + 이동속도
+        {
+            selectedItemStatStamina.gameObject.SetActive(true);
+            selectedItemStatValue_Stamina.gameObject.SetActive(true);
+            selectedItemStatValue_Stamina.text += selectedItem.item.Stamina.ToString() + "\n";
+            selectedItemStatSpeed.gameObject.SetActive(true);
+            selectedItemStatValue_Speed.gameObject.SetActive(true);
+            selectedItemStatValue_Speed.text += selectedItem.item.Speed.ToString() + "\n";
+        }
 
         equipButton.SetActive(selectedItem.item.Type == ItemType.Weapon && !uiSlots[index].equipped);
         equipButton.SetActive(selectedItem.item.Type == ItemType.Boots && !uiSlots[index].equipped);
@@ -202,8 +234,8 @@ public class Inventory : UI_Base<Inventory>
         selectedItemName.text = string.Empty;
         selectedItemDescription.text = string.Empty;
 
-        selectedItemStatName.text = string.Empty;
-        selectedItemStatValue.text = string.Empty;
+        //selectedItemStatName.text = string.Empty;
+       // selectedItemStatValue.text = string.Empty;
 
       
         equipButton.SetActive(false);

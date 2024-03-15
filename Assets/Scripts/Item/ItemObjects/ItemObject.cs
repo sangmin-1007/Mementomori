@@ -1,7 +1,12 @@
 using UnityEngine;
 
-public class ItemObject : MonoBehaviour
+public class ItemObject : MonoBehaviour , IInteractable
 {
+  
+
+ 
+
+
     private ItemData item;
 
     public int itemId;
@@ -25,5 +30,12 @@ public class ItemObject : MonoBehaviour
     {
        item = DataBase.Item.Get(id);
         spriteRenderer.sprite = item.Sprite;
+    }
+
+    public void OnInteract()
+    {
+     
+        Inventory.instance.AddItem(item);
+        Destroy(gameObject);
     }
 }

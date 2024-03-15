@@ -17,7 +17,8 @@ MonoBehaviour:
     _grade: 0
     _type: 0
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uAC80"
-    _description: " \uC0AC\uB0E5\uAFBC\uC758 \uAC80\uC774\uB2E4."
+    _description: "\uB531\uD788 \uC4F8\uB9CC\uD574 \uBCF4\uC774\uC9C0\uB294 \uC54A\uB294\uB2E4.\uCCAB
+      \uD658\uC0DD\uB54C\uB294 \uC774\uAC78\uB85C \uC2DC\uC791\uD55C\uAC70 \uAC19\uC740\uB370.."
     _spritePath: Sprite/Item/Weapon/Sword_1
     _atk: 10
     _atkSpeed: 1.2
@@ -29,7 +30,8 @@ MonoBehaviour:
     _grade: 0
     _type: 0
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uAC80(A)"
-    _description: " \uC0AC\uB0E5\uAFBC\uC758 \uAC80\uC774\uB2E4."
+    _description: "\uC774\uAC74 \uBA87\uBC88 \uD718\uB450\uB974\uBA74 \uBD80\uC11C\uC9C8
+      \uAC83 \uAC19\uC740\uB370?"
     _spritePath: Sprite/Item/Weapon/Sword_1_A
     _atk: 12
     _atkSpeed: 1.2
@@ -41,8 +43,8 @@ MonoBehaviour:
     _grade: 0
     _type: 0
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uAC80(S)"
-    _description: " \uC0AC\uB0E5\uAFBC\uC758 \uAC80\uC774\uB2E4. \uAE30\uC874 \uB4F1\uAE09\uC5D0\uC11C
-      \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _description: "\uAD1C\uCC2E\uC544 \uBCF4\uC774\uAE34\uD558\uC9C0\uB9CC..\uB9C8\uC655\uC744
+      \uC0C1\uB300\uD558\uB294\uB370\uB294 \uBD80\uC871\uD574.."
     _spritePath: Sprite/Item/Weapon/Sword_1_S
     _atk: 14
     _atkSpeed: 1.3
@@ -54,7 +56,8 @@ MonoBehaviour:
     _grade: 1
     _type: 0
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC80"
-    _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC80\uC774\uB2E4."
+    _description: "\uC5B4\uB5A4 \uC8FD\uC740 \uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC80
+      \uAC19\uC740\uB370..\uB09C \uC5B8\uC81C\uCBE4 \uC8FD\uC73C\uB824\uB098.."
     _spritePath: Sprite/Item/Weapon/Sword_2
     _atk: 15
     _atkSpeed: 1.4
@@ -66,7 +69,8 @@ MonoBehaviour:
     _grade: 1
     _type: 0
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC80(A)"
-    _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC80\uC774\uB2E4."
+    _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC80 \uC911\uC5D0\uC11C \uB098\uB984
+      \uAD1C\uCC2E\uC740 \uC0C1\uD0DC\uB97C \uBCF4\uC774\uACE0 \uC788\uAD70"
     _spritePath: Sprite/Item/Weapon/Sword_2_A
     _atk: 17
     _atkSpeed: 1.4
@@ -78,8 +82,8 @@ MonoBehaviour:
     _grade: 1
     _type: 0
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC80(S)"
-    _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC80\uC774\uB2E4. \uAE30\uC874
-      \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _description: "\uC774\uAC8C \uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC80\uC774\uB77C\uACE0?
+      \uC544\uB9C8 \uAF64 \uC4F8\uB9CC\uD55C \uAE30\uC0AC\uC600\uB358\uAC83 \uAC19\uAD70."
     _spritePath: Sprite/Item/Weapon/Sword_2_S
     _atk: 19
     _atkSpeed: 1.5
@@ -91,7 +95,8 @@ MonoBehaviour:
     _grade: 2
     _type: 0
     _name: "\uB9C8\uC2A4\uD130\uC758 \uAC80"
-    _description: "\uB9C8\uC2A4\uD130\uC758 \uAC80\uC774\uB2E4."
+    _description: "\uC61B \uB3D9\uB8CC \uD558\uB3C4\uB974\uC758 \uAC80\uC774\uAD70..
+      \uC798\uC4F0\uACA0\uB2E4!"
     _spritePath: Sprite/Item/Weapon/Sword_3
     _atk: 20
     _atkSpeed: 1.6
@@ -103,7 +108,8 @@ MonoBehaviour:
     _grade: 2
     _type: 0
     _name: "\uB9C8\uC2A4\uD130\uC758 \uAC80(A)"
-    _description: "\uB9C8\uC2A4\uD130\uC758 \uAC80\uC774\uB2E4."
+    _description: "\uC774 \uAC80\uC758 \uC6D0\uB798 \uC8FC\uC778\uC740 \uC9C0\uAE08
+      \uB098\uB85C\uC368\uB3C4..\uAC10\uB2F9\uAC00\uB2A5 \uD560\uC9C0\uB294 \uBAA8\uB974\uACA0\uAD70.."
     _spritePath: Sprite/Item/Weapon/Sword_3_A
     _atk: 22
     _atkSpeed: 1.6
@@ -115,8 +121,8 @@ MonoBehaviour:
     _grade: 2
     _type: 0
     _name: "\uB9C8\uC2A4\uD130\uC758 \uAC80(S)"
-    _description: "\uB9C8\uC2A4\uD130\uC758 \uAC80\uC774\uB2E4. \uAE30\uC874 \uB4F1\uAE09\uC5D0\uC11C
-      \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _description: "\uB0B4\uAD6C\uB3C4\uAC00 \uC0C1\uB2F9\uD55C \uAC80\uC774\uAD70..
+      \uC774\uC815\uB3C4\uBA74..!"
     _spritePath: Sprite/Item/Weapon/Sword_3_S
     _atk: 24
     _atkSpeed: 1.7
@@ -128,7 +134,8 @@ MonoBehaviour:
     _grade: 3
     _type: 0
     _name: "\uC2E0\uC758 \uAC80"
-    _description: "\uC2E0\uC758 \uAC80\uC774\uB2E4."
+    _description: "\uC774\uB7F0 \uAC80\uC774 \uC544\uC9C1 \uC788\uC5C8\uB2E4\uB2C8..\uB9C8\uC655\uD55C\uD14C\uB3C4
+      \uD1B5\uD560\uAC83\uAC19\uC544!"
     _spritePath: Sprite/Item/Weapon/Sword_4
     _atk: 25
     _atkSpeed: 1.8
@@ -140,7 +147,8 @@ MonoBehaviour:
     _grade: 3
     _type: 0
     _name: "\uC2E0\uC758 \uAC80(A)"
-    _description: "\uC2E0\uC758 \uAC80\uC774\uB2E4."
+    _description: "\uC774 \uBCF4\uB2E4 \uC88B\uC740 \uAC80\uC740 \uC138\uC0C1\uC5D0
+      \uC5C6\uC744\uAC83\uC774\uC57C!!"
     _spritePath: Sprite/Item/Weapon/Sword_4_A
     _atk: 27
     _atkSpeed: 1.8
@@ -152,8 +160,7 @@ MonoBehaviour:
     _grade: 3
     _type: 0
     _name: "\uC2E0\uC758 \uAC80(S)"
-    _description: "\uC2E0\uC758 \uAC80\uC774\uB2E4. \uAE30\uC874 \uB4F1\uAE09\uC5D0\uC11C
-      \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _description: "\uC2E0\uC774\uC2DC\uC5EC.. \uB2F9\uC2E0\uC758 \uB73B\uC744 \uBC1B\uB4E4\uACA0\uC2B5\uB2C8\uB2E4."
     _spritePath: Sprite/Item/Weapon/Sword_4_S
     _atk: 30
     _atkSpeed: 2
@@ -165,7 +172,8 @@ MonoBehaviour:
     _grade: 0
     _type: 1
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uAC11\uC637"
-    _description: "\uC0AC\uB0E5\uAFBC\uC758 \uAC11\uC637\uC774\uB2E4."
+    _description: "\uB531\uD788 \uC4F8\uB9CC\uD574 \uBCF4\uC774\uC9C0\uB294 \uC54A\uB294\uB2E4.\uCCAB
+      \uD658\uC0DD\uB54C\uB294 \uC774\uAC78\uB85C \uC2DC\uC791\uD55C\uAC70 \uAC19\uC740\uB370.."
     _spritePath: Sprite/Item/Armor/Armor_1
     _atk: 0
     _atkSpeed: 0
@@ -177,7 +185,8 @@ MonoBehaviour:
     _grade: 0
     _type: 1
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uAC11\uC637(A)"
-    _description: "\uC0AC\uB0E5\uAFBC\uC758 \uAC11\uC637\uC774\uB2E4."
+    _description: "\uC774\uAC74 \uBA87\uBC88 \uB9DE\uC73C\uBA74 \uBD80\uC11C\uC9C8
+      \uAC83 \uAC19\uC740\uB370?"
     _spritePath: Sprite/Item/Armor/Armor_1_A
     _atk: 0
     _atkSpeed: 0
@@ -189,8 +198,8 @@ MonoBehaviour:
     _grade: 0
     _type: 1
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uAC11\uC637(S)"
-    _description: "\uC0AC\uB0E5\uAFBC\uC758 \uAC11\uC637\uC774\uB2E4.\uAE30\uC874
-      \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _description: "\uAD1C\uCC2E\uC544 \uBCF4\uC774\uAE34\uD558\uC9C0\uB9CC..\uB9C8\uC655\uC744
+      \uC0C1\uB300\uD558\uB294\uB370\uB294 \uBD80\uC871\uD574.."
     _spritePath: Sprite/Item/Armor/Armor_1_S
     _atk: 0
     _atkSpeed: 0
@@ -202,7 +211,8 @@ MonoBehaviour:
     _grade: 1
     _type: 1
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC11\uC637"
-    _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC11\uC637\uC774\uB2E4."
+    _description: "\uC5B4\uB5A4 \uC8FD\uC740 \uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC11\uC637
+      \uAC19\uC740\uB370..\uB09C \uC5B8\uC81C\uCBE4 \uC8FD\uC73C\uB824\uB098.."
     _spritePath: Sprite/Item/Armor/Armor_2
     _atk: 0
     _atkSpeed: 0
@@ -214,7 +224,8 @@ MonoBehaviour:
     _grade: 1
     _type: 1
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC11\uC637(A)"
-    _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC11\uC637\uC774\uB2E4."
+    _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC11\uC637 \uC911\uC5D0\uC11C
+      \uB098\uB984 \uAD1C\uCC2E\uC740 \uC0C1\uD0DC\uB97C \uBCF4\uC774\uACE0 \uC788\uAD70"
     _spritePath: Sprite/Item/Armor/Armor_2_A
     _atk: 0
     _atkSpeed: 0
@@ -226,8 +237,8 @@ MonoBehaviour:
     _grade: 1
     _type: 1
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC11\uC637(S)"
-    _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC11\uC637\uC774\uB2E4. \uAE30\uC874
-      \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _description: "\uC774\uAC8C \uACAC\uC2B5\uAE30\uC0AC\uC758 \uAC11\uC637\uC774\uB77C\uACE0?
+      \uC544\uB9C8 \uAF64 \uC4F8\uB9CC\uD55C \uAE30\uC0AC\uC600\uB358\uAC83 \uAC19\uAD70."
     _spritePath: Sprite/Item/Armor/Armor_2_S
     _atk: 0
     _atkSpeed: 0
@@ -239,7 +250,7 @@ MonoBehaviour:
     _grade: 2
     _type: 1
     _name: "\uB9C8\uC2A4\uD130\uC758 \uAC11\uC637"
-    _description: "\uB9C8\uC2A4\uD130\uC758 \uAC11\uC637\uC774\uB2E4."
+    _description: "\uC61B \uB3D9\uB8CC \uD53C\uB97C\uB85C\uC758 \uAC11\uC637.. \uC798\uC4F0\uACA0\uB2E4!"
     _spritePath: Sprite/Item/Armor/Armor_3
     _atk: 0
     _atkSpeed: 0
@@ -251,7 +262,8 @@ MonoBehaviour:
     _grade: 2
     _type: 1
     _name: "\uB9C8\uC2A4\uD130\uC758 \uAC11\uC637(A)"
-    _description: "\uB9C8\uC2A4\uD130\uC758 \uAC11\uC637\uC774\uB2E4."
+    _description: "\uC774 \uAC11\uC637\uC758 \uC6D0\uB798 \uC8FC\uC778\uC740 \uC9C0\uAE08
+      \uB098\uB85C\uC368\uB3C4..\uAC10\uB2F9\uAC00\uB2A5 \uD560\uC9C0\uB294 \uBAA8\uB974\uACA0\uAD70.."
     _spritePath: Sprite/Item/Armor/Armor_3_A
     _atk: 0
     _atkSpeed: 0
@@ -263,8 +275,8 @@ MonoBehaviour:
     _grade: 2
     _type: 1
     _name: "\uB9C8\uC2A4\uD130\uC758 \uAC11\uC637(S)"
-    _description: "\uB9C8\uC2A4\uD130\uC758 \uAC11\uC637\uC774\uB2E4. \uAE30\uC874
-      \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _description: "\uB0B4\uAD6C\uB3C4\uAC00 \uC0C1\uB2F9\uD55C \uAC11\uC637\uC774\uAD70..
+      \uC774\uC815\uB3C4\uBA74..!"
     _spritePath: Sprite/Item/Armor/Armor_3_S
     _atk: 0
     _atkSpeed: 0
@@ -276,7 +288,8 @@ MonoBehaviour:
     _grade: 3
     _type: 1
     _name: "\uC2E0\uC758 \uAC11\uC637"
-    _description: "\uC2E0\uC758 \uAC11\uC637\uC774\uB2E4."
+    _description: "\uC774\uB7F0 \uAC11\uC637\uC774 \uC544\uC9C1 \uC788\uC5C8\uB2E4\uB2C8..\uB9C8\uC655\uC758
+      \uACF5\uACA9\uC744 \uBC84\uD168\uC904 \uC218 \uC788\uC744 \uAC83 \uAC19\uC544."
     _spritePath: Sprite/Item/Armor/Armor_4
     _atk: 0
     _atkSpeed: 0
@@ -288,7 +301,8 @@ MonoBehaviour:
     _grade: 3
     _type: 1
     _name: "\uC2E0\uC758 \uAC11\uC637(A)"
-    _description: "\uC2E0\uC758 \uAC11\uC637\uC774\uB2E4."
+    _description: "\uC774 \uBCF4\uB2E4 \uC88B\uC740 \uAC11\uC637\uC740 \uC138\uC0C1\uC5D0
+      \uC5C6\uC744\uAC83\uC774\uC57C!!"
     _spritePath: Sprite/Item/Armor/Armor_4_A
     _atk: 0
     _atkSpeed: 0
@@ -300,8 +314,7 @@ MonoBehaviour:
     _grade: 3
     _type: 1
     _name: "\uC2E0\uC758 \uAC11\uC637(S)"
-    _description: "\uC2E0\uC758 \uAC11\uC637\uC774\uB2E4. \uAE30\uC874 \uB4F1\uAE09\uC5D0\uC11C
-      \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _description: "\uC2E0\uC774\uC2DC\uC5EC.. \uB2F9\uC2E0\uC758 \uB73B\uC744 \uBC1B\uB4E4\uACA0\uC2B5\uB2C8\uB2E4."
     _spritePath: Sprite/Item/Armor/Armor_4_S
     _atk: 0
     _atkSpeed: 0
@@ -313,7 +326,8 @@ MonoBehaviour:
     _grade: 0
     _type: 2
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uBC29\uD328"
-    _description: "\uC0AC\uB0E5\uAFBC\uC758 \uBC29\uD328\uC774\uB2E4."
+    _description: "\uB531\uD788 \uC4F8\uB9CC\uD574 \uBCF4\uC774\uC9C0\uB294 \uC54A\uB294\uB2E4.\uCCAB
+      \uD658\uC0DD\uB54C\uB294 \uC774\uAC78\uB85C \uC2DC\uC791\uD55C\uAC70 \uAC19\uC740\uB370.."
     _spritePath: Sprite/Item/Shield/Shield_1
     _atk: 0
     _atkSpeed: 0
@@ -325,7 +339,8 @@ MonoBehaviour:
     _grade: 0
     _type: 2
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uBC29\uD328(A)"
-    _description: "\uC0AC\uB0E5\uAFBC\uC758 \uBC29\uD328\uC774\uB2E4."
+    _description: "\uC774\uAC74 \uBA87\uBC88 \uB9DE\uC73C\uBA74 \uBD80\uC11C\uC9C8
+      \uAC83 \uAC19\uC740\uB370?"
     _spritePath: Sprite/Item/Shield/Shield_1_A
     _atk: 0
     _atkSpeed: 0
@@ -337,8 +352,8 @@ MonoBehaviour:
     _grade: 0
     _type: 2
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uBC29\uD328(S)"
-    _description: "\uC0AC\uB0E5\uAFBC\uC758 \uBC29\uD328\uC774\uB2E4. \uAE30\uC874
-      \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _description: "\uAD1C\uCC2E\uC544 \uBCF4\uC774\uAE34\uD558\uC9C0\uB9CC..\uB9C8\uC655\uC744
+      \uC0C1\uB300\uD558\uB294\uB370\uB294 \uBD80\uC871\uD574.."
     _spritePath: Sprite/Item/Shield/Shield_1_S
     _atk: 0
     _atkSpeed: 0
@@ -350,7 +365,8 @@ MonoBehaviour:
     _grade: 1
     _type: 2
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBC29\uD328"
-    _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBC29\uD328\uC774\uB2E4."
+    _description: "\uC5B4\uB5A4 \uC8FD\uC740 \uACAC\uC2B5\uAE30\uC0AC\uC758 \uBC29\uD328
+      \uAC19\uC740\uB370..\uB09C \uC5B8\uC81C\uCBE4 \uC8FD\uC73C\uB824\uB098.."
     _spritePath: Sprite/Item/Shield/Shield_2
     _atk: 0
     _atkSpeed: 0
@@ -362,7 +378,8 @@ MonoBehaviour:
     _grade: 1
     _type: 2
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBC29\uD328(A)"
-    _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBC29\uD328\uC774\uB2E4."
+    _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBC29\uD328 \uC911\uC5D0\uC11C
+      \uB098\uB984 \uAD1C\uCC2E\uC740 \uC0C1\uD0DC\uB97C \uBCF4\uC774\uACE0 \uC788\uAD70"
     _spritePath: Sprite/Item/Shield/Shield_2_A
     _atk: 0
     _atkSpeed: 0
@@ -374,8 +391,8 @@ MonoBehaviour:
     _grade: 1
     _type: 2
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBC29\uD328(S)"
-    _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBC29\uD328\uC774\uB2E4. \uAE30\uC874
-      \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _description: "\uC774\uAC8C \uACAC\uC2B5\uAE30\uC0AC\uC758 \uBC29\uD328\uC774\uB77C\uACE0?
+      \uC544\uB9C8 \uAF64 \uC4F8\uB9CC\uD55C \uAE30\uC0AC\uC600\uB358\uAC83 \uAC19\uAD70."
     _spritePath: Sprite/Item/Shield/Shield_2_S
     _atk: 0
     _atkSpeed: 0
@@ -387,7 +404,7 @@ MonoBehaviour:
     _grade: 2
     _type: 2
     _name: "\uB9C8\uC2A4\uD130\uC758 \uBC29\uD328"
-    _description: "\uB9C8\uC2A4\uD130\uC758 \uBC29\uD328\uC774\uB2E4."
+    _description: "\uC61B \uB3D9\uB8CC \uC870\uB85C\uC758 \uAC11\uC637.. \uC798\uC4F0\uACA0\uB2E4!"
     _spritePath: Sprite/Item/Shield/Shield_3
     _atk: 0
     _atkSpeed: 0
@@ -399,7 +416,8 @@ MonoBehaviour:
     _grade: 2
     _type: 2
     _name: "\uB9C8\uC2A4\uD130\uC758 \uBC29\uD328(A)"
-    _description: "\uB9C8\uC2A4\uD130\uC758 \uBC29\uD328\uC774\uB2E4."
+    _description: "\uC774 \uBC29\uD328\uB294 \uC544\uC8FC \uD6CC\uB8E1\uD55C \uB300\uC7A5\uC7A5\uC774\uAC00
+      \uB9CC\uB4E0\uAC83\uAC19\uC544.."
     _spritePath: Sprite/Item/Shield/Shield_3_A
     _atk: 0
     _atkSpeed: 0
@@ -411,8 +429,8 @@ MonoBehaviour:
     _grade: 2
     _type: 2
     _name: "\uB9C8\uC2A4\uD130\uC758 \uBC29\uD328(S)"
-    _description: "\uB9C8\uC2A4\uD130\uC758 \uBC29\uD328\uC774\uB2E4. \uAE30\uC874
-      \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _description: "\uB0B4\uAD6C\uB3C4\uAC00 \uC0C1\uB2F9\uD55C \uBC29\uD328\uC774\uAD70..
+      \uC774\uC815\uB3C4\uBA74..!"
     _spritePath: Sprite/Item/Shield/Shield_3_S
     _atk: 0
     _atkSpeed: 0
@@ -424,7 +442,8 @@ MonoBehaviour:
     _grade: 3
     _type: 2
     _name: "\uC2E0\uC758 \uBC29\uD328"
-    _description: "\uC2E0\uC758 \uBC29\uD328\uC774\uB2E4."
+    _description: "\uC774\uB7F0 \uBC29\uD328\uC774 \uC544\uC9C1 \uC788\uC5C8\uB2E4\uB2C8..\uB9C8\uC655\uC758
+      \uACF5\uACA9\uC744 \uBC84\uD168\uC904 \uC218 \uC788\uC744 \uAC83 \uAC19\uC544."
     _spritePath: Sprite/Item/Shield/Shield_4
     _atk: 0
     _atkSpeed: 0
@@ -436,7 +455,8 @@ MonoBehaviour:
     _grade: 3
     _type: 2
     _name: "\uC2E0\uC758 \uBC29\uD328(A)"
-    _description: "\uC2E0\uC758 \uBC29\uD328\uC774\uB2E4."
+    _description: "\uC774 \uBCF4\uB2E4 \uC88B\uC740 \uBC29\uD328\uC740 \uC138\uC0C1\uC5D0
+      \uC5C6\uC744\uAC83\uC774\uC57C!!"
     _spritePath: Sprite/Item/Shield/Shield_4_A
     _atk: 0
     _atkSpeed: 0
@@ -448,8 +468,7 @@ MonoBehaviour:
     _grade: 3
     _type: 2
     _name: "\uC2E0\uC758 \uBC29\uD328(S)"
-    _description: "\uC2E0\uC758 \uBC29\uD328\uC774\uB2E4.\uAE30\uC874 \uB4F1\uAE09\uC5D0\uC11C
-      \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _description: "\uC2E0\uC774\uC2DC\uC5EC.. \uB2F9\uC2E0\uC758 \uB73B\uC744 \uBC1B\uB4E4\uACA0\uC2B5\uB2C8\uB2E4."
     _spritePath: Sprite/Item/Shield/Shield_4_S
     _atk: 0
     _atkSpeed: 0
@@ -460,8 +479,9 @@ MonoBehaviour:
   - _id: 40001013
     _grade: 0
     _type: 3
-    _name: "\uC0AC\uB0E5\uAFBC\uC758 \uC2E0\uBC1C"
-    _description: "\uC0AC\uB0E5\uAFBC\uC758 \uC2E0\uBC1C\uC774\uB2E4."
+    _name: "\uC0AC\uB0E5\uAFBC\uC758 \uBD80\uCE20"
+    _description: "\uB531\uD788 \uC4F8\uB9CC\uD574 \uBCF4\uC774\uC9C0\uB294 \uC54A\uB294\uB2E4.\uCCAB
+      \uD658\uC0DD\uB54C\uB294 \uC774\uAC78\uB85C \uC2DC\uC791\uD55C\uAC70 \uAC19\uC740\uB370.."
     _spritePath: Sprite/Item/Boots/Boots_1
     _atk: 0
     _atkSpeed: 0
@@ -472,8 +492,9 @@ MonoBehaviour:
   - _id: 40001014
     _grade: 0
     _type: 3
-    _name: "\uC0AC\uB0E5\uAFBC\uC758 \uC2E0\uBC1C(A)"
-    _description: "\uC0AC\uB0E5\uAFBC\uC758 \uC2E0\uBC1C\uC774\uB2E4."
+    _name: "\uC0AC\uB0E5\uAFBC\uC758 \uBD80\uCE20(A)"
+    _description: "\uCC29\uC6A9\uAC10\uC774 \uC548\uC88B\uAE34 \uD558\uAD70..\uC5C6\uB294\uAC83
+      \uBCF4\uB2E4\uC57C.."
     _spritePath: Sprite/Item/Boots/Boots_1_A
     _atk: 0
     _atkSpeed: 0
@@ -484,9 +505,9 @@ MonoBehaviour:
   - _id: 40001015
     _grade: 0
     _type: 3
-    _name: "\uC0AC\uB0E5\uAFBC\uC758 \uC2E0\uBC1C(S)"
-    _description: "\uC0AC\uB0E5\uAFBC\uC758 \uC2E0\uBC1C\uC774\uB2E4. \uAE30\uC874
-      \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _name: "\uC0AC\uB0E5\uAFBC\uC758 \uBD80\uCE20(S)"
+    _description: "\uC88B\uC740 \uBD80\uCE20\uC740 \uC544\uB2C8\uC9C0\uB9CC \uC0C1\uD0DC\uB294
+      \uC88B\uAD70"
     _spritePath: Sprite/Item/Boots/Boots_1_S
     _atk: 0
     _atkSpeed: 0
@@ -497,8 +518,9 @@ MonoBehaviour:
   - _id: 40001016
     _grade: 1
     _type: 3
-    _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uC2E0\uBC1C"
-    _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uC2E0\uBC1C\uC774\uB2E4."
+    _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBD80\uCE20"
+    _description: "\uC5B4\uB5A4 \uC8FD\uC740 \uACAC\uC2B5\uAE30\uC0AC\uC758 \uBD80\uCE20
+      \uAC19\uC740\uB370..\uB09C \uC5B8\uC81C\uCBE4 \uC8FD\uC73C\uB824\uB098.."
     _spritePath: Sprite/Item/Boots/Boots_2
     _atk: 0
     _atkSpeed: 0
@@ -509,8 +531,9 @@ MonoBehaviour:
   - _id: 40001017
     _grade: 1
     _type: 3
-    _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uC2E0\uBC1C(A)"
-    _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uC2E0\uBC1C\uC774\uB2E4."
+    _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBD80\uCE20(A)"
+    _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBD80\uCE20 \uC911\uC5D0\uC11C
+      \uB098\uB984 \uAD1C\uCC2E\uC740 \uC0C1\uD0DC\uB97C \uBCF4\uC774\uACE0 \uC788\uAD70"
     _spritePath: Sprite/Item/Boots/Boots_2_A
     _atk: 0
     _atkSpeed: 0
@@ -521,9 +544,9 @@ MonoBehaviour:
   - _id: 40001018
     _grade: 1
     _type: 3
-    _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uC2E0\uBC1C(S)"
-    _description: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uC2E0\uBC1C\uC774\uB2E4. \uAE30\uC874
-      \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBD80\uCE20(S)"
+    _description: "\uC774\uAC8C \uACAC\uC2B5\uAE30\uC0AC\uC758 \uBD80\uCE20\uC774\uB77C\uACE0?
+      \uC544\uB9C8 \uAF64 \uC4F8\uB9CC\uD55C \uAE30\uC0AC\uC600\uB358\uAC83 \uAC19\uAD70."
     _spritePath: Sprite/Item/Boots/Boots_2_S
     _atk: 0
     _atkSpeed: 0
@@ -534,8 +557,8 @@ MonoBehaviour:
   - _id: 40001019
     _grade: 2
     _type: 3
-    _name: "\uB9C8\uC2A4\uD130\uC758 \uC2E0\uBC1C"
-    _description: "\uB9C8\uC2A4\uD130\uC758 \uC2E0\uBC1C\uC774\uB2E4."
+    _name: "\uB9C8\uC2A4\uD130\uC758 \uBD80\uCE20"
+    _description: "\uC61B \uB3D9\uB8CC \uD30C\uC774\uC758 \uBD80\uCE20.. \uC798\uC4F0\uACA0\uB2E4!"
     _spritePath: Sprite/Item/Boots/Boots_3
     _atk: 0
     _atkSpeed: 0
@@ -546,8 +569,9 @@ MonoBehaviour:
   - _id: 40001020
     _grade: 2
     _type: 3
-    _name: "\uB9C8\uC2A4\uD130\uC758 \uC2E0\uBC1C(A)"
-    _description: "\uB9C8\uC2A4\uD130\uC758 \uC2E0\uBC1C\uC774\uB2E4."
+    _name: "\uB9C8\uC2A4\uD130\uC758 \uBD80\uCE20(A)"
+    _description: "\uC774 \uBD80\uCE20\uB294 \uC694\uC815\uC774 \uB9CC\uB4E0\uAC74\uAC00?
+      \uBAB8\uC774 \uC544\uC8FC \uAC00\uBCBC\uC6CC \uC9C4 \uAC83\uAC19\uC544!"
     _spritePath: Sprite/Item/Boots/Boots_3_A
     _atk: 0
     _atkSpeed: 0
@@ -558,9 +582,9 @@ MonoBehaviour:
   - _id: 40001021
     _grade: 2
     _type: 3
-    _name: "\uB9C8\uC2A4\uD130\uC758 \uC2E0\uBC1C(S)"
-    _description: "\uB9C8\uC2A4\uD130\uC758 \uC2E0\uBC1C\uC774\uB2E4. \uAE30\uC874
-      \uB4F1\uAE09\uC5D0\uC11C \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _name: "\uB9C8\uC2A4\uD130\uC758 \uBD80\uCE20(S)"
+    _description: "\uB0B4\uAD6C\uB3C4\uAC00 \uC0C1\uB2F9\uD55C \uBD80\uCE20\uC774\uAD70..
+      \uC774\uC815\uB3C4\uBA74..!"
     _spritePath: Sprite/Item/Boots/Boots_3_S
     _atk: 0
     _atkSpeed: 0
@@ -571,8 +595,9 @@ MonoBehaviour:
   - _id: 40001022
     _grade: 3
     _type: 3
-    _name: "\uC2E0\uC758 \uC2E0\uBC1C"
-    _description: "\uC2E0\uC758 \uC2E0\uBC1C\uC774\uB2E4."
+    _name: "\uC2E0\uC758 \uBD80\uCE20"
+    _description: "\uC774\uB7F0 \uBD80\uCE20\uAC00 \uC544\uC9C1 \uC788\uC5C8\uB2E4\uB2C8..\uB9C8\uC655\uC758
+      \uACF5\uACA9\uC744 \uD53C\uD560 \uC218 \uC788\uC744 \uAC83 \uAC19\uC544."
     _spritePath: Sprite/Item/Boots/Boots_4
     _atk: 0
     _atkSpeed: 0
@@ -583,8 +608,9 @@ MonoBehaviour:
   - _id: 40001023
     _grade: 3
     _type: 3
-    _name: "\uC2E0\uC758 \uC2E0\uBC1C(A)"
-    _description: "\uC2E0\uC758 \uC2E0\uBC1C\uC774\uB2E4."
+    _name: "\uC2E0\uC758 \uBD80\uCE20(A)"
+    _description: "\uC774 \uBCF4\uB2E4 \uC88B\uC740 \uBD80\uCE20\uC740 \uC138\uC0C1\uC5D0
+      \uC5C6\uC744\uAC83\uC774\uC57C!!"
     _spritePath: Sprite/Item/Boots/Boots_4_A
     _atk: 0
     _atkSpeed: 0
@@ -595,9 +621,8 @@ MonoBehaviour:
   - _id: 40001024
     _grade: 3
     _type: 3
-    _name: "\uC2E0\uC758 \uC2E0\uBC1C(S)"
-    _description: "\uC2E0\uC758 \uC2E0\uBC1C\uC774\uB2E4. \uAE30\uC874 \uB4F1\uAE09\uC5D0\uC11C
-      \uCD5C\uACE0\uC758 \uC0C1\uD0DC\uC774\uB2E4."
+    _name: "\uC2E0\uC758 \uBD80\uCE20(S)"
+    _description: "\uC2E0\uC774\uC2DC\uC5EC.. \uB2F9\uC2E0\uC758 \uB73B\uC744 \uBC1B\uB4E4\uACA0\uC2B5\uB2C8\uB2E4."
     _spritePath: Sprite/Item/Boots/Boots_4_S
     _atk: 0
     _atkSpeed: 0

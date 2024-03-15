@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemDB : MonoBehaviour
+public class ItemDB 
 {
     private Dictionary<int, ItemData> _items = new();
     // int에는 _id키값(10001001)를 넣어준다.
