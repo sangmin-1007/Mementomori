@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -121,7 +121,1414 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_0
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 83
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e051b344d5cc3fd4d87dd38a5ed8143d
+      internalID: -556421473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_1
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 83
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28983972a7a61544abee66036716ed13
+      internalID: 1482485348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_2
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 83
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58d86fa8145bca84a926b20e93abee7e
+      internalID: -1305281301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_3
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 86
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcde7b95b2e5f204881677dd331df998
+      internalID: 1534786399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_4
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 83
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 371b5bcbbaa24904f88b5676180ab0b3
+      internalID: 1222408806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_5
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 83
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 066503b9e04c2fb4aad5c91c8426d2c3
+      internalID: 1128304580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_6
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 83
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 795a51dd3ffdb9c4dadfc087098dfcc1
+      internalID: 1126841921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_7
+      rect:
+        serializedVersion: 2
+        x: 1348
+        y: 86
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4ce1c6472d52844f9b68552d283b540
+      internalID: 1401086534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_8
+      rect:
+        serializedVersion: 2
+        x: 1476
+        y: 83
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ed4071ed8dfe2b4d817be0d93b41be8
+      internalID: 1842741956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_9
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 77
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19c6aed5a0c5f694fadd2fd5c287085a
+      internalID: 1710229464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_10
+      rect:
+        serializedVersion: 2
+        x: 4273
+        y: 63
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd3e181377a1af44bb56d2bfcd1f4beb
+      internalID: -1306787531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_11
+      rect:
+        serializedVersion: 2
+        x: 4402
+        y: 78
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6810e9620db963498d69ca531d36001
+      internalID: -332635427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_12
+      rect:
+        serializedVersion: 2
+        x: 4535
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3fd707075ac5742af428636c4b06e3
+      internalID: 397418390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_13
+      rect:
+        serializedVersion: 2
+        x: 4552
+        y: 78
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98bdca634a55eeb44b0844036c46d083
+      internalID: -1571916589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_14
+      rect:
+        serializedVersion: 2
+        x: 4678
+        y: 80
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e7a37848bc91e142a5f22b571621355
+      internalID: 903180285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_15
+      rect:
+        serializedVersion: 2
+        x: 4707
+        y: 63
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22dc2d19c88ed8740991f014a416190d
+      internalID: 602661148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_16
+      rect:
+        serializedVersion: 2
+        x: 4838
+        y: 63
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb6a1104d49e9bb45ad871362aaf216f
+      internalID: 482797761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_17
+      rect:
+        serializedVersion: 2
+        x: 4969
+        y: 63
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dff5739ffde7c9c46af79036e721a523
+      internalID: 1091417654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_18
+      rect:
+        serializedVersion: 2
+        x: 5348
+        y: 63
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b9e724954997694284a8f38a6b38823
+      internalID: -985918642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_19
+      rect:
+        serializedVersion: 2
+        x: 5477
+        y: 63
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c98eb91617b879347bea3bd42a3d3270
+      internalID: 1341302228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_20
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 77
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a0e2d56e2a4dac45a967aac4ccc2433
+      internalID: 1588833291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_21
+      rect:
+        serializedVersion: 2
+        x: 1838
+        y: 68
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d64ee94207aada4e8e6c1ee81eb374d
+      internalID: -2078258133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_22
+      rect:
+        serializedVersion: 2
+        x: 2093
+        y: 68
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a0a15c5721f13a4a876448092489cd6
+      internalID: 1412723649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_23
+      rect:
+        serializedVersion: 2
+        x: 2219
+        y: 71
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52b38ab718b4c574b8f39ea8929c3823
+      internalID: 1711955014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_24
+      rect:
+        serializedVersion: 2
+        x: 2351
+        y: 68
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70b82001109f2e5489c83d6d567912d3
+      internalID: -2041779353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_25
+      rect:
+        serializedVersion: 2
+        x: 2475
+        y: 68
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 037bf8ec28587454694d658e79735b8f
+      internalID: 337771451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_26
+      rect:
+        serializedVersion: 2
+        x: 2604
+        y: 68
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fed5197d74e2d744abcc6dedba13bf4
+      internalID: 967802025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_27
+      rect:
+        serializedVersion: 2
+        x: 2731
+        y: 71
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7a2260ef469f3942a3ef7e4d7c83318
+      internalID: 1576024875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_28
+      rect:
+        serializedVersion: 2
+        x: 2863
+        y: 68
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f03d74cf6e132744acdf02d3c8f6063
+      internalID: 1372853753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_29
+      rect:
+        serializedVersion: 2
+        x: 3115
+        y: 68
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad50c4f3a17b54046bbb12f88573f862
+      internalID: -7815138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_30
+      rect:
+        serializedVersion: 2
+        x: 3244
+        y: 71
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f5b2c63a0b96048ae42117a38301e7
+      internalID: -1492589956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_31
+      rect:
+        serializedVersion: 2
+        x: 3374
+        y: 68
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e61b03d65263d9044b5c0d77a8fe527d
+      internalID: 1719463629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_32
+      rect:
+        serializedVersion: 2
+        x: 3626
+        y: 68
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9591e1d121e331144a97b184f626c7a9
+      internalID: -396313044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_33
+      rect:
+        serializedVersion: 2
+        x: 3756
+        y: 71
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e43a2b76f0cc2843b63e7d968a47544
+      internalID: -309541809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_34
+      rect:
+        serializedVersion: 2
+        x: 3886
+        y: 68
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cded4844c8f025e429d514f888cc6037
+      internalID: -1639281278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_35
+      rect:
+        serializedVersion: 2
+        x: 4015
+        y: 66
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 938f2a046e6503c4293398672f36b559
+      internalID: 48429379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_36
+      rect:
+        serializedVersion: 2
+        x: 4146
+        y: 63
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329caead0b2827843b3bc709b2d37889
+      internalID: 1083008371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_37
+      rect:
+        serializedVersion: 2
+        x: 4417
+        y: 63
+        width: 49
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5e2916e912ed6f469f7b0c45ed4985e
+      internalID: 1781530144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_38
+      rect:
+        serializedVersion: 2
+        x: 4569
+        y: 63
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75ba683451169634d8bd870bcf92da85
+      internalID: 175925779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_39
+      rect:
+        serializedVersion: 2
+        x: 5098
+        y: 66
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e973c4f8b1a742a4facda8efac660c36
+      internalID: -1330169452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_40
+      rect:
+        serializedVersion: 2
+        x: 5221
+        y: 63
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4e427ec01e043947954558737143a56
+      internalID: 382103955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_41
+      rect:
+        serializedVersion: 2
+        x: 5606
+        y: 77
+        width: 24
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d259855b00ddb9a47b4f321f856e33bc
+      internalID: 79915842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_42
+      rect:
+        serializedVersion: 2
+        x: 5736
+        y: 77
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cbd652356bcd654792053491dcd2829
+      internalID: -1655419528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_43
+      rect:
+        serializedVersion: 2
+        x: 5747
+        y: 77
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5441d27f4e2a11a48b5607a772b49a90
+      internalID: -1947350686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_44
+      rect:
+        serializedVersion: 2
+        x: 5865
+        y: 77
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2e0f611d7c525244af7857a2bea1a0c
+      internalID: -680632014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_45
+      rect:
+        serializedVersion: 2
+        x: 5877
+        y: 77
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f9f1277f9114164a875d46fcf71a532
+      internalID: 1812045481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_46
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 68
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b086c40581761b54fa58d0e85ce062e2
+      internalID: -224432911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_47
+      rect:
+        serializedVersion: 2
+        x: 2989
+        y: 68
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26db950f05dff5b42967b6773add18fd
+      internalID: -333298221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_48
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 68
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c07985374e4fcaf4d932cfbc09664f7d
+      internalID: 273992913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_49
+      rect:
+        serializedVersion: 2
+        x: 4402
+        y: 63
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e662a9aa7bb0ca40b59c947f66b2e8c
+      internalID: 164490170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_50
+      rect:
+        serializedVersion: 2
+        x: 4537
+        y: 63
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2c188ab8ebdc8442a0526f4b43fa23f
+      internalID: -1392520446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_51
+      rect:
+        serializedVersion: 2
+        x: 4552
+        y: 52
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca3dddc39d4b5ae47afb205d1fe45b71
+      internalID: -1102914113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_52
+      rect:
+        serializedVersion: 2
+        x: 4669
+        y: 55
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a6127da03194e44853f97bc53b252a
+      internalID: 1632571177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_53
+      rect:
+        serializedVersion: 2
+        x: 5495
+        y: 66
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 751b3534095ae174a8d637a203fbe550
+      internalID: 1648926721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_54
+      rect:
+        serializedVersion: 2
+        x: 5606
+        y: 65
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e77a2d0dccabce0449b552267f8f2e6c
+      internalID: -1867461815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_55
+      rect:
+        serializedVersion: 2
+        x: 5621
+        y: 65
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e98064875d925a643a4d926adda22b36
+      internalID: 124023385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_56
+      rect:
+        serializedVersion: 2
+        x: 5736
+        y: 66
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ec6e62c7e6e354ba395bc7ff36218f
+      internalID: -755686056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_57
+      rect:
+        serializedVersion: 2
+        x: 5747
+        y: 66
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18d5ef87ea4f75648bb94567b7ec6268
+      internalID: 1803095176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_58
+      rect:
+        serializedVersion: 2
+        x: 5863
+        y: 66
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eeef586d0457f845aa8669de55bad1b
+      internalID: 852163867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_59
+      rect:
+        serializedVersion: 2
+        x: 5877
+        y: 66
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 754d16db8bdae8e419a5cc86ea79fd5d
+      internalID: 58241088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_60
+      rect:
+        serializedVersion: 2
+        x: 4284
+        y: 48
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acec0627d13f2464a818a3e286418dfd
+      internalID: 1097261805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_61
+      rect:
+        serializedVersion: 2
+        x: 4414
+        y: 51
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f14a360bebb7a574abb64081b2d9f899
+      internalID: -1599020548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_62
+      rect:
+        serializedVersion: 2
+        x: 4425
+        y: 51
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b14325c87237bb94c9ebb505efa2fe57
+      internalID: 1672385738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_63
+      rect:
+        serializedVersion: 2
+        x: 4540
+        y: 54
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8fc79acca5cc26469b667813ede7625
+      internalID: -1207328605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_64
+      rect:
+        serializedVersion: 2
+        x: 4801
+        y: 57
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fb228b15d3fc7a47be36c9117e71f59
+      internalID: -741560337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_65
+      rect:
+        serializedVersion: 2
+        x: 4035
+        y: 45
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c437deffccd19b4fb19c5fd5c30fd09
+      internalID: -417190287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_NecromancerAttackEffect_strip47_66
+      rect:
+        serializedVersion: 2
+        x: 4161
+        y: 45
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdbf2e5d84492f546b595876256c42cb
+      internalID: 1728374791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +1539,74 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spr_NecromancerAttackEffect_strip47_0: -556421473
+      spr_NecromancerAttackEffect_strip47_1: 1482485348
+      spr_NecromancerAttackEffect_strip47_10: -1306787531
+      spr_NecromancerAttackEffect_strip47_11: -332635427
+      spr_NecromancerAttackEffect_strip47_12: 397418390
+      spr_NecromancerAttackEffect_strip47_13: -1571916589
+      spr_NecromancerAttackEffect_strip47_14: 903180285
+      spr_NecromancerAttackEffect_strip47_15: 602661148
+      spr_NecromancerAttackEffect_strip47_16: 482797761
+      spr_NecromancerAttackEffect_strip47_17: 1091417654
+      spr_NecromancerAttackEffect_strip47_18: -985918642
+      spr_NecromancerAttackEffect_strip47_19: 1341302228
+      spr_NecromancerAttackEffect_strip47_2: -1305281301
+      spr_NecromancerAttackEffect_strip47_20: 1588833291
+      spr_NecromancerAttackEffect_strip47_21: -2078258133
+      spr_NecromancerAttackEffect_strip47_22: 1412723649
+      spr_NecromancerAttackEffect_strip47_23: 1711955014
+      spr_NecromancerAttackEffect_strip47_24: -2041779353
+      spr_NecromancerAttackEffect_strip47_25: 337771451
+      spr_NecromancerAttackEffect_strip47_26: 967802025
+      spr_NecromancerAttackEffect_strip47_27: 1576024875
+      spr_NecromancerAttackEffect_strip47_28: 1372853753
+      spr_NecromancerAttackEffect_strip47_29: -7815138
+      spr_NecromancerAttackEffect_strip47_3: 1534786399
+      spr_NecromancerAttackEffect_strip47_30: -1492589956
+      spr_NecromancerAttackEffect_strip47_31: 1719463629
+      spr_NecromancerAttackEffect_strip47_32: -396313044
+      spr_NecromancerAttackEffect_strip47_33: -309541809
+      spr_NecromancerAttackEffect_strip47_34: -1639281278
+      spr_NecromancerAttackEffect_strip47_35: 48429379
+      spr_NecromancerAttackEffect_strip47_36: 1083008371
+      spr_NecromancerAttackEffect_strip47_37: 1781530144
+      spr_NecromancerAttackEffect_strip47_38: 175925779
+      spr_NecromancerAttackEffect_strip47_39: -1330169452
+      spr_NecromancerAttackEffect_strip47_4: 1222408806
+      spr_NecromancerAttackEffect_strip47_40: 382103955
+      spr_NecromancerAttackEffect_strip47_41: 79915842
+      spr_NecromancerAttackEffect_strip47_42: -1655419528
+      spr_NecromancerAttackEffect_strip47_43: -1947350686
+      spr_NecromancerAttackEffect_strip47_44: -680632014
+      spr_NecromancerAttackEffect_strip47_45: 1812045481
+      spr_NecromancerAttackEffect_strip47_46: -224432911
+      spr_NecromancerAttackEffect_strip47_47: -333298221
+      spr_NecromancerAttackEffect_strip47_48: 273992913
+      spr_NecromancerAttackEffect_strip47_49: 164490170
+      spr_NecromancerAttackEffect_strip47_5: 1128304580
+      spr_NecromancerAttackEffect_strip47_50: -1392520446
+      spr_NecromancerAttackEffect_strip47_51: -1102914113
+      spr_NecromancerAttackEffect_strip47_52: 1632571177
+      spr_NecromancerAttackEffect_strip47_53: 1648926721
+      spr_NecromancerAttackEffect_strip47_54: -1867461815
+      spr_NecromancerAttackEffect_strip47_55: 124023385
+      spr_NecromancerAttackEffect_strip47_56: -755686056
+      spr_NecromancerAttackEffect_strip47_57: 1803095176
+      spr_NecromancerAttackEffect_strip47_58: 852163867
+      spr_NecromancerAttackEffect_strip47_59: 58241088
+      spr_NecromancerAttackEffect_strip47_6: 1126841921
+      spr_NecromancerAttackEffect_strip47_60: 1097261805
+      spr_NecromancerAttackEffect_strip47_61: -1599020548
+      spr_NecromancerAttackEffect_strip47_62: 1672385738
+      spr_NecromancerAttackEffect_strip47_63: -1207328605
+      spr_NecromancerAttackEffect_strip47_64: -741560337
+      spr_NecromancerAttackEffect_strip47_65: -417190287
+      spr_NecromancerAttackEffect_strip47_66: 1728374791
+      spr_NecromancerAttackEffect_strip47_7: 1401086534
+      spr_NecromancerAttackEffect_strip47_8: 1842741956
+      spr_NecromancerAttackEffect_strip47_9: 1710229464
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

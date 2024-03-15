@@ -15,7 +15,7 @@ public class MonsterAnimationController : MonsterAnimations
 
     private void Update()
     {
-        Move.
+        //Move.
     }
 
     private void Walk(Vector2 obj)
