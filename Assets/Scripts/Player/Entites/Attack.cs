@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class Attack : MonoBehaviour
@@ -34,37 +35,6 @@ public class Attack : MonoBehaviour
     public Vector2 boxSize1;
     public Vector2 boxSize2;
 
-    private void OnShoot(AttackSO attackSO)
-    {
-        Collider2D[] collider2D = Physics2D.OverlapBoxAll(pos2.position, boxSize2, 0);
-
-        foreach (Collider2D collider in collider2D)
-        {
-            Debug.Log(collider.tag);
-        }
-
-        if (spriteRenderer.flipX == false)
-        {
-            Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos1.position, boxSize1, 0);
-            
-            foreach (Collider2D collider in collider2Ds)
-            {
-                Debug.Log(collider.tag);
-            }
-        }
-        else if (spriteRenderer.flipX == true)
-        {
-            Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos3.position, boxSize1, 0);
-
-            foreach (Collider2D collider in collider2Ds)
-            {
-                Debug.Log(collider.tag);
-            }
-        }
-
-       
-    }
-
     public void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
@@ -73,18 +43,85 @@ public class Attack : MonoBehaviour
         {
             Gizmos.DrawWireCube(pos1.position, boxSize1);
         }
-        else if(spriteRenderer.flipX == true)
+        else if (spriteRenderer.flipX == true)
         {
             Gizmos.DrawWireCube(pos3.position, boxSize1);
         }
-        
-        
-        
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnShoot(AttackSO attackSO)
     {
-        
+        Collider2D[] collider2D = Physics2D.OverlapBoxAll(pos2.position, boxSize2, 0);
+
+        foreach (Collider2D collider in collider2D)
+        {
+            if (attackSO.target.value == (attackSO.target.value | (1 << collider.gameObject.layer)))
+            {
+                HealthSystem healthSystem = collider.GetComponent<HealthSystem>();
+                if (healthSystem != null)
+                {
+                    healthSystem.ChangeHealth(-attackSO.power);
+                    if (attackSO.isOnKnockback)
+                    {
+                        Movement movement = collider.GetComponent<Movement>();
+                        if (movement != null)
+                        {
+                            movement.ApplyKnockback(transform, attackSO.knockbackPower, attackSO.knockbackTime);
+                        }
+                    }
+                }
+            }
+        }
+
+        if (spriteRenderer.flipX == false)
+        {
+            Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos1.position, boxSize1, 0);
+            
+            foreach (Collider2D collider in collider2Ds)
+            {
+                if (attackSO.target.value == (attackSO.target.value | (1 << collider.gameObject.layer)))
+                {
+                    HealthSystem healthSystem = collider.GetComponent<HealthSystem>();
+                    if(healthSystem != null )
+                    {
+                        healthSystem.ChangeHealth(-attackSO.power);
+                        if(attackSO.isOnKnockback)
+                        {
+                            Movement movement = collider.GetComponent<Movement>();
+                            if(movement != null )
+                            {
+                                movement.ApplyKnockback(transform, attackSO.knockbackPower, attackSO.knockbackTime);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        else if (spriteRenderer.flipX == true)
+        {
+            Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos3.position, boxSize1, 0);
+
+            foreach (Collider2D collider in collider2Ds)
+            {
+                if (attackSO.target.value == (attackSO.target.value | (1 << collider.gameObject.layer)))
+                {
+                    HealthSystem healthSystem = collider.GetComponent<HealthSystem>();
+                    if (healthSystem != null)
+                    {
+                        healthSystem.ChangeHealth(-attackSO.power);
+                        if (attackSO.isOnKnockback)
+                        {
+                            Movement movement = collider.GetComponent<Movement>();
+                            if (movement != null)
+                            {
+                                movement.ApplyKnockback(transform, attackSO.knockbackPower, attackSO.knockbackTime);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+       
     }
 }

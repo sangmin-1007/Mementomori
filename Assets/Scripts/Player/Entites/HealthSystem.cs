@@ -48,7 +48,7 @@ public class HealthSystem : MonoBehaviour
             return false;
         }
 
-        _timeSinceLastChange = 0;
+        _timeSinceLastChange = 0f;
         CurrentHealth += change;
         CurrentHealth = CurrentHealth > MaxHealth ? MaxHealth : CurrentHealth;
         CurrentHealth = CurrentHealth < 0 ? 0 : CurrentHealth;
