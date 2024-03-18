@@ -9,8 +9,12 @@ public class GameSceneManager : MonoBehaviour
 
     public void InitializeGameScene()
     {
-        var GameMap = Resources.Load<GameObject>("Prefabs/Map");
-        var Player = Resources.Load<GameObject>("Prefabs/Player");
+        var gameMap = Resources.Load<GameObject>("Prefabs/Map/GameMap");
+        var mapInfo = Instantiate(gameMap).GetComponent<MapInfo>();
+
+        var playerPath = Resources.Load<GameObject>("Prefabs/Player/PlayerTest");
+        Player = Instantiate(playerPath, mapInfo.playerSpawnPoint.position, Quaternion.Euler(Vector3.zero));
+
     }
     
 }

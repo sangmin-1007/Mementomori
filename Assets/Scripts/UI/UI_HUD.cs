@@ -14,6 +14,7 @@ public class UI_HUD : UI_Base<UI_HUD>
     [SerializeField] private Image staminaBar;
     [SerializeField] private Image expBar;
 
+
     private int curHp, maxHP;
     private int curStamina, maxStamina;
     private int curExp, maxExp;
@@ -22,6 +23,11 @@ public class UI_HUD : UI_Base<UI_HUD>
     {
         miniMapAddButton.onClick.AddListener(OnClickAddButton);
         miniMapSubButton.onClick.AddListener(OnClickSubButton);
+    }
+
+    private void OnDisable()
+    {
+        DestroyUI();
     }
 
     private void Update()
@@ -51,7 +57,7 @@ public class UI_HUD : UI_Base<UI_HUD>
 
     private void OnClickSubButton()
     {
-        if(miniMapCanvasGroup.alpha >= 0 )
+        if(miniMapCanvasGroup.alpha >= 0.2f)
         {
             miniMapCanvasGroup.alpha -= 0.1f;
         }

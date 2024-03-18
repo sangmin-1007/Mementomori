@@ -32,7 +32,7 @@ public class LobbyIneract : MonoBehaviour
 
             case InteractType.Door:
 
-                Managers.UI_Manager.ShowLoadingUI("LobbyScene-KSM");
+                Managers.UI_Manager.ShowLoadingUI("GameScene");
 
             break;
 
