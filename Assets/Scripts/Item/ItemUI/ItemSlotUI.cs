@@ -37,6 +37,7 @@ public class ItemSlotUI : MonoBehaviour
         
         if (outline != null)
         {
+            Debug.Log("dfdf");
             outline.enabled = equipped;
         }
 

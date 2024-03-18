@@ -117,7 +117,7 @@ public class Inventory : UI_Base<Inventory>
         {
 
             emptySlot.item = item; // 거기에 아이템 추가
-            spriteRenderer.sprite = item.Sprite;
+           
 
 
 
@@ -198,7 +198,7 @@ public class Inventory : UI_Base<Inventory>
 
         if (selectedItem.item.Atk > 0) // 아이템이 검일때 검은 공격력/공격속도만 보여준다.
         {
-            Debug.Log("크다!");
+           
             selectedItemStatAtk.gameObject.SetActive(true);
             selectedItemStatValue_Atk.gameObject.SetActive(true);
             selectedItemStatValue_Atk.text += selectedItem.item.Atk.ToString() + "\n";
@@ -232,14 +232,14 @@ public class Inventory : UI_Base<Inventory>
             selectedItemStatValue_Speed.text += selectedItem.item.Speed.ToString() + "\n";
         }
 
-        equipButton.SetActive(selectedItem.item.Type == ItemType.Weapon && !uiSlots[index].equipped);
-        equipButton.SetActive(selectedItem.item.Type == ItemType.Boots && !uiSlots[index].equipped);
-        equipButton.SetActive(selectedItem.item.Type == ItemType.Shield && !uiSlots[index].equipped);
-        equipButton.SetActive(selectedItem.item.Type == ItemType.Armor && !uiSlots[index].equipped);
-        unequipButton.SetActive(selectedItem.item.Type == ItemType.Weapon && uiSlots[index].equipped);
-        unequipButton.SetActive(selectedItem.item.Type == ItemType.Boots && uiSlots[index].equipped);
-        unequipButton.SetActive(selectedItem.item.Type == ItemType.Shield && uiSlots[index].equipped);
-        unequipButton.SetActive(selectedItem.item.Type == ItemType.Armor && uiSlots[index].equipped);
+        equipButton.SetActive(true);
+        //equipButton.SetActive(selectedItem.item.Type == ItemType.Boots && !uiSlots[index].equipped);
+        //equipButton.SetActive(selectedItem.item.Type == ItemType.Shield && !uiSlots[index].equipped);
+        //equipButton.SetActive(selectedItem.item.Type == ItemType.Armor && !uiSlots[index].equipped);
+        //unequipButton.SetActive(selectedItem.item.Type == ItemType.Weapon );
+        //unequipButton.SetActive(selectedItem.item.Type == ItemType.Boots && uiSlots[index].equipped);
+        //unequipButton.SetActive(selectedItem.item.Type == ItemType.Shield && uiSlots[index].equipped);
+        //unequipButton.SetActive(selectedItem.item.Type == ItemType.Armor && uiSlots[index].equipped);
        
     }
 
