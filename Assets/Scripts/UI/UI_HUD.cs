@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,7 +16,11 @@ public class UI_HUD : UI_Base<UI_HUD>
     [SerializeField] private Image staminaBar;
     [SerializeField] private Image expBar;
 
+    [SerializeField] private TextMeshProUGUI timeText;
+
     private HealthSystem playerStats;
+
+    private float time;
 
     private float curHp, maxHP;
     private float curStamina, maxStamina;
@@ -32,11 +38,14 @@ public class UI_HUD : UI_Base<UI_HUD>
 
     private void OnDisable()
     {
+        Managers.GameManager.ResetTimer();
         DestroyUI();
     }
 
     private void Update()
     {
+        Timer();
+
         curHp = playerStats.CurrentHealth;
 
         hpBar.fillAmount = Mathf.Lerp(hpBar.fillAmount, GetPercentage(curHp,maxHP), Time.deltaTime * 3f);
@@ -69,5 +78,17 @@ public class UI_HUD : UI_Base<UI_HUD>
             miniMapCanvasGroup.alpha -= 0.1f;
         }
         
+    }
+
+    private void Timer()
+    {
+        time = Managers.GameManager.timer;
+
+        Managers.GameManager.Ontimer();
+
+        int min = Mathf.Max(0, (int)time / 60);
+        int sec = Mathf.Max(0, (int)time % 60);
+
+        timeText.text = min.ToString("D2") + ":" + sec.ToString("D2");
     }
 }
