@@ -17,7 +17,7 @@ public class Spawner : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer > 0.5f)
+        if (timer > 5f)
         {
             timer = 0f;
             if (SpawnManager.instance.pool == null)

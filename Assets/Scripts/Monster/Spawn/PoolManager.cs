@@ -22,7 +22,7 @@ public class PoolManager : MonoBehaviour
     {
         GameObject select = null;
 
-        foreach(GameObject item in pools[index])
+        foreach (GameObject item in pools[index])
         {
             if (!item.activeSelf)
             {
