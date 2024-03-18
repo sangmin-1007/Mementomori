@@ -14,13 +14,18 @@ public class UI_HUD : UI_Base<UI_HUD>
     [SerializeField] private Image staminaBar;
     [SerializeField] private Image expBar;
 
+    private HealthSystem playerStats;
 
-    private int curHp, maxHP;
-    private int curStamina, maxStamina;
-    private int curExp, maxExp;
+    private float curHp, maxHP;
+    private float curStamina, maxStamina;
+    private float curExp, maxExp;
 
     private void Start()
     {
+        playerStats = Managers.GameSceneManager.Player.GetComponent<HealthSystem>();
+
+        maxHP = playerStats.MaxHealth;
+
         miniMapAddButton.onClick.AddListener(OnClickAddButton);
         miniMapSubButton.onClick.AddListener(OnClickSubButton);
     }
@@ -32,7 +37,9 @@ public class UI_HUD : UI_Base<UI_HUD>
 
     private void Update()
     {
-        hpBar.fillAmount = Mathf.Lerp(hpBar.fillAmount, 0, Time.deltaTime * 3f);
+        curHp = playerStats.CurrentHealth;
+
+        hpBar.fillAmount = Mathf.Lerp(hpBar.fillAmount, GetPercentage(curHp,maxHP), Time.deltaTime * 3f);
         staminaBar.fillAmount = Mathf.Lerp(staminaBar.fillAmount, 0, Time.deltaTime * 5f);
         expBar.fillAmount = Mathf.Lerp(expBar.fillAmount, 1f, Time.deltaTime * 1.5f);
 
