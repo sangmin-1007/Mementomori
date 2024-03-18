@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 2059478211930601490}
   - component: {fileID: 3862767294892471841}
   - component: {fileID: -5627410295261115579}
+  - component: {fileID: -6148852042165205791}
   - component: {fileID: 8381624744668391208}
   m_Layer: 0
   m_Name: SkeletonWarrior
@@ -253,6 +254,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.7
+--- !u!114 &-6148852042165205791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2367717372256310082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f97482fe437759540be38fb309e73313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8381624744668391208
 MonoBehaviour:
   m_ObjectHideFlags: 0

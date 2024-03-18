@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Spawner : MonoBehaviour
 {
     public Transform[] spawnPoint;
 
-    float timer;
+    float timer = 0f;
+    public static int count = 0;
 
     private void Awake()
     {
@@ -17,14 +19,15 @@ public class Spawner : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer > 5f)
+        if (timer > 1f)
         {
             timer = 0f;
-            if (SpawnManager.instance.pool == null)
+            if (SpawnManager.instance.pool == null || count > 5)
             {
                 return;
             }
             Spawn();
+            count++;
         }
     }
 
