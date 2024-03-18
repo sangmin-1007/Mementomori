@@ -11,10 +11,17 @@ public class Managers : MonoBehaviour
 
     // Manager
     private UI_Manager _uiManager;
+    private GameSceneManager _gameSceneManager;
+    private LobbySceneManager _LobbySceneManager;
+    private GameManager _gameManager;
+    private SceneLoader _sceneLoader;
 
     // Manager Singletone
     public static UI_Manager UI_Manager => Instance._uiManager;
-
+    public static GameManager GameManager => Instance._gameManager;
+    public static LobbySceneManager LobbySceneManager => Instance._LobbySceneManager;
+    public static GameSceneManager GameSceneManager => Instance._gameSceneManager;
+    public static SceneLoader SceneLoader => Instance._sceneLoader;
 
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
@@ -42,6 +49,26 @@ public class Managers : MonoBehaviour
             if(!go.TryGetComponent(out instance._uiManager))
             {
                 instance._uiManager = go.AddComponent<UI_Manager>();
+            }
+
+            if(!go.TryGetComponent(out instance._gameManager))
+            {
+                instance._gameManager = go.AddComponent<GameManager>();
+            }
+
+            if (!go.TryGetComponent(out instance._gameSceneManager))
+            {
+                instance._gameSceneManager = go.AddComponent<GameSceneManager>();
+            }
+
+            if (!go.TryGetComponent(out instance._LobbySceneManager))
+            {
+                instance._LobbySceneManager= go.AddComponent<LobbySceneManager>();
+            }
+
+            if (!go.TryGetComponent(out instance._sceneLoader))
+            {
+                instance._sceneLoader = go.AddComponent<SceneLoader>();
             }
         }
     }

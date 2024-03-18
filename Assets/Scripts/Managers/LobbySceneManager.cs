@@ -2,19 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameSceneManager : MonoBehaviour
+public class LobbySceneManager : MonoBehaviour
 {
     public GameObject Player { get; private set; }
-    
 
-    public void InitializeGameScene()
+    public void IntializeLobbyScene()
     {
-        var gameMap = Resources.Load<GameObject>("Prefabs/Map/GameMap");
-        var mapInfo = Instantiate(gameMap).GetComponent<MapInfo>();
-
+        var lobbyMap = Resources.Load<GameObject>("Prefabs/Map/Lobby");
+        var mapInfo = Instantiate(lobbyMap).GetComponent<MapInfo>();
+        
+        // TODO : PlayerInstantiate
         var playerPath = Resources.Load<GameObject>("Prefabs/Player/PlayerTest");
         Player = Instantiate(playerPath, mapInfo.playerSpawnPoint.position, Quaternion.Euler(Vector3.zero));
-
     }
-    
 }

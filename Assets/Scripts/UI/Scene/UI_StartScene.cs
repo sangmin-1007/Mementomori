@@ -33,8 +33,7 @@ public class UI_StartScene : UI_Base<UI_StartScene>
         {
             if (Input.anyKeyDown)
             {
-                Debug.Log("æ¿¿Ãµø");
-                Managers.UI_Manager.ShowLoadingUI("GameScene");
+                Managers.UI_Manager.ShowLoadingUI("LobbyScene");
             }
         }
     }
