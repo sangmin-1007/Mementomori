@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DevelopScene/KSM/StartScene-KSM.unity
     guid: 93f95a1e77d9f804f81b271782c09aa9
+  - enabled: 1
+    path: Assets/Scenes/DevelopScene/KSM/LobbyScene-KSM.unity
+    guid: afe0d3795e89eb6479b8b65e93d2dc81
+  - enabled: 1
+    path: Assets/Scenes/DevelopScene/KSM/GameScene-KSM.unity
+    guid: 50988fca611250b4dae1888171c01464
   m_configObjects: {}

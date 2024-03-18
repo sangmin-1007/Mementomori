@@ -24,6 +24,11 @@ public class UI_HUD : UI_Base<UI_HUD>
         miniMapSubButton.onClick.AddListener(OnClickSubButton);
     }
 
+    private void OnDisable()
+    {
+        DestroyUI();
+    }
+
     private void Update()
     {
         hpBar.fillAmount = Mathf.Lerp(hpBar.fillAmount, 0, Time.deltaTime * 3f);
@@ -51,7 +56,7 @@ public class UI_HUD : UI_Base<UI_HUD>
 
     private void OnClickSubButton()
     {
-        if(miniMapCanvasGroup.alpha >= 0 )
+        if(miniMapCanvasGroup.alpha >= 0.2f)
         {
             miniMapCanvasGroup.alpha -= 0.1f;
         }

@@ -4,39 +4,39 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
+using UnityEngine.SceneManagement;
 
-public class UI_GameOver : UI_Base<UI_GameOver>
+public class UI_GameClear : UI_Base<UI_GameClear>
 {
     [SerializeField] private Image backGround;
-    [SerializeField] private Button LobbyButton;
+    [SerializeField] private Button nextButton;
 
     [SerializeField] private CanvasGroup resultCanvasGroup;
 
-    [SerializeField] private TextMeshProUGUI gameOverText;
+    [SerializeField] private TextMeshProUGUI gameClearText;
+
 
     private void Start()
     {
-        LobbyButton.onClick.AddListener(OnClickLobbyButton);
-        StartCoroutine(GameOverCoroutine());
+        nextButton.onClick.AddListener(OnClickNextButton);
+        StartCoroutine(GameClearCoroutine());
     }
 
-    private void OnClickLobbyButton()
+    private void OnDisable()
     {
         DestroyUI();
-        Managers.UI_Manager.ShowLoadingUI("LobbyScene-KSM");
     }
 
-
-    private IEnumerator GameOverCoroutine()
+    private IEnumerator GameClearCoroutine()
     {
-        
+
 
         backGround.DOFade(1f, 2f);
         yield return new WaitForSeconds(2f);
 
         StartCoroutine(TypingText());
         yield return new WaitForSeconds(4f);
-        gameOverText.DOFade(0f, 2f);
+        gameClearText.DOFade(0f, 2f);
         yield return new WaitForSeconds(2f);
 
         resultCanvasGroup.DOFade(1f, 2f);
@@ -45,10 +45,15 @@ public class UI_GameOver : UI_Base<UI_GameOver>
 
     }
 
+    private void OnClickNextButton()
+    {
+        Debug.Log("EndingScene");
+    }
+
     private IEnumerator TypingText()
     {
-        gameOverText.text = "Game Over";
-        TMPDoText(gameOverText, 2f);
+        gameClearText.text = "Game Clear";
+        TMPDoText(gameClearText, 2f);
 
         yield break;
     }

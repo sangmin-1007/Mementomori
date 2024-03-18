@@ -4,9 +4,19 @@ using UnityEngine;
 
 public class KSM_Test : MonoBehaviour
 {
-    private void Start()
+    //private void Start()
+    //{
+    //    Managers.UI_Manager.ShowUI<UI_StartScene>();
+    //}
+    private void Update()
     {
-        Managers.UI_Manager.ShowUI<UI_StartScene>();
+        if(Input.GetKeyDown(KeyCode.H))
+        {
+            Managers.UI_Manager.ShowUI<UI_GameClear>();
+        }
+        else if (Input.GetKeyDown(KeyCode.G))
+        {
+            Managers.UI_Manager.ShowUI<UI_GameOver>();
+        }
     }
-
 }
