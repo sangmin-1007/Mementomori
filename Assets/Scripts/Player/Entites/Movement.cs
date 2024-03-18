@@ -19,16 +19,20 @@ public class Movement : MonoBehaviour
     private Vector2 _knockback = Vector2.zero;
     private float knockbackDuration = 0.0f;
 
+    public float CurrentSpeed { get; private set; }
+
     private void Awake()
     {
         _controller = GetComponent<PlayerController>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
-        defaultSpeed = speed;
+        _stats = GetComponent<PlayerStatsHandler>();
     }
 
     private void Start()
     {
+        CurrentSpeed = _stats.CurrentStates.speed;
+        CurrentSpeed = defaultSpeed;
         //±¸µ¶
         _controller.OnMoveEvent += Move;
         
@@ -57,7 +61,6 @@ public class Movement : MonoBehaviour
         _knockback = -(other.position - transform.position).normalized * power;
     }
 
-    public float speed;
     private float defaultSpeed;
     private bool isDash;
     public float dashSpeed;
@@ -91,7 +94,7 @@ public class Movement : MonoBehaviour
         }
         if (dashTime <= 0f)
         {
-            defaultSpeed = speed;
+            defaultSpeed = _stats.CurrentStates.speed;
             if (isDash)
                 dashTime = defaultTime;
         }
