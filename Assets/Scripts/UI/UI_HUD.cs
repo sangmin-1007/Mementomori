@@ -14,6 +14,7 @@ public class UI_HUD : UI_Base<UI_HUD>
     [SerializeField] private Image staminaBar;
     [SerializeField] private Image expBar;
 
+
     private int curHp, maxHP;
     private int curStamina, maxStamina;
     private int curExp, maxExp;

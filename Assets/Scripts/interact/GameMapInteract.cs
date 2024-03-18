@@ -14,6 +14,9 @@ public class GameMapInteract : MonoBehaviour
     private Vector2 PlayerDir;
     private void Start()
     {
+        player = Managers.GameSceneManager.Player;
+        PlayerInput = Managers.GameSceneManager.Player.GetComponent<PlayerController>();
+
         PlayerInput.OnMoveEvent += PlayerMoveDir;
     }
 
