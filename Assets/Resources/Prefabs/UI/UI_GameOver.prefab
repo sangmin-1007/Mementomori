@@ -4098,7 +4098,7 @@ RectTransform:
   - {fileID: 4470940801599973675}
   - {fileID: 5326353657984769066}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4184,6 +4184,7 @@ MonoBehaviour:
   LobbyButton: {fileID: 5623100703440070913}
   resultCanvasGroup: {fileID: 6192448827379334303}
   gameOverText: {fileID: 885544261348121770}
+  timeText: {fileID: 5683325492335847608}
 --- !u!1 &8511915148430824666
 GameObject:
   m_ObjectHideFlags: 0

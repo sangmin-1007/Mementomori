@@ -13,6 +13,7 @@ public class UI_GameOver : UI_Base<UI_GameOver>
     [SerializeField] private CanvasGroup resultCanvasGroup;
 
     [SerializeField] private TextMeshProUGUI gameOverText;
+    [SerializeField] private TextMeshProUGUI timeText;
 
     private void Start()
     {
@@ -57,5 +58,17 @@ public class UI_GameOver : UI_Base<UI_GameOver>
     {
         text.maxVisibleCharacters = 0;
         DOTween.To(x => text.maxVisibleCharacters = (int)x, 0f, text.text.Length, duration);
+    }
+
+    private void Timer()
+    {
+
+        float time = Managers.GameManager.timer;
+
+
+        int min = Mathf.Max(0, (int)time / 60);
+        int sec = Mathf.Max(0, (int)time % 60);
+
+        timeText.text = "Time : " + min.ToString("D2") + ":" + sec.ToString("D2");
     }
 }
