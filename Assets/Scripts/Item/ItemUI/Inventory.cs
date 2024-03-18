@@ -1,7 +1,9 @@
 using Constants;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -16,6 +18,7 @@ public class ItemSlot
 public class Inventory : UI_Base<Inventory>
 {
     public ItemSlotUI[] uiSlots;
+    public ItemSlotUI[] equippedSlots;
     public ItemSlot[] slots;
    
     public GameObject inventoryWindow;
@@ -26,6 +29,7 @@ public class Inventory : UI_Base<Inventory>
     
     public Text selectedItemName;
     public Text selectedItemDescription;
+
     public Text selectedItemStatAtk;
     public Text selectedItemStatHp;
     public Text selectedItemStatAtk_Speed;
@@ -41,6 +45,7 @@ public class Inventory : UI_Base<Inventory>
 
     public GameObject equipButton;
     public GameObject unequipButton;
+ 
 
   
 
@@ -81,6 +86,9 @@ public class Inventory : UI_Base<Inventory>
             uiSlots[i].Clear();
         }
         ClearSeletecItemWindow();
+
+       
+
     }
 
    
@@ -157,17 +165,53 @@ public class Inventory : UI_Base<Inventory>
        
         for (int i = 0; i < slots.Length; i++)
         {
-            
+
             if (slots[i].item != null)
             {
                 uiSlots[i].Set(slots[i]);
-                
-
 
             }
-                
             else
                 uiSlots[i].Clear();
+          
+
+        }
+        //for (int q = 0; q < equippedSlots.Length; q++)
+        //{
+        //    if (equippedSlots[q] != null)
+        //    {
+        //        // equippedSlots와 일치하는 uiSlots 찾아서 업데이트
+        //        int index = Array.IndexOf(uiSlots, equippedSlots[q]);
+        //        if (index != -1)
+        //        {
+        //            uiSlots[index].Clear();
+        //            equippedSlots[q].Set(slots[index]);
+        //        }
+        //    }
+        //    else
+        //    {
+        //        equippedSlots[q].Clear();
+        //    }
+        //}
+
+
+    }
+
+    void UpdateEquippedUI()
+    {
+        UpdateUI();
+        for (int i = 0; i < equippedSlots.Length; i++)
+        {
+
+            if (equippedSlots[i] != null)
+            {
+                equippedSlots[i].Set(slots[i]);
+
+            }
+            else
+                equippedSlots[i].Clear();
+
+
         }
     }
 
@@ -198,7 +242,10 @@ public class Inventory : UI_Base<Inventory>
 
         if (selectedItem.item.Atk > 0) // 아이템이 검일때 검은 공격력/공격속도만 보여준다.
         {
-           
+            selectedItemStatHp.gameObject.SetActive(false);
+            selectedItemStatDef.gameObject.SetActive(false);
+            selectedItemStatSpeed.gameObject.SetActive(false);
+            selectedItemStatStamina.gameObject.SetActive(false);
             selectedItemStatAtk.gameObject.SetActive(true);
             selectedItemStatValue_Atk.gameObject.SetActive(true);
             selectedItemStatValue_Atk.text += selectedItem.item.Atk.ToString() + "\n";
@@ -210,6 +257,11 @@ public class Inventory : UI_Base<Inventory>
 
         if(selectedItem.item.Hp > 0) // 갑옷 = 체력
         {
+            selectedItemStatAtk.gameObject.SetActive(false);
+            selectedItemStatAtk_Speed.gameObject.SetActive(false);
+            selectedItemStatDef.gameObject.SetActive(false);
+            selectedItemStatSpeed.gameObject.SetActive(false);
+            selectedItemStatStamina.gameObject.SetActive(false);
             selectedItemStatHp.gameObject.SetActive(true);
             selectedItemStatValue_Hp.gameObject.SetActive(true);
             selectedItemStatValue_Hp.text += selectedItem.item.Hp.ToString() + "\n";
@@ -217,6 +269,11 @@ public class Inventory : UI_Base<Inventory>
 
         if(selectedItem.item.Def > 0) // 방패 = 방어력
         {
+            selectedItemStatAtk.gameObject.SetActive(false);
+            selectedItemStatHp.gameObject.SetActive(false);
+            selectedItemStatAtk_Speed.gameObject.SetActive(false);
+            selectedItemStatSpeed.gameObject.SetActive(false);
+            selectedItemStatStamina.gameObject.SetActive(false);
             selectedItemStatDef.gameObject.SetActive(true);
             selectedItemStatValue_Def.gameObject.SetActive(true);
             selectedItemStatValue_Def.text += selectedItem.item.Def.ToString() + "\n";
@@ -224,6 +281,10 @@ public class Inventory : UI_Base<Inventory>
 
         if(selectedItem.item.Speed > 0) // 신발 = 스태미나 + 이동속도
         {
+            selectedItemStatAtk.gameObject.SetActive(false);
+            selectedItemStatHp.gameObject.SetActive(false);
+            selectedItemStatAtk_Speed.gameObject.SetActive(false);
+            selectedItemStatDef.gameObject.SetActive(false);
             selectedItemStatStamina.gameObject.SetActive(true);
             selectedItemStatValue_Stamina.gameObject.SetActive(true);
             selectedItemStatValue_Stamina.text += selectedItem.item.Stamina.ToString() + "\n";
@@ -231,16 +292,12 @@ public class Inventory : UI_Base<Inventory>
             selectedItemStatValue_Speed.gameObject.SetActive(true);
             selectedItemStatValue_Speed.text += selectedItem.item.Speed.ToString() + "\n";
         }
-
-        equipButton.SetActive(true);
-        //equipButton.SetActive(selectedItem.item.Type == ItemType.Boots && !uiSlots[index].equipped);
-        //equipButton.SetActive(selectedItem.item.Type == ItemType.Shield && !uiSlots[index].equipped);
-        //equipButton.SetActive(selectedItem.item.Type == ItemType.Armor && !uiSlots[index].equipped);
-        //unequipButton.SetActive(selectedItem.item.Type == ItemType.Weapon );
-        //unequipButton.SetActive(selectedItem.item.Type == ItemType.Boots && uiSlots[index].equipped);
-        //unequipButton.SetActive(selectedItem.item.Type == ItemType.Shield && uiSlots[index].equipped);
-        //unequipButton.SetActive(selectedItem.item.Type == ItemType.Armor && uiSlots[index].equipped);
        
+
+        equipButton.SetActive(!uiSlots[index].equipped);
+        unequipButton.SetActive(uiSlots[index].equipped);
+       
+
     }
 
     private void ClearSeletecItemWindow()
@@ -249,10 +306,20 @@ public class Inventory : UI_Base<Inventory>
         selectedItemName.text = string.Empty;
         selectedItemDescription.text = string.Empty;
 
-        //selectedItemStatName.text = string.Empty;
-       // selectedItemStatValue.text = string.Empty;
+        selectedItemStatAtk.gameObject.SetActive(false);
+        selectedItemStatHp.gameObject.SetActive(false);
+        selectedItemStatAtk_Speed.gameObject.SetActive(false);
+        selectedItemStatDef.gameObject.SetActive(false);
+        selectedItemStatSpeed.gameObject.SetActive(false); 
+        selectedItemStatStamina.gameObject.SetActive(false);
+        selectedItemStatValue_Atk.text = string.Empty;
+        selectedItemStatValue_Atk_speed.text = string.Empty;
+        selectedItemStatValue_Hp.text = string.Empty;
+        selectedItemStatValue_Speed.text = string.Empty;
+        selectedItemStatValue_Def.text = string.Empty;
+        selectedItemStatValue_Stamina.text = string.Empty;
 
-      
+
         equipButton.SetActive(false);
         unequipButton.SetActive(false);
       
@@ -263,17 +330,66 @@ public class Inventory : UI_Base<Inventory>
 
     public void OnEquipButton()
     {
+        if (uiSlots[curEquipIndex].equipped)
+        {
+            UnEquip(curEquipIndex);
+        }
+       //switch(selectedItem.item.Type)
+       // {
+       //     case (ItemType)0:
+       //         uiSlots[selectedItemIndex] = equippedSlots[0];
+       //         break;
+       //     case (ItemType)1:
+       //         uiSlots[selectedItemIndex] = equippedSlots[1];
+       //         break;
+       //     case (ItemType)2:
+       //         uiSlots[selectedItemIndex] = equippedSlots[2];
+       //         break;
+       //         case(ItemType)3:
+       //         uiSlots[selectedItemIndex] = equippedSlots[3];
+       //         break;
 
+       // }
+        uiSlots[selectedItemIndex].equipped = true;
+        curEquipIndex = selectedItemIndex;
+
+        //if (selectedItem.item.Type == ItemType.Weapon)
+        //{
+        //    uiSlots[selectedItemIndex] = equippedSlots[0];
+          
+        //}
+        //else if (selectedItem.item.Type == ItemType.Armor)
+        //{
+        //    uiSlots[selectedItemIndex] = equippedSlots[1];
+        //}
+        //else if (selectedItem.item.Type == ItemType.Shield)
+        //{
+        //    uiSlots[selectedItemIndex] = equippedSlots[2];
+        //}
+        //else if (selectedItem.item.Type == ItemType.Boots)
+        //{
+        //    uiSlots[selectedItemIndex] = equippedSlots[3];
+        //}
+        
+        
+        UpdateUI();
+
+        SelectItem(selectedItemIndex);
     }
 
     void UnEquip(int index)
     {
+        uiSlots[index].equipped = false;
+        
+        UpdateUI();
 
+        if (selectedItemIndex == index)
+            SelectItem(index);
     }
 
     public void OnUnequipButton()
     {
-
+        UnEquip(selectedItemIndex);
     }
 
     public bool HasItems(ItemData item)

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -7,9 +8,10 @@ using UnityEngine.UI;
 
 public class ItemSlotUI : MonoBehaviour
 {
-    
+  
     public Button button;
     public Image icon;
+   
     private ItemSlot curSlot;
     private Outline outline;
 
@@ -37,8 +39,8 @@ public class ItemSlotUI : MonoBehaviour
         
         if (outline != null)
         {
-            Debug.Log("dfdf");
             outline.enabled = equipped;
+       
         }
 
     }
@@ -48,7 +50,11 @@ public class ItemSlotUI : MonoBehaviour
     {
         curSlot = null;
         icon.gameObject.SetActive(false);
-        
+      
+       
+
+
+
     }
     public void OnButtonClick()
     {
