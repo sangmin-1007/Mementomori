@@ -21,7 +21,7 @@ public class GameSceneManager : MonoBehaviour
         var monsterSpawnerPath = Resources.Load<GameObject>("Prefabs/MonsterSpawner/SpawnManager");
         MonsterSpawner = Instantiate(monsterSpawnerPath);
 
-        Managers.ObjectPoolTest.Init();
+        Managers.ItemObjectPool.Init();
     }
     
 }

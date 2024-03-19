@@ -16,7 +16,7 @@ public class Managers : MonoBehaviour
     private GameManager _gameManager;
     private SceneLoader _sceneLoader;
     private DataManager _dataManager;
-    private ItemObjectPool _objectPoolTest;
+    private ItemObjectPool _itemObjectPool;
 
     // Manager Singletone
     public static UI_Manager UI_Manager => Instance._uiManager;
@@ -26,7 +26,7 @@ public class Managers : MonoBehaviour
     public static SceneLoader SceneLoader => Instance._sceneLoader;
     public static DataManager DataManager => Instance._dataManager;
 
-    public static ItemObjectPool ObjectPoolTest => Instance._objectPoolTest;
+    public static ItemObjectPool ItemObjectPool => Instance._itemObjectPool;
 
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
@@ -81,9 +81,9 @@ public class Managers : MonoBehaviour
                 instance._dataManager = go.AddComponent<DataManager>();
             }
 
-            if(!go.TryGetComponent(out instance._objectPoolTest))
+            if(!go.TryGetComponent(out instance._itemObjectPool))
             {
-                Instance._objectPoolTest = go.AddComponent<ItemObjectPool>();
+                Instance._itemObjectPool = go.AddComponent<ItemObjectPool>();
             }
         }
     }
