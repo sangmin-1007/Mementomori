@@ -278,6 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 10001004
+  PlayerTransform: {fileID: 1050310451}
 --- !u!1001 &64053637
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1780,6 +1781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 30001004
+  PlayerTransform: {fileID: 1050310451}
 --- !u!1 &495177399
 GameObject:
   m_ObjectHideFlags: 0
@@ -2152,6 +2154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 40001013
+  PlayerTransform: {fileID: 1050310451}
 --- !u!1001 &592253024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3852,7 +3855,6 @@ GameObject:
   - component: {fileID: 1050310462}
   - component: {fileID: 1050310463}
   - component: {fileID: 1050310464}
-  - component: {fileID: 1050310467}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4005,7 +4007,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  speed: 5
   dashSpeed: 30
   defaultTime: 0.1
 --- !u!114 &1050310461
@@ -4049,8 +4050,12 @@ MonoBehaviour:
     statsChangeType: 2
     maxHealth: 10
     speed: 5
+    maxStamina: 0
     attackSO: {fileID: 11400000, guid: 02cb8a3c2171c6545990643da4c4fbfc, type: 2}
   statsModifiers: []
+  staminaRecoveryRate: 0
+  rechargeTime: 0
+  currentRechargeTime: 0
 --- !u!114 &1050310464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4063,22 +4068,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f796a783630a01843ac8efb56004bab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1050310467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1050310449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45c76287a2f03374f98b710469761eb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 1048576
-  promptText: {fileID: 1118787187}
 --- !u!1 &1071666174
 GameObject:
   m_ObjectHideFlags: 0
@@ -6742,6 +6731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 20001004
+  PlayerTransform: {fileID: 1050310451}
 --- !u!1 &1734212770
 GameObject:
   m_ObjectHideFlags: 0
