@@ -38,7 +38,7 @@ Transform:
   m_Children:
   - {fileID: 1417144561141854960}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5124705688192982126
 MonoBehaviour:
@@ -181,9 +181,6 @@ MonoBehaviour:
     maxStamina: 0
     attackSO: {fileID: 11400000, guid: 63ad84429e044b94fb8b8885b7e5d84f, type: 2}
   statsModifiers: []
-  staminaRecoveryRate: 0
-  rechargeTime: 0
-  currentRechargeTime: 0
 --- !u!114 &959209097628157002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,6 +194,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthChangeDelay: 0.5
+  currentStamina: 0
+  staminaRecoveryRate: 0
 --- !u!114 &-3110955963878946198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,7 +282,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 1025881489, guid: a4ae99a4c489beb4c952e636a9a1394d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

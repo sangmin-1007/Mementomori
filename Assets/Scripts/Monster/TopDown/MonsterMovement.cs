@@ -49,6 +49,6 @@ public class MonsterMovement : MonoBehaviour
 
     private void OnEnable()
     {
-        player = SpawnManager.instance.player.GetComponent<Rigidbody2D>();
+        player = Managers.GameSceneManager.Player.GetComponent<Rigidbody2D>();
     }
 }

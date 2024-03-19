@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public static SpawnManager instance;
     public PoolManager pool;
-    public PlayerInputController player;
+    private PlayerInputController player;
 
-    private void Awake()
+    private void Start()
     {
-        instance = this;
+        player = Managers.GameSceneManager.Player.GetComponent<PlayerInputController>();
     }
 }
