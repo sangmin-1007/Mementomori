@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour
 
     private PlayerController _controller;
     private PlayerStatsHandler _stats;
+    private HealthSystem _healthSystem;
 
     private Vector2 _movementDirction = Vector2.zero;
     private Rigidbody2D _rigidbody2D;
@@ -28,6 +29,7 @@ public class Movement : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
         _stats = GetComponent<PlayerStatsHandler>();
+        _healthSystem = GetComponent<HealthSystem>();
     }
 
     private void Start()
@@ -88,12 +90,12 @@ public class Movement : MonoBehaviour
 
     private void Dash()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && _stats.GetCurrentSP() > 25)
+        if (Input.GetKeyDown(KeyCode.Space) && _healthSystem.GetCurrentSP() > 25)
         {
             isDash = true;
             StartCoroutine(TriggerCourtine());
             animator.SetTrigger(IsDash);
-            _stats.DecreaseStamina(25);
+            _healthSystem.DecreaseStamina(25);
         }
         if (dashTime <= 0f)
         {

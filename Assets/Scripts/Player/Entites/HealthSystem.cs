@@ -28,6 +28,8 @@ public class HealthSystem : MonoBehaviour
         CurrentHealth = _statsHandler.CurrentStates.maxHealth;
 
         OnDeath += Managers.GameManager.GameOver;
+
+        currentStamina = _statsHandler.CurrentStates.maxStamina;
     }
 
     private void Update()
@@ -41,6 +43,8 @@ public class HealthSystem : MonoBehaviour
                 OnInvincibilityEnd?.Invoke();
             }
         }
+        SPRechargeTime();
+        SPRecover();
     }
 
     public bool ChangeHealth(float change)
@@ -76,5 +80,45 @@ public class HealthSystem : MonoBehaviour
     private void CallDeath()
     {
         OnDeath?.Invoke();
+    }
+
+    public float currentStamina;
+
+    [SerializeField] private float staminaRecoveryRate;
+    private float rechargeTime;
+    private float currentRechargeTime;
+    private bool staminaUsed;
+
+    public void DecreaseStamina(float _count)
+    {
+        staminaUsed = true;
+        currentRechargeTime = 0;
+        if (currentStamina - _count > 0)
+        {
+            currentStamina -= _count;
+        }
+        else
+            currentStamina = 0;
+    }
+    private void SPRechargeTime()
+    {
+        if (staminaUsed)
+        {
+            if (currentRechargeTime < rechargeTime)
+                currentRechargeTime++;
+            else
+                staminaUsed = false;
+        }
+    }
+    private void SPRecover()
+    {
+        if (!staminaUsed && currentStamina < _statsHandler.CurrentStates.maxStamina)
+        {
+            currentStamina += staminaRecoveryRate * Time.deltaTime;
+        }
+    }
+    public float GetCurrentSP()
+    {
+        return currentStamina;
     }
 }
