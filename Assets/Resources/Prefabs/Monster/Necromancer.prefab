@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2150737256626861846}
   - component: {fileID: 4881756847542554435}
   - component: {fileID: 4827193886494848589}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CharacterSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,10 @@ GameObject:
   - component: {fileID: 7771168707773363743}
   - component: {fileID: 1353684814625235748}
   - component: {fileID: 8713114614871556508}
-  m_Layer: 0
+  - component: {fileID: -2632813247575997624}
+  - component: {fileID: -5190086419941202977}
+  - component: {fileID: -4104844291855223565}
+  m_Layer: 6
   m_Name: Necromancer
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -263,5 +266,48 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f97482fe437759540be38fb309e73313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-2632813247575997624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5818681289612884098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65cdc5abe5334114a86c615ec71a8c3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseStats:
+    statsChangeType: 2
+    maxHealth: 3
+    speed: 0
+    attackSO: {fileID: 0}
+  statsModifiers: []
+--- !u!114 &-5190086419941202977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5818681289612884098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d9dc21c19de1348853f141cd7bafeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthChangeDelay: 0.5
+--- !u!114 &-4104844291855223565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5818681289612884098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2450718659365444ea8fef9f3a29289e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

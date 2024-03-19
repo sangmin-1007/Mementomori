@@ -19,15 +19,16 @@ public class Spawner : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer > 1f)
+        if (timer > 1f && count < 5)
         {
             timer = 0f;
-            if (SpawnManager.instance.pool == null || count > 5)
+            if (SpawnManager.instance.pool == null)
             {
                 return;
             }
             Spawn();
             count++;
+            Debug.Log($"증가 후 몬스터 수 : {count}");
         }
     }
 

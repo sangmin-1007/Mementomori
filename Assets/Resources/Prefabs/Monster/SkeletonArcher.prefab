@@ -14,7 +14,10 @@ GameObject:
   - component: {fileID: 3046457507189609134}
   - component: {fileID: -938126706350312803}
   - component: {fileID: -8681743510574982447}
-  m_Layer: 0
+  - component: {fileID: 7473228208998771912}
+  - component: {fileID: 7761078539751093734}
+  - component: {fileID: -9187494322822931282}
+  m_Layer: 6
   m_Name: SkeletonArcher
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -159,6 +162,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f97482fe437759540be38fb309e73313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7473228208998771912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512736088422090152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65cdc5abe5334114a86c615ec71a8c3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseStats:
+    statsChangeType: 2
+    maxHealth: 3
+    speed: 0
+    attackSO: {fileID: 0}
+  statsModifiers: []
+--- !u!114 &7761078539751093734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512736088422090152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d9dc21c19de1348853f141cd7bafeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthChangeDelay: 0.5
+--- !u!114 &-9187494322822931282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512736088422090152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2450718659365444ea8fef9f3a29289e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8873247114465052662
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,7 +216,7 @@ GameObject:
   - component: {fileID: 4939423458293616049}
   - component: {fileID: 2126336898107105565}
   - component: {fileID: 2471135083825426744}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CharacterSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

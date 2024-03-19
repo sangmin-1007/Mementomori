@@ -74,6 +74,7 @@ public class HealthSystem : MonoBehaviour
         {
             CallDeath();
         }
+        Debug.Log($"증감 : {change}, 체력 : {CurrentHealth}");
         return true;
     }
 
