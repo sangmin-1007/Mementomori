@@ -19,9 +19,12 @@ public class MonsterMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        Movement();
-        Rotation(player.transform.position.x - transform.position.x);
-        Reposition();
+        if(player != null)
+        {
+            Movement();
+            Rotation(player.transform.position.x - transform.position.x);
+            Reposition();
+        }
     }
 
     private void Reposition()
@@ -49,6 +52,6 @@ public class MonsterMovement : MonoBehaviour
 
     private void OnEnable()
     {
-        player = SpawnManager.instance.player.GetComponent<Rigidbody2D>();
+        player = Managers.GameSceneManager.Player.GetComponent<Rigidbody2D>();
     }
 }

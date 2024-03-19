@@ -21,6 +21,8 @@ public class MonsterDeath : MonoBehaviour
 
     private void OnDie()
     {
+        Managers.ItemObjectPool.SpawnItem(transform.position, 50001000);
+
         rigid.velocity = Vector3.zero;
 
         foreach (SpriteRenderer renderer in transform.GetComponentsInChildren<SpriteRenderer>())

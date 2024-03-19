@@ -9,13 +9,14 @@ public class ItemObject : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
-    public Transform PlayerTransform;
-    private float rootDistance = 2f;
+    private Transform playerTransform;
+    private float rootDistance = 1f;
 
 
     private void Start()
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        playerTransform = Managers.GameSceneManager.Player.GetComponent<Transform>();
 
        if( itemId != 0)
         {
@@ -26,7 +27,7 @@ public class ItemObject : MonoBehaviour
 
     private void Update()
     {
-        float Distance = Vector3.Distance(transform.position, PlayerTransform.position);
+        float Distance = Vector3.Distance(transform.position, playerTransform.position);
 
         if( Distance <= rootDistance )
         {
@@ -47,11 +48,12 @@ public class ItemObject : MonoBehaviour
         {
             Managers.DataManager.AddItem(item);
             Inventory.instance.AddItem(Managers.DataManager.playerItemData[0]);
-            Destroy(gameObject);
+            Managers.ItemObjectPool.DisableItem(gameObject);
         }
         else
         {
-            Destroy(gameObject);
+            Managers.ItemObjectPool.DisableItem(gameObject);
+            Debug.Log("°æÇèÄ¡ È¹µæ");
             //ObjectPool
             //°æÇèÄ¡ 
         }

@@ -23,8 +23,12 @@ public class UI_GameOver : UI_Base<UI_GameOver>
 
     private void OnClickLobbyButton()
     {
+        Managers.UI_Manager.ShowLoadingUI("LobbyScene");
+    }
+
+    private void OnDisable()
+    {
         DestroyUI();
-        Managers.UI_Manager.ShowLoadingUI("LobbyScene-KSM");
     }
 
 

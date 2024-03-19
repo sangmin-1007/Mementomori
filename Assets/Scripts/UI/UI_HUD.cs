@@ -31,6 +31,7 @@ public class UI_HUD : UI_Base<UI_HUD>
         playerStats = Managers.GameSceneManager.Player.GetComponent<HealthSystem>();
 
         maxHP = playerStats.MaxHealth;
+        maxStamina = playerStats.MaxStamina;
 
         miniMapAddButton.onClick.AddListener(OnClickAddButton);
         miniMapSubButton.onClick.AddListener(OnClickSubButton);
@@ -47,9 +48,10 @@ public class UI_HUD : UI_Base<UI_HUD>
         Timer();
 
         curHp = playerStats.CurrentHealth;
+        curStamina = playerStats.currentStamina;
 
         hpBar.fillAmount = Mathf.Lerp(hpBar.fillAmount, GetPercentage(curHp,maxHP), Time.deltaTime * 3f);
-        staminaBar.fillAmount = Mathf.Lerp(staminaBar.fillAmount, 0, Time.deltaTime * 5f);
+        staminaBar.fillAmount = Mathf.Lerp(staminaBar.fillAmount,GetPercentage(curStamina,maxStamina), Time.deltaTime * 5f);
         expBar.fillAmount = Mathf.Lerp(expBar.fillAmount, 1f, Time.deltaTime * 1.5f);
 
         if(expBar.fillAmount >= 0.99f)
