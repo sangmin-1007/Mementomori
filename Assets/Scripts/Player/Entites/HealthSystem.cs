@@ -83,7 +83,9 @@ public class HealthSystem : MonoBehaviour
         OnDeath?.Invoke();
     }
 
-    public float currentStamina;
+    //스태미너 관련
+    public float currentStamina { get; private set; }
+    public float MaxStamina => _statsHandler.CurrentStates.maxStamina;
 
     [SerializeField] private float staminaRecoveryRate;
     private float rechargeTime;
