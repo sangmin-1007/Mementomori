@@ -34,7 +34,7 @@ public class HealthSystem : MonoBehaviour
 
     private void Update()
     {
-        //¸¶Áö¸·ÀÇ º¯°æµÈ °ªÀÌ < 0.5 ÃÊº¸´Ù ÀÛ´Ù¸é
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ < 0.5 ï¿½Êºï¿½ï¿½ï¿½ ï¿½Û´Ù¸ï¿½
         if(_timeSinceLastChange < healthChangeDelay)
         {
             _timeSinceLastChange += Time.deltaTime;
@@ -59,22 +59,22 @@ public class HealthSystem : MonoBehaviour
         CurrentHealth = CurrentHealth > MaxHealth ? MaxHealth : CurrentHealth;
         CurrentHealth = CurrentHealth < 0 ? 0 : CurrentHealth;
 
-        //ÇÇ°¡ Âû °æ¿ì
+        //ï¿½Ç°ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½
         if(change > 0)
         {
             OnHeal?.Invoke();
         }
-        //ÇÇ°¡ ´âÀ» °æ¿ì
+        //ï¿½Ç°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
         else
         {
             OnDamage?.Invoke();
         }
-        //»ç¸Á
+        //ï¿½ï¿½ï¿½
         if(CurrentHealth <= 0f)
         {
             CallDeath();
         }
-        Debug.Log($"Áõ°¨ : {change}, Ã¼·Â : {CurrentHealth}");
+        Debug.Log($"ï¿½ï¿½ï¿½ï¿½ : {change}, Ã¼ï¿½ï¿½ : {CurrentHealth}");
         return true;
     }
 

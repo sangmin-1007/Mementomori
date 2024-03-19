@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Spawner : MonoBehaviour
 {
+    public int stage = 1;
+
     public Transform[] spawnPoint;
 
     float timer = 0f;
@@ -19,7 +21,7 @@ public class Spawner : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer > 1f && count < 5)
+        if (timer > 1f && count < 10)
         {
             timer = 0f;
             if (SpawnManager.instance.pool == null)
@@ -38,7 +40,7 @@ public class Spawner : MonoBehaviour
         {
             return;
         }
-        GameObject monster = SpawnManager.instance.pool.Get(Random.Range(0, 4));
+        GameObject monster = SpawnManager.instance.pool.Get(Random.Range(0, stage));
         monster.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
     }
 }

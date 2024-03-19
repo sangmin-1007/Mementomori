@@ -35,10 +35,26 @@ public class MonsterDeath : MonoBehaviour
             component.enabled = false;
         }
 
-        gameObject.SetActive(false);
+        Invoke("SetDie", 1f);
         //coll.enabled = false;
         //rigid.simulated = false;
         Spawner.count--;
         Debug.Log($"감소 후 몬스터 수 : {Spawner.count}");
+    }
+
+    void SetDie()
+    {
+        foreach (SpriteRenderer renderer in transform.GetComponentsInChildren<SpriteRenderer>())
+        {
+            Color color = renderer.color;
+            color.a = 1f;
+            renderer.color = color;
+        }
+
+        foreach (Behaviour component in transform.GetComponentsInChildren<Behaviour>())
+        {
+            component.enabled = true;
+        }
+        gameObject.SetActive(false);
     }
 }

@@ -262,8 +262,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 2995324460039495246, guid: 08a4a02094046094d9658f149fa58ae9, type: 3}
-  - {fileID: 512736088422090152, guid: 462a0994aa09acf4ab569c42d74ed5ee, type: 3}
   - {fileID: 2367717372256310082, guid: 9599efe65d93bc84cb041da9688876d0, type: 3}
+  - {fileID: 512736088422090152, guid: 462a0994aa09acf4ab569c42d74ed5ee, type: 3}
   - {fileID: 5818681289612884098, guid: a990c3f1ed8fd774b900aeed32088794, type: 3}
 --- !u!4 &200452549
 Transform:
@@ -458,6 +458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd56ddbca224854a9b001921a1d96af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stage: 1
   spawnPoint: []
 --- !u!1 &963114476
 GameObject:
@@ -592,9 +593,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  speed: 5
+  speed: 10
   dashSpeed: 30
-  defaultTime: 0.1
+  defaultTime: 1
 --- !u!114 &987750812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1129,7 +1130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1714782057
 MonoBehaviour:
   m_ObjectHideFlags: 0
