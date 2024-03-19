@@ -23,6 +23,8 @@ public class ItemData
     [SerializeField] private float _def;
     [SerializeField] private float _speed;
     [SerializeField] private float _stamina;
+    [SerializeField] private int _exp;
+
 
 
     public int Id => _id;
@@ -33,7 +35,7 @@ public class ItemData
 
     public string SpritePath => _spritePath;
 
-        
+    public int Exp => _exp;
 
     public float Atk=> _atk;
 
