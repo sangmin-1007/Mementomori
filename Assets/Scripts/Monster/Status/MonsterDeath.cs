@@ -39,7 +39,7 @@ public class MonsterDeath : MonoBehaviour
         //coll.enabled = false;
         //rigid.simulated = false;
         Spawner.count--;
-        Debug.Log($"감소 후 몬스터 수 : {Spawner.count}");
+        //Debug.Log($"감소 후 몬스터 수 : {Spawner.count}");
     }
 
     void SetDie()

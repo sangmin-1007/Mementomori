@@ -5,38 +5,39 @@ using UnityEngine;
 public class ContactAttack : MonoBehaviour
 {
     Animator animator;
-    AttackSO attackSO;
+
+    protected PlayerStatsHandler Stats { get; private set; }
+    [SerializeField] private string targetTag = "Player";
+
+    private HealthSystem healthSystem;
+    private HealthSystem playerHealthSystem;
+    //private TopDownMovement _collidingMovement;
 
     private void Awake()
     {
         animator = GetComponentInChildren<Animator>();
-        attackSO = GetComponent<AttackSO>();
+
+        healthSystem = GetComponent<HealthSystem>();
+        Stats = GetComponent<PlayerStatsHandler>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        OnContactAttack(attackSO, collision);
+        if (collision.tag == targetTag)
+        {
+            playerHealthSystem = collision.GetComponent<HealthSystem>();
+            OnContactAttack(collision);
+        }
     }
 
-    void OnContactAttack(AttackSO attackSO, Collider2D collision)
+    void OnContactAttack(Collider2D collision)
     {
-        if (collision.tag == "Player")
-        {
-            animator.SetTrigger("Attack");
+        if (Stats.CurrentStates.attackSO == null)
+            return;
 
-            HealthSystem healthSystem = collision.GetComponent<HealthSystem>();
-            if (healthSystem != null)
-            {
-                healthSystem.ChangeHealth(-attackSO.power);
-                //if (attackSO.isOnKnockback)
-                //{
-                //    Movement movement = collision.GetComponent<Movement>();
-                //    if (movement != null)
-                //    {
-                //        movement.ApplyKnockback(transform, attackSO.knockbackPower, attackSO.knockbackTime);
-                //    }
-                //}
-            }
-        }
+        animator.SetTrigger("Attack");
+
+        AttackSO attackSO = Stats.CurrentStates.attackSO;
+        bool hasBeenChanged = playerHealthSystem.ChangeHealth(-attackSO.power);
     }
 }

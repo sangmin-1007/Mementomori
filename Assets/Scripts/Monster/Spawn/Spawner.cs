@@ -30,7 +30,7 @@ public class Spawner : MonoBehaviour
             }
             Spawn();
             count++;
-            Debug.Log($"증가 후 몬스터 수 : {count}");
+            //Debug.Log($"증가 후 몬스터 수 : {count}");
         }
     }
 

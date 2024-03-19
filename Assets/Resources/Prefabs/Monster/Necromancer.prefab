@@ -122,7 +122,6 @@ GameObject:
   - component: {fileID: 8713114614871556508}
   - component: {fileID: -2632813247575997624}
   - component: {fileID: -5190086419941202977}
-  - component: {fileID: -4104844291855223565}
   m_Layer: 6
   m_Name: Necromancer
   m_TagString: Enemy
@@ -255,7 +254,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.7
+  m_Radius: 0.6
 --- !u!114 &8713114614871556508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,8 +283,12 @@ MonoBehaviour:
     statsChangeType: 2
     maxHealth: 3
     speed: 0
+    maxStamina: 0
     attackSO: {fileID: 0}
   statsModifiers: []
+  staminaRecoveryRate: 0
+  rechargeTime: 0
+  currentRechargeTime: 0
 --- !u!114 &-5190086419941202977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,15 +302,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthChangeDelay: 0.5
---- !u!114 &-4104844291855223565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5818681289612884098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2450718659365444ea8fef9f3a29289e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

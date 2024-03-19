@@ -510,6 +510,7 @@ GameObject:
   - component: {fileID: 987750808}
   - component: {fileID: 987750807}
   - component: {fileID: 987750817}
+  - component: {fileID: 987750818}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -565,8 +566,12 @@ MonoBehaviour:
     statsChangeType: 2
     maxHealth: 10
     speed: 5
+    maxStamina: 0
     attackSO: {fileID: 11400000, guid: 02cb8a3c2171c6545990643da4c4fbfc, type: 2}
   statsModifiers: []
+  staminaRecoveryRate: 0
+  rechargeTime: 0
+  currentRechargeTime: 0
 --- !u!114 &987750810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -593,7 +598,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  speed: 10
   dashSpeed: 30
   defaultTime: 1
 --- !u!114 &987750812
@@ -756,6 +760,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthChangeDelay: 0.5
+--- !u!114 &987750818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987750806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3fb82ac3aee25c49b50369305b2cda6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1027138340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1171,8 +1187,12 @@ MonoBehaviour:
     statsChangeType: 2
     maxHealth: 5
     speed: 0
+    maxStamina: 0
     attackSO: {fileID: 0}
   statsModifiers: []
+  staminaRecoveryRate: 0
+  rechargeTime: 0
+  currentRechargeTime: 0
 --- !u!114 &1714782060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1392,8 +1412,12 @@ MonoBehaviour:
     statsChangeType: 2
     maxHealth: 10
     speed: 5
+    maxStamina: 0
     attackSO: {fileID: 11400000, guid: 02cb8a3c2171c6545990643da4c4fbfc, type: 2}
   statsModifiers: []
+  staminaRecoveryRate: 0
+  rechargeTime: 0
+  currentRechargeTime: 0
 --- !u!114 &1880769914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1420,7 +1444,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  speed: 5
   dashSpeed: 30
   defaultTime: 0.1
 --- !u!114 &1880769916
