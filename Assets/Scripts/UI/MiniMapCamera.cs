@@ -7,12 +7,11 @@ public class MiniMapCamera : MonoBehaviour
     [SerializeField]
     private bool x, y, z;
 
-    [SerializeField]
     private Transform target;
 
     private void Start()
     {
-        
+        target = Managers.GameSceneManager.Player.GetComponent<Transform>();
     }
 
     private void Update()

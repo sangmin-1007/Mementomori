@@ -19,15 +19,11 @@ public class LobbyIneract : MonoBehaviour
         switch(interactType)
         {
             case InteractType.Shop:
-
-                Debug.Log("¼¥");
-
+                    Debug.Log("¼¥");
             break;
 
             case InteractType.Storage:
-
-                Debug.Log("Ã¢°í");
-
+                    Debug.Log("Ã¢°í");
             break;
 
             case InteractType.Door:

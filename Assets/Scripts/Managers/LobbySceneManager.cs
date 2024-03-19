@@ -12,7 +12,7 @@ public class LobbySceneManager : MonoBehaviour
         var mapInfo = Instantiate(lobbyMap).GetComponent<MapInfo>();
         
         // TODO : PlayerInstantiate
-        var playerPath = Resources.Load<GameObject>("Prefabs/Player/PlayerTest");
+        var playerPath = Resources.Load<GameObject>("Prefabs/Player/Player");
         Player = Instantiate(playerPath, mapInfo.playerSpawnPoint.position, Quaternion.Euler(Vector3.zero));
     }
 }
