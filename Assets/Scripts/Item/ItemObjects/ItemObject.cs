@@ -43,8 +43,18 @@ public class ItemObject : MonoBehaviour
 
     public void Interaction()
     {
-        Managers.DataManager.AddItem(item);
-        Inventory.instance.AddItem(Managers.DataManager.playerItemData[0]);
-        Destroy(gameObject);
+        if(item.Type != Constants.ItemType.Consume)
+        {
+            Managers.DataManager.AddItem(item);
+            Inventory.instance.AddItem(Managers.DataManager.playerItemData[0]);
+            Destroy(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+            //ObjectPool
+            //°æÇèÄ¡ 
+        }
+      
     }
 }

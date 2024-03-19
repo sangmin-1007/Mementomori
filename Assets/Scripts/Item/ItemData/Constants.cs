@@ -9,7 +9,8 @@ namespace Constants
         Weapon,
         Armor,
         Shield,
-        Boots
+        Boots,
+        Consume
     }
 
     public enum ItemGrade

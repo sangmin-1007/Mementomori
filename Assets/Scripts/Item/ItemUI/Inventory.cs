@@ -208,12 +208,14 @@ public class Inventory : UI_Base<Inventory>
         selectedItemDescription.text = selectedItem.item.Description;
 
 
-        if (selectedItem.item.Atk > 0) // 아이템이 검일때 검은 공격력/공격속도만 보여준다.
+        if (selectedItem.item.Type == ItemType.Weapon) // 아이템이 검일때 검은 공격력/공격속도만 보여준다.
         {
             selectedItemStatHp.gameObject.SetActive(false);
             selectedItemStatDef.gameObject.SetActive(false);
             selectedItemStatSpeed.gameObject.SetActive(false);
             selectedItemStatStamina.gameObject.SetActive(false);
+            selectedItemStatValue_Stamina.gameObject.SetActive(false);
+            //=====
             selectedItemStatAtk.gameObject.SetActive(true);
             selectedItemStatValue_Atk.gameObject.SetActive(true);
             selectedItemStatValue_Atk.text += selectedItem.item.Atk.ToString() + "\n";
@@ -221,38 +223,48 @@ public class Inventory : UI_Base<Inventory>
             selectedItemStatValue_Atk_speed.gameObject.SetActive(true);
             selectedItemStatValue_Atk_speed.text += selectedItem.item.AtkSpeed.ToString() + "\n";
 
+
         }
 
-        if(selectedItem.item.Hp > 0) // 갑옷 = 체력
+        if(selectedItem.item.Type == ItemType.Armor) // 갑옷 = 체력
         {
             selectedItemStatAtk.gameObject.SetActive(false);
             selectedItemStatAtk_Speed.gameObject.SetActive(false);
             selectedItemStatDef.gameObject.SetActive(false);
             selectedItemStatSpeed.gameObject.SetActive(false);
             selectedItemStatStamina.gameObject.SetActive(false);
+            selectedItemStatValue_Atk_speed.gameObject.SetActive(false);
+            selectedItemStatValue_Stamina.gameObject.SetActive(false);
+            //===
             selectedItemStatHp.gameObject.SetActive(true);
             selectedItemStatValue_Hp.gameObject.SetActive(true);
             selectedItemStatValue_Hp.text += selectedItem.item.Hp.ToString() + "\n";
         }
 
-        if(selectedItem.item.Def > 0) // 방패 = 방어력
+        if(selectedItem.item.Type == ItemType.Shield) // 방패 = 방어력
         {
             selectedItemStatAtk.gameObject.SetActive(false);
             selectedItemStatHp.gameObject.SetActive(false);
             selectedItemStatAtk_Speed.gameObject.SetActive(false);
             selectedItemStatSpeed.gameObject.SetActive(false);
             selectedItemStatStamina.gameObject.SetActive(false);
+            selectedItemStatValue_Atk_speed.gameObject.SetActive(false);
+            selectedItemStatValue_Stamina.gameObject.SetActive(false);
+            //====
             selectedItemStatDef.gameObject.SetActive(true);
             selectedItemStatValue_Def.gameObject.SetActive(true);
             selectedItemStatValue_Def.text += selectedItem.item.Def.ToString() + "\n";
         }
 
-        if(selectedItem.item.Speed > 0) // 신발 = 스태미나 + 이동속도
+        if(selectedItem.item.Type == ItemType.Boots) // 신발 = 스태미나 + 이동속도
         {
             selectedItemStatAtk.gameObject.SetActive(false);
             selectedItemStatHp.gameObject.SetActive(false);
             selectedItemStatAtk_Speed.gameObject.SetActive(false);
             selectedItemStatDef.gameObject.SetActive(false);
+            selectedItemStatValue_Atk_speed.gameObject.SetActive(false);
+            
+            //===
             selectedItemStatStamina.gameObject.SetActive(true);
             selectedItemStatValue_Stamina.gameObject.SetActive(true);
             selectedItemStatValue_Stamina.text += selectedItem.item.Stamina.ToString() + "\n";
@@ -262,8 +274,8 @@ public class Inventory : UI_Base<Inventory>
         }
        
 
-        equipButton.SetActive(!uiSlots[index].equipped);
-        unequipButton.SetActive(uiSlots[index].equipped);
+        equipButton.SetActive(selectedItem.item.Type != ItemType.Consume && !uiSlots[index].equipped);
+        unequipButton.SetActive(selectedItem.item.Type != ItemType.Consume && uiSlots[index].equipped);
        
 
     }

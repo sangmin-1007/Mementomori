@@ -2136,25 +2136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f04561aba3cf54190e30253b5a9f3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &572579496 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7468992034664459517, guid: 49af9dc2976d99f408033c9e04ff760e, type: 3}
-  m_PrefabInstance: {fileID: 1854970620}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &572579497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 572579496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c84728025388e164eb143803c18deb5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 40001013
-  PlayerTransform: {fileID: 1050310451}
 --- !u!1001 &592253024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7137,74 +7118,6 @@ MonoBehaviour:
   m_Spacing: {x: 5, y: 5}
   m_Constraint: 0
   m_ConstraintCount: 2
---- !u!1001 &1854970620
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3013781466264282091, guid: 49af9dc2976d99f408033c9e04ff760e, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3013781466264282091, guid: 49af9dc2976d99f408033c9e04ff760e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.155
-      objectReference: {fileID: 0}
-    - target: {fileID: 3013781466264282091, guid: 49af9dc2976d99f408033c9e04ff760e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.745
-      objectReference: {fileID: 0}
-    - target: {fileID: 3013781466264282091, guid: 49af9dc2976d99f408033c9e04ff760e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3013781466264282091, guid: 49af9dc2976d99f408033c9e04ff760e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3013781466264282091, guid: 49af9dc2976d99f408033c9e04ff760e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3013781466264282091, guid: 49af9dc2976d99f408033c9e04ff760e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3013781466264282091, guid: 49af9dc2976d99f408033c9e04ff760e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3013781466264282091, guid: 49af9dc2976d99f408033c9e04ff760e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3013781466264282091, guid: 49af9dc2976d99f408033c9e04ff760e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3013781466264282091, guid: 49af9dc2976d99f408033c9e04ff760e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7342041156409010807, guid: 49af9dc2976d99f408033c9e04ff760e, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7468992034664459517, guid: 49af9dc2976d99f408033c9e04ff760e, type: 3}
-      propertyPath: m_Name
-      value: Armor_1 (3)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7468992034664459517, guid: 49af9dc2976d99f408033c9e04ff760e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 572579497}
-  m_SourcePrefab: {fileID: 100100000, guid: 49af9dc2976d99f408033c9e04ff760e, type: 3}
 --- !u!114 &1865220043 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -5441685148700302590, guid: 2d988b0e8868983469c1c9de3cf6b03f, type: 3}

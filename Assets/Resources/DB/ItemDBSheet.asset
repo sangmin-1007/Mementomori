@@ -630,3 +630,15 @@ MonoBehaviour:
     _def: 0
     _speed: 2
     _stamina: 300
+  - _id: 50001000
+    _grade: 0
+    _type: 4
+    _name: "\uACBD\uD5D8\uCE58\uAD6C\uC2AC"
+    _description: 
+    _spritePath: Sprite/Item/Exp/exp
+    _atk: 0
+    _atkSpeed: 0
+    _hp: 0
+    _def: 0
+    _speed: 0
+    _stamina: 0
