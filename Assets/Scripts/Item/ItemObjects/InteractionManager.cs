@@ -28,6 +28,7 @@ public class InteractionManager : MonoBehaviour
         {
             curInteractGameobject = collision.gameObject;
             curInteractable = curInteractGameobject.GetComponent<IInteractable>();
+            
             GetItem();
             StartCoroutine(GetItemTextCourtine());
 

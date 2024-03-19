@@ -125,14 +125,9 @@ public class Inventory : UI_Base<Inventory>
         {
 
             emptySlot.item = item; // 거기에 아이템 추가
-           
-
-
-
-
+            Managers.DataManager.AddItem(item);
             UpdateUI(); // UI업데이트 한번 해주기
             return;
-
 
         }
     }
@@ -176,44 +171,12 @@ public class Inventory : UI_Base<Inventory>
           
 
         }
-        //for (int q = 0; q < equippedSlots.Length; q++)
-        //{
-        //    if (equippedSlots[q] != null)
-        //    {
-        //        // equippedSlots와 일치하는 uiSlots 찾아서 업데이트
-        //        int index = Array.IndexOf(uiSlots, equippedSlots[q]);
-        //        if (index != -1)
-        //        {
-        //            uiSlots[index].Clear();
-        //            equippedSlots[q].Set(slots[index]);
-        //        }
-        //    }
-        //    else
-        //    {
-        //        equippedSlots[q].Clear();
-        //    }
-        //}
+      
 
 
     }
 
-    void UpdateEquippedUI()
-    {
-        UpdateUI();
-        for (int i = 0; i < equippedSlots.Length; i++)
-        {
-
-            if (equippedSlots[i] != null)
-            {
-                equippedSlots[i].Set(slots[i]);
-
-            }
-            else
-                equippedSlots[i].Clear();
-
-
-        }
-    }
+   
 
     ItemSlot GetEmptySlot() 
     {
@@ -334,22 +297,7 @@ public class Inventory : UI_Base<Inventory>
         {
             UnEquip(curEquipIndex);
         }
-       //switch(selectedItem.item.Type)
-       // {
-       //     case (ItemType)0:
-       //         uiSlots[selectedItemIndex] = equippedSlots[0];
-       //         break;
-       //     case (ItemType)1:
-       //         uiSlots[selectedItemIndex] = equippedSlots[1];
-       //         break;
-       //     case (ItemType)2:
-       //         uiSlots[selectedItemIndex] = equippedSlots[2];
-       //         break;
-       //         case(ItemType)3:
-       //         uiSlots[selectedItemIndex] = equippedSlots[3];
-       //         break;
-
-       // }
+     
         uiSlots[selectedItemIndex].equipped = true;
         curEquipIndex = selectedItemIndex;
 

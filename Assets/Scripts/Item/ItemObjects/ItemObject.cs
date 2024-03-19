@@ -2,10 +2,6 @@ using UnityEngine;
 
 public class ItemObject : MonoBehaviour , IInteractable
 {
-  
-
- 
-
 
     private ItemData item;
 
