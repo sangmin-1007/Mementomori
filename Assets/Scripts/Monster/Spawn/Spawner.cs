@@ -17,24 +17,30 @@ public class Spawner : MonoBehaviour
     private void Start()
     {
         spawnPoint = GetComponentsInChildren<Transform>();
-        _spawnManager = Managers.GameSceneManager.MonsterSpawner.GetComponent<SpawnManager>();
+        if(SceneManager.GetActiveScene().name == "GameScene")
+        {
+            _spawnManager = Managers.GameSceneManager.MonsterSpawner.GetComponent<SpawnManager>();
+        }
+
     }
 
     private void Update()
     {
         timer += Time.deltaTime;
 
+
+        if (_spawnManager == null)
+            return;
+
         if (timer > 1f && count < 10)
         {
             timer = 0f;
-            if (_spawnManager.pool == null)
-            {
-                return;
-            }
+
             Spawn();
             count++;
             //Debug.Log($"증가 후 몬스터 수 : {count}");
         }
+
     }
 
     void Spawn()

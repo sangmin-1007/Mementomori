@@ -27,8 +27,6 @@ public class HealthSystem : MonoBehaviour
     {
         CurrentHealth = _statsHandler.CurrentStates.maxHealth;
 
-        OnDeath += Managers.GameManager.GameOver;
-
         currentStamina = _statsHandler.CurrentStates.maxStamina;
     }
 
