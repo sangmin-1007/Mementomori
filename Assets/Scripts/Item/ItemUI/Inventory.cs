@@ -21,6 +21,7 @@ public class Inventory : UI_Base<Inventory>
     public ItemSlotUI[] equippedSlots;
     public ItemSlot[] slots;
    
+   
     public GameObject inventoryWindow;
 
     [Header("Selected Item")]
@@ -51,6 +52,7 @@ public class Inventory : UI_Base<Inventory>
 
 
     private SpriteRenderer spriteRenderer;
+    
   
 
     private int curEquipIndex;
@@ -70,6 +72,7 @@ public class Inventory : UI_Base<Inventory>
         instance = this;
         //private PlayerController controller; 캐릭터 InvokeEvent방식이랑 호환
         //private PlayerCondition condition; 장비창이 스탯이랑 연관있으니 캐릭터 스탯?이랑 호환해야할듯
+        
 
     }
 
@@ -131,6 +134,8 @@ public class Inventory : UI_Base<Inventory>
 
         }
     }
+
+
    
 
 
@@ -168,7 +173,7 @@ public class Inventory : UI_Base<Inventory>
             }
             else
                 uiSlots[i].Clear();
-          
+     
 
         }
       

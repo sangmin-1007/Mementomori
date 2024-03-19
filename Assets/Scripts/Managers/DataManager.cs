@@ -12,12 +12,7 @@ public class DataManager : MonoBehaviour
     
     public void AddItem(ItemData itemDatas)
     {
-        for(int i = 0; i < playerItemData.Count; i++)
-        {
-            itemDatas = playerItemData[i];
-            playerItemData.Add(itemDatas);
-        }
-        
+        playerItemData.Insert(0,itemDatas);
     }
     public void EquipItem(ItemData itemDatas)
     {

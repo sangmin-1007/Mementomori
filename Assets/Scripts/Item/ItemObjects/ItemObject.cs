@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ItemObject : MonoBehaviour , IInteractable
+public class ItemObject : MonoBehaviour 
 {
 
     private ItemData item;
@@ -8,6 +8,9 @@ public class ItemObject : MonoBehaviour , IInteractable
     public int itemId;
 
     private SpriteRenderer spriteRenderer;
+
+    public Transform PlayerTransform;
+    private float rootDistance = 2f;
 
 
     private void Start()
@@ -21,6 +24,16 @@ public class ItemObject : MonoBehaviour , IInteractable
         }
     }
 
+    private void Update()
+    {
+        float Distance = Vector3.Distance(transform.position, PlayerTransform.position);
+
+        if( Distance <= rootDistance )
+        {
+            Interaction();
+        }
+    }
+
 
     public void ItemSetting(int id)
     {
@@ -28,10 +41,10 @@ public class ItemObject : MonoBehaviour , IInteractable
         spriteRenderer.sprite = item.Sprite;
     }
 
-    public void OnInteract()
+    public void Interaction()
     {
-        
-        Inventory.instance.AddItem(item);
+        Managers.DataManager.AddItem(item);
+        Inventory.instance.AddItem(Managers.DataManager.playerItemData[0]);
         Destroy(gameObject);
     }
 }
