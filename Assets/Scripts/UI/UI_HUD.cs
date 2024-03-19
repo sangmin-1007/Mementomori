@@ -31,7 +31,7 @@ public class UI_HUD : UI_Base<UI_HUD>
         playerStats = Managers.GameSceneManager.Player.GetComponent<HealthSystem>();
 
         maxHP = playerStats.MaxHealth;
-        maxStamina = playerStats.MaxHealth;
+        maxStamina = playerStats.MaxStamina;
 
         miniMapAddButton.onClick.AddListener(OnClickAddButton);
         miniMapSubButton.onClick.AddListener(OnClickSubButton);

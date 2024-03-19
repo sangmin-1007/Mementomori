@@ -249,9 +249,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStats:
     statsChangeType: 2
-    maxHealth: 10
+    maxHealth: 29
     speed: 5
-    maxStamina: 0
+    maxStamina: 100
     attackSO: {fileID: 11400000, guid: 02cb8a3c2171c6545990643da4c4fbfc, type: 2}
   statsModifiers: []
 --- !u!114 &6965241902243966612
@@ -299,8 +299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthChangeDelay: 0.5
-  currentStamina: 0
-  staminaRecoveryRate: 0
+  staminaRecoveryRate: 10
 --- !u!114 &5716492099658022893
 MonoBehaviour:
   m_ObjectHideFlags: 0
