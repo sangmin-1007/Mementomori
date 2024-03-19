@@ -18,7 +18,7 @@ public class UI_HUD : UI_Base<UI_HUD>
 
     [SerializeField] private TextMeshProUGUI timeText;
 
-    private HealthSystem playerStats;
+    private PlayerStatsHandler playerStats;
 
     private float time;
 
@@ -28,9 +28,10 @@ public class UI_HUD : UI_Base<UI_HUD>
 
     private void Start()
     {
-        playerStats = Managers.GameSceneManager.Player.GetComponent<HealthSystem>();
+        playerStats = Managers.GameSceneManager.Player.GetComponent<PlayerStatsHandler>();
 
-        maxHP = playerStats.MaxHealth;
+        maxHP = playerStats.CurrentStates.maxHealth;
+        maxStamina = playerStats.CurrentStates.maxStamina;
 
         miniMapAddButton.onClick.AddListener(OnClickAddButton);
         miniMapSubButton.onClick.AddListener(OnClickSubButton);
@@ -46,9 +47,10 @@ public class UI_HUD : UI_Base<UI_HUD>
     {
         Timer();
 
-        curHp = playerStats.CurrentHealth;
+        curHp = playerStats.CurrentStates.maxStamina;
+        curStamina = playerStats.CurrentStates.maxStamina;
 
-        hpBar.fillAmount = Mathf.Lerp(hpBar.fillAmount, GetPercentage(curHp,maxHP), Time.deltaTime * 3f);
+        hpBar.fillAmount = Mathf.Lerp(hpBar.fillAmount, 0, Time.deltaTime * 3f);
         staminaBar.fillAmount = Mathf.Lerp(staminaBar.fillAmount, 0, Time.deltaTime * 5f);
         expBar.fillAmount = Mathf.Lerp(expBar.fillAmount, 1f, Time.deltaTime * 1.5f);
 
