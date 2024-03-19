@@ -20,6 +20,7 @@ public class Movement : MonoBehaviour
     private float knockbackDuration = 0.0f;
 
     public float CurrentSpeed { get; private set; }
+    public int CurrentStamina { get; private set; }
 
     private void Awake()
     {
@@ -33,6 +34,7 @@ public class Movement : MonoBehaviour
     {
         CurrentSpeed = _stats.CurrentStates.speed;
         CurrentSpeed = defaultSpeed;
+        CurrentStamina = _stats.CurrentStates.Stamina;
         //±¸µ¶
         _controller.OnMoveEvent += Move;
         
@@ -86,23 +88,28 @@ public class Movement : MonoBehaviour
 
     private void Dash()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if(CurrentStamina > 25)
         {
-            isDash = true;
-            StartCoroutine(TriggerCourtine());
-            animator.SetTrigger(IsDash);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                isDash = true;
+                StartCoroutine(TriggerCourtine());
+                animator.SetTrigger(IsDash);
+            }
+            if (dashTime <= 0f)
+            {
+                defaultSpeed = _stats.CurrentStates.speed;
+                if (isDash)
+                    dashTime = defaultTime;
+            }
+            else
+            {
+                dashTime -= Time.deltaTime;
+                defaultSpeed = dashSpeed;
+            }
+            isDash = false;
+            CurrentStamina = CurrentStamina - 25;
         }
-        if (dashTime <= 0f)
-        {
-            defaultSpeed = _stats.CurrentStates.speed;
-            if (isDash)
-                dashTime = defaultTime;
-        }
-        else
-        {
-            dashTime -= Time.deltaTime;
-            defaultSpeed = dashSpeed;
-        }
-        isDash = false;
+        
     }
 }

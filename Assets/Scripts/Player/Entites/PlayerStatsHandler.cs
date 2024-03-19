@@ -27,5 +27,6 @@ public class PlayerStatsHandler : MonoBehaviour
         CurrentStates.statsChangeType = baseStats.statsChangeType;
         CurrentStates.maxHealth = baseStats.maxHealth;
         CurrentStates.speed = baseStats.speed;
+        CurrentStates.Stamina = baseStats.Stamina;
     }
 }

@@ -16,6 +16,7 @@ public class PlayerStats
     public StatsChangeType statsChangeType;
     [Range(1, 100)] public int maxHealth;
     [Range(1f, 20f)] public float speed;
+    [Range(1, 100)] public int Stamina;
 
     //공격 데이터
     public AttackSO attackSO;
