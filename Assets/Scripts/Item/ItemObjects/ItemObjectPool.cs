@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemObjectPoolTest : MonoBehaviour
+public class ItemObjectPool : MonoBehaviour
 {
     Queue<GameObject> itemPool = new Queue<GameObject>();
 
