@@ -16,9 +16,11 @@ public class UI_HUD : UI_Base<UI_HUD>
     [SerializeField] private Image staminaBar;
     [SerializeField] private Image expBar;
 
+    [SerializeField] private TextMeshProUGUI levelText;
     [SerializeField] private TextMeshProUGUI timeText;
 
     private HealthSystem playerStats;
+    private Level playerLevel;
 
     private float time;
 
@@ -29,6 +31,7 @@ public class UI_HUD : UI_Base<UI_HUD>
     private void Start()
     {
         playerStats = Managers.GameSceneManager.Player.GetComponent<HealthSystem>();
+        playerLevel = Managers.GameSceneManager.Player.GetComponent<Level>();
 
         maxHP = playerStats.MaxHealth;
         maxStamina = playerStats.MaxStamina;
@@ -46,18 +49,7 @@ public class UI_HUD : UI_Base<UI_HUD>
     private void Update()
     {
         Timer();
-
-        curHp = playerStats.CurrentHealth;
-        curStamina = playerStats.currentStamina;
-
-        hpBar.fillAmount = Mathf.Lerp(hpBar.fillAmount, GetPercentage(curHp,maxHP), Time.deltaTime * 3f);
-        staminaBar.fillAmount = Mathf.Lerp(staminaBar.fillAmount,GetPercentage(curStamina,maxStamina), Time.deltaTime * 5f);
-        expBar.fillAmount = Mathf.Lerp(expBar.fillAmount, 1f, Time.deltaTime * 1.5f);
-
-        if(expBar.fillAmount >= 0.99f)
-        {
-            expBar.fillAmount = 0f;
-        }
+        UpdateHUD();
     }
 
     private float GetPercentage(float curValue, float maxValue)
@@ -92,5 +84,24 @@ public class UI_HUD : UI_Base<UI_HUD>
         int sec = Mathf.Max(0, (int)time % 60);
 
         timeText.text = min.ToString("D2") + ":" + sec.ToString("D2");
+    }
+
+    private void UpdateHUD()
+    {
+        curHp = playerStats.CurrentHealth;
+        curStamina = playerStats.currentStamina;
+        maxExp = playerLevel.expriecneCap;
+        curExp = playerLevel.expriecne;
+
+        levelText.text = playerLevel.level.ToString();
+
+        hpBar.fillAmount = Mathf.Lerp(hpBar.fillAmount, GetPercentage(curHp, maxHP), Time.deltaTime * 3f);
+        staminaBar.fillAmount = Mathf.Lerp(staminaBar.fillAmount, GetPercentage(curStamina, maxStamina), Time.deltaTime * 5f);
+        expBar.fillAmount = Mathf.Lerp(expBar.fillAmount, GetPercentage(curExp, maxExp), Time.deltaTime * 1.5f);
+
+        if (expBar.fillAmount >= 0.99f)
+        {
+            expBar.fillAmount = 0f;
+        }
     }
 }

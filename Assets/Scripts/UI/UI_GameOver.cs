@@ -14,14 +14,19 @@ public class UI_GameOver : UI_Base<UI_GameOver>
 
     [SerializeField] private TextMeshProUGUI gameOverText;
     [SerializeField] private TextMeshProUGUI timeText;
+    [SerializeField] private TextMeshProUGUI levelText;
     [SerializeField] private Image[] itemSprite;
+
+    private Level playerLevel;
 
     private void Start()
     {
         LobbyButton.onClick.AddListener(OnClickLobbyButton);
-        Timer();
 
-        for(int i = 0; i < itemSprite.Length; i++)
+        Timer();
+        LevelTextChange();
+
+        for (int i = 0; i < itemSprite.Length; i++)
         {
             if (Managers.DataManager.playerItemData.Count == 0)
                 break;
@@ -90,5 +95,12 @@ public class UI_GameOver : UI_Base<UI_GameOver>
         int sec = Mathf.Max(0, (int)time % 60);
 
         timeText.text = "Time : " + min.ToString("D2") + ":" + sec.ToString("D2");
+    }
+
+    private void LevelTextChange()
+    {
+        playerLevel = Managers.GameSceneManager.Player.GetComponent<Level>();
+
+        levelText.text = playerLevel.level.ToString();
     }
 }

@@ -4185,6 +4185,7 @@ MonoBehaviour:
   resultCanvasGroup: {fileID: 6192448827379334303}
   gameOverText: {fileID: 885544261348121770}
   timeText: {fileID: 5683325492335847608}
+  levelText: {fileID: 989720849532705621}
   itemSprite:
   - {fileID: 5698093416890342310}
   - {fileID: 4870608478087510544}
