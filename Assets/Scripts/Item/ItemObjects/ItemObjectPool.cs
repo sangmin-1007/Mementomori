@@ -13,11 +13,14 @@ public class ItemObjectPool : MonoBehaviour
 
     private void Start()
     {
+        
         itemObject = Resources.Load<GameObject>("Prefabs/Item/ItemObject");
     }
 
     public void Init()
     {
+        itemPool.Clear();
+
         itemPoolObject = GameObject.Find("itemPoolObject");
 
         if(itemPoolObject == null)
