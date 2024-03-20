@@ -13,7 +13,7 @@ public class ItemObjectPool : MonoBehaviour
 
     private void Start()
     {
-        itemObject = (GameObject)Resources.Load("Prefabs/Item/ItemObject");
+        itemObject = Resources.Load<GameObject>("Prefabs/Item/ItemObject");
     }
 
     public void Init()
@@ -63,8 +63,6 @@ public class ItemObjectPool : MonoBehaviour
     public void DisableItem(GameObject item)
     {
         item.SetActive(false);
-        item = itemObject;
         itemPool.Enqueue(item);
-        
     }
 }

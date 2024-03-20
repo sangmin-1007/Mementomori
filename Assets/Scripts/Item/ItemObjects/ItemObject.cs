@@ -29,6 +29,9 @@ public class ItemObject : MonoBehaviour
 
     private void Update()
     {
+        if (playerTransform == null)
+            return;
+
         float Distance = Vector3.Distance(transform.position, playerTransform.position);
 
         if( Distance <= rootDistance )

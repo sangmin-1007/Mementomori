@@ -17,7 +17,7 @@ public class Spawner : MonoBehaviour
     private void Start()
     {
         spawnPoint = GetComponentsInChildren<Transform>();
-        if(SceneManager.GetActiveScene().name == "GameScene")
+        if(SceneManager.GetActiveScene().name == "GameScene" || SceneManager.GetActiveScene().name == "GameScene-LIK")
         {
             _spawnManager = Managers.GameSceneManager.MonsterSpawner.GetComponent<SpawnManager>();
         }
