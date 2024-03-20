@@ -356,7 +356,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthChangeDelay: 0.5
-  currentStamina: 0
   staminaRecoveryRate: 0
 --- !u!114 &842050156
 MonoBehaviour:
@@ -1243,5 +1242,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9203734851289271431, guid: c13a322a8f8b32e4680a027e6a25dd9c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4456069162983961396}
   m_SourcePrefab: {fileID: 100100000, guid: c13a322a8f8b32e4680a027e6a25dd9c, type: 3}
+--- !u!1 &4456069162983961395 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9203734851289271431, guid: c13a322a8f8b32e4680a027e6a25dd9c, type: 3}
+  m_PrefabInstance: {fileID: 4456069162983961394}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4456069162983961396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4456069162983961395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c1a5ea4101e2e94da9464d239559b46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expriecne: 0
+  level: 1
+  expriecneCap: 0
+  levelRanges:
+  - startLevel: 1
+    endLevel: 5
+    experienceCapIncrease: 100
+  - startLevel: 6
+    endLevel: 10
+    experienceCapIncrease: 150
+  - startLevel: 11
+    endLevel: 15
+    experienceCapIncrease: 200

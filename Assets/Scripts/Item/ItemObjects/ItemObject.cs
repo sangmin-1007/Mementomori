@@ -12,11 +12,13 @@ public class ItemObject : MonoBehaviour
     private Transform playerTransform;
     private float rootDistance = 1f;
 
+    private Level level;
 
     private void Start()
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         playerTransform = Managers.GameSceneManager.Player.GetComponent<Transform>();
+        level = Managers.GameSceneManager.Player.GetComponent<Level>();
 
        if( itemId != 0)
         {
@@ -53,7 +55,9 @@ public class ItemObject : MonoBehaviour
         else
         {
             Managers.ItemObjectPool.DisableItem(gameObject);
-            Debug.Log("°æÇèÄ¡ È¹µæ");
+            //Debug.Log("°æÇèÄ¡ È¹µæ");
+            Debug.Log($"°æÇèÄ¡ : {level.expriecne}, ·¹º§ : {level.level}");
+            level.IncreaseExprience(10);
             //ObjectPool
             //°æÇèÄ¡ 
         }
