@@ -29,6 +29,9 @@ public class ItemObject : MonoBehaviour
 
     private void Update()
     {
+        if (playerTransform == null)
+            return;
+
         float Distance = Vector3.Distance(transform.position, playerTransform.position);
 
         if( Distance <= rootDistance )
@@ -40,7 +43,7 @@ public class ItemObject : MonoBehaviour
 
     public void ItemSetting(int id)
     {
-       item = DataBase.Item.Get(id);
+       item = DataBase.Item.GetID(id);
         spriteRenderer.sprite = item.Sprite;
     }
 

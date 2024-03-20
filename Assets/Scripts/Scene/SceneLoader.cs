@@ -46,6 +46,7 @@ public class SceneLoader : MonoBehaviour
                 break;
             //EndingScene
             case 3:
+                Managers.GameSceneManager.InitializeGameScene();
                 break;
         }
     }

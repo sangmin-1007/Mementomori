@@ -72,14 +72,15 @@ public class Inventory : UI_Base<Inventory>
         instance = this;
         //private PlayerController controller; 캐릭터 InvokeEvent방식이랑 호환
         //private PlayerCondition condition; 장비창이 스탯이랑 연관있으니 캐릭터 스탯?이랑 호환해야할듯
-        
+
+        DontDestroyOnLoad(gameObject);
+
 
     }
 
     private void Start()
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        inventoryWindow.SetActive(false);
         slots = new ItemSlot[uiSlots.Length];
 
         for (int i = 0; i < uiSlots.Length; i++)
@@ -89,9 +90,6 @@ public class Inventory : UI_Base<Inventory>
             uiSlots[i].Clear();
         }
         ClearSeletecItemWindow();
-
-       
-
     }
 
    
@@ -128,7 +126,6 @@ public class Inventory : UI_Base<Inventory>
         {
 
             emptySlot.item = item; // 거기에 아이템 추가
-            Managers.DataManager.AddItem(item);
             UpdateUI(); // UI업데이트 한번 해주기
             return;
 

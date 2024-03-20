@@ -24,6 +24,14 @@ public class UI_Manager : MonoBehaviour
             return CreateUI<T>(parent);
     }
 
+    public void HideUI<T>()
+    {
+        if (UI_List.ContainsKey(typeof(T).Name) && UI_List[typeof(T).Name] == null)
+            return;
+
+        UI_List[typeof(T).Name].SetActive(false);
+    }
+
     public T CreateUI<T>(Transform parent = null)
     {
         try

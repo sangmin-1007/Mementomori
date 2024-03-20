@@ -13,11 +13,14 @@ public class ItemObjectPool : MonoBehaviour
 
     private void Start()
     {
-        itemObject = (GameObject)Resources.Load("Prefabs/Item/ItemObject");
+        
+        itemObject = Resources.Load<GameObject>("Prefabs/Item/ItemObject");
     }
 
     public void Init()
     {
+        itemPool.Clear();
+
         itemPoolObject = GameObject.Find("itemPoolObject");
 
         if(itemPoolObject == null)
@@ -33,6 +36,8 @@ public class ItemObjectPool : MonoBehaviour
     {
         for(int i = 0; i < itemCount; i++)
         {
+            if (itemObject == null)
+                return;
             GameObject itemObjectCopy = Instantiate(itemObject);
 
             itemObjectCopy.transform.parent = itemPoolObject.transform;
@@ -63,8 +68,6 @@ public class ItemObjectPool : MonoBehaviour
     public void DisableItem(GameObject item)
     {
         item.SetActive(false);
-        item = itemObject;
         itemPool.Enqueue(item);
-        
     }
 }

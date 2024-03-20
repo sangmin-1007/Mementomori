@@ -38,7 +38,14 @@ public class PlayerInputController : PlayerController
     {
         if (value.isPressed)
         {
-            Inventory.instance.Toggle();
+            if(!Managers.UI_Manager.IsActive<Inventory>())
+            {
+                Managers.UI_Manager.ShowUI<Inventory>();
+            }
+            else
+            {
+                Managers.UI_Manager.HideUI<Inventory>();
+            }
         }
     }
 }
