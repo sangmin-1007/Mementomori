@@ -8,6 +8,7 @@ public class LobbySceneManager : MonoBehaviour
 
     public void IntializeLobbyScene()
     {
+
         var lobbyMap = Resources.Load<GameObject>("Prefabs/Map/Lobby");
         var mapInfo = Instantiate(lobbyMap).GetComponent<MapInfo>();
         
@@ -15,7 +16,5 @@ public class LobbySceneManager : MonoBehaviour
         var playerPath = Resources.Load<GameObject>("Prefabs/Player/Player");
         Player = Instantiate(playerPath, mapInfo.playerSpawnPoint.position, Quaternion.Euler(Vector3.zero));
 
-        Managers.UI_Manager.ShowUI<Inventory>();
-        Managers.UI_Manager.HideUI<Inventory>();
     }
 }

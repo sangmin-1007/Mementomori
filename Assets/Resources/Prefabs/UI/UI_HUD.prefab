@@ -1245,6 +1245,7 @@ MonoBehaviour:
   hpBar: {fileID: 4643770515916293969}
   staminaBar: {fileID: 5671479174664385031}
   expBar: {fileID: 8694235379578006657}
+  levelText: {fileID: 1891660506485255183}
   timeText: {fileID: 2247526342490045665}
 --- !u!1 &4160106272256447345
 GameObject:

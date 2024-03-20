@@ -32,7 +32,6 @@ public class HealthSystem : MonoBehaviour
 
     private void Update()
     {
-        //�������� ����� ���� < 0.5 �ʺ��� �۴ٸ�
         if(_timeSinceLastChange < healthChangeDelay)
         {
             _timeSinceLastChange += Time.deltaTime;
@@ -57,17 +56,15 @@ public class HealthSystem : MonoBehaviour
         CurrentHealth = CurrentHealth > MaxHealth ? MaxHealth : CurrentHealth;
         CurrentHealth = CurrentHealth < 0 ? 0 : CurrentHealth;
 
-        //�ǰ� �� ���
+
         if(change > 0)
         {
             OnHeal?.Invoke();
         }
-        //�ǰ� ���� ���
         else
         {
             OnDamage?.Invoke();
         }
-        //���
         if(CurrentHealth <= 0f)
         {
             CallDeath();
