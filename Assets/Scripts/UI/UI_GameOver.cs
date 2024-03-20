@@ -14,10 +14,26 @@ public class UI_GameOver : UI_Base<UI_GameOver>
 
     [SerializeField] private TextMeshProUGUI gameOverText;
     [SerializeField] private TextMeshProUGUI timeText;
+    [SerializeField] private Image[] itemSprite;
 
     private void Start()
     {
         LobbyButton.onClick.AddListener(OnClickLobbyButton);
+        Timer();
+
+        for(int i = 0; i < itemSprite.Length; i++)
+        {
+            if (Managers.DataManager.playerItemData.Count == 0)
+                break;
+
+            itemSprite[i].sprite = Managers.DataManager.playerItemData[i].Sprite;
+
+            if (itemSprite[i].sprite != null)
+            {
+                itemSprite[i].gameObject.SetActive(true);
+            }
+        }
+
         StartCoroutine(GameOverCoroutine());
     }
 

@@ -14,5 +14,8 @@ public class LobbySceneManager : MonoBehaviour
         // TODO : PlayerInstantiate
         var playerPath = Resources.Load<GameObject>("Prefabs/Player/Player");
         Player = Instantiate(playerPath, mapInfo.playerSpawnPoint.position, Quaternion.Euler(Vector3.zero));
+
+        Managers.UI_Manager.ShowUI<Inventory>();
+        Managers.UI_Manager.HideUI<Inventory>();
     }
 }

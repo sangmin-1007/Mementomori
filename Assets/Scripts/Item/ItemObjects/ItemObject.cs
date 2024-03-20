@@ -43,7 +43,7 @@ public class ItemObject : MonoBehaviour
 
     public void ItemSetting(int id)
     {
-       item = DataBase.Item.Get(id);
+       item = DataBase.Item.GetID(id);
         spriteRenderer.sprite = item.Sprite;
     }
 

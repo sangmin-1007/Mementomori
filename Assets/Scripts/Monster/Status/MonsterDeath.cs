@@ -1,3 +1,4 @@
+using Constants;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -21,7 +22,16 @@ public class MonsterDeath : MonoBehaviour
 
     private void OnDie()
     {
-        Managers.ItemObjectPool.SpawnItem(transform.position, 50001000);
+        int dropRate = UnityEngine.Random.Range(1, 101);
+        if(dropRate <= 50)
+        {
+            Managers.ItemObjectPool.SpawnItem(transform.position, 50001000);
+        }
+        else
+        {
+            Managers.ItemObjectPool.SpawnItem(transform.position,DataBase.Item.GetRandomItemID());
+        }
+        
 
         rigid.velocity = Vector3.zero;
 
