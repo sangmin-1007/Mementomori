@@ -79,7 +79,6 @@ public class Inventory : UI_Base<Inventory>
     private void Start()
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        inventoryWindow.SetActive(false);
         slots = new ItemSlot[uiSlots.Length];
 
         for (int i = 0; i < uiSlots.Length; i++)
@@ -89,9 +88,6 @@ public class Inventory : UI_Base<Inventory>
             uiSlots[i].Clear();
         }
         ClearSeletecItemWindow();
-
-       
-
     }
 
    
