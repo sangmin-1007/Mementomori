@@ -342,8 +342,11 @@ MonoBehaviour:
   level: 1
   expriecneCap: 0
   levelRanges:
+  - startLevel: 0
+    endLevel: 0
+    experienceCapIncrease: 100
   - startLevel: 1
-    endLevel: 100
+    endLevel: 10
     experienceCapIncrease: 10
 --- !u!1 &607005517381296512
 GameObject:
