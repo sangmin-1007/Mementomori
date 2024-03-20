@@ -52,7 +52,7 @@ public class ItemObject : MonoBehaviour
         if(item.Type != Constants.ItemType.Consume)
         {
             Managers.DataManager.AddItem(item);
-            Inventory.instance.AddItem(Managers.DataManager.playerItemData[0]);
+            //Inventory.instance.AddItem(Managers.DataManager.playerItemData[0]);
             Managers.ItemObjectPool.DisableItem(gameObject);
         }
         else
@@ -60,7 +60,7 @@ public class ItemObject : MonoBehaviour
             Managers.ItemObjectPool.DisableItem(gameObject);
             //Debug.Log("경험치 획득");
             Debug.Log($"경험치 : {level.expriecne}, 레벨 : {level.level}");
-            level.IncreaseExprience(10);
+            level.IncreaseExprience(item.Exp);
             //ObjectPool
             //경험치 
         }

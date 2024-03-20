@@ -22,16 +22,19 @@ public class MonsterDeath : MonoBehaviour
 
     private void OnDie()
     {
-        int dropRate = UnityEngine.Random.Range(1, 101);
-        if(dropRate <= 50)
-        {
-            Managers.ItemObjectPool.SpawnItem(transform.position, 50001000);
-        }
-        else
-        {
-            Managers.ItemObjectPool.SpawnItem(transform.position,DataBase.Item.GetRandomItemID());
-        }
-        
+        Managers.ItemObjectPool.SpawnItem(transform.position, 50001000);
+
+        #region 아이템 드롭 테스트
+        //int dropRate = UnityEngine.Random.Range(1, 101);
+        //if(dropRate <= 50)
+        //{
+        //    Managers.ItemObjectPool.SpawnItem(transform.position, 50001000);
+        //}
+        //else
+        //{
+        //    Managers.ItemObjectPool.SpawnItem(transform.position,DataBase.Item.GetRandomItemID());
+        //}
+        #endregion
 
         rigid.velocity = Vector3.zero;
 
