@@ -12,6 +12,7 @@ public class Spawner : MonoBehaviour
     private SpawnManager _spawnManager;
 
     float timer = 0f;
+    float stage_time = 0f;
     public static int count = 0;
 
     private void Start()
@@ -27,7 +28,13 @@ public class Spawner : MonoBehaviour
     private void Update()
     {
         timer += Time.deltaTime;
+        stage_time += Time.deltaTime;
 
+        if(stage_time > 30f)
+        {
+            SpawnBoss();
+            return;
+        }
 
         if (_spawnManager == null)
             return;
@@ -41,6 +48,11 @@ public class Spawner : MonoBehaviour
             //Debug.Log($"증가 후 몬스터 수 : {count}");
         }
 
+    }
+
+    private void SpawnBoss()
+    {
+        
     }
 
     void Spawn()

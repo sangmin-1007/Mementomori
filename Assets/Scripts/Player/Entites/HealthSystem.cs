@@ -76,6 +76,11 @@ public class HealthSystem : MonoBehaviour
         return true;
     }
 
+    private void OnEnable()
+    {
+        CurrentHealth = MaxHealth;
+    }
+
     private void CallDeath()
     {
         OnDeath?.Invoke();
