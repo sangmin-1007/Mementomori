@@ -12,11 +12,13 @@ public class Spawner : MonoBehaviour
     private SpawnManager _spawnManager;
 
     float timer = 0f;
-    float stage_time = 0f;
+    //float stage_time = 0f;
     public static int count = 0;
 
     private void Start()
     {
+        count = 0;
+
         spawnPoint = GetComponentsInChildren<Transform>();
         if(SceneManager.GetActiveScene().name == "GameScene" || SceneManager.GetActiveScene().name == "GameScene-LIK")
         {
@@ -28,13 +30,14 @@ public class Spawner : MonoBehaviour
     private void Update()
     {
         timer += Time.deltaTime;
-        stage_time += Time.deltaTime;
+        Debug.Log(timer);
+        //stage_time += Time.deltaTime;
 
-        if(stage_time > 30f)
-        {
-            SpawnBoss();
-            return;
-        }
+        //if(stage_time > 30f)
+        //{
+        //    SpawnBoss();
+        //    return;
+        //}
 
         if (_spawnManager == null)
             return;
