@@ -18,6 +18,8 @@ public class ItemObjectPool : MonoBehaviour
 
     public void Init()
     {
+        itemPool.Clear();
+
         itemPoolObject = GameObject.Find("itemPoolObject");
 
         if(itemPoolObject == null)
@@ -33,6 +35,9 @@ public class ItemObjectPool : MonoBehaviour
     {
         for(int i = 0; i < itemCount; i++)
         {
+            if (itemObject == null)
+                return;
+
             GameObject itemObjectCopy = Instantiate(itemObject);
 
             itemObjectCopy.transform.parent = itemPoolObject.transform;
