@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ItemObject : MonoBehaviour 
 {
@@ -10,7 +11,11 @@ public class ItemObject : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     private Transform playerTransform;
-    private float rootDistance = 1f;
+    private PlayerStatsHandler playerStats;
+    private float rootDistance = 0.5f;
+    private float magnetDistance = 3f;
+
+    private float moveSpeed;
 
     private Level level;
 
@@ -18,9 +23,12 @@ public class ItemObject : MonoBehaviour
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         playerTransform = Managers.GameSceneManager.Player.GetComponent<Transform>();
+        playerStats = Managers.GameSceneManager.Player.GetComponent<PlayerStatsHandler>();
         level = Managers.GameSceneManager.Player.GetComponent<Level>();
 
-       if( itemId != 0)
+        moveSpeed = (playerStats.CurrentStates.speed + 2f);
+
+       if ( itemId != 0)
         {
             ItemSetting(itemId);
 
@@ -37,6 +45,11 @@ public class ItemObject : MonoBehaviour
         if( Distance <= rootDistance )
         {
             Interaction();
+        }
+
+        if (Distance <= magnetDistance)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, moveSpeed * Time.deltaTime);
         }
     }
 
