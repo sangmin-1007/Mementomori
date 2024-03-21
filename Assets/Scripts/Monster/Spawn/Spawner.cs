@@ -30,7 +30,7 @@ public class Spawner : MonoBehaviour
     private void Update()
     {
         timer += Time.deltaTime;
-        Debug.Log(timer);
+        //Debug.Log(timer);
         //stage_time += Time.deltaTime;
 
         //if(stage_time > 30f)

@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 
     private float _timeSinceLastAttack = float.MaxValue;
     protected bool IsAttacking { get; set; }
+    public bool IsDashing { get; set; }
     protected PlayerStatsHandler Stats { get; private set; }
 
     protected virtual void Awake()

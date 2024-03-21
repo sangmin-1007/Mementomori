@@ -20,7 +20,7 @@ public class Movement : MonoBehaviour
     private Vector2 _knockback = Vector2.zero;
     private float knockbackDuration = 0.0f;
 
-    public float CurrentSpeed { get; private set; }
+    
     public float CurrentStamina { get; private set; }
 
     private void Awake()
@@ -34,12 +34,10 @@ public class Movement : MonoBehaviour
 
     private void Start()
     {
-        CurrentSpeed = _stats.CurrentStates.speed;
-        CurrentSpeed = defaultSpeed;
+        defaultSpeed = _stats.CurrentStates.speed;
         CurrentStamina = _stats.CurrentStates.maxStamina;
         //±¸µ¶
         _controller.OnMoveEvent += Move;
-        
     }
     private void Update()
     {
@@ -82,32 +80,27 @@ public class Movement : MonoBehaviour
     }
     private IEnumerator TriggerCourtine()
     {
-        gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
         yield return new WaitForSeconds(0.5f); 
-        gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
+        gameObject.GetComponent<BoxCollider2D>().enabled = true;
         yield break;
     }
-
+    private IEnumerator DashCourtine()
+    {
+        defaultSpeed = dashSpeed;
+        yield return new WaitForSeconds(0.1f);
+        defaultSpeed = _stats.CurrentStates.speed;
+        yield break ;
+    }
     private void Dash()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && _healthSystem.GetCurrentSP() > 25)
+        if (_controller.IsDashing && _healthSystem.GetCurrentSP() > 25)
         {
-            isDash = true;
             StartCoroutine(TriggerCourtine());
             animator.SetTrigger(IsDash);
+            StartCoroutine(DashCourtine());
             _healthSystem.DecreaseStamina(25);
+            _controller.IsDashing = false;
         }
-        if (dashTime <= 0f)
-        {
-            defaultSpeed = _stats.CurrentStates.speed;
-            if (isDash)
-                dashTime = defaultTime;
-        }
-        else
-        {
-            dashTime -= Time.deltaTime;
-            defaultSpeed = dashSpeed;
-        }
-        isDash = false;
     }
 }

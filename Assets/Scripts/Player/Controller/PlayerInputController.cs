@@ -20,6 +20,11 @@ public class PlayerInputController : PlayerController
         CallMoveEvent(moveInput);
     }
 
+    public void OnDash(InputValue value)
+    {
+        IsDashing = value.isPressed;
+    }
+
     public void OnLook(InputValue value)
     {
         Vector2 newAim = value.Get<Vector2>();
