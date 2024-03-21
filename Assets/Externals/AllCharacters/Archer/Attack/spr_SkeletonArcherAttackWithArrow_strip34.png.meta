@@ -1,0 +1,998 @@
+fileFormatVersion: 2
+guid: a1c690f46deb3d7499b7efc256f54acf
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 30
+        width: 65
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cafa6abf8e9db21418806cf88f082b05
+      internalID: 131565433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_1
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 30
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc399b5a538a3a84787659db9fea80f3
+      internalID: -1067645997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_2
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 30
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecc4804385d8d3e48ac64044f7d21f9d
+      internalID: -168635495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_3
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 30
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e5de51e68201f647a67cf6afd3a824e
+      internalID: -750521418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_4
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 30
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99397a389e823d64fa56aa2ea9053498
+      internalID: 840471789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_5
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 30
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c494e95f58651942b7056f44c6d5af3
+      internalID: -950042435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_6
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 30
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf5e5a3612a7d44bb732d533aa5658e
+      internalID: -396833396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_7
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 30
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce5b95fd0241bc44ae4916a6795bd49
+      internalID: -1476742640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_8
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 30
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 628246aa320610d46ad761843e088ccf
+      internalID: 1614871648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_9
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 30
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f75a10da1d4452a4b98e19931bbb676f
+      internalID: 309154716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_10
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 30
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dedd6af7bd512dc4e81e637569677a96
+      internalID: 1442010562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_11
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 30
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60dd48e2e8dae814988e85f819764561
+      internalID: 1345823396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_12
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 30
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df2d7c6daa9233d41b0f0e79cb99b86e
+      internalID: -1744830318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_13
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 30
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c851d23ec05234d9a89197ce784bca
+      internalID: -967670176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_14
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 30
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c629c03582799184ca29b6d652b813a0
+      internalID: -1290876179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_15
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 30
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3deb47f5d51744143b2f8bbbdfc42165
+      internalID: 462451424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_16
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 30
+        width: 29
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ae41c49eec3a64da4b341679392f6a
+      internalID: 1484696025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_17
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 30
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69e7a22092a2f884e80f1fafee6730c1
+      internalID: 1004095727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_18
+      rect:
+        serializedVersion: 2
+        x: 1764
+        y: 30
+        width: 39
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3501d25368c806340a333cab73de2634
+      internalID: 1388636430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_19
+      rect:
+        serializedVersion: 2
+        x: 1861
+        y: 30
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 819216ff61767454783271f82eb506d4
+      internalID: 523555071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_20
+      rect:
+        serializedVersion: 2
+        x: 1956
+        y: 30
+        width: 45
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad803922c14800041a3d213cc32704f9
+      internalID: 192256407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_21
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 30
+        width: 45
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4b15378a3eaed04cacbb58e949f15be
+      internalID: 265378899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_22
+      rect:
+        serializedVersion: 2
+        x: 2148
+        y: 30
+        width: 44
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7114065415776de468e923897478e17a
+      internalID: 1510414307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_23
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 30
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dacf866cdd8db9744b1561e5ca8751b8
+      internalID: 1012143836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_24
+      rect:
+        serializedVersion: 2
+        x: 2337
+        y: 30
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71d3f8756255bd546aeee06460374c6b
+      internalID: -288286907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_25
+      rect:
+        serializedVersion: 2
+        x: 2433
+        y: 30
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 844f84e8617ad3b4b9392c48c77e09d9
+      internalID: 100615397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_26
+      rect:
+        serializedVersion: 2
+        x: 2529
+        y: 30
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9275059da89ce2b45a04825f6a31c8d1
+      internalID: 1229895320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_27
+      rect:
+        serializedVersion: 2
+        x: 2626
+        y: 30
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24fc68e06a30ebe469d47d3492716151
+      internalID: 518486971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_28
+      rect:
+        serializedVersion: 2
+        x: 2721
+        y: 30
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab055dc3d4b7fec4a8949527f76e754d
+      internalID: 1498258202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_29
+      rect:
+        serializedVersion: 2
+        x: 2812
+        y: 30
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b9e6177d4ebd89479508328a9389284
+      internalID: -886342775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_30
+      rect:
+        serializedVersion: 2
+        x: 2860
+        y: 52
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 691e42f0a93bc5f4c929627d7b42161c
+      internalID: -1251060161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_31
+      rect:
+        serializedVersion: 2
+        x: 2908
+        y: 30
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6210819336de9f848b0f051b4c0b0599
+      internalID: -1208023399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_32
+      rect:
+        serializedVersion: 2
+        x: 2956
+        y: 50
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b754de4495fcc4187499131eb9357a
+      internalID: 1282479950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_33
+      rect:
+        serializedVersion: 2
+        x: 3003
+        y: 30
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97249af66b3973e4696ff61f9af096b1
+      internalID: -419276220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_34
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 52
+        width: 26
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe6c68d6db85d940ae307b28e91588d
+      internalID: -724111835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_35
+      rect:
+        serializedVersion: 2
+        x: 3099
+        y: 30
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89eee485c5de67d4b971239f4aa5a50c
+      internalID: 1415021543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_36
+      rect:
+        serializedVersion: 2
+        x: 3144
+        y: 52
+        width: 26
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44df2c720dfd4944183bfcd9ef8fa590
+      internalID: -215726417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_37
+      rect:
+        serializedVersion: 2
+        x: 3195
+        y: 30
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf4e4e11f5626546bc5e4cbacbfd26b
+      internalID: 47827214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_SkeletonArcherAttackWithArrow_strip34_38
+      rect:
+        serializedVersion: 2
+        x: 3239
+        y: 52
+        width: 25
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 209fcf74c3b59e44c950da1585d58133
+      internalID: 285108626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      spr_SkeletonArcherAttackWithArrow_strip34_0: 131565433
+      spr_SkeletonArcherAttackWithArrow_strip34_1: -1067645997
+      spr_SkeletonArcherAttackWithArrow_strip34_10: 1442010562
+      spr_SkeletonArcherAttackWithArrow_strip34_11: 1345823396
+      spr_SkeletonArcherAttackWithArrow_strip34_12: -1744830318
+      spr_SkeletonArcherAttackWithArrow_strip34_13: -967670176
+      spr_SkeletonArcherAttackWithArrow_strip34_14: -1290876179
+      spr_SkeletonArcherAttackWithArrow_strip34_15: 462451424
+      spr_SkeletonArcherAttackWithArrow_strip34_16: 1484696025
+      spr_SkeletonArcherAttackWithArrow_strip34_17: 1004095727
+      spr_SkeletonArcherAttackWithArrow_strip34_18: 1388636430
+      spr_SkeletonArcherAttackWithArrow_strip34_19: 523555071
+      spr_SkeletonArcherAttackWithArrow_strip34_2: -168635495
+      spr_SkeletonArcherAttackWithArrow_strip34_20: 192256407
+      spr_SkeletonArcherAttackWithArrow_strip34_21: 265378899
+      spr_SkeletonArcherAttackWithArrow_strip34_22: 1510414307
+      spr_SkeletonArcherAttackWithArrow_strip34_23: 1012143836
+      spr_SkeletonArcherAttackWithArrow_strip34_24: -288286907
+      spr_SkeletonArcherAttackWithArrow_strip34_25: 100615397
+      spr_SkeletonArcherAttackWithArrow_strip34_26: 1229895320
+      spr_SkeletonArcherAttackWithArrow_strip34_27: 518486971
+      spr_SkeletonArcherAttackWithArrow_strip34_28: 1498258202
+      spr_SkeletonArcherAttackWithArrow_strip34_29: -886342775
+      spr_SkeletonArcherAttackWithArrow_strip34_3: -750521418
+      spr_SkeletonArcherAttackWithArrow_strip34_30: -1251060161
+      spr_SkeletonArcherAttackWithArrow_strip34_31: -1208023399
+      spr_SkeletonArcherAttackWithArrow_strip34_32: 1282479950
+      spr_SkeletonArcherAttackWithArrow_strip34_33: -419276220
+      spr_SkeletonArcherAttackWithArrow_strip34_34: -724111835
+      spr_SkeletonArcherAttackWithArrow_strip34_35: 1415021543
+      spr_SkeletonArcherAttackWithArrow_strip34_36: -215726417
+      spr_SkeletonArcherAttackWithArrow_strip34_37: 47827214
+      spr_SkeletonArcherAttackWithArrow_strip34_38: 285108626
+      spr_SkeletonArcherAttackWithArrow_strip34_4: 840471789
+      spr_SkeletonArcherAttackWithArrow_strip34_5: -950042435
+      spr_SkeletonArcherAttackWithArrow_strip34_6: -396833396
+      spr_SkeletonArcherAttackWithArrow_strip34_7: -1476742640
+      spr_SkeletonArcherAttackWithArrow_strip34_8: 1614871648
+      spr_SkeletonArcherAttackWithArrow_strip34_9: 309154716
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
