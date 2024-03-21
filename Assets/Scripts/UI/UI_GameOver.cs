@@ -28,14 +28,14 @@ public class UI_GameOver : UI_Base<UI_GameOver>
 
         for (int i = 0; i < itemSprite.Length; i++)
         {
-            if (Managers.DataManager.playerItemData.Count == 0)
-                break;
-
-            itemSprite[i].sprite = Managers.DataManager.playerItemData[i].Sprite;
-
-            if (itemSprite[i].sprite != null)
+            if (Managers.DataManager.playerItemData.Count == 0 && i < Managers.DataManager.playerItemData.Count)
             {
-                itemSprite[i].gameObject.SetActive(true);
+                itemSprite[i].sprite = Managers.DataManager.playerItemData[i].Sprite;
+
+                if (itemSprite[i].sprite != null)
+                {
+                    itemSprite[i].gameObject.SetActive(true);
+                }
             }
         }
 
