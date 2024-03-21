@@ -46,7 +46,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pool: {fileID: 8901611406915986783}
-  player: {fileID: 0}
 --- !u!1 &7977753938376858671
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,3 +95,4 @@ MonoBehaviour:
   - {fileID: 2367717372256310082, guid: 9599efe65d93bc84cb041da9688876d0, type: 3}
   - {fileID: 512736088422090152, guid: 462a0994aa09acf4ab569c42d74ed5ee, type: 3}
   - {fileID: 5818681289612884098, guid: a990c3f1ed8fd774b900aeed32088794, type: 3}
+  - {fileID: 5344142885034079629, guid: 58ffebeeddc46d74e8cb84d4cc9494f1, type: 3}

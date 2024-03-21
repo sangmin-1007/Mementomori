@@ -12,7 +12,7 @@ public class Spawner : MonoBehaviour
     private SpawnManager _spawnManager;
 
     float timer = 0f;
-    //float stage_time = 0f;
+    float stage_time = 0f;
     public static int count = 0;
 
     private void Start()
@@ -30,14 +30,15 @@ public class Spawner : MonoBehaviour
     private void Update()
     {
         timer += Time.deltaTime;
-        //Debug.Log(timer);
-        //stage_time += Time.deltaTime;
+        Debug.Log(timer);
+        stage_time += Time.deltaTime;
 
-        //if(stage_time > 30f)
-        //{
-        //    SpawnBoss();
-        //    return;
-        //}
+        if (stage_time > 30f)
+        {
+            SpawnBoss();
+            stage_time = 0f;
+            return;
+        }
 
         if (_spawnManager == null)
             return;
@@ -55,7 +56,12 @@ public class Spawner : MonoBehaviour
 
     private void SpawnBoss()
     {
-        
+        if (_spawnManager.pool == null)
+        {
+            return;
+        }
+        GameObject monster = _spawnManager.pool.Get(4);
+        monster.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
     }
 
     void Spawn()
