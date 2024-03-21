@@ -23,14 +23,14 @@ public class MonsterMovement : MonoBehaviour
         {
             Movement();
             Rotation(player.transform.position.x - transform.position.x);
-            Reposition();
+            if ((player.transform.position - transform.position).magnitude > 15)
+                Reposition();
         }
     }
 
     private void Reposition()
     {
-        if ((player.transform.position - transform.position).magnitude > 15)
-            transform.position += (player.transform.position - transform.position) * 2f;
+        transform.position += (player.transform.position - transform.position) * 1.6f;
     }
 
     void Movement()
