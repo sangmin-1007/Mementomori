@@ -68,18 +68,8 @@ public class Inventory : UI_Base<Inventory>
 
     void Awake()
     {
-       
         instance = this;
-        //private PlayerController controller; 캐릭터 InvokeEvent방식이랑 호환
-        //private PlayerCondition condition; 장비창이 스탯이랑 연관있으니 캐릭터 스탯?이랑 호환해야할듯
 
-        DontDestroyOnLoad(gameObject);
-
-
-    }
-
-    private void Start()
-    {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         slots = new ItemSlot[uiSlots.Length];
 
@@ -92,9 +82,12 @@ public class Inventory : UI_Base<Inventory>
         ClearSeletecItemWindow();
     }
 
-   
-   
-    
+    public override void OnEnable()
+    {
+        base.OnEnable();
+        UpdateItemUI();
+    }
+
     public void Toggle()
     {
         if (inventoryWindow.activeInHierarchy)
@@ -109,12 +102,6 @@ public class Inventory : UI_Base<Inventory>
             onOpenInventory?.Invoke();
             //controller.ToggleCursor(true); 공격키가 클릭일경우
         }
-    }
-
-
-    public bool IsOpen()
-    {
-        return inventoryWindow.activeInHierarchy;
     }
 
     public void AddItem(ItemData item)  // 아이템 획득
@@ -132,16 +119,6 @@ public class Inventory : UI_Base<Inventory>
         }
     }
 
-
-   
-
-
-
-    //void ThrowItem(ItemData item) 버리기 기능있을때
-    //{
-
-    //}
-
     public void RemoveSelectedItem()
     {
        if (uiSlots[selectedItemIndex].equipped)
@@ -152,9 +129,6 @@ public class Inventory : UI_Base<Inventory>
          selectedItem.item = null;
          ClearSeletecItemWindow();
          UpdateUI();
-
-
-      
     }
 
     void UpdateUI()
@@ -170,12 +144,7 @@ public class Inventory : UI_Base<Inventory>
             }
             else
                 uiSlots[i].Clear();
-     
-
         }
-      
-
-
     }
 
    
@@ -186,8 +155,6 @@ public class Inventory : UI_Base<Inventory>
         {
             if (slots[i].item == null)
                 return slots[i];
-
-
         }
 
         return null;
@@ -318,7 +285,7 @@ public class Inventory : UI_Base<Inventory>
         //if (selectedItem.item.Type == ItemType.Weapon)
         //{
         //    uiSlots[selectedItemIndex] = equippedSlots[0];
-          
+
         //}
         //else if (selectedItem.item.Type == ItemType.Armor)
         //{
@@ -332,8 +299,8 @@ public class Inventory : UI_Base<Inventory>
         //{
         //    uiSlots[selectedItemIndex] = equippedSlots[3];
         //}
-        
-        
+
+
         UpdateUI();
 
         SelectItem(selectedItemIndex);
@@ -358,4 +325,16 @@ public class Inventory : UI_Base<Inventory>
     {
         return false;
     }
+
+    private void UpdateItemUI()
+    {
+        for(int i = 0; i <  slots.Length; i++)
+        {
+            if (i < Managers.DataManager.playerInventoryItemData.Count &&
+               Managers.DataManager.playerInventoryItemData[i].Sprite != uiSlots[i].icon.sprite)
+
+                AddItem(Managers.DataManager.playerInventoryItemData[i]);
+        }
+    }
+
 }
