@@ -28,9 +28,9 @@ public class UI_GameOver : UI_Base<UI_GameOver>
 
         for (int i = 0; i < itemSprite.Length; i++)
         {
-            if (Managers.DataManager.playerItemData.Count == 0 && i < Managers.DataManager.playerItemData.Count)
+            if (Managers.DataManager.playerInventoryItemData.Count == 0 && i < Managers.DataManager.playerInventoryItemData.Count)
             {
-                itemSprite[i].sprite = Managers.DataManager.playerItemData[i].Sprite;
+                itemSprite[i].sprite = Managers.DataManager.playerInventoryItemData[i].Sprite;
 
                 if (itemSprite[i].sprite != null)
                 {
