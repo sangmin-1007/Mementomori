@@ -21,6 +21,15 @@ public class DataManager : MonoBehaviour
     }
     public void EquipItem(ItemData itemDatas)
     {
+        if (playerEquipItemDatas.ContainsKey(itemDatas.Type))
+        {
+            playerInventoryItemData.Add(playerEquipItemDatas[itemDatas.Type]);
+            playerEquipItemDatas.Remove(itemDatas.Type);
+            playerEquipItemDatas.Add(itemDatas.Type,itemDatas);
+            playerInventoryItemData.Remove(itemDatas);
+            return;
+        }
+
         playerInventoryItemData.Remove(itemDatas);
         playerEquipItemDatas.Add(itemDatas.Type,itemDatas);
     }
