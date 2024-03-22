@@ -31,30 +31,14 @@ public class Inventory : UI_Base<Inventory>
     public Text selectedItemName;
     public Text selectedItemDescription;
 
-    public Text selectedItemStatAtk;
-    public Text selectedItemStatHp;
-    public Text selectedItemStatAtk_Speed;
-    public Text selectedItemStatDef;
-    public Text selectedItemStatSpeed;
-    public Text selectedItemStatStamina;
-    public Text selectedItemStatValue_Atk;
-    public Text selectedItemStatValue_Atk_speed;
-    public Text selectedItemStatValue_Hp;
-    public Text selectedItemStatValue_Speed;
-    public Text selectedItemStatValue_Def;
-    public Text selectedItemStatValue_Stamina;
+    public Text[] selectedItemStatName;
+    public Text[] selectedItemStatValue;
 
     public GameObject equipButton;
     public GameObject unequipButton;
  
-
-  
-
-
     private SpriteRenderer spriteRenderer;
     
-  
-
     private int curEquipIndex;
 
     //private PlayerController controller; 캐릭터 InvokeEvent방식이랑 호환
@@ -68,18 +52,8 @@ public class Inventory : UI_Base<Inventory>
 
     void Awake()
     {
-       
         instance = this;
-        //private PlayerController controller; 캐릭터 InvokeEvent방식이랑 호환
-        //private PlayerCondition condition; 장비창이 스탯이랑 연관있으니 캐릭터 스탯?이랑 호환해야할듯
 
-        DontDestroyOnLoad(gameObject);
-
-
-    }
-
-    private void Start()
-    {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         slots = new ItemSlot[uiSlots.Length];
 
@@ -92,9 +66,15 @@ public class Inventory : UI_Base<Inventory>
         ClearSeletecItemWindow();
     }
 
-   
-   
-    
+    public override void OnEnable()
+    {
+        base.OnEnable();
+
+
+        UpdateEquipSlots();
+        UpdateItemUI();
+    }
+
     public void Toggle()
     {
         if (inventoryWindow.activeInHierarchy)
@@ -109,12 +89,6 @@ public class Inventory : UI_Base<Inventory>
             onOpenInventory?.Invoke();
             //controller.ToggleCursor(true); 공격키가 클릭일경우
         }
-    }
-
-
-    public bool IsOpen()
-    {
-        return inventoryWindow.activeInHierarchy;
     }
 
     public void AddItem(ItemData item)  // 아이템 획득
@@ -132,16 +106,6 @@ public class Inventory : UI_Base<Inventory>
         }
     }
 
-
-   
-
-
-
-    //void ThrowItem(ItemData item) 버리기 기능있을때
-    //{
-
-    //}
-
     public void RemoveSelectedItem()
     {
        if (uiSlots[selectedItemIndex].equipped)
@@ -152,9 +116,6 @@ public class Inventory : UI_Base<Inventory>
          selectedItem.item = null;
          ClearSeletecItemWindow();
          UpdateUI();
-
-
-      
     }
 
     void UpdateUI()
@@ -170,12 +131,7 @@ public class Inventory : UI_Base<Inventory>
             }
             else
                 uiSlots[i].Clear();
-     
-
         }
-      
-
-
     }
 
    
@@ -186,8 +142,6 @@ public class Inventory : UI_Base<Inventory>
         {
             if (slots[i].item == null)
                 return slots[i];
-
-
         }
 
         return null;
@@ -196,7 +150,17 @@ public class Inventory : UI_Base<Inventory>
     public void SelectItem(int index)
     {
         if (slots[index].item == null)
+        {
+            selectedItemName.gameObject.SetActive(false);
+            selectedItemDescription.gameObject.SetActive(false);
+            for(int i = 0; i < selectedItemStatName.Length; i++)
+            {
+                selectedItemStatName[i].gameObject.SetActive(false);
+                selectedItemStatValue[i].gameObject.SetActive(false);
+            }
             return;
+        }
+
        
         selectedItem = slots[index];
         selectedItemIndex = index;
@@ -204,77 +168,63 @@ public class Inventory : UI_Base<Inventory>
         selectedItemName.text = selectedItem.item.Name;
         selectedItemDescription.text = selectedItem.item.Description;
 
+        selectedItemName.gameObject.SetActive(true);
+        selectedItemDescription.gameObject.SetActive(true);
+
+        for (int i = 0; i < selectedItemStatName.Length; i++)
+        {
+            selectedItemStatName[i].gameObject.SetActive(true);
+            selectedItemStatValue[i].gameObject.SetActive(true);
+        }
+
 
         if (selectedItem.item.Type == ItemType.Weapon) // 아이템이 검일때 검은 공격력/공격속도만 보여준다.
         {
-            selectedItemStatHp.gameObject.SetActive(false);
-            selectedItemStatDef.gameObject.SetActive(false);
-            selectedItemStatSpeed.gameObject.SetActive(false);
-            selectedItemStatStamina.gameObject.SetActive(false);
-            selectedItemStatValue_Stamina.gameObject.SetActive(false);
-            //=====
-            selectedItemStatAtk.gameObject.SetActive(true);
-            selectedItemStatValue_Atk.gameObject.SetActive(true);
-            selectedItemStatValue_Atk.text += selectedItem.item.Atk.ToString() + "\n";
-            selectedItemStatAtk_Speed.gameObject.SetActive(true);
-            selectedItemStatValue_Atk_speed.gameObject.SetActive(true);
-            selectedItemStatValue_Atk_speed.text += selectedItem.item.AtkSpeed.ToString() + "\n";
+            selectedItemStatName[0].text = "공격력 : ";
+            selectedItemStatName[1].text = "공격속도 :";
 
-
+            selectedItemStatValue[0].text = selectedItem.item.Atk.ToString();
+            selectedItemStatValue[1].text = selectedItem.item.AtkSpeed.ToString();
         }
 
         if(selectedItem.item.Type == ItemType.Armor) // 갑옷 = 체력
         {
-            selectedItemStatAtk.gameObject.SetActive(false);
-            selectedItemStatAtk_Speed.gameObject.SetActive(false);
-            selectedItemStatDef.gameObject.SetActive(false);
-            selectedItemStatSpeed.gameObject.SetActive(false);
-            selectedItemStatStamina.gameObject.SetActive(false);
-            selectedItemStatValue_Atk_speed.gameObject.SetActive(false);
-            selectedItemStatValue_Stamina.gameObject.SetActive(false);
-            //===
-            selectedItemStatHp.gameObject.SetActive(true);
-            selectedItemStatValue_Hp.gameObject.SetActive(true);
-            selectedItemStatValue_Hp.text += selectedItem.item.Hp.ToString() + "\n";
+            selectedItemName.gameObject.SetActive(true);
+            selectedItemDescription.gameObject.SetActive(true);
+
+            selectedItemStatName[0].text = "체력 : ";
+            selectedItemStatName[1].gameObject.SetActive(false);
+
+            selectedItemStatValue[0].text = selectedItem.item.Hp.ToString();
+            selectedItemStatValue[1].gameObject.SetActive(false);
         }
 
         if(selectedItem.item.Type == ItemType.Shield) // 방패 = 방어력
         {
-            selectedItemStatAtk.gameObject.SetActive(false);
-            selectedItemStatHp.gameObject.SetActive(false);
-            selectedItemStatAtk_Speed.gameObject.SetActive(false);
-            selectedItemStatSpeed.gameObject.SetActive(false);
-            selectedItemStatStamina.gameObject.SetActive(false);
-            selectedItemStatValue_Atk_speed.gameObject.SetActive(false);
-            selectedItemStatValue_Stamina.gameObject.SetActive(false);
-            //====
-            selectedItemStatDef.gameObject.SetActive(true);
-            selectedItemStatValue_Def.gameObject.SetActive(true);
-            selectedItemStatValue_Def.text += selectedItem.item.Def.ToString() + "\n";
+            selectedItemName.gameObject.SetActive(true);
+            selectedItemDescription.gameObject.SetActive(true);
+
+            selectedItemStatName[0].text = "방어력 : ";
+            selectedItemStatName[1].gameObject.SetActive(false);
+
+            selectedItemStatValue[0].text = selectedItem.item.Def.ToString();
+            selectedItemStatValue[1].gameObject.SetActive(false);
         }
 
         if(selectedItem.item.Type == ItemType.Boots) // 신발 = 스태미나 + 이동속도
         {
-            selectedItemStatAtk.gameObject.SetActive(false);
-            selectedItemStatHp.gameObject.SetActive(false);
-            selectedItemStatAtk_Speed.gameObject.SetActive(false);
-            selectedItemStatDef.gameObject.SetActive(false);
-            selectedItemStatValue_Atk_speed.gameObject.SetActive(false);
-            
-            //===
-            selectedItemStatStamina.gameObject.SetActive(true);
-            selectedItemStatValue_Stamina.gameObject.SetActive(true);
-            selectedItemStatValue_Stamina.text += selectedItem.item.Stamina.ToString() + "\n";
-            selectedItemStatSpeed.gameObject.SetActive(true);
-            selectedItemStatValue_Speed.gameObject.SetActive(true);
-            selectedItemStatValue_Speed.text += selectedItem.item.Speed.ToString() + "\n";
+            selectedItemName.gameObject.SetActive(true);
+            selectedItemDescription.gameObject.SetActive(true);
+
+            selectedItemStatName[0].text = "이동속도 : ";
+            selectedItemStatName[1].text = "스태미나 : ";
+
+            selectedItemStatValue[0].text = selectedItem.item.Speed.ToString();
+            selectedItemStatValue[1].text = selectedItem.item.Stamina.ToString();
         }
        
 
         equipButton.SetActive(selectedItem.item.Type != ItemType.Consume && !uiSlots[index].equipped);
-        unequipButton.SetActive(selectedItem.item.Type != ItemType.Consume && uiSlots[index].equipped);
-       
-
     }
 
     private void ClearSeletecItemWindow()
@@ -282,19 +232,6 @@ public class Inventory : UI_Base<Inventory>
         selectedItem = null;
         selectedItemName.text = string.Empty;
         selectedItemDescription.text = string.Empty;
-
-        selectedItemStatAtk.gameObject.SetActive(false);
-        selectedItemStatHp.gameObject.SetActive(false);
-        selectedItemStatAtk_Speed.gameObject.SetActive(false);
-        selectedItemStatDef.gameObject.SetActive(false);
-        selectedItemStatSpeed.gameObject.SetActive(false); 
-        selectedItemStatStamina.gameObject.SetActive(false);
-        selectedItemStatValue_Atk.text = string.Empty;
-        selectedItemStatValue_Atk_speed.text = string.Empty;
-        selectedItemStatValue_Hp.text = string.Empty;
-        selectedItemStatValue_Speed.text = string.Empty;
-        selectedItemStatValue_Def.text = string.Empty;
-        selectedItemStatValue_Stamina.text = string.Empty;
 
 
         equipButton.SetActive(false);
@@ -311,30 +248,19 @@ public class Inventory : UI_Base<Inventory>
         {
             UnEquip(curEquipIndex);
         }
-     
-        uiSlots[selectedItemIndex].equipped = true;
+
         curEquipIndex = selectedItemIndex;
 
-        //if (selectedItem.item.Type == ItemType.Weapon)
-        //{
-        //    uiSlots[selectedItemIndex] = equippedSlots[0];
-          
-        //}
-        //else if (selectedItem.item.Type == ItemType.Armor)
-        //{
-        //    uiSlots[selectedItemIndex] = equippedSlots[1];
-        //}
-        //else if (selectedItem.item.Type == ItemType.Shield)
-        //{
-        //    uiSlots[selectedItemIndex] = equippedSlots[2];
-        //}
-        //else if (selectedItem.item.Type == ItemType.Boots)
-        //{
-        //    uiSlots[selectedItemIndex] = equippedSlots[3];
-        //}
-        
-        
-        UpdateUI();
+
+        Managers.DataManager.EquipItem(selectedItem.item);
+        uiSlots[selectedItemIndex].icon.gameObject.SetActive(false);
+        slots[selectedItemIndex].item = null;
+
+        UpdateEquipSlots();
+        UpdateItemUI();
+
+
+        //UpdateUI();
 
         SelectItem(selectedItemIndex);
     }
@@ -358,4 +284,50 @@ public class Inventory : UI_Base<Inventory>
     {
         return false;
     }
+
+    private void UpdateItemUI()
+    {
+        for (int i = 0; i < uiSlots.Length; i++)
+        {
+            slots[i].item = null;
+            uiSlots[i].icon.sprite = null;
+            if (uiSlots[i].icon.sprite == null)
+            {
+                uiSlots[i].icon.gameObject.SetActive(false);
+            }
+        }
+
+        for (int i = 0; i <  slots.Length; i++)
+        {
+            if (i < Managers.DataManager.playerInventoryItemData.Count &&
+               Managers.DataManager.playerInventoryItemData[i].Sprite != uiSlots[i].icon.sprite)
+
+                AddItem(Managers.DataManager.playerInventoryItemData[i]);
+        }
+    }
+
+    private void UpdateEquipSlots()
+    {
+        for(int i = 0; i < equippedSlots.Length; i++)
+        {
+            if (Managers.DataManager.playerEquipItemDatas.ContainsKey(ItemType.Weapon))
+            {
+                equippedSlots[0].icon.sprite = Managers.DataManager.playerEquipItemDatas[ItemType.Weapon].Sprite;
+            }
+            if (Managers.DataManager.playerEquipItemDatas.ContainsKey(ItemType.Armor))
+            {
+                equippedSlots[1].icon.sprite = Managers.DataManager.playerEquipItemDatas[ItemType.Armor].Sprite;
+            }
+            if (Managers.DataManager.playerEquipItemDatas.ContainsKey(ItemType.Shield))
+            {
+                equippedSlots[2].icon.sprite = Managers.DataManager.playerEquipItemDatas[ItemType.Shield].Sprite;
+            }
+            if (Managers.DataManager.playerEquipItemDatas.ContainsKey(ItemType.Boots))
+            {
+                equippedSlots[3].icon.sprite = Managers.DataManager.playerEquipItemDatas[ItemType.Boots].Sprite;
+            }
+        }
+
+    }
+
 }

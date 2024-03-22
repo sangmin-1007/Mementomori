@@ -51,11 +51,7 @@ public class ItemSlotUI : MonoBehaviour
     {
         curSlot = null;
         icon.gameObject.SetActive(false);
-      
-       
-
-
-
+     
     }
     public void OnButtonClick()
     {
