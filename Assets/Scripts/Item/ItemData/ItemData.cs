@@ -24,7 +24,8 @@ public class ItemData
     [SerializeField] private float _speed;
     [SerializeField] private float _stamina;
     [SerializeField] private int _exp;
-
+    [SerializeField] private int _buyPrice;
+    [SerializeField] private int _sellPrice;
 
 
     public int Id => _id;
@@ -44,6 +45,10 @@ public class ItemData
     public float Def => _def;
     public float Speed => _speed;
     public float Stamina => _stamina;
+
+    public int BuyPrice => _buyPrice;
+
+    public int SellPrice => _sellPrice;
 
     private Sprite _sprite;
 
