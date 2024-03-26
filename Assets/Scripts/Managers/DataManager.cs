@@ -11,7 +11,9 @@ public class DataManager : MonoBehaviour
 
     public int playerGold;
 
-    public int slotIndex;
+    public int inventoryIndex;
+    public int storageIndex;
+    public int shopIndex;
     
     public void AddItem(ItemData itemDatas)
     {

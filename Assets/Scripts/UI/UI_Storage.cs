@@ -14,11 +14,11 @@ public class UI_Storage : UI_Base<UI_Storage>
     [SerializeField] private ItemSlotUI[] inventorySlotUI;
     [SerializeField] private ItemSlotUI[] storageSlotUI;
 
-    private int selectIndex;
+    private int inventoryIndex;
+    private int storageIndex;
 
     private void Awake()
     {
-        selectIndex = Managers.DataManager.slotIndex;
         inventoryItemData = new ItemSlot[inventorySlotUI.Length];
         storageItemData = new ItemSlot[storageSlotUI.Length];
 
@@ -40,14 +40,27 @@ public class UI_Storage : UI_Base<UI_Storage>
 
     public void OnClickKeepButton()
     {
-        Managers.DataManager.StorageKeepItemData(inventoryItemData[selectIndex].item);
+        inventoryIndex = Managers.DataManager.inventoryIndex;
+
+        if (inventoryItemData[inventoryIndex].item == null) return;
+
+        Managers.DataManager.StorageKeepItemData(inventoryItemData[inventoryIndex].item);
         UpdateItemData();
+
+        Managers.DataManager.inventoryIndex = 0;
+
     }
 
     public void OnClickTakeOutButton()
     {
-        Managers.DataManager.StorageTakeOutItemData(storageItemData[selectIndex].item);
+        storageIndex = Managers.DataManager.storageIndex;
+
+        if (storageItemData[storageIndex].item == null) return;
+
+        Managers.DataManager.StorageTakeOutItemData(storageItemData[storageIndex].item);
         UpdateItemData();
+
+        Managers.DataManager.storageIndex = 0;
     }
 
 

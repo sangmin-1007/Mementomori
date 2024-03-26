@@ -6,6 +6,13 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum SlotType
+{
+    Inventory,
+    Storage,
+    Shop,
+    Equip
+}
 public class ItemSlotUI : MonoBehaviour
 {
   
@@ -15,7 +22,7 @@ public class ItemSlotUI : MonoBehaviour
     private ItemSlot curSlot;
     private Outline outline;
 
-
+    public SlotType slotType;
     public int index;
     public bool equipped;
 
@@ -55,8 +62,23 @@ public class ItemSlotUI : MonoBehaviour
     }
     public void OnButtonClick()
     {
-        //Inventory.instance.SelectItem(index);
-        Managers.DataManager.slotIndex = index;
+        switch(slotType)
+        {
+            case SlotType.Inventory:
+                Managers.DataManager.inventoryIndex = index;
+                break;
+            case SlotType.Storage:
+                Managers.DataManager.storageIndex = index;
+                break;
+            case SlotType.Shop:
+                Managers.DataManager.shopIndex = index;
+                break;
+            case SlotType.Equip:
+                break;
+            default:
+                break;
+        }
+
     }
 
     public int OnClickItemSlotButton()
