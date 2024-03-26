@@ -23,7 +23,7 @@ public class LobbyIneract : MonoBehaviour
             break;
 
             case InteractType.Storage:
-                    Debug.Log("Ã¢°í");
+                Managers.UI_Manager.ShowUI<UI_Storage>();
             break;
 
             case InteractType.Door:
