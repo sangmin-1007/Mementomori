@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Warrior_DefaultAttackData
   m_EditorClassIdentifier: 
   size: 1
-  delay: 1.5
+  delay: 0.5
   power: 2
   speed: 10
   target:

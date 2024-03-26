@@ -21,11 +21,11 @@
 //        Stats = GetComponent<PlayerStatsHandler>();
 //    }
 
-    
+
 
 //    float DistanceToTarget()
 //    {
-//        return Vector3.Distance(transform.position, GameManager.position);
+//        //return Vector3.Distance(transform.position, GameManager.position);
 //    }
 
 //    void OnShoot()

@@ -301,7 +301,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthChangeDelay: 0.5
-  currentStamina: 0
   staminaRecoveryRate: 0
 --- !u!114 &-681740430392833189
 MonoBehaviour:
