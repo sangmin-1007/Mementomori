@@ -1,35 +1,84 @@
-//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-//public class RangedAttack : MonoBehaviour
-//{
-//    Animator animator;
-//    SpawnManager spawnManager;
+public class RangedAttack : MonoBehaviour
+{
+    Rigidbody2D player;
 
-//    protected PlayerStatsHandler Stats { get; private set; }
-//    [SerializeField] private string targetTag = "Player";
+    Animator animator;
 
-//    private HealthSystem healthSystem;
-//    private HealthSystem playerHealthSystem;
+    public float shootRange = 5f;
+    float defaultSpeed;
 
-//    private void Awake()
-//    {
-//        animator = GetComponentInChildren<Animator>();
+    float attackTime;
 
-//        healthSystem = GetComponent<HealthSystem>();
-//        Stats = GetComponent<PlayerStatsHandler>();
-//    }
+    bool isAttacking = false;
 
+    MonsterMovement movement;
+    protected PlayerStatsHandler Stats { get; private set; }
+    [SerializeField] private string targetTag = "Player";
 
+    private HealthSystem healthSystem;
+    private HealthSystem playerHealthSystem;
 
-//    float DistanceToTarget()
-//    {
-//        //return Vector3.Distance(transform.position, GameManager.position);
-//    }
+    private void Awake()
+    {
+        player = Managers.GameSceneManager.Player.GetComponent<Rigidbody2D>();
+        animator = GetComponentInChildren<Animator>();
+        movement = GetComponent<MonsterMovement>();
 
-//    void OnShoot()
-//    {
+        healthSystem = GetComponent<HealthSystem>();
+        Stats = GetComponent<PlayerStatsHandler>();
+    }
 
-//    }
-//}
+    private void Start()
+    {
+        defaultSpeed = movement.speed;
+        attackTime = 0f;
+    }
+
+    private void Update()
+    {
+        attackTime -= Time.deltaTime;
+
+        if (shootRange < DistanceToTarget() && !isAttacking)
+        {
+            OnMove();
+        }
+        else if (attackTime < 0f) 
+        {
+            attackTime = 2f;
+            OnShoot();
+        }
+    }
+
+    float DistanceToTarget()
+    {
+        return Vector3.Distance(transform.position, player.position);
+    }
+
+    IEnumerator AttackCoroutine()
+    {
+        isAttacking = true;
+        movement.speed = 0f;
+        yield return new WaitForSeconds(2f);
+        isAttacking = false;
+    }
+
+    void OnShoot()
+    {
+        animator.SetTrigger("Attack");
+        StartCoroutine(AttackCoroutine());
+
+        var arrow = ObjectPool.GetObject();
+        var direction = new Vector3(transform.position.x, transform.position.y) - transform.position;
+        arrow.transform.position = direction.normalized;
+        arrow.Shoot(direction.normalized);
+    }
+
+    void OnMove()
+    {
+        movement.speed = defaultSpeed;
+    }
+}

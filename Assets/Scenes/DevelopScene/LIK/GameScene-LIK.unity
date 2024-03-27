@@ -425,6 +425,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SkeletonArcher
       objectReference: {fileID: 0}
+    - target: {fileID: 512736088422090152, guid: 462a0994aa09acf4ab569c42d74ed5ee, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1613514597839353943, guid: 462a0994aa09acf4ab569c42d74ed5ee, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

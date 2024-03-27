@@ -6,7 +6,7 @@ using UnityEngine;
 public class MonsterMovement : MonoBehaviour
 {
     Rigidbody2D player;
-    [SerializeField] float speed = 1f;
+    public float speed = 1f;
 
     Rigidbody2D rigid;
     SpriteRenderer sprite;
