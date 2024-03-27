@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class HealthSystem : MonoBehaviour
 {
-    [SerializeField] private float healthChangeDelay = .5f;
+    [SerializeField] private float healthChangeDelay = .1f;
 
     private PlayerStatsHandler _statsHandler;
     private float _timeSinceLastChange = float.MaxValue;
@@ -69,7 +69,7 @@ public class HealthSystem : MonoBehaviour
         {
             CallDeath();
         }
-        Debug.Log($"���� : {change}, ü�� : {CurrentHealth}");
+        Debug.Log($"바뀐체력 : {change}, 현재체력 : {CurrentHealth} 최대체력 : {MaxHealth}");
         return true;
     }
 

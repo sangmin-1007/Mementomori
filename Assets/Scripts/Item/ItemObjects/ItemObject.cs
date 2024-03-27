@@ -73,7 +73,8 @@ public class ItemObject : MonoBehaviour
             Managers.ItemObjectPool.DisableItem(gameObject);
             //Debug.Log("경험치 획득");
             Debug.Log($"경험치 : {level.expriecne}, 레벨 : {level.level}");
-            level.IncreaseExprience(item.Exp);
+            level.IncreaseExprience(50);
+            //level.IncreaseExprience(item.Exp);
             //ObjectPool
             //경험치 
         }

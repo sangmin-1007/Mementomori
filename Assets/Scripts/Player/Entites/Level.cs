@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Level : MonoBehaviour
@@ -28,6 +29,13 @@ public class Level : MonoBehaviour
         if (expriecne >= expriecneCap)
         {
             level++;
+            if (!Managers.UI_Manager.IsActive<Skill>())
+            {
+                Managers.UI_Manager.ShowUI<Skill>();
+                Time.timeScale = 0;
+                //StartCoroutine(StopTime());
+
+            }
             //현재 경험치 초기화
             expriecne -= expriecneCap;
 
@@ -42,5 +50,11 @@ public class Level : MonoBehaviour
             }
             expriecneCap += experienceCapIncrease;
         }
+    }
+    private IEnumerator StopTime()
+    {
+        yield return new WaitForSeconds(0.5f);
+        Time.timeScale = 0;
+        yield break;
     }
 }
