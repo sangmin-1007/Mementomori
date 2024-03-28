@@ -29,12 +29,11 @@ public class Level : MonoBehaviour
         if (expriecne >= expriecneCap)
         {
             level++;
-            if (!Managers.UI_Manager.IsActive<Skill>())
+            if (!Managers.UI_Manager.IsActive<UI_Skill>())
             {
-                Managers.UI_Manager.ShowUI<Skill>();
+                Managers.UI_Manager.ShowUI<UI_Skill>();
                 Time.timeScale = 0;
                 //StartCoroutine(StopTime());
-
             }
             //현재 경험치 초기화
             expriecne -= expriecneCap;
