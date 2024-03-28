@@ -45,7 +45,7 @@ public class Spawner : MonoBehaviour
         if (_spawnManager == null)
             return;
 
-        if (timer > 0.5f && count < 50)
+        if (timer > 0.5f && count < 10)
         {
             timer = 0f;
 

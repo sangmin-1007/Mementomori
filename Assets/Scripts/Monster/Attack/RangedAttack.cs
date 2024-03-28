@@ -13,7 +13,7 @@ public class RangedAttack : MonoBehaviour
 
     float attackTime;
 
-    bool isAttacking = false;
+    public bool isAttacking = false;
 
     MonsterMovement movement;
     protected PlayerStatsHandler Stats { get; private set; }
@@ -42,7 +42,12 @@ public class RangedAttack : MonoBehaviour
     {
         attackTime -= Time.deltaTime;
 
-        if (shootRange < DistanceToTarget() && !isAttacking)
+        if (isAttacking)
+        {
+            return;
+        }
+
+        if (shootRange < DistanceToTarget())
         {
             OnMove();
         }
@@ -61,6 +66,7 @@ public class RangedAttack : MonoBehaviour
     IEnumerator AttackCoroutine()
     {
         isAttacking = true;
+        animator.SetTrigger("Attack");
         movement.speed = 0f;
         yield return new WaitForSeconds(2f);
         isAttacking = false;
@@ -68,11 +74,10 @@ public class RangedAttack : MonoBehaviour
 
     void OnShoot()
     {
-        animator.SetTrigger("Attack");
         StartCoroutine(AttackCoroutine());
 
         var arrow = ObjectPool.GetObject();
-        var direction = new Vector3(transform.position.x, transform.position.y) - transform.position;
+        var direction = new Vector3(transform.position.x, transform.position.y) - player.transform.position;
         arrow.transform.position = direction.normalized;
         arrow.Shoot(direction.normalized);
     }

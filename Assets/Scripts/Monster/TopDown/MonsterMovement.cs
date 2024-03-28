@@ -11,10 +11,13 @@ public class MonsterMovement : MonoBehaviour
     Rigidbody2D rigid;
     SpriteRenderer sprite;
 
+    RangedAttack rangedAttack;
+
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         sprite = GetComponentInChildren<SpriteRenderer>();
+        rangedAttack = GetComponent<RangedAttack>();
     }
 
     void FixedUpdate()

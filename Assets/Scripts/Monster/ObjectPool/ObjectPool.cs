@@ -15,7 +15,7 @@ public class ObjectPool : MonoBehaviour
     {
         Instance = this;
 
-        Initialize(2);
+        Initialize(50);
     }
 
     private void Initialize(int initCount)
