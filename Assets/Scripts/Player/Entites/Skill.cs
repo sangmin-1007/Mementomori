@@ -1,45 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Skill : UI_Base<Skill>
+public class Skill : MonoBehaviour
 {
-    [SerializeField] private List<PlayerStats> statsModifier;
-    [SerializeField] int healValue = 10;
-    private HealthSystem healthSystem;
+    public SkillData data;
+    public int skillLevel;
+    //public Weapon weapon;
 
-    public static Skill instance;
+    Image icon;
+    Text textLevel;
 
     private void Awake()
     {
-        instance = this;
+        icon = GetComponentsInChildren<Image>()[1];
+        icon.sprite = data.skillIcon;
+
+        Text[] texts = GetComponentsInChildren<Text>();
+        textLevel = texts[0];
     }
-    
-    public void GetSkill()
+
+    private void LateUpdate()
     {
-        Time.timeScale = 1;
-        healthSystem = Managers.GameSceneManager.Player.GetComponent<HealthSystem>();
-        healthSystem.ChangeHealth(healValue);
-        PlayerStatsHandler statsHandler = Managers.GameSceneManager.Player.GetComponent<PlayerStatsHandler>();
-        foreach (PlayerStats stat in statsModifier)
-        {
-            statsHandler.AddStatModifire(stat);
-        }
-        Managers.UI_Manager.HideUI<Skill>();
+        textLevel.text = "Lv." + skillLevel;
     }
-    private IEnumerator SkillDelay()
+
+    public void OnClick()
     {
-        healthSystem = Managers.GameSceneManager.Player.GetComponent<HealthSystem>();
-        healthSystem.ChangeHealth(healValue);
-        PlayerStatsHandler statsHandler = Managers.GameSceneManager.Player.GetComponent<PlayerStatsHandler>();
-        foreach (PlayerStats stat in statsModifier)
+        switch (data.skillType)
         {
-            statsHandler.AddStatModifire(stat);
+            case SkillData.SkillType.Statup:
+                break;
+            case SkillData.SkillType.Addskill:
+                break;
         }
-        Managers.UI_Manager.HideUI<Skill>();
-        yield return new WaitForSeconds(0.5f);
-        Time.timeScale = 1;
-        yield break;
+        skillLevel++;
+        if(skillLevel == data.damages.Length)
+        {
+            GetComponent<Button>().interactable = false;
+        }
     }
 }
