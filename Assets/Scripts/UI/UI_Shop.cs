@@ -1,25 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UI_Shop : UI_Base<UI_Shop>
 {
-    [SerializeField] private ItemSlot[] storeItemData;
+    [SerializeField] private ItemSlot[] shopItemData;
     [SerializeField] private ItemSlot[] inventoryItemData;
 
-    [SerializeField] private ItemSlotUI[] storeSlotUI;
+    [SerializeField] private ItemSlotUI[] shopSlotUI;
     [SerializeField] private ItemSlotUI[] inventorySlotUI;
+
+    [SerializeField] private Text[] shopItemNameText;
+    [SerializeField] private Text[] shopItemPriceText;
+
+    [SerializeField] private Text sellGoldText;
+    [SerializeField] private Text buyGoldText;
 
     private void Awake()
     {
-        storeItemData = new ItemSlot[storeSlotUI.Length];
+        shopItemData = new ItemSlot[shopSlotUI.Length];
         inventoryItemData = new ItemSlot[inventorySlotUI.Length];
 
-        for(int i = 0; i < storeSlotUI.Length; i++)
+        for(int i = 0; i < shopSlotUI.Length; i++)
         {
-            storeItemData[i] = new ItemSlot();
-            storeSlotUI[i].index = i;
-            storeSlotUI[i].icon.gameObject.SetActive(false);
+            shopItemData[i] = new ItemSlot();
+            shopSlotUI[i].index = i;
+            shopSlotUI[i].icon.gameObject.SetActive(false);
         }
 
         for(int i = 0; i < inventorySlotUI.Length; i++)
@@ -33,6 +40,7 @@ public class UI_Shop : UI_Base<UI_Shop>
     private void Start()
     {
         UpdateStore();
+        UpdateShopText();
     }
 
     public override void OnEnable()
@@ -45,14 +53,14 @@ public class UI_Shop : UI_Base<UI_Shop>
     {
         int itemID = 0;
 
-        for(int i = 0; i < storeItemData.Length; i++)
+        for(int i = 0; i < shopItemData.Length; i++)
         {
             itemID = DataBase.Item.GetRandomItemID();
-            storeItemData[i].item = DataBase.Item.GetID(itemID);
-            storeSlotUI[i].icon.sprite = storeItemData[i].item.Sprite;
+            shopItemData[i].item = DataBase.Item.GetID(itemID);
+            shopSlotUI[i].icon.sprite = shopItemData[i].item.Sprite;
 
-            if (storeSlotUI[i].icon.sprite != null)
-                storeSlotUI[i].icon.gameObject.SetActive(true);
+            if (shopSlotUI[i].icon.sprite != null)
+                shopSlotUI[i].icon.gameObject.SetActive(true);
         }
     }
 
@@ -71,4 +79,37 @@ public class UI_Shop : UI_Base<UI_Shop>
         }
     }
 
+    private void UpdateShopText()
+    {
+        for(int i = 0; i < shopItemData.Length; i++)
+        {
+            shopItemNameText[i].text = shopItemData[i].item.Name;
+            shopItemPriceText[i].text = shopItemData[i].item.BuyPrice.ToString();
+        }
+    }
+
+    private void OnClickSellButton()
+    {
+
+    }
+
+    private void OnClickBuyButton()
+    {
+
+    }
+
+    public void OnClickSellPopUpButton()
+    {
+
+    }
+
+    public void OnClickBuyPopUpButton()
+    {
+
+    }
+
+    public void OnClickNoButton()
+    {
+
+    }
 }

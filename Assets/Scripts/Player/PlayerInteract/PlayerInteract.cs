@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class PlayerInteract : MonoBehaviour
 {
     private GameMapInteract gameMapInteract;
-    private LobbyIneract lobbyIneract;
+    private LobbyInteract lobbyIneract;
 
     private BoxCollider2D boxCollider;
 
@@ -27,7 +27,7 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<LobbyIneract>(out lobbyIneract))
+        if (collision.TryGetComponent<LobbyInteract>(out lobbyIneract))
         {
             isInteract = true;
         }
@@ -46,7 +46,7 @@ public class PlayerInteract : MonoBehaviour
 
         isInteract = false;
 
-        if(!isInteract)
+        if(!isInteract && SceneManager.GetActiveScene().name != "GameScene")
         {
             Managers.UI_Manager.HideUI<UI_Storage>();
         }

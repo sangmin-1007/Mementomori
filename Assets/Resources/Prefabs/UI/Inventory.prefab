@@ -92,25 +92,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f04561aba3cf54190e30253b5a9f3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotType: 1
-  item:
-    _id: 0
-    _grade: 0
-    _type: 0
-    _name: 
-    _description: 
-    _spritePath: 
-    _atk: 0
-    _atkSpeed: 0
-    _hp: 0
-    _def: 0
-    _speed: 0
-    _stamina: 0
-    _exp: 0
-    _buyPrice: 0
-    _sellPrice: 0
   button: {fileID: 8464818288079477276}
   icon: {fileID: 4303254903234095884}
+  slotType: 3
   index: 0
   equipped: 0
 --- !u!114 &8464818288079477276
@@ -499,25 +483,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f04561aba3cf54190e30253b5a9f3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotType: 1
-  item:
-    _id: 0
-    _grade: 0
-    _type: 0
-    _name: 
-    _description: 
-    _spritePath: 
-    _atk: 0
-    _atkSpeed: 0
-    _hp: 0
-    _def: 0
-    _speed: 0
-    _stamina: 0
-    _exp: 0
-    _buyPrice: 0
-    _sellPrice: 0
   button: {fileID: 928308556140039081}
   icon: {fileID: 1322916045908599872}
+  slotType: 3
   index: 0
   equipped: 0
 --- !u!114 &928308556140039081
@@ -683,25 +651,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f04561aba3cf54190e30253b5a9f3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotType: 1
-  item:
-    _id: 0
-    _grade: 0
-    _type: 0
-    _name: 
-    _description: 
-    _spritePath: 
-    _atk: 0
-    _atkSpeed: 0
-    _hp: 0
-    _def: 0
-    _speed: 0
-    _stamina: 0
-    _exp: 0
-    _buyPrice: 0
-    _sellPrice: 0
   button: {fileID: 6347994225073679272}
   icon: {fileID: 1911153340472442100}
+  slotType: 3
   index: 0
   equipped: 0
 --- !u!114 &6347994225073679272
@@ -1584,12 +1536,6 @@ MonoBehaviour:
   ToolTip: {fileID: 4200038511175275887}
   equipButton: {fileID: 0}
   unequipButton: {fileID: 0}
-  onOpenInventory:
-    m_PersistentCalls:
-      m_Calls: []
-  onCloseInventory:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &5274172098331808526
 GameObject:
   m_ObjectHideFlags: 0
@@ -1885,25 +1831,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f04561aba3cf54190e30253b5a9f3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotType: 1
-  item:
-    _id: 0
-    _grade: 0
-    _type: 0
-    _name: 
-    _description: 
-    _spritePath: 
-    _atk: 0
-    _atkSpeed: 0
-    _hp: 0
-    _def: 0
-    _speed: 0
-    _stamina: 0
-    _exp: 0
-    _buyPrice: 0
-    _sellPrice: 0
   button: {fileID: 6719464612841640928}
   icon: {fileID: 1207148289437036113}
+  slotType: 3
   index: 0
   equipped: 0
 --- !u!114 &6719464612841640928

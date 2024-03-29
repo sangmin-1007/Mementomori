@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public enum SlotType
@@ -13,7 +14,7 @@ public enum SlotType
     Shop,
     Equip
 }
-public class ItemSlotUI : MonoBehaviour
+public class ItemSlotUI : MonoBehaviour,IPointerClickHandler,IPointerEnterHandler,IPointerExitHandler
 {
   
     public Button button;
@@ -60,6 +61,7 @@ public class ItemSlotUI : MonoBehaviour
         icon.gameObject.SetActive(false);
      
     }
+
     public void OnButtonClick()
     {
         switch(slotType)
@@ -81,8 +83,29 @@ public class ItemSlotUI : MonoBehaviour
 
     }
 
-    public int OnClickItemSlotButton()
+    public void OnPointerEnter(PointerEventData eventData)
     {
-        return index;
+        switch(slotType)
+        {
+            case SlotType.Inventory:
+                Inventory.instance.SelectItem(index, transform.position);
+                break;
+            case SlotType.Equip:
+                Inventory.instance.SelectEquipItem(index, transform.position);
+                break;
+        }
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if(eventData.button == PointerEventData.InputButton.Right)
+        {
+            Inventory.instance.OnEquipButton();
+        }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        Inventory.instance.ClearSeletecItemWindow();
     }
 }

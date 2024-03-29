@@ -10,7 +10,7 @@ public enum InteractType
     Door,
     GameMapReposition
 }
-public class LobbyIneract : MonoBehaviour
+public class LobbyInteract : MonoBehaviour
 {
     public InteractType interactType;
 

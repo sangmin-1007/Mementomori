@@ -12,7 +12,7 @@ public class PlayerTest : MonoBehaviour
     private bool isStorage;
     private bool isDoor;
 
-    private LobbyIneract interact;
+    private LobbyInteract interact;
 
     private bool isInteract;
 
@@ -31,7 +31,7 @@ public class PlayerTest : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<LobbyIneract>(out interact))
+        if (collision.TryGetComponent<LobbyInteract>(out interact))
         {
             isInteract = true;
         }

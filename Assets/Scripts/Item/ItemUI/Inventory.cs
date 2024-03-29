@@ -23,10 +23,7 @@ public class Inventory : UI_Base<Inventory>
 
     public ItemSlotUI[] equippedSlots;
     public ItemSlot[] equipSlots;
-    
 
-
-    public GameObject inventoryWindow;
 
     [Header("Selected Item")]
     private ItemSlot selectedItem;
@@ -41,31 +38,19 @@ public class Inventory : UI_Base<Inventory>
     public Text[] selectedItemStatValue;
 
     public GameObject ToolTip;
-
-    public GameObject equipButton;
-    public GameObject unequipButton;
- 
-    private SpriteRenderer spriteRenderer;
     
     private int curEquipIndex;
     private Outline _outline;
 
-    
-
-    //private PlayerController controller; 캐릭터 InvokeEvent방식이랑 호환
-    //private PlayerCondition condition; 장비창이 스탯이랑 연관있으니 캐릭터 스탯?이랑 호환해야할듯
-
-    [Header("Events")]
-    public UnityEvent onOpenInventory;
-    public UnityEvent onCloseInventory;
 
     public static Inventory instance;
 
     void Awake()
     {
         instance = this;
+
         _outline = ToolTip.GetComponentInChildren<Outline>();
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
         slots = new ItemSlot[uiSlots.Length];
         equipSlots = new ItemSlot[equippedSlots.Length];
 
@@ -94,22 +79,6 @@ public class Inventory : UI_Base<Inventory>
         UpdateItemUI();
     }
 
-    public void Toggle()
-    {
-        if (inventoryWindow.activeInHierarchy)
-        {
-            inventoryWindow.SetActive(false);
-            onCloseInventory?.Invoke();
-            //controller.ToggleCursor(false); 공격키가 클릭일경우
-        }
-        else
-        {
-            inventoryWindow.SetActive(true);
-            onOpenInventory?.Invoke();
-            //controller.ToggleCursor(true); 공격키가 클릭일경우
-        }
-    }
-
     public void AddItem(ItemData item)  // 아이템 획득
     {
        
@@ -123,18 +92,6 @@ public class Inventory : UI_Base<Inventory>
             return;
 
         }
-    }
-
-    public void RemoveSelectedItem()
-    {
-       if (uiSlots[selectedItemIndex].equipped)
-       {
-          UnEquip(selectedItemIndex);
-       }
-
-         selectedItem.item = null;
-         ClearSeletecItemWindow();
-         UpdateUI();
     }
 
     void UpdateUI()
@@ -167,8 +124,6 @@ public class Inventory : UI_Base<Inventory>
 
     }
 
-   
-
     ItemSlot GetEmptySlot() 
     {
         for (int i = 0; i < slots.Length; i++)
@@ -179,11 +134,6 @@ public class Inventory : UI_Base<Inventory>
 
         return null;
     }
-
- 
-
- 
-
 
     public void SelectItem(int index,Vector3 _pos)
     {
@@ -232,8 +182,6 @@ public class Inventory : UI_Base<Inventory>
 
                 selectedItemStatValue[0].text = selectedItem.item.Atk.ToString();
                 selectedItemStatValue[1].text = selectedItem.item.AtkSpeed.ToString();
-
-
             }
 
             if (selectedItem.item.Type == ItemType.Armor) // 갑옷 = 체력
@@ -284,20 +232,7 @@ public class Inventory : UI_Base<Inventory>
         if (equipSlots[index].item == null)
         {
             ToolTip.SetActive(false);
-            //selectedItemName.gameObject.SetActive(false);
-            //selectedItemDescription.gameObject.SetActive(false);
-
-
-            //for (int i = 0; i < selectedItemStatName.Length; i++)
-            //{
-            //    selectedItemStatName[i].gameObject.SetActive(false);
-            //    selectedItemStatValue[i].gameObject.SetActive(false);
-            //}
-            //return;
-
         }
-
-
 
         selectedItem = equipSlots[index];
         selectedItemIndex = index;
@@ -314,11 +249,6 @@ public class Inventory : UI_Base<Inventory>
         selectedItemName.text = equipSelectedItem.item.Name;
 
         selectedItemDescription.text = equipSelectedItem.item.Description;
-       
-
-
-
-
 
         for (int i = 0; i < selectedItemStatName.Length; i++)
         {
@@ -376,28 +306,12 @@ public class Inventory : UI_Base<Inventory>
         }
     }
 
-
-
-
-
-
-
-
-
-
-
-
     public void ClearSeletecItemWindow()
     {
         ToolTip.SetActive(false);
         selectedItem = null;
         selectedItemName.text = string.Empty;
         selectedItemDescription.text = string.Empty;
-
-
-       // equipButton.SetActive(false);
-       // unequipButton.SetActive(false);
-      
     }
 
 
@@ -419,31 +333,17 @@ public class Inventory : UI_Base<Inventory>
         
         UpdateEquipSlots();
         UpdateItemUI();
-
-
-        //UpdateUI();
-
-        //SelectItem(selectedItemIndex);
     }
 
     void UnEquip(int index)
     {
         uiSlots[index].equipped = false;
-        
         UpdateUI();
-
-        //if (selectedItemIndex == index)
-            //SelectItem(index);
     }
 
     public void OnUnequipButton()
     {
         UnEquip(selectedItemIndex);
-    }
-
-    public bool HasItems(ItemData item)
-    {
-        return false;
     }
 
     public void UpdateItemUI()
@@ -466,35 +366,23 @@ public class Inventory : UI_Base<Inventory>
                 AddItem(Managers.DataManager.playerInventoryItemData[i]);
          
         }
-
-
-
-      
-
     }
 
  
 
     private void UpdateEquipSlots()
     {
-
-
         for (int i = 0; i < equippedSlots.Length; i++)
         {
-            
-
             if (Managers.DataManager.playerEquipItemDatas.ContainsKey(ItemType.Weapon))
             {
                 equippedSlots[0].icon.sprite = Managers.DataManager.playerEquipItemDatas[ItemType.Weapon].Sprite;
                 equipSlots[0].item = Managers.DataManager.playerEquipItemDatas[ItemType.Weapon];
-
-
             }
             if (Managers.DataManager.playerEquipItemDatas.ContainsKey(ItemType.Armor))
             {
                 equippedSlots[1].icon.sprite = Managers.DataManager.playerEquipItemDatas[ItemType.Armor].Sprite;
                 equipSlots[1].item = Managers.DataManager.playerEquipItemDatas[ItemType.Armor];
-
             }
             if (Managers.DataManager.playerEquipItemDatas.ContainsKey(ItemType.Shield))
             {
@@ -505,13 +393,9 @@ public class Inventory : UI_Base<Inventory>
             {
                 equippedSlots[3].icon.sprite = Managers.DataManager.playerEquipItemDatas[ItemType.Boots].Sprite;
                 equipSlots[3].item = Managers.DataManager.playerEquipItemDatas[ItemType.Boots];
-
             }
             
         }
-
-       
-
     }
 
 }
