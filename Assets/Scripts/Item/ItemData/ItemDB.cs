@@ -42,7 +42,7 @@ public class ItemDB
 
     public int GetRandomItemID()
     {
-        int randomType = UnityEngine.Random.Range(0,Enum.GetValues(typeof(ItemType)).Length);
+        int randomType = UnityEngine.Random.Range(0,Enum.GetValues(typeof(ItemType)).Length - 1);
         int randomItemGrade = UnityEngine.Random.Range(0, Enum.GetValues(typeof(ItemGrade)).Length);
 
         foreach (var item in _items)
@@ -53,8 +53,7 @@ public class ItemDB
             }
         }
 
-
-        return 50001000;
+        return 0;
     }
 
     public IEnumerator DbEnumerator() //  사용함 하나의 키값으로 아이템을 얻는게아니라, 전체아이템을 확인하고싶을떄 사용함

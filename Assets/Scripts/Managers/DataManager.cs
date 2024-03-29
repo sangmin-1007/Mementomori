@@ -10,6 +10,10 @@ public class DataManager : MonoBehaviour
     public List<ItemData> storageItemData = new List<ItemData>();
 
     public int playerGold;
+
+    public int inventoryIndex;
+    public int storageIndex;
+    public int shopIndex;
     
     public void AddItem(ItemData itemDatas)
     {
@@ -33,8 +37,16 @@ public class DataManager : MonoBehaviour
         playerInventoryItemData.Remove(itemDatas);
         playerEquipItemDatas.Add(itemDatas.Type,itemDatas);
     }
-    public void StorageItemData(ItemData itemDatas)
+
+    public void StorageKeepItemData(ItemData itemDatas)
     {
         storageItemData.Add(itemDatas);
+        playerInventoryItemData.Remove(itemDatas);
+    }
+
+    public void  StorageTakeOutItemData(ItemData itemDatas)
+    {
+        storageItemData.Remove(itemDatas);
+        playerInventoryItemData.Add(itemDatas);
     }
 }
