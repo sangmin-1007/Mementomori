@@ -28,9 +28,8 @@ public class ObjectPool : MonoBehaviour
 
     private Arrow CreateNewObject()
     {
-        var newObj = Instantiate(poolingObjectPrefab).GetComponent<Arrow>();
+        var newObj = Instantiate(poolingObjectPrefab, transform).GetComponent<Arrow>();
         newObj.gameObject.SetActive(false);
-        newObj.transform.SetParent(transform);
         return newObj;
     }
 

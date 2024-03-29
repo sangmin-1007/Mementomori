@@ -6,6 +6,10 @@ public class ContactAttack : MonoBehaviour
 {
     Animator animator;
 
+    bool isAttacking = false;
+    float defaultSpeed;
+    MonsterMovement movement;
+
     protected PlayerStatsHandler Stats { get; private set; }
     [SerializeField] private string targetTag = "Player";
 
@@ -16,29 +20,55 @@ public class ContactAttack : MonoBehaviour
     private void Awake()
     {
         animator = GetComponentInChildren<Animator>();
-
+        movement = GetComponent<MonsterMovement>();
         healthSystem = GetComponent<HealthSystem>();
         Stats = GetComponent<PlayerStatsHandler>();
     }
 
+    private void Start()
+    {
+        defaultSpeed = movement.speed;
+    }
+
+    private void Update()
+    {
+        if (!isAttacking)
+            OnMove();
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
+        if(isAttacking)
+            return;
+
         if (collision.tag == targetTag)
         {
             playerHealthSystem = collision.GetComponent<HealthSystem>();
-            OnContactAttack(collision);
+
+            StartCoroutine(OnContactAttack(collision));
         }
     }
 
-    void OnContactAttack(Collider2D collision)
+    IEnumerator OnContactAttack(Collider2D collision)
     {
         if (Stats.CurrentStates.attackSO == null)
-            return;
+            yield break;
 
+        isAttacking = true;
         animator.SetTrigger("Attack");
+        movement.speed = 0f;
 
         AttackSO attackSO = Stats.CurrentStates.attackSO;
         bool hasBeenChanged = playerHealthSystem.ChangeHealth(-attackSO.power);
         //Managers.SoundManager.Play("Effect/PlayerAttackFail1", Sound.Effect);
+
+        yield return new WaitForSeconds(1f);
+
+        isAttacking = false;
+    }
+
+    void OnMove()
+    {
+        movement.speed = defaultSpeed;
     }
 }

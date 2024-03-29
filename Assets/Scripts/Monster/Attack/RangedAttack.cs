@@ -74,12 +74,12 @@ public class RangedAttack : MonoBehaviour
 
     void OnShoot()
     {
-        StartCoroutine(AttackCoroutine());
-
         var arrow = ObjectPool.GetObject();
-        var direction = new Vector3(transform.position.x, transform.position.y) - player.transform.position;
-        arrow.transform.position = direction.normalized;
-        arrow.Shoot(direction.normalized);
+        var direction = new Vector3(player.transform.position.x, player.transform.position.y) - transform.position;
+        arrow.transform.position = transform.position + direction.normalized * 0.5f;
+        arrow.Shoot(direction.normalized * Time.deltaTime);
+
+        StartCoroutine(AttackCoroutine());
     }
 
     void OnMove()
