@@ -32,9 +32,10 @@ public class SoundManager :MonoBehaviour
         {
             GameObject go = new GameObject { name = soundNames[i] };
             audioSources[i] = go.AddComponent<AudioSource>();
-     
+            DontDestroyOnLoad(go);
         }
-      
+     
+   
     }
 
     public void Play(string path, Sound type = Sound.Effect, float volume =1.0f)

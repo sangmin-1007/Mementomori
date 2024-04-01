@@ -55,4 +55,20 @@ public class PlayerInputController : PlayerController
             }
         }
     }
+
+
+    public void OnOption(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            if (!Managers.UI_Manager.IsActive<UI_Option>())
+            {
+                Managers.UI_Manager.ShowUI<UI_Option>();
+            }
+            else
+            {
+                Managers.UI_Manager.HideUI<UI_Option>();
+            }
+        }
+    }
 }

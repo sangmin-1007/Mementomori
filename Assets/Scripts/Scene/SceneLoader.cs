@@ -41,8 +41,6 @@ public class SceneLoader : MonoBehaviour
             case 1:
                 Managers.LobbySceneManager.IntializeLobbyScene();
                 Managers.SoundManager.Play("Bgm/LobbyScene1", Sound.Bgm);
-              
-
                 break;
             // GameScene
             case 2:

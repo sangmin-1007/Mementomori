@@ -532,8 +532,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7113393207934739819}
   - {fileID: 9185580265776221579}
+  - {fileID: 7113393207934739819}
   - {fileID: 5575174653848984620}
   m_Father: {fileID: 4975580606508765203}
   m_RootOrder: -1
@@ -2198,7 +2198,6 @@ GameObject:
   - component: {fileID: 5102524702425900406}
   - component: {fileID: 3200711311890403818}
   - component: {fileID: -6153622918480210206}
-  - component: {fileID: 1317502021265776298}
   m_Layer: 5
   m_Name: UI_Option
   m_TagString: Untagged
@@ -2309,18 +2308,6 @@ MonoBehaviour:
   saveButton: {fileID: 8081218762949244337}
   exitButton: {fileID: 5689886959308482505}
   quitGameButton: {fileID: 7916969789538259200}
---- !u!114 &1317502021265776298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7341242375965642167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd61977b774b7414baf60dd78f970bea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   MasterMixer: {fileID: 24100000, guid: ff1f4f26d2582694c8e7f2554a0ef0c7, type: 2}
   audioMixer: {fileID: 24100000, guid: 1bd86a7dbc1649a42a09e481fac3ebc9, type: 2}
   sfxMixer: {fileID: 24100000, guid: 691ee971a60808b42a5340b0eb9247e4, type: 2}
