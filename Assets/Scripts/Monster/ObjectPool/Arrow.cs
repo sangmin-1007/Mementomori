@@ -45,4 +45,23 @@ public class Arrow : MonoBehaviour
     {
         Stats = GetComponent<PlayerStatsHandler>();
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == targetTag)
+        {
+            playerHealthSystem = collision.GetComponent<HealthSystem>();
+            if (Stats.CurrentStates.attackSO == null)
+                return;
+            AttackSO attackSO = Stats.CurrentStates.attackSO;
+            bool hasBeenChanged = playerHealthSystem.ChangeHealth(-attackSO.power);
+
+            DestroyArrow();
+        }
+    }
+
+    private void OnEnable()
+    {
+        Stats = GetComponent<PlayerStatsHandler>();
+    }
 }
