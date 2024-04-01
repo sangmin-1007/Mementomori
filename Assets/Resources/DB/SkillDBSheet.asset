@@ -1,0 +1,1074 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 8
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce8c1844d750b14b9d2ac4ca3362bca, type: 3}
+  m_Name: SkillDBSheet
+  m_EditorClassIdentifier: 
+  Entities:
+  - _id: 10001001
+    _level: 1
+    _name: "MaxHP \uC99D\uAC00 - 1"
+    _description: "\uCD5C\uB300HP\uB97C 20 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon15
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 20
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10001002
+    _level: 2
+    _name: "MaxHP \uC99D\uAC00 - 2"
+    _description: "\uCD5C\uB300HP\uB97C 22 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon15
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 22
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10001003
+    _level: 3
+    _name: "MaxHP \uC99D\uAC00 - 3"
+    _description: "\uCD5C\uB300HP\uB97C 24 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon15
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 24
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10001004
+    _level: 4
+    _name: "MaxHP \uC99D\uAC00 - 4"
+    _description: "\uCD5C\uB300HP\uB97C 26 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon15
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 26
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10001005
+    _level: 5
+    _name: "MaxHP \uC99D\uAC00 - 5"
+    _description: "\uCD5C\uB300HP\uB97C 28 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon15
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 28
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10001006
+    _level: 6
+    _name: "MaxHP \uC99D\uAC00 - 6"
+    _description: "\uCD5C\uB300HP\uB97C 30 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon15
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 30
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10001007
+    _level: 7
+    _name: "MaxHP \uC99D\uAC00 - 7"
+    _description: "\uCD5C\uB300HP\uB97C 32 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon15
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 32
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10001008
+    _level: 8
+    _name: "MaxHP \uC99D\uAC00 - 8"
+    _description: "\uCD5C\uB300HP\uB97C 34 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon15
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 34
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10001009
+    _level: 9
+    _name: "MaxHP \uC99D\uAC00 - 9"
+    _description: "\uCD5C\uB300HP\uB97C 36 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon15
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 36
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10001010
+    _level: 10
+    _name: "MaxHP \uC99D\uAC00(Max)"
+    _description: "\uCD5C\uB300HP\uB97C 45 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon15
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 45
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10002001
+    _level: 1
+    _name: "\uACF5\uACA9\uC18D\uB3C4 \uC99D\uAC00 - 1"
+    _description: "\uACF5\uACA9\uC18D\uB3C4\uB97C 1.2% \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon5
+    _power: 0
+    _atkSpeed: 1.2
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10002002
+    _level: 2
+    _name: "\uACF5\uACA9\uC18D\uB3C4 \uC99D\uAC00 - 2"
+    _description: "\uACF5\uACA9\uC18D\uB3C4\uB97C 1.25% \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon5
+    _power: 0
+    _atkSpeed: 1.25
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10002003
+    _level: 3
+    _name: "\uACF5\uACA9\uC18D\uB3C4 \uC99D\uAC00 - 3"
+    _description: "\uACF5\uACA9\uC18D\uB3C4\uB97C 1.3% \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon5
+    _power: 0
+    _atkSpeed: 1.3
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10002004
+    _level: 4
+    _name: "\uACF5\uACA9\uC18D\uB3C4 \uC99D\uAC00 - 4"
+    _description: "\uACF5\uACA9\uC18D\uB3C4\uB97C 1.35% \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon5
+    _power: 0
+    _atkSpeed: 1.35
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10002005
+    _level: 5
+    _name: "\uACF5\uACA9\uC18D\uB3C4 \uC99D\uAC00 - 5"
+    _description: "\uACF5\uACA9\uC18D\uB3C4\uB97C 1.40% \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon5
+    _power: 0
+    _atkSpeed: 1.4
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10002006
+    _level: 6
+    _name: "\uACF5\uACA9\uC18D\uB3C4 \uC99D\uAC00 - 6"
+    _description: "\uACF5\uACA9\uC18D\uB3C4\uB97C 1.45% \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon5
+    _power: 0
+    _atkSpeed: 1.45
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10002007
+    _level: 7
+    _name: "\uACF5\uACA9\uC18D\uB3C4 \uC99D\uAC00 - 7"
+    _description: "\uACF5\uACA9\uC18D\uB3C4\uB97C 1.50% \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon5
+    _power: 0
+    _atkSpeed: 1.5
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10002008
+    _level: 8
+    _name: "\uACF5\uACA9\uC18D\uB3C4 \uC99D\uAC00 - 8"
+    _description: "\uACF5\uACA9\uC18D\uB3C4\uB97C 1.55% \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon5
+    _power: 0
+    _atkSpeed: 1.55
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10002009
+    _level: 9
+    _name: "\uACF5\uACA9\uC18D\uB3C4 \uC99D\uAC00 - 9"
+    _description: "\uACF5\uACA9\uC18D\uB3C4\uB97C 1.60% \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon5
+    _power: 0
+    _atkSpeed: 1.6
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10002010
+    _level: 10
+    _name: "\uACF5\uACA9\uC18D\uB3C4 \uC99D\uAC00(Max)"
+    _description: "\uACF5\uACA9\uC18D\uB3C4\uB97C 2% \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon5
+    _power: 0
+    _atkSpeed: 2
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10003001
+    _level: 1
+    _name: "\uACF5\uACA9\uB825 \uC99D\uAC00 - 1"
+    _description: "\uACF5\uACA9\uB825\uC744 20 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon1
+    _power: 20
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10003002
+    _level: 2
+    _name: "\uACF5\uACA9\uB825 \uC99D\uAC00 - 2"
+    _description: "\uACF5\uACA9\uB825\uC744 22 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon1
+    _power: 22
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10003003
+    _level: 3
+    _name: "\uACF5\uACA9\uB825 \uC99D\uAC00 - 3"
+    _description: "\uACF5\uACA9\uB825\uC744 24 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon1
+    _power: 24
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10003004
+    _level: 4
+    _name: "\uACF5\uACA9\uB825 \uC99D\uAC00 - 4"
+    _description: "\uACF5\uACA9\uB825\uC744 26 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon1
+    _power: 26
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10003005
+    _level: 5
+    _name: "\uACF5\uACA9\uB825 \uC99D\uAC00 - 5"
+    _description: "\uACF5\uACA9\uB825\uC744 28 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon1
+    _power: 28
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10003006
+    _level: 6
+    _name: "\uACF5\uACA9\uB825 \uC99D\uAC00 - 6"
+    _description: "\uACF5\uACA9\uB825\uC744 30 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon1
+    _power: 30
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10003007
+    _level: 7
+    _name: "\uACF5\uACA9\uB825 \uC99D\uAC00 - 7"
+    _description: "\uACF5\uACA9\uB825\uC744 32 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon1
+    _power: 32
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10003008
+    _level: 8
+    _name: "\uACF5\uACA9\uB825 \uC99D\uAC00 - 8"
+    _description: "\uACF5\uACA9\uB825\uC74434 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon1
+    _power: 34
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10003009
+    _level: 9
+    _name: "\uACF5\uACA9\uB825 \uC99D\uAC00 - 9"
+    _description: "\uACF5\uACA9\uB825\uC744 36 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon1
+    _power: 36
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10003010
+    _level: 10
+    _name: "\uACF5\uACA9\uB825 \uC99D\uAC00(Max)"
+    _description: "\uACF5\uACA9\uB825\uC744 45 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon1
+    _power: 45
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10004001
+    _level: 1
+    _name: "\uBC29\uC5B4\uB825 \uC99D\uAC00 - 1"
+    _description: "\uBC29\uC5B4\uB825\uC744 20 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon10
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10004002
+    _level: 2
+    _name: "\uBC29\uC5B4\uB825\uC99D\uAC00 - 2"
+    _description: "\uBC29\uC5B4\uB825\uC744 22 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon10
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10004003
+    _level: 3
+    _name: "\uBC29\uC5B4\uB825 \uC99D\uAC00 - 3"
+    _description: "\uBC29\uC5B4\uB825\uC744 24 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon10
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10004004
+    _level: 4
+    _name: "\uBC29\uC5B4\uB825 \uC99D\uAC00 - 4"
+    _description: "\uBC29\uC5B4\uB825\uC744 26 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon10
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10004005
+    _level: 5
+    _name: "\uBC29\uC5B4\uB825 \uC99D\uAC00 - 5"
+    _description: "\uBC29\uC5B4\uB825\uC744 28 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon10
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10004006
+    _level: 6
+    _name: "\uBC29\uC5B4\uB825 \uC99D\uAC00 - 6"
+    _description: "\uBC29\uC5B4\uB825\uC744 30 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon10
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10004007
+    _level: 7
+    _name: "\uBC29\uC5B4\uB825 \uC99D\uAC00 - 7"
+    _description: "\uBC29\uC5B4\uB825\uC744 32 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon10
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10004008
+    _level: 8
+    _name: "\uBC29\uC5B4\uB825 \uC99D\uAC00 - 8"
+    _description: "\uBC29\uC5B4\uB825\uC74434 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon10
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10004009
+    _level: 9
+    _name: "\uBC29\uC5B4\uB825 \uC99D\uAC00 - 9"
+    _description: "\uBC29\uC5B4\uB825\uC744 36 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon10
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10004010
+    _level: 10
+    _name: "\uBC29\uC5B4\uB825 \uC99D\uAC00(Max)"
+    _description: "\uBC29\uC5B4\uB825\uC744 45 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon10
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10005001
+    _level: 1
+    _name: "\uC774\uB3D9\uC18D\uB3C4 \uC99D\uAC00 - 1"
+    _description: "\uC774\uB3D9\uC18D\uB3C4\uB97C 1.2% \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon43
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10005002
+    _level: 2
+    _name: "\uC774\uB3D9\uC18D\uB3C4 \uC99D\uAC00 - 2"
+    _description: "\uC774\uB3D9\uC18D\uB3C4\uB97C 1.25% \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon43
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10005003
+    _level: 3
+    _name: "\uC774\uB3D9\uC18D\uB3C4 \uC99D\uAC00 - 3"
+    _description: "\uC774\uB3D9\uC18D\uB3C4\uB97C 1.3% \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon43
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10005004
+    _level: 4
+    _name: "\uC774\uB3D9\uC18D\uB3C4 \uC99D\uAC00 - 4"
+    _description: "\uC774\uB3D9\uC18D\uB3C4\uB97C 1.35% \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon43
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10005005
+    _level: 5
+    _name: "\uC774\uB3D9\uC18D\uB3C4 \uC99D\uAC00 - 5"
+    _description: "\uC774\uB3D9\uC18D\uB3C4\uB97C 1.40% \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon43
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10005006
+    _level: 6
+    _name: "\uC774\uB3D9\uC18D\uB3C4 \uC99D\uAC00 - 6"
+    _description: "\uC774\uB3D9\uC18D\uB3C4\uB97C 1.45% \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon43
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10005007
+    _level: 7
+    _name: "\uC774\uB3D9\uC18D\uB3C4 \uC99D\uAC00 - 7"
+    _description: "\uC774\uB3D9\uC18D\uB3C4\uB97C 1.50% \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon43
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10005008
+    _level: 8
+    _name: "\uC774\uB3D9\uC18D\uB3C4 \uC99D\uAC00 - 8"
+    _description: "\uC774\uB3D9\uC18D\uB3C4\uB97C 1.55% \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon43
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10005009
+    _level: 9
+    _name: "\uC774\uB3D9\uC18D\uB3C4 \uC99D\uAC00 - 9"
+    _description: "\uC774\uB3D9\uC18D\uB3C4\uB97C 1.60% \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon43
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10005010
+    _level: 10
+    _name: "\uC774\uB3D9\uC18D\uB3C4 \uC99D\uAC00(Max)"
+    _description: "\uC774\uB3D9\uC18D\uB3C4\uB97C 2% \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon43
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10006001
+    _level: 1
+    _name: "MaxStamina \uC99D\uAC00 - 1"
+    _description: "\uCD5C\uB300 Stamina\uB97C 20 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon24
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 20
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10006002
+    _level: 2
+    _name: "MaxStamina \uC99D\uAC00 - 2"
+    _description: "\uCD5C\uB300 Stamina\uB97C 22 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon24
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 22
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10006003
+    _level: 3
+    _name: "MaxStamina \uC99D\uAC00 - 3"
+    _description: "\uCD5C\uB300 Stamina\uB97C 24 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon24
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 24
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10006004
+    _level: 4
+    _name: "MaxStamina \uC99D\uAC00 - 4"
+    _description: "\uCD5C\uB300 Stamina\uB97C 26 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon24
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 26
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10006005
+    _level: 5
+    _name: "MaxStamina \uC99D\uAC00 - 5"
+    _description: "\uCD5C\uB300 Stamina\uB97C 28 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon24
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 28
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10006006
+    _level: 6
+    _name: "MaxStamina \uC99D\uAC00 - 6"
+    _description: "\uCD5C\uB300 Stamina\uB97C30 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon24
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 30
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10006007
+    _level: 7
+    _name: "MaxStamina \uC99D\uAC00 - 7"
+    _description: "\uCD5C\uB300 Stamina\uB97C32 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon24
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 32
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10006008
+    _level: 8
+    _name: "MaxStamina \uC99D\uAC00 - 8"
+    _description: "\uCD5C\uB300 Stamina\uB97C 34 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon24
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 34
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10006009
+    _level: 9
+    _name: "MaxStamina \uC99D\uAC00 - 9"
+    _description: "\uCD5C\uB300 Stamina\uB97C 36 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon24
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 36
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10006010
+    _level: 10
+    _name: "MaxStamina \uC99D\uAC00(Max)"
+    _description: "\uCD5C\uB300 Stamina\uB97C 45 \uC99D\uAC00 \uC2DC\uD0A8\uB2E4."
+    _spritePath: Sprite/Skill/Icon24
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 45
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10007001
+    _level: 1
+    _name: "\uCCB4\uB825 \uC99D\uAC00 \uD3EC\uC158 - 1"
+    _description: "\uD604\uC7AC \uCCB4\uB825\uC744 20 \uD68C\uBCF5\uD569\uB2C8\uB2E4."
+    _spritePath: Sprite/Skill/Icon12
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 20
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10007002
+    _level: 2
+    _name: "\uCCB4\uB825 \uC99D\uAC00 \uD3EC\uC158 - 2"
+    _description: "\uD604\uC7AC \uCCB4\uB825\uC744 30 \uD68C\uBCF5\uD569\uB2C8\uB2E4."
+    _spritePath: Sprite/Skill/Icon12
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 30
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10007003
+    _level: 3
+    _name: "\uCCB4\uB825 \uC99D\uAC00 \uD3EC\uC158 - 3"
+    _description: "\uD604\uC7AC \uCCB4\uB825\uC744 35 \uD68C\uBCF5\uD569\uB2C8\uB2E4."
+    _spritePath: Sprite/Skill/Icon12
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 35
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10007004
+    _level: 4
+    _name: "\uCCB4\uB825 \uC99D\uAC00 \uD3EC\uC158 - 4"
+    _description: "\uD604\uC7AC \uCCB4\uB825\uC744 40 \uD68C\uBCF5\uD569\uB2C8\uB2E4."
+    _spritePath: Sprite/Skill/Icon12
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 40
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10007005
+    _level: 5
+    _name: "\uCCB4\uB825 \uC99D\uAC00 \uD3EC\uC158 - 5"
+    _description: "\uD604\uC7AC \uCCB4\uB825\uC744 50 \uD68C\uBCF5\uD569\uB2C8\uB2E4."
+    _spritePath: Sprite/Skill/Icon12
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 50
+    _objectDamage: 0
+    _objectSpeed: 0
+    _objectNum: 0
+  - _id: 10008001
+    _level: 1
+    _name: "\uD68C\uC804\uC804\uAE30"
+    _description: "\uC804\uAE30\uAC00 \uC8FC\uC704\uB97C \uB3CC\uBA70 \uC801\uC744
+      \uC0AC\uC0B4\uD569\uB2C8\uB2E4.\n\uB370\uBBF8\uC9C0:20 \n\uD68C\uC804\uC18D\uB3C4:10
+      \n\uAC1C\uC218:1"
+    _spritePath: Sprite/Skill/Icon24
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 20
+    _objectSpeed: 10
+    _objectNum: 1
+  - _id: 10008002
+    _level: 2
+    _name: "\uD68C\uC804\uC804\uAE30"
+    _description: "\uC804\uAE30\uAC00 \uC8FC\uC704\uB97C \uB3CC\uBA70 \uC801\uC744
+      \uC0AC\uC0B4\uD569\uB2C8\uB2E4.\n\uB370\uBBF8\uC9C0:25\n\uD68C\uC804\uC18D\uB3C4:10
+      \n\uAC1C\uC218:1"
+    _spritePath: Sprite/Skill/Icon24
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 25
+    _objectSpeed: 10
+    _objectNum: 1
+  - _id: 10008003
+    _level: 3
+    _name: "\uD68C\uC804\uC804\uAE30"
+    _description: "\uC804\uAE30\uAC00 \uC8FC\uC704\uB97C \uB3CC\uBA70 \uC801\uC744
+      \uC0AC\uC0B4\uD569\uB2C8\uB2E4.\n\uB370\uBBF8\uC9C0:30\n\uD68C\uC804\uC18D\uB3C4:10
+      \n\uAC1C\uC218:2"
+    _spritePath: Sprite/Skill/Icon24
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 30
+    _objectSpeed: 10
+    _objectNum: 2
+  - _id: 10008004
+    _level: 4
+    _name: "\uD68C\uC804\uC804\uAE30"
+    _description: "\uC804\uAE30\uAC00 \uC8FC\uC704\uB97C \uB3CC\uBA70 \uC801\uC744
+      \uC0AC\uC0B4\uD569\uB2C8\uB2E4.\n\uB370\uBBF8\uC9C0:35 \n\uD68C\uC804\uC18D\uB3C4:15\n\uAC1C\uC218:2"
+    _spritePath: Sprite/Skill/Icon24
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 35
+    _objectSpeed: 15
+    _objectNum: 2
+  - _id: 10008005
+    _level: 5
+    _name: "\uD68C\uC804\uC804\uAE30"
+    _description: "\uC804\uAE30\uAC00 \uC8FC\uC704\uB97C \uB3CC\uBA70 \uC801\uC744
+      \uC0AC\uC0B4\uD569\uB2C8\uB2E4.\n\uB370\uBBF8\uC9C0:50 \n\uD68C\uC804\uC18D\uB3C4:15
+      \n\uAC1C\uC218:3"
+    _spritePath: Sprite/Skill/Icon24
+    _power: 0
+    _atkSpeed: 0
+    _def: 0
+    _movespeed: 0
+    _maxStamina: 0
+    _maxHealth: 0
+    _curHealth: 0
+    _objectDamage: 50
+    _objectSpeed: 15
+    _objectNum: 3
