@@ -13,15 +13,12 @@ public class ContactAttack : MonoBehaviour
     protected PlayerStatsHandler Stats { get; private set; }
     [SerializeField] private string targetTag = "Player";
 
-    private HealthSystem healthSystem;
     private HealthSystem playerHealthSystem;
-    //private TopDownMovement _collidingMovement;
 
     private void Awake()
     {
         animator = GetComponentInChildren<Animator>();
         movement = GetComponent<MonsterMovement>();
-        healthSystem = GetComponent<HealthSystem>();
         Stats = GetComponent<PlayerStatsHandler>();
     }
 

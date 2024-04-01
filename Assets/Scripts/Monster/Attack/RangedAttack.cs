@@ -12,6 +12,7 @@ public class RangedAttack : MonoBehaviour
     float defaultSpeed;
 
     float attackTime;
+    float defaultAttackTime = 1.8f;
 
     public bool isAttacking = false;
 
@@ -53,13 +54,17 @@ public class RangedAttack : MonoBehaviour
         }
         else if (attackTime < 0f) 
         {
-            attackTime = 2f;
+            attackTime = defaultAttackTime;
             OnShoot();
         }
     }
 
     float DistanceToTarget()
     {
+        if (!player)
+        {
+            return 0f;
+        }
         return Vector3.Distance(transform.position, player.position);
     }
 
@@ -68,16 +73,24 @@ public class RangedAttack : MonoBehaviour
         isAttacking = true;
         animator.SetTrigger("Attack");
         movement.speed = 0f;
-        yield return new WaitForSeconds(2f);
+
+        yield return new WaitForSeconds(defaultAttackTime);
+
+        var arrow = ObjectPool.GetObject();
+        var direction = new Vector3(player.transform.position.x, player.transform.position.y) - transform.position;
+        arrow.transform.position = transform.position + direction.normalized * 0.5f;
+        arrow.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg);
+        arrow.Shoot(new Vector3(1, 0) * Time.deltaTime * 10f);
+
         isAttacking = false;
     }
 
     void OnShoot()
     {
-        var arrow = ObjectPool.GetObject();
-        var direction = new Vector3(player.transform.position.x, player.transform.position.y) - transform.position;
-        arrow.transform.position = transform.position + direction.normalized * 0.5f;
-        arrow.Shoot(direction.normalized * Time.deltaTime);
+        if (!player)
+        {
+            return;
+        }
 
         StartCoroutine(AttackCoroutine());
     }
