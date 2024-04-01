@@ -25,6 +25,7 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadScene(SceneNumber scene)
     {
+       // Managers.Clear();
         SceneManager.LoadSceneAsync((int)scene);
     }
 
@@ -39,6 +40,9 @@ public class SceneLoader : MonoBehaviour
             // LobbyScene
             case 1:
                 Managers.LobbySceneManager.IntializeLobbyScene();
+                Managers.SoundManager.Play("Bgm/LobbyScene1", Sound.Bgm);
+              
+
                 break;
             // GameScene
             case 2:

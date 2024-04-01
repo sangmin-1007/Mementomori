@@ -94,8 +94,10 @@ public class Movement : MonoBehaviour
     }
     private void Dash()
     {
+       
         if (_controller.IsDashing && _healthSystem.GetCurrentSP() > 25)
         {
+            Managers.SoundManager.Play("Effect/PlayerDash1", Sound.Effect);
             StartCoroutine(TriggerCourtine());
             animator.SetTrigger(IsDash);
             StartCoroutine(DashCourtine());

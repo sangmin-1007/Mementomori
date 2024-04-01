@@ -51,6 +51,7 @@ public class Attack : MonoBehaviour
 
     private void OnShoot(AttackSO attackSO)
     {
+        Managers.SoundManager.Play("Effect/PlayerAttackFail1", Sound.Effect);
         Collider2D[] collider2D = Physics2D.OverlapBoxAll(pos2.position, boxSize2, 0);
 
         //피격 박스(위쪽) 데미지 계산

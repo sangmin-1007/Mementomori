@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Managers : MonoBehaviour
@@ -17,6 +18,7 @@ public class Managers : MonoBehaviour
     private SceneLoader _sceneLoader;
     private DataManager _dataManager;
     private ItemObjectPool _itemObjectPool;
+    private SoundManager _soundManager;
 
     // Manager Singletone
     public static UI_Manager UI_Manager => Instance._uiManager;
@@ -28,11 +30,13 @@ public class Managers : MonoBehaviour
 
     public static ItemObjectPool ItemObjectPool => Instance._itemObjectPool;
 
+    public static SoundManager SoundManager => Instance._soundManager;
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     public static void Excute()
     {
         Initilize();
+        
     }
 
     private static void Initilize()
@@ -49,9 +53,14 @@ public class Managers : MonoBehaviour
 
             DontDestroyOnLoad(go);
             instance = go.GetComponent<Managers>();
+            
+
+
+
+
 
             //TODO Manager registration
-            if(!go.TryGetComponent(out instance._uiManager))
+            if (!go.TryGetComponent(out instance._uiManager))
             {
                 instance._uiManager = go.AddComponent<UI_Manager>();
             }
@@ -85,6 +94,18 @@ public class Managers : MonoBehaviour
             {
                 Instance._itemObjectPool = go.AddComponent<ItemObjectPool>();
             }
+
+            if (!go.TryGetComponent(out instance._soundManager))
+            {
+                instance._soundManager = go.AddComponent<SoundManager>();
+
+            }
         }
+    }
+
+    public static void Clear() // 씬이동할때 Clear 해주는부분
+    {
+        Debug.Log("dfdfds");
+        SoundManager.AudioClear();
     }
 }

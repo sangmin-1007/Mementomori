@@ -23,6 +23,8 @@ public class PlayerInputController : PlayerController
     public void OnDash(InputValue value)
     {
         IsDashing = value.isPressed;
+        
+
     }
 
     public void OnLook(InputValue value)

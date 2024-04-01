@@ -8,7 +8,7 @@ public class LobbySceneManager : MonoBehaviour
 
     public void IntializeLobbyScene()
     {
-
+       
         var lobbyMap = Resources.Load<GameObject>("Prefabs/Map/Lobby");
         var mapInfo = Instantiate(lobbyMap).GetComponent<MapInfo>();
         
