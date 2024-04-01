@@ -43,6 +43,7 @@ public class ItemSlotUI : MonoBehaviour,IPointerClickHandler,IPointerEnterHandle
     private void OnEnable()
     {
         outline.enabled = equipped;
+        button.onClick.AddListener(OnClickSlot);
     }
 
     
@@ -69,6 +70,31 @@ public class ItemSlotUI : MonoBehaviour,IPointerClickHandler,IPointerEnterHandle
      
     }
 
+    public void OnClickSlot()
+    {
+        switch(slotType)
+        {
+            case SlotType.Inventory:
+                Managers.DataManager.inventoryIndex = index;
+                break;
+            case SlotType.Storage:
+                Managers.DataManager.storageIndex = index;
+                break;
+            case SlotType.Storage_Inventory:
+                Managers.DataManager.inventoryIndex = index;
+                break;
+            case SlotType.Equip:
+                Managers.DataManager.equipItemIndex = index;
+                break;
+            case SlotType.Shop:
+                Managers.DataManager.shopIndex = index;
+                break;
+            case SlotType.Shop_Inventory:
+                Managers.DataManager.inventoryIndex = index;
+                break;
+        }
+    }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         Managers.DataManager.selectSlotType = slotType;
@@ -84,12 +110,10 @@ public class ItemSlotUI : MonoBehaviour,IPointerClickHandler,IPointerEnterHandle
             case SlotType.Inventory:
                 Managers.DataManager.inventoryIndex = index;
                 toolTip.ItemInfoText(curSlot.item);
-                //Inventory.instance.SelectItem(index, transform.position);
                 break;
             case SlotType.Equip:
                 Managers.DataManager.equipItemIndex = index;
                 toolTip.ItemInfoText(curSlot.item);
-                //Inventory.instance.SelectEquipItem(index, transform.position);
                 break;
             case SlotType.Storage:
                 Managers.DataManager.storageIndex = index;
@@ -100,6 +124,8 @@ public class ItemSlotUI : MonoBehaviour,IPointerClickHandler,IPointerEnterHandle
                 toolTip.ItemInfoText(curSlot.item);
                 break;
             case SlotType.Shop:
+                Managers.DataManager.shopIndex = index;
+                toolTip.ItemInfoText(curSlot.item);
                 break;
             case SlotType.Shop_Inventory:
                 break;
@@ -144,6 +170,5 @@ public class ItemSlotUI : MonoBehaviour,IPointerClickHandler,IPointerEnterHandle
     public void OnPointerExit(PointerEventData eventData)
     {
         Managers.UI_Manager.HideUI<UI_ItemToolTip>();
-        //Inventory.instance.ClearSeletecItemWindow();
     }
 }
