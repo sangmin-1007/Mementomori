@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.49411765}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.49411765}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 8464818288079477276}
   icon: {fileID: 4303254903234095884}
-  slotType: 3
+  slotType: 5
   index: 0
   equipped: 0
 --- !u!114 &8464818288079477276
@@ -454,14 +454,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.49411765}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.49411765}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 1481765990470897609, guid: 252d1f9f9eb6dfe46873735361f596d6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -485,7 +485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 928308556140039081}
   icon: {fileID: 1322916045908599872}
-  slotType: 3
+  slotType: 5
   index: 0
   equipped: 0
 --- !u!114 &928308556140039081
@@ -622,14 +622,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.49411765}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.49411765}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 3589525664035264429, guid: 252d1f9f9eb6dfe46873735361f596d6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -653,7 +653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 6347994225073679272}
   icon: {fileID: 1911153340472442100}
-  slotType: 3
+  slotType: 5
   index: 0
   equipped: 0
 --- !u!114 &6347994225073679272
@@ -1524,7 +1524,6 @@ MonoBehaviour:
   - {fileID: 5510777509852913518}
   - {fileID: 2227825598467977241}
   - {fileID: 693037066962827280}
-  inventoryWindow: {fileID: 4989756292887842960}
   selectedItemName: {fileID: 3018215831595882982}
   selectedItemDescription: {fileID: 6886098123873593844}
   selectedItemStatName:
@@ -1534,8 +1533,6 @@ MonoBehaviour:
   - {fileID: 6346168299431597797}
   - {fileID: 8941532110897660821}
   ToolTip: {fileID: 4200038511175275887}
-  equipButton: {fileID: 0}
-  unequipButton: {fileID: 0}
 --- !u!1 &5274172098331808526
 GameObject:
   m_ObjectHideFlags: 0
@@ -1802,14 +1799,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.49411765}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.49411765}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -6979345463012375436, guid: 252d1f9f9eb6dfe46873735361f596d6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1833,7 +1830,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 6719464612841640928}
   icon: {fileID: 1207148289437036113}
-  slotType: 3
+  slotType: 5
   index: 0
   equipped: 0
 --- !u!114 &6719464612841640928
@@ -2259,7 +2256,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &459398571740195303
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2727,7 +2724,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4941514010931574835
 RectTransform:
   m_ObjectHideFlags: 0

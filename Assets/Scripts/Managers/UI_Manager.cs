@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class UI_Manager : MonoBehaviour
 {   
-    Dictionary<string, GameObject> UI_List = new Dictionary<string, GameObject>();
+    public Dictionary<string, GameObject> UI_List = new Dictionary<string, GameObject>();
 
     [HideInInspector] public string sceneName;
 

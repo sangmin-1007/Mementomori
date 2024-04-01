@@ -12,8 +12,10 @@ public class DataManager : MonoBehaviour
     public int playerGold;
 
     public int inventoryIndex;
+    public int equipItemIndex;
     public int storageIndex;
     public int shopIndex;
+    public SlotType selectSlotType;
     
     public void AddItem(ItemData itemDatas)
     {
@@ -36,6 +38,12 @@ public class DataManager : MonoBehaviour
 
         playerInventoryItemData.Remove(itemDatas);
         playerEquipItemDatas.Add(itemDatas.Type,itemDatas);
+    }
+
+    public void UnEquipItem(ItemData itemDatas)
+    {
+        playerEquipItemDatas.Remove(itemDatas.Type);
+        playerInventoryItemData.Add(itemDatas);
     }
 
     public void StorageKeepItemData(ItemData itemDatas)

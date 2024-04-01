@@ -1,17 +1,12 @@
 using Constants;
-using JetBrains.Annotations;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-//using UnityEditor.Build;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
-//using UnityEngine.UIElements;
-//using static UnityEditor.Progress;
 
 
+
+[System.Serializable]
 public class ItemSlot 
 {
     public ItemData item;
@@ -74,7 +69,7 @@ public class Inventory : UI_Base<Inventory>
     {
         base.OnEnable();
 
-
+        UpdateUI();
         UpdateEquipSlots();
         UpdateItemUI();
     }
@@ -242,9 +237,14 @@ public class Inventory : UI_Base<Inventory>
         equipSelectedItem = equipSlots[index];
         equipSelectedItemIndex = index;
 
-        Color GradeColorEquipSelected = Colors.ItemGrade[(int)equipSelectedItem.item.Grade];
-        selectedItemName.color = GradeColorEquipSelected;
-        _outline.effectColor = GradeColorEquipSelected;
+        if (equipSlots[selectedItemIndex] != null)
+        {
+            Color GradeColorEquipSelected = Colors.ItemGrade[(int)equipSelectedItem.item.Grade];
+
+            selectedItemName.color = GradeColorEquipSelected;
+            _outline.effectColor = GradeColorEquipSelected;
+        }
+ 
 
         selectedItemName.text = equipSelectedItem.item.Name;
 
@@ -319,31 +319,28 @@ public class Inventory : UI_Base<Inventory>
 
     public void OnEquipButton()
     {
-        if (uiSlots[curEquipIndex].equipped)
-        {
-            UnEquip(curEquipIndex);
-        }
-
-        curEquipIndex = selectedItemIndex;
-
-
-        Managers.DataManager.EquipItem(selectedItem.item);
+        //selectedItem = ;
+        //Managers.DataManager.EquipItem(selectedItem.item);
+        Managers.DataManager.EquipItem(Managers.DataManager.playerInventoryItemData[Managers.DataManager.inventoryIndex]);
         uiSlots[selectedItemIndex].icon.gameObject.SetActive(false);
         slots[selectedItemIndex].item = null;
-        
+
         UpdateEquipSlots();
+        UpdateUI();
         UpdateItemUI();
     }
 
-    void UnEquip(int index)
+    public void UnEquip()
     {
-        uiSlots[index].equipped = false;
-        UpdateUI();
-    }
 
-    public void OnUnequipButton()
-    {
-        UnEquip(selectedItemIndex);
+        Managers.DataManager.UnEquipItem(equipSlots[Managers.DataManager.equipItemIndex].item);
+
+        equippedSlots[Managers.DataManager.equipItemIndex].icon.gameObject.SetActive(false);
+        equipSlots[Managers.DataManager.equipItemIndex].item = null;
+
+        UpdateEquipSlots();
+        UpdateUI();
+        UpdateItemUI();
     }
 
     public void UpdateItemUI()
@@ -372,8 +369,14 @@ public class Inventory : UI_Base<Inventory>
 
     private void UpdateEquipSlots()
     {
+        for(int i = 0; i < equippedSlots.Length; i++)
+        {
+            equippedSlots[i].Clear();
+        }
+
         for (int i = 0; i < equippedSlots.Length; i++)
         {
+
             if (Managers.DataManager.playerEquipItemDatas.ContainsKey(ItemType.Weapon))
             {
                 equippedSlots[0].icon.sprite = Managers.DataManager.playerEquipItemDatas[ItemType.Weapon].Sprite;

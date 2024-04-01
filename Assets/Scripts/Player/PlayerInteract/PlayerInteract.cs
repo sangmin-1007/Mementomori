@@ -46,8 +46,10 @@ public class PlayerInteract : MonoBehaviour
 
         isInteract = false;
 
-        if(!isInteract && SceneManager.GetActiveScene().name != "GameScene")
+        if (!isInteract && SceneManager.GetActiveScene().name != "GameScene" &&
+            Managers.UI_Manager.IsActive<UI_Storage>())
         {
+
             Managers.UI_Manager.HideUI<UI_Storage>();
         }
     }

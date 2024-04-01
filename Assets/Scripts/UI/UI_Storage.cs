@@ -88,6 +88,7 @@ public class UI_Storage : UI_Base<UI_Storage>
             if (Managers.DataManager.playerInventoryItemData != null && i < Managers.DataManager.playerInventoryItemData.Count)
             {
                 inventoryItemData[i].item = Managers.DataManager.playerInventoryItemData[i];
+                inventorySlotUI[i].Set(inventoryItemData[i]);
                 inventorySlotUI[i].icon.sprite = inventoryItemData[i].item.Sprite;
                 if (inventorySlotUI[i].icon.sprite != null)
                     inventorySlotUI[i].icon.gameObject.SetActive(true);
@@ -96,6 +97,7 @@ public class UI_Storage : UI_Base<UI_Storage>
             if(Managers.DataManager.storageItemData != null && i < Managers.DataManager.storageItemData.Count)
             {
                 storageItemData[i].item = Managers.DataManager.storageItemData[i];
+                storageSlotUI[i].Set(storageItemData[i]);
                 storageSlotUI[i].icon.sprite = storageItemData[i].item.Sprite;
                 if (storageSlotUI[i].icon.sprite != null)
                     storageSlotUI[i].icon.gameObject.SetActive(true);
