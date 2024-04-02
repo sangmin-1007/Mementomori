@@ -17,6 +17,7 @@ public class Death : MonoBehaviour
     void OnDeath()
     {
         Managers.GameManager.GameOver();
+        Managers.SoundManager.Play("Effect/GameOver", Sound.Effect);
 
         _rigidbody.velocity = Vector3.zero;
 

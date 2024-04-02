@@ -83,7 +83,10 @@ public class SoundManager :MonoBehaviour
                 return;
             }
 
+
             AudioSource audioSource = audioSources[(int)Sound.Effect];
+            if (audioSource.isPlaying)
+                audioSource.Stop();
             audioSource.outputAudioMixerGroup = sfxMixer;
          
             audioSource.volume = volume;

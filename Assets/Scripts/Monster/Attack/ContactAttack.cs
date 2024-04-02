@@ -39,5 +39,6 @@ public class ContactAttack : MonoBehaviour
 
         AttackSO attackSO = Stats.CurrentStates.attackSO;
         bool hasBeenChanged = playerHealthSystem.ChangeHealth(-attackSO.power);
+        //Managers.SoundManager.Play("Effect/PlayerAttackFail1", Sound.Effect);
     }
 }

@@ -45,6 +45,7 @@ public class SceneLoader : MonoBehaviour
             // GameScene
             case 2:
                 Managers.GameSceneManager.InitializeGameScene();
+                Managers.SoundManager.Play("Bgm/BattleScene", Sound.Bgm);
                 break;
             //EndingScene
             case 3:

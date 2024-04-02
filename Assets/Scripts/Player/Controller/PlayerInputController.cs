@@ -38,7 +38,9 @@ public class PlayerInputController : PlayerController
 
     public void OnAttack(InputValue value)
     {
+        
         IsAttacking = value.isPressed;
+     
     }
 
     public void OnInventory(InputValue value)

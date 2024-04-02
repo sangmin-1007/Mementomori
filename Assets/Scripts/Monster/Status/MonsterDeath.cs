@@ -49,7 +49,7 @@ public class MonsterDeath : MonoBehaviour
         {
             component.enabled = false;
         }
-
+        Managers.SoundManager.Play("Effect/Monster_Die1", Sound.Effect);
         Invoke("SetDie", 1f);
         //coll.enabled = false;
         //rigid.simulated = false;
@@ -59,6 +59,7 @@ public class MonsterDeath : MonoBehaviour
 
     void SetDie()
     {
+        
         foreach (SpriteRenderer renderer in transform.GetComponentsInChildren<SpriteRenderer>())
         {
             Color color = renderer.color;
