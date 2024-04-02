@@ -16,7 +16,7 @@ public class Managers : MonoBehaviour
     private LobbySceneManager _LobbySceneManager;
     private GameManager _gameManager;
     private SceneLoader _sceneLoader;
-    private DataManager _dataManager;
+    private UserData _userData;
     private ItemObjectPool _itemObjectPool;
     private SoundManager _soundManager;
 
@@ -26,7 +26,7 @@ public class Managers : MonoBehaviour
     public static LobbySceneManager LobbySceneManager => Instance._LobbySceneManager;
     public static GameSceneManager GameSceneManager => Instance._gameSceneManager;
     public static SceneLoader SceneLoader => Instance._sceneLoader;
-    public static DataManager DataManager => Instance._dataManager;
+    public static UserData UserData => Instance._userData;
 
     public static ItemObjectPool ItemObjectPool => Instance._itemObjectPool;
 
@@ -85,9 +85,9 @@ public class Managers : MonoBehaviour
                 instance._sceneLoader = go.AddComponent<SceneLoader>();
             }
 
-            if(!go.TryGetComponent(out instance._dataManager))
+            if(!go.TryGetComponent(out instance._userData))
             {
-                instance._dataManager = go.AddComponent<DataManager>();
+                instance._userData = go.AddComponent<UserData>();
             }
 
             if(!go.TryGetComponent(out instance._itemObjectPool))

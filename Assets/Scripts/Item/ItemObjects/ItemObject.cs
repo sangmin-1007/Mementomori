@@ -64,7 +64,7 @@ public class ItemObject : MonoBehaviour
     {
         if(item.Type != Constants.ItemType.Consume)
         {
-            Managers.DataManager.AddItem(item);
+            Managers.UserData.AddItem(item);
             //Inventory.instance.AddItem(Managers.DataManager.playerItemData[0]);
             Managers.ItemObjectPool.DisableItem(gameObject);
         }

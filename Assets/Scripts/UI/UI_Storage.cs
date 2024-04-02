@@ -40,27 +40,27 @@ public class UI_Storage : UI_Base<UI_Storage>
 
     public void OnClickKeepButton()
     {
-        inventoryIndex = Managers.DataManager.inventoryIndex;
+        inventoryIndex = Managers.UserData.inventoryIndex;
 
         if (inventoryItemData[inventoryIndex].item == null) return;
 
-        Managers.DataManager.StorageKeepItemData(inventoryItemData[inventoryIndex].item);
+        Managers.UserData.StorageKeepItemData(inventoryItemData[inventoryIndex].item);
         UpdateItemData();
 
-        Managers.DataManager.inventoryIndex = 0;
+        Managers.UserData.inventoryIndex = 0;
 
     }
 
     public void OnClickTakeOutButton()
     {
-        storageIndex = Managers.DataManager.storageIndex;
+        storageIndex = Managers.UserData.storageIndex;
 
         if (storageItemData[storageIndex].item == null) return;
 
-        Managers.DataManager.StorageTakeOutItemData(storageItemData[storageIndex].item);
+        Managers.UserData.StorageTakeOutItemData(storageItemData[storageIndex].item);
         UpdateItemData();
 
-        Managers.DataManager.storageIndex = 0;
+        Managers.UserData.storageIndex = 0;
     }
 
 
@@ -85,17 +85,19 @@ public class UI_Storage : UI_Base<UI_Storage>
 
         for(int i = 0; i < inventoryItemData.Length; i++)
         {
-            if (Managers.DataManager.playerInventoryItemData != null && i < Managers.DataManager.playerInventoryItemData.Count)
+            if (Managers.UserData.playerInventoryItemData != null && i < Managers.UserData.playerInventoryItemData.Count)
             {
-                inventoryItemData[i].item = Managers.DataManager.playerInventoryItemData[i];
+                inventoryItemData[i].item = Managers.UserData.playerInventoryItemData[i];
+                inventorySlotUI[i].Set(inventoryItemData[i]);
                 inventorySlotUI[i].icon.sprite = inventoryItemData[i].item.Sprite;
                 if (inventorySlotUI[i].icon.sprite != null)
                     inventorySlotUI[i].icon.gameObject.SetActive(true);
             }
 
-            if(Managers.DataManager.storageItemData != null && i < Managers.DataManager.storageItemData.Count)
+            if(Managers.UserData.storageItemData != null && i < Managers.UserData.storageItemData.Count)
             {
-                storageItemData[i].item = Managers.DataManager.storageItemData[i];
+                storageItemData[i].item = Managers.UserData.storageItemData[i];
+                storageSlotUI[i].Set(storageItemData[i]);
                 storageSlotUI[i].icon.sprite = storageItemData[i].item.Sprite;
                 if (storageSlotUI[i].icon.sprite != null)
                     storageSlotUI[i].icon.gameObject.SetActive(true);

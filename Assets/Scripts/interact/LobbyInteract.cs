@@ -10,7 +10,7 @@ public enum InteractType
     Door,
     GameMapReposition
 }
-public class LobbyIneract : MonoBehaviour
+public class LobbyInteract : MonoBehaviour
 {
     public InteractType interactType;
 
@@ -19,7 +19,7 @@ public class LobbyIneract : MonoBehaviour
         switch(interactType)
         {
             case InteractType.Shop:
-                    Debug.Log("¼¥");
+                Managers.UI_Manager.ShowUI<UI_Shop>();
             break;
 
             case InteractType.Storage:

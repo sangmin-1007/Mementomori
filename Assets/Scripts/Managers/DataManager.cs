@@ -1,52 +1,52 @@
-using Constants;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
-public class DataManager : MonoBehaviour
+public class SaveData
 {
-    public List<ItemData> playerInventoryItemData = new List<ItemData>();
-    public Dictionary<ItemType,ItemData> playerEquipItemDatas = new Dictionary<ItemType,ItemData>();
+    public List<ItemData> inventoryItemData = new List<ItemData>();
+    public List<ItemData> equipItemData = new List<ItemData>();
     public List<ItemData> storageItemData = new List<ItemData>();
 
     public int playerGold;
+}
 
-    public int inventoryIndex;
-    public int storageIndex;
-    public int shopIndex;
-    
-    public void AddItem(ItemData itemDatas)
+public class DataManager : MonoBehaviour
+{
+    string path;
+
+    private void Start()
     {
-        playerInventoryItemData.Add(itemDatas);
-        if(Managers.UI_Manager.IsActive<Inventory>())
-        {
-            Inventory.instance.AddItem(itemDatas);
-        }
+
     }
-    public void EquipItem(ItemData itemDatas)
+
+    public void Save()
     {
-        if (playerEquipItemDatas.ContainsKey(itemDatas.Type))
+        SaveData saveData = new SaveData();
+
+        saveData.playerGold = Managers.UserData.playerGold;
+
+        for (int i = 0; i < Managers.UserData.playerInventoryItemData.Count; i++)
         {
-            playerInventoryItemData.Add(playerEquipItemDatas[itemDatas.Type]);
-            playerEquipItemDatas.Remove(itemDatas.Type);
-            playerEquipItemDatas.Add(itemDatas.Type,itemDatas);
-            playerInventoryItemData.Remove(itemDatas);
-            return;
+            saveData.inventoryItemData.Add(Managers.UserData.playerInventoryItemData[i]);
         }
 
-        playerInventoryItemData.Remove(itemDatas);
-        playerEquipItemDatas.Add(itemDatas.Type,itemDatas);
+        foreach(ItemData item in Managers.UserData.playerEquipItemDatas.Values)
+        {
+            saveData.equipItemData.Add(item);
+        }
+
+        for(int i = 0; i < Managers.UserData.storageItemData.Count; i++)
+        {
+            saveData.storageItemData.Add(Managers.UserData.storageItemData[i]);
+        }
+
+
     }
 
-    public void StorageKeepItemData(ItemData itemDatas)
+    public void Load()
     {
-        storageItemData.Add(itemDatas);
-        playerInventoryItemData.Remove(itemDatas);
-    }
 
-    public void  StorageTakeOutItemData(ItemData itemDatas)
-    {
-        storageItemData.Remove(itemDatas);
-        playerInventoryItemData.Add(itemDatas);
     }
 }
