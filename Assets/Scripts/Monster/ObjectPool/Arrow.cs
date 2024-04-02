@@ -24,7 +24,7 @@ public class Arrow : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(direction);
+        transform.Translate(direction * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

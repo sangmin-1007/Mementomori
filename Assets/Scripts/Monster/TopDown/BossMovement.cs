@@ -6,7 +6,7 @@ using UnityEngine;
 public class BossMovement : MonoBehaviour
 {
     Rigidbody2D player;
-    [SerializeField] float speed = 1f;
+    public float speed = 3f;
 
     Rigidbody2D rigid;
     SpriteRenderer sprite;

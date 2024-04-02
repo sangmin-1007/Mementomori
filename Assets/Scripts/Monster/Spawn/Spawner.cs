@@ -7,6 +7,7 @@ public class Spawner : MonoBehaviour
 {
     public int stage = 1;
     float bossTimer;
+    int boss = 0;
 
     public Transform[] spawnPoint;
 
@@ -31,19 +32,10 @@ public class Spawner : MonoBehaviour
 
     private void Update()
     {
-        timer += Time.deltaTime;
-
-        bossTimer = Managers.GameManager.timer;
-
-        if (bossTimer > 30f)
-        {
-            SpawnBoss();
-
-            bossTimer = 0f;
-        }
-
         if (_spawnManager == null)
             return;
+
+        timer += Time.deltaTime;
 
         if (timer > 0.5f && count < 10)
         {
@@ -54,6 +46,20 @@ public class Spawner : MonoBehaviour
             //Debug.Log($"증가 후 몬스터 수 : {count}");
         }
 
+        bossTimer = Managers.GameManager.timer;
+
+        if (bossTimer > 20f && boss == 0)
+        {
+            SpawnBoss();
+
+            boss = 1;
+        }
+
+        if (bossTimer > 30f && boss == 1)
+        {
+            Managers.GameManager.GameOver();
+            Managers.SoundManager.Play("Effect/GameOver", Sound.Effect);
+        }
     }
 
     private void SpawnBoss()
