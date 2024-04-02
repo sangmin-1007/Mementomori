@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RangedAttack : MonoBehaviour
+public class NecromancerAttack : MonoBehaviour
 {
     Rigidbody2D player;
 
     Animator animator;
 
-    float shootRange = 7f;
+    float shootRange = 5f;
     float defaultSpeed;
 
     float attackTime;
-    float defaultAttackTime = 1.8f;
+    float defaultAttackTime = 2.8f;
 
     public bool isAttacking = false;
 
@@ -52,7 +52,7 @@ public class RangedAttack : MonoBehaviour
         {
             OnMove();
         }
-        else if (attackTime < 0f) 
+        else if (attackTime < 0f)
         {
             attackTime = defaultAttackTime;
             OnShoot();
@@ -76,11 +76,14 @@ public class RangedAttack : MonoBehaviour
 
         yield return new WaitForSeconds(defaultAttackTime);
 
-        var arrow = ObjectPool.GetObjectArrow();
+        var energy = ObjectPool.GetObjectEnergy();
         var direction = new Vector3(player.transform.position.x, player.transform.position.y) - transform.position;
-        arrow.transform.position = transform.position + direction.normalized * 0.5f;
-        arrow.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg);
-        arrow.Shoot(new Vector3(1, 0) * Time.deltaTime * 10f);
+        //if (direction.x > 0)
+            energy.transform.position = transform.position + direction.normalized * 0.5f;
+        //else
+            //energy.transform.position = new Vector3(transform.position.x + direction.normalized.x * 0.5f, transform.position.y + direction.normalized.y * 0.5f + 1f);
+        //energy.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg);
+        energy.Shoot(direction.normalized * Time.deltaTime * 5f);
 
         isAttacking = false;
     }

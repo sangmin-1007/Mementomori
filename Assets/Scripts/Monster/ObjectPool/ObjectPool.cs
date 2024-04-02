@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class ObjectPool : MonoBehaviour
 {
     public static ObjectPool Instance;
 
-    [SerializeField]
-    private GameObject poolingObjectPrefab;
+    [SerializeField] private GameObject poolingObjectPrefabArrow;
+    [SerializeField] private GameObject poolingObjectPrefabEnergy;
 
-    Queue<Arrow> poolingObjectQueue = new Queue<Arrow>();
+    Queue<Arrow> poolingObjectQueueArrow = new Queue<Arrow>();
+    Queue<Energy> poolingObjectQueueEnergy = new Queue<Energy>();
 
     private void Awake()
     {
@@ -22,39 +24,75 @@ public class ObjectPool : MonoBehaviour
     {
         for (int i = 0; i < initCount; i++)
         {
-            poolingObjectQueue.Enqueue(CreateNewObject());
+            poolingObjectQueueArrow.Enqueue(CreateNewObjectArrow());
+        }
+        for (int i = 0; i < initCount; i++)
+        {
+            poolingObjectQueueEnergy.Enqueue(CreateNewObjectEnergy());
         }
     }
 
-    private Arrow CreateNewObject()
+    private Arrow CreateNewObjectArrow()
     {
-        var newObj = Instantiate(poolingObjectPrefab, transform).GetComponent<Arrow>();
+        var newObj = Instantiate(poolingObjectPrefabArrow, transform).GetComponent<Arrow>();
         newObj.gameObject.SetActive(false);
         return newObj;
     }
 
-    public static Arrow GetObject()
+    private Energy CreateNewObjectEnergy()
     {
-        if (Instance.poolingObjectQueue.Count > 0)
+        var newObj = Instantiate(poolingObjectPrefabEnergy, transform).GetComponent<Energy>();
+        newObj.gameObject.SetActive(false);
+        return newObj;
+    }
+
+    public static Arrow GetObjectArrow()
+    {
+        if (Instance.poolingObjectQueueArrow.Count > 0)
         {
-            var obj = Instance.poolingObjectQueue.Dequeue();
+            var obj = Instance.poolingObjectQueueArrow.Dequeue();
             obj.transform.SetParent(null);
             obj.gameObject.SetActive(true);
             return obj;
         }
         else
         {
-            var newObj = Instance.CreateNewObject();
+            var newObj = Instance.CreateNewObjectArrow();
+            newObj.gameObject.SetActive(true);
+            newObj.transform.SetParent(null);
+            return newObj;
+        }
+    }
+    
+    public static Energy GetObjectEnergy()
+    {
+        if (Instance.poolingObjectQueueEnergy.Count > 0)
+        {
+            var obj = Instance.poolingObjectQueueEnergy.Dequeue();
+            obj.transform.SetParent(null);
+            obj.gameObject.SetActive(true);
+            return obj;
+        }
+        else
+        {
+            var newObj = Instance.CreateNewObjectEnergy();
             newObj.gameObject.SetActive(true);
             newObj.transform.SetParent(null);
             return newObj;
         }
     }
 
-    public static void ReturnObject(Arrow obj)
+    public static void ReturnObjectArrow(Arrow obj)
     {
         obj.gameObject.SetActive(false);
         obj.transform.SetParent(Instance.transform);
-        Instance.poolingObjectQueue.Enqueue(obj);
+        Instance.poolingObjectQueueArrow.Enqueue(obj);
+    }
+
+    public static void ReturnObjectEnergy(Energy obj)
+    {
+        obj.gameObject.SetActive(false);
+        obj.transform.SetParent(Instance.transform);
+        Instance.poolingObjectQueueEnergy.Enqueue(obj);
     }
 }

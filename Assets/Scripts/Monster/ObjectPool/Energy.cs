@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
-public class Arrow : MonoBehaviour
+public class Energy : MonoBehaviour
 {
     private Vector3 direction;
 
@@ -11,15 +11,22 @@ public class Arrow : MonoBehaviour
     HealthSystem playerHealthSystem;
     protected PlayerStatsHandler Stats { get; private set; }
 
+    Animator animator;
+
+    private void Awake()
+    {
+        animator = GetComponentInChildren<Animator>();
+    }
+
     public void Shoot(Vector3 direction)
     {
         this.direction = direction;
-        Invoke("DestroyArrow", 5f);
+        Invoke("DestroyEnergy", 5f);
     }
 
-    public void DestroyArrow()
+    public void DestroyEnergy()
     {
-        ObjectPool.ReturnObjectArrow(this);
+        ObjectPool.ReturnObjectEnergy(this);
     }
 
     void Update()
@@ -29,15 +36,17 @@ public class Arrow : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == targetTag)
+        if (collision.tag == targetTag)
         {
             playerHealthSystem = collision.GetComponent<HealthSystem>();
             if (Stats.CurrentStates.attackSO == null)
                 return;
             AttackSO attackSO = Stats.CurrentStates.attackSO;
             bool hasBeenChanged = playerHealthSystem.ChangeHealth(-attackSO.power);
+            animator.SetTrigger("IsHit");
+            direction = Vector3.zero;
 
-            DestroyArrow();
+            Invoke("DestroyEnergy", 0.8f);
         }
     }
 

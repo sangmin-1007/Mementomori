@@ -91,7 +91,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8e954e252cadce44b8885899c09acc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolingObjectPrefab: {fileID: 698901222200185267, guid: cbc9e384a1abfac429f92c594ec03069, type: 3}
+  poolingObjectPrefabArrow: {fileID: 698901222200185267, guid: cbc9e384a1abfac429f92c594ec03069, type: 3}
+  poolingObjectPrefabEnergy: {fileID: 5825456123431133024, guid: 56e9a4b1d5cdcb54fb664306fce76107, type: 3}
 --- !u!1 &7977753938376858671
 GameObject:
   m_ObjectHideFlags: 0
