@@ -38,7 +38,7 @@ public class SoundManager :MonoBehaviour
    
     }
 
-    public void Play(string path, Sound type = Sound.Effect, float volume =1.0f)
+    public void Play(string path, Sound type = Sound.Effect, float volume=1.0f)
     {
         
         audioSources[(int)Sound.Bgm].loop = true;
@@ -67,7 +67,7 @@ public class SoundManager :MonoBehaviour
             audioSource.outputAudioMixerGroup = bgmMixer;
            
 
-            audioSource.volume = volume;
+             audioSource.volume = volume;
           
 
             audioSource.Play();
@@ -85,12 +85,11 @@ public class SoundManager :MonoBehaviour
 
 
             AudioSource audioSource = audioSources[(int)Sound.Effect];
-            if (audioSource.isPlaying)
-                audioSource.Stop();
-            audioSource.outputAudioMixerGroup = sfxMixer;
+           
          
             audioSource.volume = volume;
             audioSource.PlayOneShot(audioclip);
+            audioSource.outputAudioMixerGroup = sfxMixer;
 
 
         }

@@ -28,23 +28,23 @@ public class UI_Option : UI_Base<UI_Option>
         masterSlider.onValueChanged.AddListener(ChangeMasterSound);
         bgmSlider.onValueChanged.AddListener(ChangeBgmSound);
         sfxSlider.onValueChanged.AddListener(ChangeSfxSound);
-
-        bgmSlider.value = PlayerPrefs.GetFloat(BGM_VOLUME_KEY, 1f);
-        sfxSlider.value = PlayerPrefs.GetFloat(SFX_VOLUME_KEY, 1f);
-        masterSlider.value = PlayerPrefs.GetFloat(MASTER_VOLUME_KEY, 1f);
-
+   
     }
 
     public override void OnEnable()
     {
-        base.OnEnable(); 
+        base.OnEnable();
+        bgmSlider.value = PlayerPrefs.GetFloat(BGM_VOLUME_KEY);
+        sfxSlider.value = PlayerPrefs.GetFloat(SFX_VOLUME_KEY);
+        masterSlider.value = PlayerPrefs.GetFloat(MASTER_VOLUME_KEY);
 
     }
 
     void ChangeMasterSound(float volume)
     {
-        audioMixer.SetFloat("BGM", Mathf.Log10(volume) * 20);
         sfxMixer.SetFloat("Master", Mathf.Log10(volume) * 20);
+        audioMixer.SetFloat("BGM", Mathf.Log10(volume) * 20);
+
         PlayerPrefs.SetFloat(MASTER_VOLUME_KEY, volume);
         PlayerPrefs.Save();
     }
