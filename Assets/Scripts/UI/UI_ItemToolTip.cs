@@ -30,7 +30,7 @@ public class UI_ItemToolTip : UI_Base<UI_ItemToolTip>
 
     private void InputKeyText()
     {
-        selectedSlotType = Managers.DataManager.selectSlotType;
+        selectedSlotType = Managers.UserData.selectSlotType;
 
         switch (selectedSlotType)
         {

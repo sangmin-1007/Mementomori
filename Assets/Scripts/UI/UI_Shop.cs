@@ -82,13 +82,13 @@ public class UI_Shop : UI_Base<UI_Shop>
 
     private void UpdateInventory()
     {
-        playerGoldText.text = Managers.DataManager.playerGold.ToString();
+        playerGoldText.text = Managers.UserData.playerGold.ToString();
 
         for(int i = 0; i < inventoryItemData.Length; i++)
         {
-            if (i < Managers.DataManager.playerInventoryItemData.Count)
+            if (i < Managers.UserData.playerInventoryItemData.Count)
             {
-                inventoryItemData[i].item = Managers.DataManager.playerInventoryItemData[i];
+                inventoryItemData[i].item = Managers.UserData.playerInventoryItemData[i];
                 inventorySlotUI[i].Set(inventoryItemData[i]);
                 inventorySlotUI[i].icon.sprite = inventoryItemData[i].item.Sprite;
             }
@@ -96,7 +96,7 @@ public class UI_Shop : UI_Base<UI_Shop>
             if (inventorySlotUI[i].icon.sprite != null)
                 inventorySlotUI[i].icon.gameObject.SetActive(true);
 
-            if(i >= Managers.DataManager.playerInventoryItemData.Count)
+            if(i >= Managers.UserData.playerInventoryItemData.Count)
             {
                 inventoryItemData[i].item = null;
                 inventorySlotUI[i].icon.sprite = null;
@@ -116,20 +116,20 @@ public class UI_Shop : UI_Base<UI_Shop>
 
     public void OnClickSellButton()
     {
-        sellGoldText.text = inventoryItemData[Managers.DataManager.inventoryIndex].item.SellPrice.ToString();
+        sellGoldText.text = inventoryItemData[Managers.UserData.inventoryIndex].item.SellPrice.ToString();
         sellPopUpUI.SetActive(true);
     }
 
     public void OnClickBuyButton()
     {
-        buyGoldText.text = shopItemData[Managers.DataManager.shopIndex].item.BuyPrice.ToString();
+        buyGoldText.text = shopItemData[Managers.UserData.shopIndex].item.BuyPrice.ToString();
         buyPopUpUI.SetActive(true);
     }
 
     public void OnClickSellYesutton()
     {
-        Managers.DataManager.playerGold += inventoryItemData[Managers.DataManager.inventoryIndex].item.SellPrice;
-        Managers.DataManager.playerInventoryItemData.Remove(inventoryItemData[Managers.DataManager.inventoryIndex].item);
+        Managers.UserData.playerGold += inventoryItemData[Managers.UserData.inventoryIndex].item.SellPrice;
+        Managers.UserData.playerInventoryItemData.Remove(inventoryItemData[Managers.UserData.inventoryIndex].item);
 
         sellPopUpUI.SetActive(false);
         UpdateInventory();
@@ -137,11 +137,11 @@ public class UI_Shop : UI_Base<UI_Shop>
 
     public void OnClickBuyYesButton()
     {
-        if (shopItemData[Managers.DataManager.shopIndex].item.BuyPrice <= Managers.DataManager.playerGold)
+        if (shopItemData[Managers.UserData.shopIndex].item.BuyPrice <= Managers.UserData.playerGold)
         {
-            Managers.DataManager.playerGold -= shopItemData[Managers.DataManager.shopIndex].item.BuyPrice;
+            Managers.UserData.playerGold -= shopItemData[Managers.UserData.shopIndex].item.BuyPrice;
 
-            Managers.DataManager.AddItem(shopItemData[Managers.DataManager.shopIndex].item);
+            Managers.UserData.AddItem(shopItemData[Managers.UserData.shopIndex].item);
             buyPopUpUI.SetActive(false);
             UpdateInventory();
         }

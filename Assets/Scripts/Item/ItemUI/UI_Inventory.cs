@@ -122,9 +122,9 @@ public class UI_Inventory : UI_Base<UI_Inventory>
 
     public void OnEquipButton()
     {
-        Managers.DataManager.EquipItem(Managers.DataManager.playerInventoryItemData[Managers.DataManager.inventoryIndex]);
-        uiSlots[Managers.DataManager.inventoryIndex].icon.gameObject.SetActive(false);
-        slots[Managers.DataManager.inventoryIndex].item = null;
+        Managers.UserData.EquipItem(Managers.UserData.playerInventoryItemData[Managers.UserData.inventoryIndex]);
+        uiSlots[Managers.UserData.inventoryIndex].icon.gameObject.SetActive(false);
+        slots[Managers.UserData.inventoryIndex].item = null;
 
         UpdateEquipSlots();
         UpdateUI();
@@ -134,10 +134,10 @@ public class UI_Inventory : UI_Base<UI_Inventory>
     public void UnEquip()
     {
 
-        Managers.DataManager.UnEquipItem(equipSlots[Managers.DataManager.equipItemIndex].item);
+        Managers.UserData.UnEquipItem(equipSlots[Managers.UserData.equipItemIndex].item);
 
-        equippedSlots[Managers.DataManager.equipItemIndex].icon.gameObject.SetActive(false);
-        equipSlots[Managers.DataManager.equipItemIndex].item = null;
+        equippedSlots[Managers.UserData.equipItemIndex].icon.gameObject.SetActive(false);
+        equipSlots[Managers.UserData.equipItemIndex].item = null;
 
         UpdateEquipSlots();
         UpdateUI();
@@ -158,10 +158,10 @@ public class UI_Inventory : UI_Base<UI_Inventory>
 
         for (int i = 0; i < slots.Length; i++)
         {
-            if (i < Managers.DataManager.playerInventoryItemData.Count &&
-               Managers.DataManager.playerInventoryItemData[i].Sprite != uiSlots[i].icon.sprite)
+            if (i < Managers.UserData.playerInventoryItemData.Count &&
+               Managers.UserData.playerInventoryItemData[i].Sprite != uiSlots[i].icon.sprite)
 
-                AddItem(Managers.DataManager.playerInventoryItemData[i]);
+                AddItem(Managers.UserData.playerInventoryItemData[i]);
          
         }
     }
@@ -178,25 +178,25 @@ public class UI_Inventory : UI_Base<UI_Inventory>
         for (int i = 0; i < equippedSlots.Length; i++)
         {
 
-            if (Managers.DataManager.playerEquipItemDatas.ContainsKey(ItemType.Weapon))
+            if (Managers.UserData.playerEquipItemDatas.ContainsKey(ItemType.Weapon))
             {
-                equippedSlots[0].icon.sprite = Managers.DataManager.playerEquipItemDatas[ItemType.Weapon].Sprite;
-                equipSlots[0].item = Managers.DataManager.playerEquipItemDatas[ItemType.Weapon];
+                equippedSlots[0].icon.sprite = Managers.UserData.playerEquipItemDatas[ItemType.Weapon].Sprite;
+                equipSlots[0].item = Managers.UserData.playerEquipItemDatas[ItemType.Weapon];
             }
-            if (Managers.DataManager.playerEquipItemDatas.ContainsKey(ItemType.Armor))
+            if (Managers.UserData.playerEquipItemDatas.ContainsKey(ItemType.Armor))
             {
-                equippedSlots[1].icon.sprite = Managers.DataManager.playerEquipItemDatas[ItemType.Armor].Sprite;
-                equipSlots[1].item = Managers.DataManager.playerEquipItemDatas[ItemType.Armor];
+                equippedSlots[1].icon.sprite = Managers.UserData.playerEquipItemDatas[ItemType.Armor].Sprite;
+                equipSlots[1].item = Managers.UserData.playerEquipItemDatas[ItemType.Armor];
             }
-            if (Managers.DataManager.playerEquipItemDatas.ContainsKey(ItemType.Shield))
+            if (Managers.UserData.playerEquipItemDatas.ContainsKey(ItemType.Shield))
             {
-                equippedSlots[2].icon.sprite = Managers.DataManager.playerEquipItemDatas[ItemType.Shield].Sprite;
-                equipSlots[2].item = Managers.DataManager.playerEquipItemDatas[ItemType.Shield];
+                equippedSlots[2].icon.sprite = Managers.UserData.playerEquipItemDatas[ItemType.Shield].Sprite;
+                equipSlots[2].item = Managers.UserData.playerEquipItemDatas[ItemType.Shield];
             }
-            if (Managers.DataManager.playerEquipItemDatas.ContainsKey(ItemType.Boots))
+            if (Managers.UserData.playerEquipItemDatas.ContainsKey(ItemType.Boots))
             {
-                equippedSlots[3].icon.sprite = Managers.DataManager.playerEquipItemDatas[ItemType.Boots].Sprite;
-                equipSlots[3].item = Managers.DataManager.playerEquipItemDatas[ItemType.Boots];
+                equippedSlots[3].icon.sprite = Managers.UserData.playerEquipItemDatas[ItemType.Boots].Sprite;
+                equipSlots[3].item = Managers.UserData.playerEquipItemDatas[ItemType.Boots];
             }
             
         }

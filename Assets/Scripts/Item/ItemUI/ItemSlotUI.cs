@@ -75,29 +75,29 @@ public class ItemSlotUI : MonoBehaviour,IPointerClickHandler,IPointerEnterHandle
         switch(slotType)
         {
             case SlotType.Inventory:
-                Managers.DataManager.inventoryIndex = index;
+                Managers.UserData.inventoryIndex = index;
                 break;
             case SlotType.Storage:
-                Managers.DataManager.storageIndex = index;
+                Managers.UserData.storageIndex = index;
                 break;
             case SlotType.Storage_Inventory:
-                Managers.DataManager.inventoryIndex = index;
+                Managers.UserData.inventoryIndex = index;
                 break;
             case SlotType.Equip:
-                Managers.DataManager.equipItemIndex = index;
+                Managers.UserData.equipItemIndex = index;
                 break;
             case SlotType.Shop:
-                Managers.DataManager.shopIndex = index;
+                Managers.UserData.shopIndex = index;
                 break;
             case SlotType.Shop_Inventory:
-                Managers.DataManager.inventoryIndex = index;
+                Managers.UserData.inventoryIndex = index;
                 break;
         }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Managers.DataManager.selectSlotType = slotType;
+        Managers.UserData.selectSlotType = slotType;
         Managers.UI_Manager.ShowUI<UI_ItemToolTip>();
 
         if(Managers.UI_Manager.UI_List.ContainsKey("UI_ItemToolTip"))
@@ -108,27 +108,27 @@ public class ItemSlotUI : MonoBehaviour,IPointerClickHandler,IPointerEnterHandle
         switch (slotType)
         {
             case SlotType.Inventory:
-                Managers.DataManager.inventoryIndex = index;
+                Managers.UserData.inventoryIndex = index;
                 toolTip.ItemInfoText(curSlot.item,transform.position);
                 break;
             case SlotType.Equip:
-                Managers.DataManager.equipItemIndex = index;
+                Managers.UserData.equipItemIndex = index;
                 toolTip.ItemInfoText(curSlot.item, transform.position);
                 break;
             case SlotType.Storage:
-                Managers.DataManager.storageIndex = index;
+                Managers.UserData.storageIndex = index;
                 toolTip.ItemInfoText(curSlot.item, transform.position);
                 break;
             case SlotType.Storage_Inventory:
-                Managers.DataManager.inventoryIndex = index;
+                Managers.UserData.inventoryIndex = index;
                 toolTip.ItemInfoText(curSlot.item, transform.position);
                 break;
             case SlotType.Shop:
-                Managers.DataManager.shopIndex = index;
+                Managers.UserData.shopIndex = index;
                 toolTip.ItemInfoText(curSlot.item, transform.position);
                 break;
             case SlotType.Shop_Inventory:
-                Managers.DataManager.inventoryIndex = index;
+                Managers.UserData.inventoryIndex = index;
                 toolTip.ItemInfoText(curSlot.item, transform.position);
                 break;
         }
