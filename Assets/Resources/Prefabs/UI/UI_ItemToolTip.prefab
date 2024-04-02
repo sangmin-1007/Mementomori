@@ -607,6 +607,8 @@ MonoBehaviour:
   selectedItemStatValue:
   - {fileID: 7231419774975451135}
   - {fileID: 4890057079863249586}
+  toolTip: {fileID: 8020300730838978656}
+  outLine: {fileID: 8612669672939020674}
 --- !u!1 &7239017243552259687
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,7 +19,7 @@ public class LobbyInteract : MonoBehaviour
         switch(interactType)
         {
             case InteractType.Shop:
-                    Debug.Log("¼¥");
+                Managers.UI_Manager.ShowUI<UI_Shop>();
             break;
 
             case InteractType.Storage:
