@@ -47,13 +47,13 @@ public class PlayerInputController : PlayerController
     {
         if (value.isPressed)
         {
-            if(!Managers.UI_Manager.IsActive<Inventory>())
+            if(!Managers.UI_Manager.IsActive<UI_Inventory>())
             {
-                Managers.UI_Manager.ShowUI<Inventory>();
+                Managers.UI_Manager.ShowUI<UI_Inventory>();
             }
             else
             {
-                Managers.UI_Manager.HideUI<Inventory>();
+                Managers.UI_Manager.HideUI<UI_Inventory>();
             }
         }
     }

@@ -52,6 +52,10 @@ public class PlayerInteract : MonoBehaviour
 
             Managers.UI_Manager.HideUI<UI_Storage>();
         }
+        else if(Managers.UI_Manager.IsActive<UI_Shop>())
+        {
+            Managers.UI_Manager.HideUI<UI_Shop>();
+        }
     }
 
     private void ColliderSizeChanger()

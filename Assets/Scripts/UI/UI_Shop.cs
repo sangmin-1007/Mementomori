@@ -23,6 +23,7 @@ public class UI_Shop : UI_Base<UI_Shop>
     [Header("бс PopUp UI")]
     [SerializeField] private GameObject buyPopUpUI;
     [SerializeField] private GameObject sellPopUpUI;
+    [SerializeField] private GameObject cantBuyPopUpUI;
 
     [Header("бс PopUPUI Text")]
     [SerializeField] private Text sellGoldText;
@@ -60,6 +61,7 @@ public class UI_Shop : UI_Base<UI_Shop>
     {
         base.OnEnable();
         UpdateInventory();
+        PopUpUIClear();
     }
 
     private void UpdateStore()
@@ -93,8 +95,13 @@ public class UI_Shop : UI_Base<UI_Shop>
 
             if (inventorySlotUI[i].icon.sprite != null)
                 inventorySlotUI[i].icon.gameObject.SetActive(true);
-            else
+
+            if(i >= Managers.DataManager.playerInventoryItemData.Count)
+            {
+                inventoryItemData[i].item = null;
+                inventorySlotUI[i].icon.sprite = null;
                 inventorySlotUI[i].icon.gameObject.SetActive(false);
+            }
         }
     }
 
@@ -130,9 +137,20 @@ public class UI_Shop : UI_Base<UI_Shop>
 
     public void OnClickBuyYesButton()
     {
-        Managers.DataManager.AddItem(shopItemData[Managers.DataManager.shopIndex].item);
-        buyPopUpUI.SetActive(false);
-        UpdateInventory();
+        if (shopItemData[Managers.DataManager.shopIndex].item.BuyPrice <= Managers.DataManager.playerGold)
+        {
+            Managers.DataManager.playerGold -= shopItemData[Managers.DataManager.shopIndex].item.BuyPrice;
+
+            Managers.DataManager.AddItem(shopItemData[Managers.DataManager.shopIndex].item);
+            buyPopUpUI.SetActive(false);
+            UpdateInventory();
+        }
+        else
+        {
+            buyPopUpUI.SetActive(false);
+            cantBuyPopUpUI.SetActive(true);
+        }
+
     }
 
     public void OnClickNoButton()
@@ -145,5 +163,17 @@ public class UI_Shop : UI_Base<UI_Shop>
         {
             sellPopUpUI.SetActive(false);
         }
+    }
+
+    public void OnClickOKButton()
+    {
+        cantBuyPopUpUI.SetActive(false);
+    }
+
+    private void PopUpUIClear()
+    {
+        sellPopUpUI.SetActive(false);
+        buyPopUpUI.SetActive(false);
+        cantBuyPopUpUI.SetActive(false);
     }
 }

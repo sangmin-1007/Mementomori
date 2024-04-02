@@ -9,7 +9,7 @@ public class DataManager : MonoBehaviour
     public Dictionary<ItemType,ItemData> playerEquipItemDatas = new Dictionary<ItemType,ItemData>();
     public List<ItemData> storageItemData = new List<ItemData>();
 
-    public int playerGold;
+    public int playerGold = 100000;
 
     public int inventoryIndex;
     public int equipItemIndex;
@@ -20,9 +20,9 @@ public class DataManager : MonoBehaviour
     public void AddItem(ItemData itemDatas)
     {
         playerInventoryItemData.Add(itemDatas);
-        if(Managers.UI_Manager.IsActive<Inventory>())
+        if(Managers.UI_Manager.IsActive<UI_Inventory>())
         {
-            Inventory.instance.AddItem(itemDatas);
+            UI_Inventory.instance.AddItem(itemDatas);
         }
     }
     public void EquipItem(ItemData itemDatas)

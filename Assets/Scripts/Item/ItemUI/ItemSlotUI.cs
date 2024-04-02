@@ -109,25 +109,27 @@ public class ItemSlotUI : MonoBehaviour,IPointerClickHandler,IPointerEnterHandle
         {
             case SlotType.Inventory:
                 Managers.DataManager.inventoryIndex = index;
-                toolTip.ItemInfoText(curSlot.item);
+                toolTip.ItemInfoText(curSlot.item,transform.position);
                 break;
             case SlotType.Equip:
                 Managers.DataManager.equipItemIndex = index;
-                toolTip.ItemInfoText(curSlot.item);
+                toolTip.ItemInfoText(curSlot.item, transform.position);
                 break;
             case SlotType.Storage:
                 Managers.DataManager.storageIndex = index;
-                toolTip.ItemInfoText(curSlot.item);
+                toolTip.ItemInfoText(curSlot.item, transform.position);
                 break;
             case SlotType.Storage_Inventory:
                 Managers.DataManager.inventoryIndex = index;
-                toolTip.ItemInfoText(curSlot.item);
+                toolTip.ItemInfoText(curSlot.item, transform.position);
                 break;
             case SlotType.Shop:
                 Managers.DataManager.shopIndex = index;
-                toolTip.ItemInfoText(curSlot.item);
+                toolTip.ItemInfoText(curSlot.item, transform.position);
                 break;
             case SlotType.Shop_Inventory:
+                Managers.DataManager.inventoryIndex = index;
+                toolTip.ItemInfoText(curSlot.item, transform.position);
                 break;
         }
     }
@@ -138,7 +140,8 @@ public class ItemSlotUI : MonoBehaviour,IPointerClickHandler,IPointerEnterHandle
         {
             storage = Managers.UI_Manager.UI_List["UI_Storage"].GetComponent<UI_Storage>();
         }
-        else if(Managers.UI_Manager.UI_List.ContainsKey("UI_Shop"))
+
+        if(Managers.UI_Manager.UI_List.ContainsKey("UI_Shop"))
         {
             shop = Managers.UI_Manager.UI_List["UI_Shop"].GetComponent<UI_Shop>();
         }
@@ -148,7 +151,7 @@ public class ItemSlotUI : MonoBehaviour,IPointerClickHandler,IPointerEnterHandle
             switch(slotType)
             {
                 case SlotType.Inventory:
-                    Inventory.instance.OnEquipButton();
+                    UI_Inventory.instance.OnEquipButton();
                     break;
                 case SlotType.Storage:
                     storage.OnClickTakeOutButton();
@@ -157,9 +160,13 @@ public class ItemSlotUI : MonoBehaviour,IPointerClickHandler,IPointerEnterHandle
                     storage.OnClickKeepButton();
                     break;
                 case SlotType.Shop:
+                    shop.OnClickBuyButton();
+                    break;
+                case SlotType.Shop_Inventory:
+                    shop.OnClickSellButton();
                     break;
                 case SlotType.Equip:
-                    Inventory.instance.UnEquip();
+                    UI_Inventory.instance.UnEquip();
                     break;
             }
             

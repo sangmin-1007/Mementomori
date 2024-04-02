@@ -16,9 +16,10 @@ public class UI_ItemToolTip : UI_Base<UI_ItemToolTip>
     [SerializeField] private Text[] selectedItemStat;
     [SerializeField] private Text[] selectedItemStatValue;
 
+    [SerializeField] private GameObject toolTip;
+    [SerializeField] private Outline outLine;
 
     private SlotType selectedSlotType;
-    private int selectedItemIndex;
 
     public override void OnEnable()
     {
@@ -54,35 +55,17 @@ public class UI_ItemToolTip : UI_Base<UI_ItemToolTip>
         }
     }
 
-    //private void SelectedItem()
-    //{
-
-
-    //    switch(selectedSlotType)
-    //    {
-    //        case SlotType.Inventory:
-    //            selectedItemIndex = Managers.DataManager.inventoryIndex;
-    //            ItemNameText.text = Managers.DataManager.playerInventoryItemData[selectedItemIndex].Name;
-    //            descriptionText.text = Managers.DataManager.playerInventoryItemData[selectedItemIndex].Description;
-    //            break;
-    //        case SlotType.Storage:
-    //            selectedItemIndex = Managers.DataManager.storageIndex;
-    //            ItemNameText.text = Managers.DataManager.storageItemData[selectedItemIndex].Name;
-    //            descriptionText.text = Managers.DataManager.storageItemData[selectedItemIndex].Description;
-    //            break;
-    //        case SlotType.Shop:
-    //            selectedItemIndex = Managers.DataManager.shopIndex;
-    //            break;
-    //        case SlotType.Equip:
-    //            selectedItemIndex = Managers.DataManager.equipItemIndex;
-    //            break;
-    //    }
-    //}
-
-    public void ItemInfoText(ItemData itemData)
+    public void ItemInfoText(ItemData itemData,Vector3 _pos)
     {
         ItemNameText.text = itemData.Name;
         descriptionText.text = itemData.Description;
+
+        _pos += new Vector3(toolTip.GetComponent<RectTransform>().rect.width * 0.5f,
+            -toolTip.GetComponent<RectTransform>().rect.height * 0.5f);
+        toolTip.transform.position = _pos;
+
+        ItemNameText.color = Colors.ItemGrade[(int)itemData.Grade];
+        outLine.effectColor = Colors.ItemGrade[(int)itemData.Grade];
 
         switch (itemData.Type)
         {
