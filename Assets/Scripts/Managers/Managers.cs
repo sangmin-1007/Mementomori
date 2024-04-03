@@ -19,6 +19,7 @@ public class Managers : MonoBehaviour
     private UserData _userData;
     private ItemObjectPool _itemObjectPool;
     private SoundManager _soundManager;
+    private DataManager _dataManager;
 
     // Manager Singletone
     public static UI_Manager UI_Manager => Instance._uiManager;
@@ -28,6 +29,7 @@ public class Managers : MonoBehaviour
     public static SceneLoader SceneLoader => Instance._sceneLoader;
     public static UserData UserData => Instance._userData;
 
+    public static DataManager DataManager => Instance._dataManager;
     public static ItemObjectPool ItemObjectPool => Instance._itemObjectPool;
 
     public static SoundManager SoundManager => Instance._soundManager;
@@ -99,6 +101,11 @@ public class Managers : MonoBehaviour
             {
                 instance._soundManager = go.AddComponent<SoundManager>();
 
+            }
+
+            if(!go.TryGetComponent(out instance._dataManager))
+            {
+                instance._dataManager = go.AddComponent<DataManager>();
             }
         }
     }

@@ -57,9 +57,10 @@ public class UI_Inventory : UI_Base<UI_Inventory>
     {
         base.OnEnable();
 
-        UpdateUI();
+
         UpdateEquipSlots();
         UpdateItemUI();
+        UpdateUI();
     }
 
     public void AddItem(ItemData item)  // æ∆¿Ã≈€ »πµÊ
@@ -170,10 +171,10 @@ public class UI_Inventory : UI_Base<UI_Inventory>
 
     private void UpdateEquipSlots()
     {
-        for(int i = 0; i < equippedSlots.Length; i++)
-        {
-            equippedSlots[i].Clear();
-        }
+        //for(int i = 0; i < equippedSlots.Length; i++)
+        //{
+        //    equippedSlots[i].Clear();
+        //}
 
         for (int i = 0; i < equippedSlots.Length; i++)
         {

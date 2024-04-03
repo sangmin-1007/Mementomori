@@ -1,4 +1,4 @@
-using System;
+    using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -136,14 +136,12 @@ public class ItemSlotUI : MonoBehaviour,IPointerClickHandler,IPointerEnterHandle
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if(/*Managers.UI_Manager.UI_List.ContainsKey("UI_Storage")*/
-            Managers.UI_Manager.IsActive<UI_Storage>())
+        if(Managers.UI_Manager.IsActive<UI_Storage>())
         {
             storage = Managers.UI_Manager.UI_List["UI_Storage"].GetComponent<UI_Storage>();
         }
 
-        if(/*Managers.UI_Manager.UI_List.ContainsKey("UI_Shop")*/
-            Managers.UI_Manager.IsActive<UI_Shop>())
+        if(Managers.UI_Manager.IsActive<UI_Shop>())
         {
             shop = Managers.UI_Manager.UI_List["UI_Shop"].GetComponent<UI_Shop>();
         }
@@ -175,7 +173,6 @@ public class ItemSlotUI : MonoBehaviour,IPointerClickHandler,IPointerEnterHandle
         }
         
     }
-
     public void OnPointerExit(PointerEventData eventData)
     {
         Managers.UI_Manager.HideUI<UI_ItemToolTip>();

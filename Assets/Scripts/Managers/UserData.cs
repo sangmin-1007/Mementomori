@@ -9,7 +9,8 @@ public class UserData : MonoBehaviour
     public Dictionary<ItemType,ItemData> playerEquipItemDatas = new Dictionary<ItemType,ItemData>();
     public List<ItemData> storageItemData = new List<ItemData>();
 
-    public int playerGold = 100000;
+    public int playerGold = 10000;
+    public int playerDeathCount;
 
     public int inventoryIndex;
     public int equipItemIndex;

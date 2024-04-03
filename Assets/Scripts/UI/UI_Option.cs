@@ -64,6 +64,26 @@ public class UI_Option : UI_Base<UI_Option>
         PlayerPrefs.Save();
     }
 
+    public void OnClickOptionExitButton()
+    {
+        CloseUI();
+    }
+
+    public void OnClickQuitGameButton()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
+
+    public void OnClickSaveButton()
+    {
+        Managers.DataManager.Save();
+    }
+
+
 
 
  
