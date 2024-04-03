@@ -31,7 +31,7 @@ public class Level : MonoBehaviour
             level++;
             if (!Managers.UI_Manager.IsActive<UI_Skill>())
             {
-                Managers.UI_Manager.ShowUI<UI_Skill>();
+                Managers.UI_Manager.ShowUI<UI_Skill>().Next();
                 Time.timeScale = 0;
                 //StartCoroutine(StopTime());
             }

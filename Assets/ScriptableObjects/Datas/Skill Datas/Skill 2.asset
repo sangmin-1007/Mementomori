@@ -12,14 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4ffca180d553444eba4db3fefc39bab, type: 3}
   m_Name: Skill 2
   m_EditorClassIdentifier: 
-  skillType: 0
+  skillType: 2
   skillId: 2
   skillName: "\uBC29\uC5B4\uB825 \uC0C1\uC2B9"
-  skillDesc: 
+  skillDesc: "\uBC29\uC5B4\uB825 {0} \uC99D\uAC00"
   skillIcon: {fileID: 21300000, guid: 039979bca5534f04da1681e221ce3b50, type: 3}
   baseDamage: 0
   baseCount: 0
   damages:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
   - 1
   - 1
   - 1

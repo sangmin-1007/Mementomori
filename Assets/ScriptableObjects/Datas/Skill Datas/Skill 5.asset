@@ -10,20 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c4ffca180d553444eba4db3fefc39bab, type: 3}
-  m_Name: Skill 0
+  m_Name: Skill 5
   m_EditorClassIdentifier: 
-  skillType: 2
-  skillId: 0
-  skillName: "\uD68C\uBCF5\uC758 \uCD95\uBCF5"
-  skillDesc: "\uCCB4\uB825 {0} \uD68C\uBCF5\n\uCD5C\uB300 \uCCB4\uB825 {0} \uC99D\uAC00"
-  skillIcon: {fileID: 21300000, guid: 5fff8175e6b5f1d479107759560751d1, type: 3}
+  skillType: 4
+  skillId: 5
+  skillName: "\uD68C\uBCF5 \uBB3C\uC57D"
+  skillDesc: "\uD68C\uBCF5 \uBB3C\uC57D\uC785\uB2C8\uB2E4."
+  skillIcon: {fileID: 21300000, guid: 1866500c4a6a4c44192a4267e704a2e1, type: 3}
   baseDamage: 0
   baseCount: 0
-  damages:
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
+  damages: []
   counts: 
   projectile: {fileID: 0}
