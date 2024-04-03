@@ -28,7 +28,13 @@ public class Skill_Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Enemy") || per == -1)
-            return;
+        {
+            HealthSystem healthSystem1 = collision.GetComponent<HealthSystem>();
+            if (healthSystem1 != null)
+            {
+                healthSystem1.ChangeHealth(-damage);
+            }
+        }
 
         per--;
 

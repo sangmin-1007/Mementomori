@@ -14916,7 +14916,7 @@ GameObject:
   - component: {fileID: 6826837444978236816}
   - component: {fileID: 2358032420919722536}
   - component: {fileID: 2194141176301890907}
-  - component: {fileID: 9175981110579271073}
+  - component: {fileID: 2563601487464667005}
   m_Layer: 0
   m_Name: ShopTrigger
   m_TagString: Untagged
@@ -15646,7 +15646,7 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
---- !u!114 &9175981110579271073
+--- !u!114 &2563601487464667005
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15707,7 +15707,7 @@ GameObject:
   - component: {fileID: 3817141571827176971}
   - component: {fileID: 6662714568251206440}
   - component: {fileID: 5844290883267393579}
-  - component: {fileID: 4695353277487942697}
+  - component: {fileID: 227954258044105270}
   m_Layer: 0
   m_Name: DoorTrigger
   m_TagString: Untagged
@@ -15897,7 +15897,7 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
---- !u!114 &4695353277487942697
+--- !u!114 &227954258044105270
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -18295,7 +18295,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 3
-      m_TileSpriteIndex: 3
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 1
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -18758,8 +18758,8 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: be2ce18750f107c4a92d50a2495d70f3, type: 3}
   - m_RefCount: 19
     m_Data: {fileID: 21300000, guid: 3a296b7b737dcc94fb93de0c9f7cb294, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 51301001a91ba70468b8428c9e17e7d3, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 9da7c5554b79c684582489f3555c0725, type: 3}
   - m_RefCount: 1
@@ -18774,8 +18774,8 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: 614a237171be84c4aa8bbb2362c1d7e9, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 21221333cca0e9b478743f0ac1794891, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 51301001a91ba70468b8428c9e17e7d3, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 30adad4b704029645abaa01354be1525, type: 3}
   - m_RefCount: 1
@@ -19314,7 +19314,7 @@ GameObject:
   - component: {fileID: 2388752382555212972}
   - component: {fileID: 1057751622953262205}
   - component: {fileID: 8196165341527510691}
-  - component: {fileID: 4031208344843919398}
+  - component: {fileID: 3724630327455749341}
   m_Layer: 0
   m_Name: Storage
   m_TagString: Untagged
@@ -19539,7 +19539,7 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
---- !u!114 &4031208344843919398
+--- !u!114 &3724630327455749341
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

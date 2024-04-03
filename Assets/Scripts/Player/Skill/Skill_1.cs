@@ -28,7 +28,7 @@ public class Skill_1 : MonoBehaviour
     {
         switch (id)
         {
-            case 0:
+            case 5:
                 transform.Rotate(Vector3.back * speed * Time.deltaTime);
                 break;
             default:
@@ -47,11 +47,12 @@ public class Skill_1 : MonoBehaviour
         this.damage = damge;
         this.count += count;
 
-        if (id == 0)
+        if (id == 5)
             CreatSkill();
     }
+
     //√ ±‚»≠
-    public void Init(SkillData data)
+    public void Init(SkillData1 data)
     {
         name = "Weapon " + data.skillId;
         transform.parent = Managers.GameSceneManager.Player.transform;
@@ -72,7 +73,7 @@ public class Skill_1 : MonoBehaviour
 
         switch (id)
         {
-            case 0:
+            case 5:
                 speed = 150;
                 CreatSkill();
                 break;

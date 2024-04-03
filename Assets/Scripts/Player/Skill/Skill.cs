@@ -6,13 +6,12 @@ using UnityEngine.UI;
 
 public class Skill : MonoBehaviour
 {
-    public SkillData data;
+    public SkillData1 data;
     public int skillLevel;
     public Skill_1 skill_1;
 
     [SerializeField] private List<PlayerStats> statsModifier;
     private HealthSystem healthSystem;
-    [SerializeField] int healValue = 10;
 
     Image icon;
     Text textLevel;
@@ -39,19 +38,17 @@ public class Skill : MonoBehaviour
 
         switch(data.skillType)
         {
-            case SkillData.SkillType.Melee:
+            case SkillData1.SkillType.Melee:
+            case SkillData1.SkillType.Range:
+                textDesc.text = string.Format(data.skillDesc, data.damages[skillLevel], data.counts[skillLevel]);
+                break;
+            case SkillData1.SkillType.Statup:
                 textDesc.text = string.Format(data.skillDesc, data.damages[skillLevel]);
                 break;
-            case SkillData.SkillType.Range:
+            case SkillData1.SkillType.Addskill:
                 textDesc.text = string.Format(data.skillDesc, data.damages[skillLevel]);
                 break;
-            case SkillData.SkillType.Statup:
-                textDesc.text = string.Format(data.skillDesc, data.damages[skillLevel]);
-                break;
-            case SkillData.SkillType.Addskill:
-                textDesc.text = string.Format(data.skillDesc, data.damages[skillLevel]);
-                break;
-            case SkillData.SkillType.Heal:
+            case SkillData1.SkillType.Heal:
                 textDesc.text = string.Format(data.skillDesc);
                 break;
         }
@@ -62,8 +59,8 @@ public class Skill : MonoBehaviour
     {
         switch (data.skillType)
         {
-            case SkillData.SkillType.Melee:
-            case SkillData.SkillType.Range:
+            case SkillData1.SkillType.Melee:
+            case SkillData1.SkillType.Range:
                 if(skillLevel == 0)
                 {
                     GameObject newWeapon = new GameObject();
@@ -81,19 +78,20 @@ public class Skill : MonoBehaviour
                     skill_1.LevelUp(nextDamage,nextCount);
                 }
                 break;
-            case SkillData.SkillType.Statup:
-                if(skillLevel == 0)
-                {
+            case SkillData1.SkillType.Statup:
                     healthSystem = Managers.GameSceneManager.Player.GetComponent<HealthSystem>();
-                    healthSystem.ChangeHealth(healValue);
+                    healthSystem.ChangeHealth(data.damages[skillLevel]);
                     PlayerStatsHandler statsHandler = Managers.GameSceneManager.Player.GetComponent<PlayerStatsHandler>();
                     foreach (PlayerStats stat in statsModifier)
                     {
                         statsHandler.AddStatModifire(stat);
                     }
-                }
                 break;
-            case SkillData.SkillType.Addskill:
+            case SkillData1.SkillType.Addskill:
+                break;
+            case SkillData1.SkillType.Heal:
+                healthSystem = Managers.GameSceneManager.Player.GetComponent<HealthSystem>();
+                healthSystem.ChangeHealth(data.baseDamage);
                 break;
         }
         skillLevel++;

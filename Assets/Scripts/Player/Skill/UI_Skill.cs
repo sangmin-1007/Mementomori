@@ -32,7 +32,7 @@ public class UI_Skill : UI_Base<UI_Skill>
             Skill ranSkill = skills[ran[index]];
             if(ranSkill.skillLevel == ranSkill.data.damages.Length)
             {
-                skills[5].gameObject.SetActive(true);
+                skills[Random.Range(0,4)].gameObject.SetActive(true);
             }
             else
             {

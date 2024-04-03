@@ -32,6 +32,8 @@ public class Level : MonoBehaviour
             if (!Managers.UI_Manager.IsActive<UI_Skill>())
             {
                 Managers.UI_Manager.ShowUI<UI_Skill>().Next();
+                HealthSystem healthSystem = Managers.GameSceneManager.Player.GetComponent<HealthSystem>();
+                healthSystem._timeSinceLastChange = 0.51f;
                 Time.timeScale = 0;
                 //StartCoroutine(StopTime());
             }

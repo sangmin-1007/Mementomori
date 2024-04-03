@@ -8,7 +8,7 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] private float healthChangeDelay = .5f;
 
     private PlayerStatsHandler _statsHandler;
-    private float _timeSinceLastChange = float.MaxValue;
+    public float _timeSinceLastChange = float.MaxValue;
 
     public event Action OnDamage;
     public event Action OnHeal;

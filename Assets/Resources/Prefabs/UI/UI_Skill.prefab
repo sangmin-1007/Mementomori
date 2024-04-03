@@ -2037,8 +2037,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: c78adedd3cacc404ba520d4c111d1f5d, type: 2}
   skillLevel: 0
+  skill_1: {fileID: 0}
   statsModifier: []
-  healValue: 10
 --- !u!1 &3397620063684802345
 GameObject:
   m_ObjectHideFlags: 0
@@ -2269,8 +2269,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 46974c9b9e4123f479645037d6d9453f, type: 2}
   skillLevel: 0
+  skill_1: {fileID: 0}
   statsModifier: []
-  healValue: 10
 --- !u!1 &3568390153698691803
 GameObject:
   m_ObjectHideFlags: 0
@@ -2490,9 +2490,9 @@ RectTransform:
   - {fileID: 9022629100563359978}
   - {fileID: 8657942653161707502}
   - {fileID: 286601508165161696}
-  - {fileID: 6480552075736922985}
-  - {fileID: 8276751051266389031}
   - {fileID: 7801117819956312378}
+  - {fileID: 8276751051266389031}
+  - {fileID: 6480552075736922985}
   m_Father: {fileID: 8223544490544626520}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2951,8 +2951,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 1d3cb6adb9abd80499cce0220d7baa7b, type: 2}
   skillLevel: 0
+  skill_1: {fileID: 0}
   statsModifier: []
-  healValue: 10
 --- !u!1 &4391782289663432920
 GameObject:
   m_ObjectHideFlags: 0
@@ -4726,7 +4726,7 @@ GameObject:
   - component: {fileID: 2662946153605725170}
   - component: {fileID: 3952138877410182742}
   m_Layer: 5
-  m_Name: SkillBtn 5
+  m_Name: SkillBtn 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4866,8 +4866,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: f009c7ce60e1b9d41952c2e384e348d7, type: 2}
   skillLevel: 0
+  skill_1: {fileID: 0}
   statsModifier: []
-  healValue: 10
 --- !u!1 &7484853833790858415
 GameObject:
   m_ObjectHideFlags: 0
@@ -5098,8 +5098,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: ff65e8ada947f864eb9d92c9dfdc94ea, type: 2}
   skillLevel: 0
-  statsModifier: []
-  healValue: 10
+  skill_1: {fileID: 0}
+  statsModifier:
+  - statsChangeType: 0
+    maxHealth: 5
+    speed: 0
+    maxStamina: 0
+    attackSO: {fileID: 0}
 --- !u!1 &7874797466150788734
 GameObject:
   m_ObjectHideFlags: 0
@@ -5582,7 +5587,7 @@ GameObject:
   - component: {fileID: 8931278291171016894}
   - component: {fileID: 9129713552415614063}
   m_Layer: 5
-  m_Name: SkillBtn 3
+  m_Name: SkillBtn 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5722,8 +5727,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: a70a85d7f3c4df440badccaf5b87213e, type: 2}
   skillLevel: 0
+  skill_1: {fileID: 0}
   statsModifier: []
-  healValue: 10
 --- !u!1 &8527411392141144048
 GameObject:
   m_ObjectHideFlags: 0

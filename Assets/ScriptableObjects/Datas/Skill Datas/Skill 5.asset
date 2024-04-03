@@ -12,13 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4ffca180d553444eba4db3fefc39bab, type: 3}
   m_Name: Skill 5
   m_EditorClassIdentifier: 
-  skillType: 4
+  skillType: 0
   skillId: 5
-  skillName: "\uD68C\uBCF5 \uBB3C\uC57D"
-  skillDesc: "\uD68C\uBCF5 \uBB3C\uC57D\uC785\uB2C8\uB2E4."
-  skillIcon: {fileID: 21300000, guid: 1866500c4a6a4c44192a4267e704a2e1, type: 3}
-  baseDamage: 0
-  baseCount: 0
-  damages: []
-  counts: 
-  projectile: {fileID: 0}
+  skillName: "\uC804\uAE30 \uAD6C\uCCB4"
+  skillDesc: "\uD50C\uB808\uC774\uC5B4\uC758 \uC8FC\uC704\uB97C \uB3CC\uBA74\uC11C
+    \uBD80\uB52A\uD788\uB294 \uC801\uC5D0\uAC8C \uB300\uBBF8\uC9C0\uB97C \uC8FC\uB294
+    \uAD6C\uCCB4\uB97C \uC0DD\uC131\uD569\uB2C8\uB2E4. \uB300\uBBF8\uC9C0 {0} \uC99D\uAC00,
+    \uAD6C\uCCB4 {1}\uC99D\uAC00."
+  skillIcon: {fileID: 21300000, guid: 6f1a529416cd29f4abb1f3d2f39d0149, type: 3}
+  baseDamage: 1
+  baseCount: 1
+  damages:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  counts: 0100000000000000010000000000000001000000
+  projectile: {fileID: 7694221757343814933, guid: ebcccb1ca4d59dc45a7fbf57d3feef2d, type: 3}
