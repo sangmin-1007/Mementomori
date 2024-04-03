@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.XR;
 using UnityEngine.SceneManagement;
 
 public enum SceneNumber
@@ -13,9 +14,11 @@ public enum SceneNumber
 
 public class SceneLoader : MonoBehaviour
 {
+
     private void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
+     
     }
 
     private void OnDestroy()
@@ -40,6 +43,7 @@ public class SceneLoader : MonoBehaviour
             // LobbyScene
             case 1:
                 Managers.LobbySceneManager.IntializeLobbyScene();
+              
                 Managers.SoundManager.Play("Bgm/LobbyScene1", Sound.Bgm);
                 break;
             // GameScene

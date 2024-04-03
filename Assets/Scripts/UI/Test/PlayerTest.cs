@@ -13,8 +13,9 @@ public class PlayerTest : MonoBehaviour
     private bool isDoor;
 
     private LobbyInteract interact;
-
+    AudioSource audioSource;
     private bool isInteract;
+    private bool hasEnteredTrigger;
 
     void Update()
     {
@@ -34,10 +35,12 @@ public class PlayerTest : MonoBehaviour
         if (collision.TryGetComponent<LobbyInteract>(out interact))
         {
             isInteract = true;
+            hasEnteredTrigger = true;
         }
         else
         {
             isInteract = false;
+
         }
 
     }
@@ -45,6 +48,8 @@ public class PlayerTest : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         isInteract = false;
+        hasEnteredTrigger = false;
+
     }
 
     private void Interaction()

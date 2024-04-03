@@ -118,18 +118,22 @@ public class UI_Shop : UI_Base<UI_Shop>
     {
         sellGoldText.text = inventoryItemData[Managers.UserData.inventoryIndex].item.SellPrice.ToString();
         sellPopUpUI.SetActive(true);
+   
     }
 
     public void OnClickBuyButton()
     {
         buyGoldText.text = shopItemData[Managers.UserData.shopIndex].item.BuyPrice.ToString();
         buyPopUpUI.SetActive(true);
+      
     }
 
     public void OnClickSellYesutton()
     {
+        Managers.SoundManager.Play("Effect/buyitem", Sound.Effect);
         Managers.UserData.playerGold += inventoryItemData[Managers.UserData.inventoryIndex].item.SellPrice;
         Managers.UserData.playerInventoryItemData.Remove(inventoryItemData[Managers.UserData.inventoryIndex].item);
+      
 
         sellPopUpUI.SetActive(false);
         UpdateInventory();
@@ -137,11 +141,13 @@ public class UI_Shop : UI_Base<UI_Shop>
 
     public void OnClickBuyYesButton()
     {
+        Managers.SoundManager.Play("Effect/buyitem", Sound.Effect);
         if (shopItemData[Managers.UserData.shopIndex].item.BuyPrice <= Managers.UserData.playerGold)
         {
             Managers.UserData.playerGold -= shopItemData[Managers.UserData.shopIndex].item.BuyPrice;
 
             Managers.UserData.AddItem(shopItemData[Managers.UserData.shopIndex].item);
+          
             buyPopUpUI.SetActive(false);
             UpdateInventory();
         }

@@ -118,6 +118,7 @@ public class UI_Inventory : UI_Base<UI_Inventory>
 
     public void OnEquipButton()
     {
+        Managers.SoundManager.Play("Effect/Equipped", Sound.Effect);
         Managers.UserData.EquipItem(Managers.UserData.playerInventoryItemData[Managers.UserData.inventoryIndex]);
         uiSlots[Managers.UserData.inventoryIndex].icon.gameObject.SetActive(false);
         slots[Managers.UserData.inventoryIndex].item = null;
@@ -130,7 +131,7 @@ public class UI_Inventory : UI_Base<UI_Inventory>
 
     public void UnEquip()
     {
-
+        Managers.SoundManager.Play("Effect/Equipped", Sound.Effect);
         Managers.UserData.UnEquipItem(equipSlots[Managers.UserData.equipItemIndex].item);
 
         equippedSlots[Managers.UserData.equipItemIndex].icon.gameObject.SetActive(false);

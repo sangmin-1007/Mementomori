@@ -140,9 +140,9 @@
                     "name": "",
                     "id": "f830fde3-9c98-4a3b-a9d3-8f08bfcc85a3",
                     "path": "<Mouse>/leftButton",
-                    "interactions": "",
+                    "interactions": "Press",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false

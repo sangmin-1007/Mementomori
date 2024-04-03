@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.IO.LowLevel.Unsafe;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -37,7 +38,7 @@ public class PlayerController : MonoBehaviour
         }
         if (IsAttacking && _timeSinceLastAttack > Stats.CurrentStates.attackSO.delay)
         {
-            _timeSinceLastAttack = 0;
+            _timeSinceLastAttack = 0f;
             CallAttackEvent(Stats.CurrentStates.attackSO);
         }
     }
@@ -53,6 +54,13 @@ public class PlayerController : MonoBehaviour
     }
     public void CallAttackEvent(AttackSO attackSO)
     {
-        OnAttackEvent?.Invoke(attackSO);
+        if (SceneManager.GetActiveScene().name == "GameScene")
+        {
+            OnAttackEvent?.Invoke(attackSO);
+        }
+       
     }
+
+ 
+
 }

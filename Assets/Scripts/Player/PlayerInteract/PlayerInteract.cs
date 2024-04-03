@@ -73,6 +73,7 @@ public class PlayerInteract : MonoBehaviour
             if(lobbyIneract.interactType == InteractType.Door)
             {
                 lobbyIneract.Interaction();
+                isInteract = false;
             }
             else if(Input.GetKeyDown(KeyCode.E))
             {

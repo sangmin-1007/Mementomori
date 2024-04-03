@@ -6,9 +6,10 @@ public class LobbySceneManager : MonoBehaviour
 {
     public GameObject Player { get; private set; }
 
+
+ 
     public void IntializeLobbyScene()
     {
-       
         var lobbyMap = Resources.Load<GameObject>("Prefabs/Map/Lobby");
         var mapInfo = Instantiate(lobbyMap).GetComponent<MapInfo>();
         
