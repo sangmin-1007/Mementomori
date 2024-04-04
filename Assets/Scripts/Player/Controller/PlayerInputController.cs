@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerInputController : PlayerController
 {
@@ -38,9 +39,10 @@ public class PlayerInputController : PlayerController
 
     public void OnAttack(InputValue value)
     {
-        
-        IsAttacking = value.isPressed;
-     
+        if (SceneManager.GetActiveScene().name == "GameScene")
+        {
+            IsAttacking = value.isPressed;
+        }
     }
 
     public void OnInventory(InputValue value)
