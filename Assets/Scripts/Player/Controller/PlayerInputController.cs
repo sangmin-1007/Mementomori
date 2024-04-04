@@ -53,10 +53,12 @@ public class PlayerInputController : PlayerController
             if(!Managers.UI_Manager.IsActive<UI_Inventory>())
             {
                 Managers.UI_Manager.ShowUI<UI_Inventory>();
+                Time.timeScale = 0f;
             }
             else
             {
                 Managers.UI_Manager.HideUI<UI_Inventory>();
+                Time.timeScale = 1f;
             }
         }
     }
@@ -69,10 +71,12 @@ public class PlayerInputController : PlayerController
             if (!Managers.UI_Manager.IsActive<UI_Option>())
             {
                 Managers.UI_Manager.ShowUI<UI_Option>();
+                Time.timeScale = 0f;
             }
             else
             {
                 Managers.UI_Manager.HideUI<UI_Option>();
+                Time.timeScale = 1f;
             }
         }
     }
