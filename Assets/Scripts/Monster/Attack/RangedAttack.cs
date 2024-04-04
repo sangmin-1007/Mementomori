@@ -41,6 +41,9 @@ public class RangedAttack : MonoBehaviour
 
     private void Update()
     {
+        if (!player)
+            return;
+
         attackTime -= Time.deltaTime;
 
         if (isAttacking)

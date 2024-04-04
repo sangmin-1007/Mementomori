@@ -5,29 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class Spawner : MonoBehaviour
 {
-    public int stage = 1;
-    float bossTimer;
-    int boss = 0;
+    static public int stage = 1;
+    float stageTimer = 0f;
+    float bossTimer = 10f;
+    static public bool boss = false;
 
     public Transform[] spawnPoint;
 
     private SpawnManager _spawnManager;
 
-    float timer = 0f;
+    float spawnTimer = 0f;
     public static int count = 0;
 
     private void Start()
     {
-        count = 0;
-
-        stage = 4;
-
         spawnPoint = GetComponentsInChildren<Transform>();
         if(SceneManager.GetActiveScene().name == "GameScene" || SceneManager.GetActiveScene().name == "GameScene-LIK")
         {
             _spawnManager = Managers.GameSceneManager.MonsterSpawner.GetComponent<SpawnManager>();
         }
-
     }
 
     private void Update()
@@ -35,27 +31,35 @@ public class Spawner : MonoBehaviour
         if (_spawnManager == null)
             return;
 
-        timer += Time.deltaTime;
+        spawnTimer += Time.deltaTime;
 
-        if (timer > 0.5f && count < 10)
+        if (spawnTimer > 0.5f && count < 30)
         {
-            timer = 0f;
+            spawnTimer = 0f;
 
             Spawn();
             count++;
             //Debug.Log($"증가 후 몬스터 수 : {count}");
         }
 
-        bossTimer = Managers.GameManager.timer;
+        stageTimer += Time.deltaTime;
+        //bossTimer = Managers.GameManager.timer;
 
-        if (bossTimer > 20f && boss == 0)
+        if (stageTimer > 20f && boss == false)
         {
             SpawnBoss();
-
-            boss = 1;
+            bossTimer = 10f;
+            boss = true;
         }
 
-        if (bossTimer > 30f && boss == 1)
+        if (boss)
+        {
+            stageTimer = 0f;
+            bossTimer -= Time.deltaTime;
+            Debug.Log(bossTimer);
+        }
+
+        if (bossTimer <= 0f)
         {
             Managers.GameManager.GameOver();
             Managers.SoundManager.Play("Effect/GameOver", Sound.Effect);

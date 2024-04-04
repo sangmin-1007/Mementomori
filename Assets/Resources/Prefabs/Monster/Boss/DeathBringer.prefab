@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7819050600281103649}
   - component: {fileID: 6714689510516035018}
   - component: {fileID: 6440282053782189170}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CharacterSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,9 +121,12 @@ GameObject:
   - component: {fileID: 2610905639811260530}
   - component: {fileID: -2192764721286484519}
   - component: {fileID: -2542397780255916763}
-  m_Layer: 0
+  - component: {fileID: 7801283104517965854}
+  - component: {fileID: 3612254482822957274}
+  - component: {fileID: -5683797203786848960}
+  m_Layer: 6
   m_Name: DeathBringer
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -289,3 +292,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTag: Player
+--- !u!114 &7801283104517965854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5344142885034079629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d9dc21c19de1348853f141cd7bafeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthChangeDelay: 0.5
+  staminaRecoveryRate: 0
+--- !u!114 &3612254482822957274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5344142885034079629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65cdc5abe5334114a86c615ec71a8c3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseStats:
+    statsChangeType: 2
+    maxHealth: 1
+    speed: 0
+    maxStamina: 0
+    attackSO: {fileID: 11400000, guid: 75eb98fd43efb344688d4e08549442b1, type: 2}
+  statsModifiers: []
+--- !u!114 &-5683797203786848960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5344142885034079629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f28e3b65691bf744ea1bc85112314ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

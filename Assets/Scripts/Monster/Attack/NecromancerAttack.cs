@@ -41,6 +41,9 @@ public class NecromancerAttack : MonoBehaviour
 
     private void Update()
     {
+        if (!player)
+            return;
+
         attackTime -= Time.deltaTime;
 
         if (isAttacking)
