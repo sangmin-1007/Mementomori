@@ -55,8 +55,9 @@ public class ContactAttack : MonoBehaviour
         animator.SetTrigger("Attack");
         movement.speed = 0f;
 
+        HealthSystem healthSystem = Managers.GameSceneManager.Player.GetComponent<HealthSystem>();
         AttackSO attackSO = Stats.CurrentStates.attackSO;
-        bool hasBeenChanged = playerHealthSystem.ChangeHealth(-attackSO.power);
+        bool hasBeenChanged = playerHealthSystem.ChangeHealth(-attackSO.power + (attackSO.power * healthSystem.CurrentDefense/100));
         //Managers.SoundManager.Play("Effect/PlayerAttackFail1", Sound.Effect);
 
         yield return new WaitForSeconds(1f);

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4ffca180d553444eba4db3fefc39bab, type: 3}
   m_Name: Skill 1
   m_EditorClassIdentifier: 
-  skillType: 2
+  skillType: 3
   skillId: 1
   skillName: "\uACF5\uACA9\uB825 \uC0C1\uC2B9"
   skillDesc: "\uACF5\uACA9\uB825 {0} \uC99D\uAC00"

@@ -74,6 +74,7 @@ public class PlayerStatsHandler : MonoBehaviour
         CurrentStates.maxHealth = (int)operation(CurrentStates.maxHealth, newModofier.maxHealth);
         CurrentStates.speed = operation(CurrentStates.speed, newModofier.speed);
         CurrentStates.maxStamina = operation(CurrentStates.maxStamina, newModofier.maxStamina);
+        CurrentStates.maxDefense = (int)operation(CurrentStates.maxDefense, newModofier.maxDefense);
 
         if (CurrentStates.attackSO == null || newModofier.attackSO == null)
             return;

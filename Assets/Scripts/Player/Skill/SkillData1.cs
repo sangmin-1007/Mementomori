@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Skill",menuName ="Scriptble Object/SkillData")]
 public class SkillData1 : ScriptableObject
 {
-    public enum SkillType { Melee, Range, Statup, Addskill, Heal}
+    public enum SkillType { Melee, Range, Statup, AttackSkill, DefenseSkill, Heal}
 
     [Header("Main Info")]
     public SkillType skillType;

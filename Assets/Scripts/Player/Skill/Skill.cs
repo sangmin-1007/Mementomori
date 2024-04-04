@@ -45,7 +45,10 @@ public class Skill : MonoBehaviour
             case SkillData1.SkillType.Statup:
                 textDesc.text = string.Format(data.skillDesc, data.damages[skillLevel]);
                 break;
-            case SkillData1.SkillType.Addskill:
+            case SkillData1.SkillType.AttackSkill:
+                textDesc.text = string.Format(data.skillDesc, data.damages[skillLevel]);
+                break;
+            case SkillData1.SkillType.DefenseSkill:
                 textDesc.text = string.Format(data.skillDesc, data.damages[skillLevel]);
                 break;
             case SkillData1.SkillType.Heal:
@@ -79,20 +82,24 @@ public class Skill : MonoBehaviour
                 }
                 break;
             case SkillData1.SkillType.Statup:
-                    healthSystem = Managers.GameSceneManager.Player.GetComponent<HealthSystem>();
-                    healthSystem.ChangeHealth(data.damages[skillLevel]);
-                    PlayerStatsHandler statsHandler = Managers.GameSceneManager.Player.GetComponent<PlayerStatsHandler>();
-                    foreach (PlayerStats stat in statsModifier)
-                    {
-                        statsHandler.AddStatModifire(stat);
-                    }
+                healthSystem = Managers.GameSceneManager.Player.GetComponent<HealthSystem>();
+                healthSystem.ChangeHealth(data.damages[skillLevel]);
+                PlayerStatsHandler statsHandler = Managers.GameSceneManager.Player.GetComponent<PlayerStatsHandler>();
+                foreach (PlayerStats stat in statsModifier)
+                {
+                    statsHandler.AddStatModifire(stat);
+                }
                 break;
-            case SkillData1.SkillType.Addskill:
+            case SkillData1.SkillType.AttackSkill:
                 PlayerStatsHandler statsHandler1 = Managers.GameSceneManager.Player.GetComponent<PlayerStatsHandler>();
                 foreach (PlayerStats stat in statsModifier)
                 {
                     statsHandler1.AddStatModifire(stat);
                 }
+                break;
+            case SkillData1.SkillType.DefenseSkill:
+                healthSystem = Managers.GameSceneManager.Player.GetComponent<HealthSystem>();
+                healthSystem.CurrentDefense = healthSystem.CurrentDefense + data.damages[skillLevel];
                 break;
             case SkillData1.SkillType.Heal:
                 healthSystem = Managers.GameSceneManager.Player.GetComponent<HealthSystem>();
