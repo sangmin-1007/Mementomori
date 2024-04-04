@@ -2490,9 +2490,9 @@ RectTransform:
   - {fileID: 9022629100563359978}
   - {fileID: 8657942653161707502}
   - {fileID: 286601508165161696}
-  - {fileID: 7801117819956312378}
-  - {fileID: 8276751051266389031}
   - {fileID: 6480552075736922985}
+  - {fileID: 8276751051266389031}
+  - {fileID: 7801117819956312378}
   m_Father: {fileID: 8223544490544626520}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4726,7 +4726,7 @@ GameObject:
   - component: {fileID: 2662946153605725170}
   - component: {fileID: 3952138877410182742}
   m_Layer: 5
-  m_Name: SkillBtn 3
+  m_Name: SkillBtn 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5587,7 +5587,7 @@ GameObject:
   - component: {fileID: 8931278291171016894}
   - component: {fileID: 9129713552415614063}
   m_Layer: 5
-  m_Name: SkillBtn 5
+  m_Name: SkillBtn 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

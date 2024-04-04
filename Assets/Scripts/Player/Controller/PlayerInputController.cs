@@ -23,9 +23,10 @@ public class PlayerInputController : PlayerController
 
     public void OnDash(InputValue value)
     {
-        IsDashing = value.isPressed;
-        
-
+        if (SceneManager.GetActiveScene().name == "GameScene")
+        {
+            IsDashing = value.isPressed;
+        }
     }
 
     public void OnLook(InputValue value)

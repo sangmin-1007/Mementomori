@@ -8,6 +8,7 @@ public class PoolManager : MonoBehaviour
     public GameObject[] skillPrefabs;
 
     List<GameObject>[] pools;
+    List<GameObject>[] skillPools;
 
     private void Awake()
     {
@@ -16,6 +17,13 @@ public class PoolManager : MonoBehaviour
         for(int i = 0; i < pools.Length; i++)
         {
             pools[i] = new List<GameObject>();
+        }
+
+        skillPools = new List<GameObject>[skillPrefabs.Length];
+
+        for(int i =0; i < skillPrefabs.Length; i++)
+        {
+            skillPools[i] = new List<GameObject>();
         }
     }
 
@@ -37,6 +45,29 @@ public class PoolManager : MonoBehaviour
         {
             select = Instantiate(prefabs[index], transform);
             pools[index].Add(select);
+        }
+
+        return select;
+    }
+
+    public GameObject SkillGet(int index)
+    {
+        GameObject select = null;
+
+        foreach (GameObject item in skillPools[index])
+        {
+            if (!item.activeSelf)
+            {
+                select = item;
+                select.SetActive(true);
+                break;
+            }
+        }
+
+        if (!select)
+        {
+            select = Instantiate(skillPrefabs[index], transform);
+            skillPools[index].Add(select);
         }
 
         return select;

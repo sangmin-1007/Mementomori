@@ -72,7 +72,7 @@ public class Skill : MonoBehaviour
                     float nextDamage = data.baseDamage;
                     int nextCount = 0;
 
-                    nextDamage += data.baseDamage * data.damages[skillLevel];
+                    nextDamage = data.damages[skillLevel];
                     nextCount += data.counts[skillLevel];
 
                     skill_1.LevelUp(nextDamage,nextCount);

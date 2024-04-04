@@ -44,7 +44,7 @@ public class Skill_1 : MonoBehaviour
 
     public void LevelUp(float damge,int count)
     {
-        this.damage = damge;
+        this.damage += damge;
         this.count += count;
 
         if (id == 5)
@@ -62,9 +62,9 @@ public class Skill_1 : MonoBehaviour
         damage = data.baseDamage;
         count = data.baseCount;
 
-        for (int index = 0; index < _spawnManager.pool.prefabs.Length; index++)
+        for (int index = 0; index < _spawnManager.pool.skillPrefabs.Length; index++)
         {
-            if(data.projectile == _spawnManager.pool.prefabs[index])
+            if(data.projectile == _spawnManager.pool.skillPrefabs[index])
             {
                 prefabId = index;
                 break;
@@ -96,7 +96,7 @@ public class Skill_1 : MonoBehaviour
             }
             else
             {
-                bullet = _spawnManager.pool.Get(prefabId).transform;
+                bullet = _spawnManager.pool.SkillGet(prefabId).transform;
                 bullet.parent = transform;
             }
 
@@ -121,7 +121,7 @@ public class Skill_1 : MonoBehaviour
         Vector3 dir = targetPos - transform.position;
         dir = dir.normalized;
 
-        Transform bullet = _spawnManager.pool.Get(prefabId).transform;
+        Transform bullet = _spawnManager.pool.SkillGet(prefabId).transform;
         bullet.position = transform.position;
         bullet.rotation = Quaternion.FromToRotation(Vector3.left, dir);
         bullet.GetComponent<Skill_Bullet>().Init(damage, count, dir);
