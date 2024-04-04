@@ -251,7 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStats:
     statsChangeType: 2
-    maxHealth: 50
+    maxHealth: 100
     speed: 5
     maxStamina: 100
     attackSO: {fileID: 11400000, guid: 02cb8a3c2171c6545990643da4c4fbfc, type: 2}
@@ -301,6 +301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthChangeDelay: 0.5
+  _timeSinceLastChange: 3.4028235e+38
   staminaRecoveryRate: 10
 --- !u!114 &5716492099658022893
 MonoBehaviour:
@@ -858,7 +859,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd56ddbca224854a9b001921a1d96af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stage: 1
   spawnPoint: []
 --- !u!1 &6744270497602868525
 GameObject:

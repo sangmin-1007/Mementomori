@@ -5,6 +5,7 @@ using UnityEngine;
 public class PoolManager : MonoBehaviour
 {
     public GameObject[] prefabs;
+    public GameObject[] skillPrefabs;
 
     List<GameObject>[] pools;
 

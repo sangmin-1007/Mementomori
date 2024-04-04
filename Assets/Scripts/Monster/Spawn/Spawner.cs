@@ -7,7 +7,7 @@ public class Spawner : MonoBehaviour
 {
     static public int stage = 1;
     float stageTimer = 0f;
-    float bossTimer = 10f;
+    float bossTimer = 20f;
     static public bool boss = false;
 
     public Transform[] spawnPoint;
@@ -17,8 +17,16 @@ public class Spawner : MonoBehaviour
     float spawnTimer = 0f;
     public static int count = 0;
 
+    int bossNum = 4;
+
     private void Start()
     {
+        count = 0;
+
+        stage = 1;
+
+        bossNum = 4;
+
         spawnPoint = GetComponentsInChildren<Transform>();
         if(SceneManager.GetActiveScene().name == "GameScene" || SceneManager.GetActiveScene().name == "GameScene-LIK")
         {
@@ -48,7 +56,7 @@ public class Spawner : MonoBehaviour
         if (stageTimer > 20f && boss == false)
         {
             SpawnBoss();
-            bossTimer = 10f;
+            bossTimer = 20f;
             boss = true;
         }
 
@@ -62,7 +70,8 @@ public class Spawner : MonoBehaviour
         if (bossTimer <= 0f)
         {
             Managers.GameManager.GameOver();
-            Managers.SoundManager.Play("Effect/GameOver", Sound.Effect);
+            boss = false;
+            bossTimer = 20f;
         }
     }
 
@@ -72,7 +81,7 @@ public class Spawner : MonoBehaviour
         {
             return;
         }
-        GameObject monster = _spawnManager.pool.Get(4);
+        GameObject monster = _spawnManager.pool.Get(bossNum++);
         monster.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
     }
 

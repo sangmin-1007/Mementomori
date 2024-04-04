@@ -15,6 +15,7 @@ public class MonsterMovement : MonoBehaviour
 
     void Awake()
     {
+        player = Managers.GameSceneManager.Player.GetComponent<Rigidbody2D>();
         rigid = GetComponent<Rigidbody2D>();
         sprite = GetComponentInChildren<SpriteRenderer>();
         rangedAttack = GetComponent<RangedAttack>();
