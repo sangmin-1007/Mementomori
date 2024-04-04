@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        Managers.UserData.playerDeathCount++;
         Managers.UI_Manager.ShowUI<UI_GameOver>();
         Managers.SoundManager.Play("Effect/GameOver", Sound.Effect);
     }

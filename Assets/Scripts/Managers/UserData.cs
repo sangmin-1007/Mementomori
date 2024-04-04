@@ -9,6 +9,8 @@ public class UserData : MonoBehaviour
     public Dictionary<ItemType,ItemData> playerEquipItemDatas = new Dictionary<ItemType,ItemData>();
     public List<ItemData> storageItemData = new List<ItemData>();
 
+    public List<ItemData> playerItemAcquired = new List<ItemData>();
+
     public int playerGold = 10000;
     public int playerDeathCount;
 
@@ -20,6 +22,12 @@ public class UserData : MonoBehaviour
     
     public void AddItem(ItemData itemDatas)
     {
+        if(playerInventoryItemData.Count >= 28)
+        {
+            Debug.Log("°¡µæ Ã¡½À´Ï´Ù");
+            return;
+        }
+
         playerInventoryItemData.Add(itemDatas);
         if(Managers.UI_Manager.IsActive<UI_Inventory>())
         {
@@ -49,12 +57,24 @@ public class UserData : MonoBehaviour
 
     public void StorageKeepItemData(ItemData itemDatas)
     {
+        if(storageItemData.Count >= 28)
+        {
+            Debug.Log("°¡µæ Ã¡½À´Ï´Ù");
+            return;
+        }
+
         storageItemData.Add(itemDatas);
         playerInventoryItemData.Remove(itemDatas);
     }
 
     public void  StorageTakeOutItemData(ItemData itemDatas)
     {
+        if(playerInventoryItemData.Count >= 28)
+        {
+            Debug.Log("°¡µæ Ã¡½À´Ï´Ù");
+            return;
+        }
+
         storageItemData.Remove(itemDatas);
         playerInventoryItemData.Add(itemDatas);
     }

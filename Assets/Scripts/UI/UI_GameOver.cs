@@ -17,6 +17,8 @@ public class UI_GameOver : UI_Base<UI_GameOver>
     [SerializeField] private TextMeshProUGUI levelText;
     [SerializeField] private Image[] itemSprite;
 
+    [SerializeField] private GameObject[] itemSpriteFrame;
+
     private Level playerLevel;
 
     private void Start()
@@ -28,14 +30,19 @@ public class UI_GameOver : UI_Base<UI_GameOver>
 
         for (int i = 0; i < itemSprite.Length; i++)
         {
-            if (Managers.UserData.playerInventoryItemData.Count == 0 && i < Managers.UserData.playerInventoryItemData.Count)
+            if (i < Managers.UserData.playerItemAcquired.Count)
             {
-                itemSprite[i].sprite = Managers.UserData.playerInventoryItemData[i].Sprite;
+                itemSprite[i].sprite = Managers.UserData.playerItemAcquired[i].Sprite;
+            }
 
-                if (itemSprite[i].sprite != null)
-                {
-                    itemSprite[i].gameObject.SetActive(true);
-                }
+            if (itemSprite[i].sprite != null)
+            {
+                itemSprite[i].gameObject.SetActive(true);
+            }
+            else
+            {
+                itemSpriteFrame[i].SetActive(false);
+                itemSprite[i].gameObject.SetActive(false);
             }
         }
 
@@ -44,6 +51,7 @@ public class UI_GameOver : UI_Base<UI_GameOver>
 
     private void OnClickLobbyButton()
     {
+        Managers.UserData.playerItemAcquired.Clear();
         Managers.UI_Manager.ShowLoadingUI("LobbyScene");
     }
 

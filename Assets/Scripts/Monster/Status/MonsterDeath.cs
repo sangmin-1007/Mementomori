@@ -4,12 +4,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum MonsterType
+{
+    Normal,
+    Boss
+}
+
 public class MonsterDeath : MonoBehaviour
 {
     PlayerController _controller;
     HealthSystem _healthSystem;
     Collider2D coll;
     Rigidbody2D rigid;
+
+    [SerializeField] private MonsterType _monsterType;
 
     private void Awake()
     {
@@ -22,19 +30,12 @@ public class MonsterDeath : MonoBehaviour
 
     private void OnDie()
     {
-        //Managers.ItemObjectPool.SpawnItem(transform.position, 50001000);
-
-        #region 아이템 드롭 테스트
-        int dropRate = UnityEngine.Random.Range(1, 101);
-        if (dropRate <= 50)
-        {
-            Managers.ItemObjectPool.SpawnItem(transform.position, 50001000);
-        }
-        else
+        Managers.ItemObjectPool.SpawnItem(transform.position, 50001000);
+        if(_monsterType == MonsterType.Boss)
         {
             Managers.ItemObjectPool.SpawnItem(transform.position, DataBase.Item.GetRandomItemID());
         }
-        #endregion
+
 
         rigid.velocity = Vector3.zero;
 

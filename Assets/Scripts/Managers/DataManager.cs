@@ -12,7 +12,9 @@ public class SaveData
 
     public int playerGold;
     public int playerDeathCount;
+    public int totalPlayTime;
     public string dateTime;
+
 }
 
 public class DataManager : MonoBehaviour
@@ -51,9 +53,12 @@ public class DataManager : MonoBehaviour
 
         nowPlayerData.dateTime = DateTime.Now.ToString();
         nowPlayerData.playerDeathCount = Managers.UserData.playerDeathCount;
+        nowPlayerData.totalPlayTime = (int)Managers.GameManager.totalPlayTime;
 
         string data = JsonUtility.ToJson(nowPlayerData);
         File.WriteAllText(path + nowSlot.ToString(), data);
+
+        NowPlayerDataClear();
     }
 
     public void Load()
@@ -90,6 +95,13 @@ public class DataManager : MonoBehaviour
     {
         nowSlot = -1;
         nowPlayerData = new SaveData();
+    }
+
+    private void NowPlayerDataClear()
+    {
+        nowPlayerData.inventoryItemData.Clear();
+        nowPlayerData.equipItemData.Clear();
+        nowPlayerData.storageItemData.Clear();
     }
 
     public void SaveDataDelete()

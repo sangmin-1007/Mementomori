@@ -62,10 +62,10 @@ public class ItemObject : MonoBehaviour
 
     public void Interaction()
     {
-        if(item.Type != Constants.ItemType.Consume)
+        if(item.Type != Constants.ItemType.Consume && Managers.UserData.playerInventoryItemData.Count >= 28)
         {
             Managers.UserData.AddItem(item);
-            //Inventory.instance.AddItem(Managers.DataManager.playerItemData[0]);
+            Managers.UserData.playerItemAcquired.Add(item);
             Managers.ItemObjectPool.DisableItem(gameObject);
         }
         else
