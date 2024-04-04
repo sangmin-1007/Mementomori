@@ -2038,7 +2038,12 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: c78adedd3cacc404ba520d4c111d1f5d, type: 2}
   skillLevel: 0
   skill_1: {fileID: 0}
-  statsModifier: []
+  statsModifier:
+  - statsChangeType: 0
+    maxHealth: 0
+    speed: 0
+    maxStamina: 0
+    attackSO: {fileID: 11400000, guid: cbfafbcc6ac6c0941a3a4791f127c8f3, type: 2}
 --- !u!1 &3397620063684802345
 GameObject:
   m_ObjectHideFlags: 0

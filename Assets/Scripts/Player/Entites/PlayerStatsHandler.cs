@@ -45,11 +45,7 @@ public class PlayerStatsHandler : MonoBehaviour
         }
 
         CurrentStates = new PlayerStats { attackSO = attackSO };
-        //TODO
-        //CurrentStates.statsChangeType = baseStats.statsChangeType;
-        //CurrentStates.maxHealth = baseStats.maxHealth;
-        //CurrentStates.speed = baseStats.speed;
-        //CurrentStates.maxStamina = baseStats.maxStamina;
+        
         UpdateStats((a, b) => b, baseStats);
         if(CurrentStates.attackSO != null)
         {
@@ -79,40 +75,40 @@ public class PlayerStatsHandler : MonoBehaviour
         CurrentStates.speed = operation(CurrentStates.speed, newModofier.speed);
         CurrentStates.maxStamina = operation(CurrentStates.maxStamina, newModofier.maxStamina);
 
-        //if(CurrentStates.attackSO == null || newModofier .attackSO == null)
-        //    return;
+        if (CurrentStates.attackSO == null || newModofier.attackSO == null)
+            return;
 
-        //UpdateAttackStats(operation,CurrentStates.attackSO,newModofier.attackSO);
+        UpdateAttackStats(operation, CurrentStates.attackSO, newModofier.attackSO);
 
-        //if(CurrentStates.attackSO.GetType() != newModofier.attackSO.GetType())
-        //{
-        //    return;
-        //}
+        if (CurrentStates.attackSO.GetType() != newModofier.attackSO.GetType())
+        {
+            return;
+        }
 
-        //switch (CurrentStates.attackSO)
-        //{
-        //    case DefaultAttackData _:
-        //        ApplyDeaaultStats(operation, newModofier);
-        //        break;
+        switch (CurrentStates.attackSO)
+        {
+            case AttackSO _:
+                ApplyDeaaultStats(operation, newModofier);
+                break;
 
-        //}
+        }
     }
-    //private void UpdateAttackStats(Func<float,float,float> operation,AttackSO currentAttack,AttackSO newAttack)
-    //{
-    //    if(currentAttack == null || newAttack == null)
-    //    {
-    //        return;
-    //    }
+    private void UpdateAttackStats(Func<float, float, float> operation, AttackSO currentAttack, AttackSO newAttack)
+    {
+        if (currentAttack == null || newAttack == null)
+        {
+            return;
+        }
 
-    //    currentAttack.delay = operation(currentAttack.delay, newAttack.delay);
-    //    currentAttack.power = operation(currentAttack.power, newAttack.power);
-    //    currentAttack.size = operation(currentAttack.size, newAttack.size);
-    //    currentAttack.speed = operation(currentAttack.speed, newAttack.speed);
-    //}
-    //private void ApplyDeaaultStats(Func<float, float, float > opreation,PlayerStats newModifier)
-    //{
-    //    DefaultAttackData currentDefaultAttacks = (DefaultAttackData)CurrentStates.attackSO;
-    //}
+        currentAttack.delay = operation(currentAttack.delay, newAttack.delay);
+        currentAttack.power = operation(currentAttack.power, newAttack.power);
+        currentAttack.size = operation(currentAttack.size, newAttack.size);
+        currentAttack.speed = operation(currentAttack.speed, newAttack.speed);
+    }
+    private void ApplyDeaaultStats(Func<float, float, float> opreation, PlayerStats newModifier)
+    {
+        AttackSO currentDefaultAttacks = (AttackSO)CurrentStates.attackSO;
+    }
 
     private void LimitStats(ref float stat, float minVal)
     {
