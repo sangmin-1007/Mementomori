@@ -12,7 +12,7 @@ public class SaveData
 
     public int playerGold;
     public int playerDeathCount;
-    public DateTime dateTime;
+    public string dateTime;
 }
 
 public class DataManager : MonoBehaviour
@@ -30,6 +30,7 @@ public class DataManager : MonoBehaviour
 
     public void Save()
     {
+        SaveDataDelete();
 
         nowPlayerData.playerGold = Managers.UserData.playerGold;
 
@@ -48,7 +49,7 @@ public class DataManager : MonoBehaviour
             nowPlayerData.storageItemData.Add(Managers.UserData.storageItemData[i]);
         }
 
-        nowPlayerData.dateTime = DateTime.Now;
+        nowPlayerData.dateTime = DateTime.Now.ToString();
         nowPlayerData.playerDeathCount = Managers.UserData.playerDeathCount;
 
         string data = JsonUtility.ToJson(nowPlayerData);
@@ -59,15 +60,19 @@ public class DataManager : MonoBehaviour
     {
         string data = File.ReadAllText(path + nowSlot.ToString());
         nowPlayerData = JsonUtility.FromJson<SaveData>(data);
+    }
 
-
+    public void LoadDataSetting()
+    {
+        string data = File.ReadAllText(path + nowSlot.ToString());
+        nowPlayerData = JsonUtility.FromJson<SaveData>(data);
 
         for (int i = 0; i < nowPlayerData.inventoryItemData.Count; i++)
         {
             Managers.UserData.playerInventoryItemData.Add(nowPlayerData.inventoryItemData[i]);
         }
 
-        for(int i = 0; i < nowPlayerData.equipItemData.Count; i++)
+        for (int i = 0; i < nowPlayerData.equipItemData.Count; i++)
         {
             Managers.UserData.playerEquipItemDatas.Add(nowPlayerData.equipItemData[i].Type, nowPlayerData.equipItemData[i]);
         }
@@ -79,5 +84,16 @@ public class DataManager : MonoBehaviour
 
         Managers.UserData.playerDeathCount = nowPlayerData.playerDeathCount;
         Managers.UserData.playerGold = nowPlayerData.playerGold;
+    }
+
+    public void DataClear()
+    {
+        nowSlot = -1;
+        nowPlayerData = new SaveData();
+    }
+
+    public void SaveDataDelete()
+    {
+        File.Delete(path + nowSlot.ToString());
     }
 }
