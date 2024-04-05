@@ -6,6 +6,12 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
 
+public enum CharacterType
+{
+    Monster,
+    Player
+}
+
 public class PlayerStatsHandler : MonoBehaviour
 {
     private const float MinAttackDelay = 0.03f;
@@ -16,6 +22,8 @@ public class PlayerStatsHandler : MonoBehaviour
     private const float MinSpeed = 0.8f;
     private const int MinMaxHealth = 5;
 
+    [SerializeField] private CharacterType characterType;
+
     [SerializeField] private PlayerStats baseStats;
     public PlayerStats CurrentStates { get; private set; }
     public List<PlayerStats> statsModifiers = new List<PlayerStats>();
@@ -23,6 +31,12 @@ public class PlayerStatsHandler : MonoBehaviour
     private void Awake()
     {
         UpdatePlayerStats();
+        if(characterType == CharacterType.Player)
+        {
+            EquipStatApply();
+            Managers.PlayerEquipStatsManager.UpdateStats += EquipStatApply;
+        }
+
     }
     public void AddStatModifire(PlayerStats statModifier)
     {
@@ -128,5 +142,15 @@ public class PlayerStatsHandler : MonoBehaviour
         LimitStats(ref CurrentStates.attackSO.speed, MinAttackSpeed);
         LimitStats(ref CurrentStates.speed, MinSpeed);
         CurrentStates.maxHealth = Mathf.Max(CurrentStates.maxHealth, MinMaxHealth);
+    }
+
+    private void EquipStatApply()
+    {
+        CurrentStates.maxDefense = baseStats.maxDefense + Managers.PlayerEquipStatsManager.def;
+        CurrentStates.speed = baseStats.speed + Managers.PlayerEquipStatsManager.speed;
+        CurrentStates.attackSO.delay = Mathf.Max(baseStats.attackSO.delay - Managers.PlayerEquipStatsManager.atkSpeed, 0.1f);
+        CurrentStates.attackSO.power = baseStats.attackSO.power + Managers.PlayerEquipStatsManager.damage;
+        CurrentStates.maxHealth = baseStats.maxHealth + (int)Managers.PlayerEquipStatsManager.hp;
+        CurrentStates.maxStamina = baseStats.maxStamina + Managers.PlayerEquipStatsManager.stamina;
     }
 }

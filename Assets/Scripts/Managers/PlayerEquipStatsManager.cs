@@ -1,10 +1,13 @@
 using Constants;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerEquipStatsManager : MonoBehaviour
 {
+    public Action UpdateStats;
+
     public float damage, atkSpeed, hp, def, speed, stamina;
 
     public void EquipItemStatsUpdate()
@@ -36,5 +39,7 @@ public class PlayerEquipStatsManager : MonoBehaviour
                     break;
             }
         }
+
+        UpdateStats?.Invoke();
     }
 }

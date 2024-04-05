@@ -249,11 +249,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65cdc5abe5334114a86c615ec71a8c3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterType: 1
   baseStats:
     statsChangeType: 2
     maxHealth: 50
     speed: 5
     maxStamina: 100
+    maxDefense: 0
     attackSO: {fileID: 11400000, guid: 02cb8a3c2171c6545990643da4c4fbfc, type: 2}
   statsModifiers: []
 --- !u!114 &6965241902243966612
