@@ -30,6 +30,7 @@ public class UI_SelectData : UI_Base<UI_SelectData>
         if (savefile[number])
         {
             Managers.DataManager.LoadDataSetting();
+            Managers.PlayerEquipStatsManager.EquipItemStatsUpdate();
             Managers.UI_Manager.ShowLoadingUI("LobbyScene");
         }
         else

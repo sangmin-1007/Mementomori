@@ -125,6 +125,7 @@ public class UI_Inventory : UI_Base<UI_Inventory>
         UpdateEquipSlots();
         UpdateUI();
         UpdateItemUI();
+        Managers.PlayerEquipStatsManager.EquipItemStatsUpdate();
     }
 
     public void UnEquip()
@@ -138,6 +139,7 @@ public class UI_Inventory : UI_Base<UI_Inventory>
         UpdateEquipSlots();
         UpdateUI();
         UpdateItemUI();
+        Managers.PlayerEquipStatsManager.EquipItemStatsUpdate();
     }
 
     public void UpdateItemUI()

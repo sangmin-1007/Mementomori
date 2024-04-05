@@ -20,6 +20,7 @@ public class Managers : MonoBehaviour
     private ItemObjectPool _itemObjectPool;
     private SoundManager _soundManager;
     private DataManager _dataManager;
+    private PlayerEquipStatsManager _playerEquipStatsManager;
 
     // Manager Singletone
     public static UI_Manager UI_Manager => Instance._uiManager;
@@ -28,11 +29,10 @@ public class Managers : MonoBehaviour
     public static GameSceneManager GameSceneManager => Instance._gameSceneManager;
     public static SceneLoader SceneLoader => Instance._sceneLoader;
     public static UserData UserData => Instance._userData;
-
     public static DataManager DataManager => Instance._dataManager;
     public static ItemObjectPool ItemObjectPool => Instance._itemObjectPool;
-
     public static SoundManager SoundManager => Instance._soundManager;
+    public static PlayerEquipStatsManager PlayerEquipStatsManager => instance._playerEquipStatsManager;
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     public static void Excute()
@@ -106,6 +106,11 @@ public class Managers : MonoBehaviour
             if (!go.TryGetComponent(out instance._dataManager))
             {
                 instance._dataManager = go.AddComponent<DataManager>();
+            }
+
+            if(!go.TryGetComponent(out instance._playerEquipStatsManager))
+            {
+                instance._playerEquipStatsManager = go.AddComponent<PlayerEquipStatsManager>();
             }
         }
     }
