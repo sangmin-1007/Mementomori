@@ -3121,11 +3121,11 @@ MonoBehaviour:
   m_Name: RecorderClip
   m_EditorClassIdentifier: 
   enabled: 1
-  take: 10
+  take: 13
   captureEveryNthFrame: 1
   fileNameGenerator:
     m_Path:
-      m_Root: 0
+      m_Root: 1
       m_Leaf: Recordings
       m_ForceAssetFolder: 0
       m_AbsolutePath: 
