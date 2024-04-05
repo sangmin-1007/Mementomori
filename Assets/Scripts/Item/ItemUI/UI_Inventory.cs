@@ -19,12 +19,9 @@ public class UI_Inventory : UI_Base<UI_Inventory>
     public ItemSlotUI[] equippedSlots;
     public ItemSlot[] equipSlots;
 
-    
-    public Text selectedItemName;
-    public Text selectedItemDescription;
-
     public Text[] selectedItemStatName;
     public Text[] selectedItemStatValue;
+    public Text goldText;
     
     private int curEquipIndex;
     private Outline _outline;
@@ -57,9 +54,10 @@ public class UI_Inventory : UI_Base<UI_Inventory>
     {
         base.OnEnable();
 
-        UpdateUI();
+        goldText.text = Managers.UserData.playerGold.ToString();
         UpdateEquipSlots();
         UpdateItemUI();
+        UpdateUI();
     }
 
     public void AddItem(ItemData item)  // æ∆¿Ã≈€ »πµÊ
@@ -118,8 +116,6 @@ public class UI_Inventory : UI_Base<UI_Inventory>
         return null;
     }
 
-    //============πˆ∆∞=======================
-
     public void OnEquipButton()
     {
         Managers.UserData.EquipItem(Managers.UserData.playerInventoryItemData[Managers.UserData.inventoryIndex]);
@@ -129,6 +125,7 @@ public class UI_Inventory : UI_Base<UI_Inventory>
         UpdateEquipSlots();
         UpdateUI();
         UpdateItemUI();
+        Managers.PlayerEquipStatsManager.EquipItemStatsUpdate();
     }
 
     public void UnEquip()
@@ -142,6 +139,7 @@ public class UI_Inventory : UI_Base<UI_Inventory>
         UpdateEquipSlots();
         UpdateUI();
         UpdateItemUI();
+        Managers.PlayerEquipStatsManager.EquipItemStatsUpdate();
     }
 
     public void UpdateItemUI()
@@ -170,10 +168,6 @@ public class UI_Inventory : UI_Base<UI_Inventory>
 
     private void UpdateEquipSlots()
     {
-        for(int i = 0; i < equippedSlots.Length; i++)
-        {
-            equippedSlots[i].Clear();
-        }
 
         for (int i = 0; i < equippedSlots.Length; i++)
         {

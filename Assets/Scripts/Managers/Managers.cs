@@ -19,6 +19,8 @@ public class Managers : MonoBehaviour
     private UserData _userData;
     private ItemObjectPool _itemObjectPool;
     private SoundManager _soundManager;
+    private DataManager _dataManager;
+    private PlayerEquipStatsManager _playerEquipStatsManager;
 
     // Manager Singletone
     public static UI_Manager UI_Manager => Instance._uiManager;
@@ -27,10 +29,10 @@ public class Managers : MonoBehaviour
     public static GameSceneManager GameSceneManager => Instance._gameSceneManager;
     public static SceneLoader SceneLoader => Instance._sceneLoader;
     public static UserData UserData => Instance._userData;
-
+    public static DataManager DataManager => Instance._dataManager;
     public static ItemObjectPool ItemObjectPool => Instance._itemObjectPool;
-
     public static SoundManager SoundManager => Instance._soundManager;
+    public static PlayerEquipStatsManager PlayerEquipStatsManager => instance._playerEquipStatsManager;
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     public static void Excute()
@@ -41,11 +43,11 @@ public class Managers : MonoBehaviour
 
     private static void Initilize()
     {
-        if(instance == null)
+        if (instance == null)
         {
             GameObject go = GameObject.Find("@AllManagers");
 
-            if(go == null)
+            if (go == null)
             {
                 go = new GameObject("@AllManagers");
                 go.AddComponent<Managers>();
@@ -53,7 +55,7 @@ public class Managers : MonoBehaviour
 
             DontDestroyOnLoad(go);
             instance = go.GetComponent<Managers>();
-            
+
 
 
 
@@ -65,7 +67,7 @@ public class Managers : MonoBehaviour
                 instance._uiManager = go.AddComponent<UI_Manager>();
             }
 
-            if(!go.TryGetComponent(out instance._gameManager))
+            if (!go.TryGetComponent(out instance._gameManager))
             {
                 instance._gameManager = go.AddComponent<GameManager>();
             }
@@ -77,7 +79,7 @@ public class Managers : MonoBehaviour
 
             if (!go.TryGetComponent(out instance._LobbySceneManager))
             {
-                instance._LobbySceneManager= go.AddComponent<LobbySceneManager>();
+                instance._LobbySceneManager = go.AddComponent<LobbySceneManager>();
             }
 
             if (!go.TryGetComponent(out instance._sceneLoader))
@@ -85,12 +87,12 @@ public class Managers : MonoBehaviour
                 instance._sceneLoader = go.AddComponent<SceneLoader>();
             }
 
-            if(!go.TryGetComponent(out instance._userData))
+            if (!go.TryGetComponent(out instance._userData))
             {
                 instance._userData = go.AddComponent<UserData>();
             }
 
-            if(!go.TryGetComponent(out instance._itemObjectPool))
+            if (!go.TryGetComponent(out instance._itemObjectPool))
             {
                 Instance._itemObjectPool = go.AddComponent<ItemObjectPool>();
             }
@@ -100,12 +102,16 @@ public class Managers : MonoBehaviour
                 instance._soundManager = go.AddComponent<SoundManager>();
 
             }
-        }
-    }
 
-    public static void Clear() // 씬이동할때 Clear 해주는부분
-    {
-        Debug.Log("dfdfds");
-        SoundManager.AudioClear();
+            if (!go.TryGetComponent(out instance._dataManager))
+            {
+                instance._dataManager = go.AddComponent<DataManager>();
+            }
+
+            if(!go.TryGetComponent(out instance._playerEquipStatsManager))
+            {
+                instance._playerEquipStatsManager = go.AddComponent<PlayerEquipStatsManager>();
+            }
+        }
     }
 }

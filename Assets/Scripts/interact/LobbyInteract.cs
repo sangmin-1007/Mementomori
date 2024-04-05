@@ -27,11 +27,9 @@ public class LobbyInteract : MonoBehaviour
             break;
 
             case InteractType.Door:
-
+                Managers.DataManager.Save();
                 Managers.UI_Manager.ShowLoadingUI("GameScene");
-
             break;
-
             default:
                 break;
 
