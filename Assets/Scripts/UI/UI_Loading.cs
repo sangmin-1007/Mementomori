@@ -1,4 +1,6 @@
 using DG.Tweening;
+using DG.Tweening.Core.Easing;
+
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -16,6 +18,10 @@ public class UI_Loading : UI_Base<UI_Loading>
 
     string loadSceneName;
 
+    public Text GameTipText;
+
+    public string[] GameTips;
+
     public override void OnEnable()
     {
         base.OnEnable();
@@ -23,6 +29,19 @@ public class UI_Loading : UI_Base<UI_Loading>
         loadSceneName = Managers.UI_Manager.sceneName;
 
         LoadScene();
+    }
+
+    private void Awake()
+    {
+        GameTips = new string[]
+       {
+            "게임 팁: NPC상점은 환생일이 갱신될때마다 초기화됩니다.",
+            "게임 팁: 창고를 이용해서 장비들을 보관할 수 있습니다.",
+            "게임 팁: 아이템의 등급이 높을수록 더 높은 능력치를 가집니다.",
+            "게임 팁: 아이템의 등급은 노멀 > 레어 > 유니크 > 레전드 순입니다.",
+            "게임 팁: 아이템의 등급은 동일하나 S등급의 장비가 제일 높은 효율을 자랑합니다."
+
+       };
     }
 
     void Start()
@@ -34,6 +53,22 @@ public class UI_Loading : UI_Base<UI_Loading>
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
         StartCoroutine(LoadSceneProcess());
+        StartCoroutine(ShowRandomGameTip());
+    }
+
+    private IEnumerator ShowRandomGameTip()
+    {
+        //Text GameTipText = GetComponentInChildren<Text>();
+        string[] gameTips = GameTips;
+        for (int i = 0; i < 5; i++)
+        {
+            int randomIndex =Random.Range(0, gameTips.Length);
+            string randomGameTip = gameTips[randomIndex];
+
+            GameTipText.text = randomGameTip;
+           
+            yield return new WaitForSeconds(5f);
+        }
     }
 
     private IEnumerator LoadSceneProcess()
