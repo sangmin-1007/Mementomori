@@ -41,12 +41,12 @@ public class UI_Stats : UI_Base<UI_Stats>
         PlayerEquipStatsManager equipStat = Managers.PlayerEquipStatsManager;
 
 
-        attackStatText.text = $"{playerStats.CurrentStates.attackSO.power} +({equipStat.damage})";
+        attackStatText.text = $"{playerStats.CurrentStates.attackSO.power}(+{equipStat.damage})";
         attackSpeedStatText.text = AttackSpeedResult(playerStats.CurrentStates.attackSO.delay,equipStat.atkSpeed) + "/s";
-        maxHpStatText.text = $"{playerStats.CurrentStates.maxHealth} +({equipStat.hp}))";
-        maxStanminaStatText.text = $"{playerStats.CurrentStates.maxStamina} +({equipStat.stamina})";
-        defStatText.text = $"{playerStats.CurrentStates.maxDefense} +({equipStat.def})";
-        moveSpeedText.text = $"{playerStats.CurrentStates.speed} +({equipStat.speed})";
+        maxHpStatText.text = $"{playerStats.CurrentStates.maxHealth}(+{equipStat.hp})";
+        maxStanminaStatText.text = $"{playerStats.CurrentStates.maxStamina} (+{equipStat.stamina})";
+        defStatText.text = $"{playerStats.CurrentStates.maxDefense}(+{equipStat.def})";
+        moveSpeedText.text = $"{playerStats.CurrentStates.speed}(+{equipStat.speed})";
 
         deathCount.text = Managers.UserData.playerDeathCount.ToString();
     }
