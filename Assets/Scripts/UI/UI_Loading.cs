@@ -58,7 +58,6 @@ public class UI_Loading : UI_Base<UI_Loading>
 
     private IEnumerator ShowRandomGameTip()
     {
-        //Text GameTipText = GetComponentInChildren<Text>();
         string[] gameTips = GameTips;
         for (int i = 0; i < 5; i++)
         {
