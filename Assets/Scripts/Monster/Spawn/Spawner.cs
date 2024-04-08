@@ -19,6 +19,11 @@ public class Spawner : MonoBehaviour
 
     private void Start()
     {
+        count = 0;
+        stage = 1;
+        boss = false;
+        stageTimer = 0f;
+        bossTimer = 10f;
         spawnPoint = GetComponentsInChildren<Transform>();
         if(SceneManager.GetActiveScene().name == "GameScene" || SceneManager.GetActiveScene().name == "GameScene-LIK")
         {
@@ -73,7 +78,7 @@ public class Spawner : MonoBehaviour
         {
             return;
         }
-        GameObject monster = _spawnManager.pool.Get(4);
+        GameObject monster = _spawnManager.pool.Get(stage + 3);
         monster.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
     }
 
