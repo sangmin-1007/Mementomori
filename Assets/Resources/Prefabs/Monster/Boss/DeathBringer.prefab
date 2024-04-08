@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -750047184722822154, guid: 1914d95466e3d4341a618c35a56d5f82, type: 3}
+  m_Sprite: {fileID: 4723107735738678597, guid: af3a84fde6171ae4386336144a8fa7b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -118,12 +118,12 @@ GameObject:
   - component: {fileID: 6035904466113638535}
   - component: {fileID: -4068432623928044647}
   - component: {fileID: -3270269773995110985}
-  - component: {fileID: 2610905639811260530}
+  - component: {fileID: 862596841785756824}
   - component: {fileID: -2192764721286484519}
-  - component: {fileID: -2542397780255916763}
   - component: {fileID: 7801283104517965854}
   - component: {fileID: 3612254482822957274}
   - component: {fileID: -5683797203786848960}
+  - component: {fileID: 3205446938628304554}
   m_Layer: 6
   m_Name: DeathBringer
   m_TagString: Enemy
@@ -253,8 +253,8 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.5
---- !u!114 &2610905639811260530
+  m_Radius: 2
+--- !u!114 &862596841785756824
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -263,7 +263,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5344142885034079629}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86fcfa1716d93744d98c45810b5b0721, type: 3}
+  m_Script: {fileID: 11500000, guid: 342a5e463498c944a9b70dd985aa5cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
@@ -279,20 +279,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f97482fe437759540be38fb309e73313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _monsterType: 1
---- !u!114 &-2542397780255916763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5344142885034079629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eb90abe975e6b941bc17b7641e6ee3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: Player
 --- !u!114 &7801283104517965854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,3 +325,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f28e3b65691bf744ea1bc85112314ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3205446938628304554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5344142885034079629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dc48d244ef306842992cd510aa5dbeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: Player
+  spriteRenderer: {fileID: 6714689510516035018}

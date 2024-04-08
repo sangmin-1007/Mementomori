@@ -56,7 +56,7 @@ public class Spawner : MonoBehaviour
         {
             stageTimer = 0f;
             bossTimer -= Time.deltaTime;
-            Debug.Log(bossTimer);
+            //Debug.Log(bossTimer);
         }
 
         if (bossTimer <= 0f)
