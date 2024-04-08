@@ -19,12 +19,22 @@ public class LobbyInteract : MonoBehaviour
         switch(interactType)
         {
             case InteractType.Shop:
-                Managers.UI_Manager.ShowUI<UI_Shop>();
+                if (Managers.UI_Manager.IsActive<UI_Shop>())
+                {
+                    Managers.UI_Manager.HideUI<UI_Shop>();
+                }
+                else
+                    Managers.UI_Manager.ShowUI<UI_Shop>();
             break;
 
             case InteractType.Storage:
-                Managers.UI_Manager.ShowUI<UI_Storage>();
-            break;
+                if (Managers.UI_Manager.IsActive<UI_Storage>())
+                {
+                    Managers.UI_Manager.HideUI<UI_Storage>();
+                }
+                else
+                    Managers.UI_Manager.ShowUI<UI_Storage>();
+                break;
 
             case InteractType.Door:
                 Managers.DataManager.Save();
