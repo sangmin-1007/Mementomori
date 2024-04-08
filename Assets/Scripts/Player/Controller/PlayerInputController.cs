@@ -48,17 +48,21 @@ public class PlayerInputController : PlayerController
 
     public void OnInventory(InputValue value)
     {
-        if (value.isPressed)
+        if (!Managers.UI_Manager.IsActive<UI_Storage>() && !Managers.UI_Manager.IsActive<UI_Shop>())
         {
-            if(!Managers.UI_Manager.IsActive<UI_Inventory>())
+            if (value.isPressed)
             {
-                Managers.UI_Manager.ShowUI<UI_Inventory>();
-            }
-            else
-            {
-                Managers.UI_Manager.HideUI<UI_Inventory>();
+                if (!Managers.UI_Manager.IsActive<UI_Inventory>())
+                {
+                    Managers.UI_Manager.ShowUI<UI_Inventory>();
+                }
+                else
+                {
+                    Managers.UI_Manager.HideUI<UI_Inventory>();
+                }
             }
         }
+       
     }
 
 
