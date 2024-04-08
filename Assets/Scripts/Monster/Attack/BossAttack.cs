@@ -20,11 +20,11 @@ public class BossAttack : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
 
-    Vector2 pos1;
-    Vector2 pos2;
-    Vector2 pos3;
-    Vector2 boxSize1;
-    Vector2 boxSize2;
+    public Transform pos1;
+    public Transform pos2;
+    public Transform pos3;
+    public Vector2 boxSize1;
+    public Vector2 boxSize2;
 
     private void Awake()
     {
@@ -40,12 +40,6 @@ public class BossAttack : MonoBehaviour
 
     private void Update()
     {
-        pos1 = transform.position + new Vector3(2f, 0.17f);
-        pos2 = transform.position + new Vector3(-1f, 2.5f);
-        pos3 = transform.position + new Vector3(-1f, 0.17f);
-        boxSize1 = new Vector3(3f, 5f);
-        boxSize2 = new Vector3(2f, 2f);
-
         if (!isAttacking)
             OnMove();
     }
@@ -91,20 +85,20 @@ public class BossAttack : MonoBehaviour
     public void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(pos2, boxSize2);
+        Gizmos.DrawWireCube(pos2.position, boxSize2);
         if (spriteRenderer.flipX == false)
         {
-            Gizmos.DrawWireCube(pos1, boxSize1);
+            Gizmos.DrawWireCube(pos1.position, boxSize1);
         }
         else if (spriteRenderer.flipX == true)
         {
-            Gizmos.DrawWireCube(pos3, boxSize1);
+            Gizmos.DrawWireCube(pos3.position, boxSize1);
         }
     }
 
     private void OnShoot(AttackSO attackSO)
     {
-        Collider2D[] collider2D = Physics2D.OverlapBoxAll(pos2, boxSize2, 0);
+        Collider2D[] collider2D = Physics2D.OverlapBoxAll(pos2.position, boxSize2, 0);
 
         //피격 박스(위쪽) 데미지 계산
         foreach (Collider2D collider in collider2D)
@@ -130,7 +124,7 @@ public class BossAttack : MonoBehaviour
         //피격 박스(오른쪽) 데미지 계산
         if (spriteRenderer.flipX == false)
         {
-            Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos1, boxSize1, 0);
+            Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos1.position, boxSize1, 0);
 
             foreach (Collider2D collider in collider2Ds)
             {
@@ -155,7 +149,7 @@ public class BossAttack : MonoBehaviour
         //피격 박스(왼쪽) 데미지 계산
         else if (spriteRenderer.flipX == true)
         {
-            Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos3, boxSize1, 0);
+            Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos3.position, boxSize1, 0);
 
             foreach (Collider2D collider in collider2Ds)
             {
