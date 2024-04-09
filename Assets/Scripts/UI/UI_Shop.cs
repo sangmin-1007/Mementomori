@@ -64,6 +64,14 @@ public class UI_Shop : UI_Base<UI_Shop>
         PopUpUIClear();
     }
 
+    public void OnDisable()
+    {
+        if (Managers.UI_Manager.IsActive<UI_ItemToolTip>())
+        {
+            Managers.UI_Manager.HideUI<UI_ItemToolTip>();
+        }
+    }
+
     private void UpdateStore()
     {
         int itemID = 0;

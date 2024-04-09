@@ -60,6 +60,14 @@ public class UI_Inventory : UI_Base<UI_Inventory>
         UpdateUI();
     }
 
+    public void OnDisable()
+    {
+        if(Managers.UI_Manager.IsActive<UI_ItemToolTip>())
+        {
+            Managers.UI_Manager.HideUI<UI_ItemToolTip>();
+        }
+    }
+
     public void AddItem(ItemData item)  // æ∆¿Ã≈€ »πµÊ
     {
        

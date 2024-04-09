@@ -38,6 +38,14 @@ public class UI_Storage : UI_Base<UI_Storage>
         UpdateItemData();
     }
 
+    public void OnDisable()
+    {
+        if(Managers.UI_Manager.IsActive<UI_ItemToolTip>())
+        {
+            Managers.UI_Manager.HideUI<UI_ItemToolTip>();
+        }
+    }
+
     public void OnClickKeepButton()
     {
         inventoryIndex = Managers.UserData.inventoryIndex;
