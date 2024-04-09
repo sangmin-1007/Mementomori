@@ -19,7 +19,8 @@ public class UserData : MonoBehaviour
     public int storageIndex;
     public int shopIndex;
     public SlotType selectSlotType;
-    
+
+    public bool isTutorial = false;
     public void AddItem(ItemData itemDatas)
     {
         if(playerInventoryItemData.Count >= 28)
