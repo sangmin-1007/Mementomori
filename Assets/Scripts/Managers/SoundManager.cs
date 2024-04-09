@@ -85,9 +85,7 @@ public class SoundManager :MonoBehaviour
 
 
             AudioSource audioSource = audioSources[(int)Sound.Effect];
-            audioSources[(int)Sound.Effect].loop = false;
-
-
+     
             audioSource.volume = volume;
             audioSource.PlayOneShot(audioclip);
             audioSource.outputAudioMixerGroup = sfxMixer;
