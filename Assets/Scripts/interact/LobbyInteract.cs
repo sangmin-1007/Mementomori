@@ -26,6 +26,7 @@ public class LobbyInteract : MonoBehaviour
                 }
                 else
                     Managers.UI_Manager.ShowUI<UI_Shop>();
+            
                 
                 break;
 
