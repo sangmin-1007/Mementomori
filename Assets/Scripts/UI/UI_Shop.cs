@@ -24,6 +24,7 @@ public class UI_Shop : UI_Base<UI_Shop>
     [SerializeField] private GameObject buyPopUpUI;
     [SerializeField] private GameObject sellPopUpUI;
     [SerializeField] private GameObject cantBuyPopUpUI;
+    [SerializeField] private GameObject inventoryFullPopUpUI;
 
     [Header("бс PopUPUI Text")]
     [SerializeField] private Text sellGoldText;
@@ -62,6 +63,14 @@ public class UI_Shop : UI_Base<UI_Shop>
         base.OnEnable();
         UpdateInventory();
         PopUpUIClear();
+    }
+
+    public void OnDisable()
+    {
+        if (Managers.UI_Manager.IsActive<UI_ItemToolTip>())
+        {
+            Managers.UI_Manager.HideUI<UI_ItemToolTip>();
+        }
     }
 
     private void UpdateStore()
@@ -141,11 +150,12 @@ public class UI_Shop : UI_Base<UI_Shop>
 
     public void OnClickBuyYesButton()
     {
-        Managers.SoundManager.Play("Effect/buyitem", Sound.Effect);
-        if (shopItemData[Managers.UserData.shopIndex].item.BuyPrice <= Managers.UserData.playerGold)
-        {
-            Managers.UserData.playerGold -= shopItemData[Managers.UserData.shopIndex].item.BuyPrice;
 
+        if (shopItemData[Managers.UserData.shopIndex].item.BuyPrice <= Managers.UserData.playerGold &&
+            Managers.UserData.playerInventoryItemData.Count < 28)
+        {
+            Managers.SoundManager.Play("Effect/buyitem", Sound.Effect);
+            Managers.UserData.playerGold -= shopItemData[Managers.UserData.shopIndex].item.BuyPrice;
             Managers.UserData.AddItem(shopItemData[Managers.UserData.shopIndex].item);
           
             buyPopUpUI.SetActive(false);
@@ -181,5 +191,6 @@ public class UI_Shop : UI_Base<UI_Shop>
         sellPopUpUI.SetActive(false);
         buyPopUpUI.SetActive(false);
         cantBuyPopUpUI.SetActive(false);
+        inventoryFullPopUpUI.SetActive(false);
     }
 }

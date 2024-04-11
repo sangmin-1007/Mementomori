@@ -15,6 +15,7 @@ public class SaveData
     public int totalPlayTime;
     public string dateTime;
 
+    public bool isTutorial;
 }
 
 public class DataManager : MonoBehaviour
@@ -54,7 +55,7 @@ public class DataManager : MonoBehaviour
         nowPlayerData.dateTime = DateTime.Now.ToString();
         nowPlayerData.playerDeathCount = Managers.UserData.playerDeathCount;
         nowPlayerData.totalPlayTime = (int)Managers.GameManager.totalPlayTime;
-
+        nowPlayerData.isTutorial = Managers.UserData.isTutorial;
         string data = JsonUtility.ToJson(nowPlayerData);
         File.WriteAllText(path + nowSlot.ToString(), data);
 
@@ -89,6 +90,9 @@ public class DataManager : MonoBehaviour
 
         Managers.UserData.playerDeathCount = nowPlayerData.playerDeathCount;
         Managers.UserData.playerGold = nowPlayerData.playerGold;
+        Managers.UserData.isTutorial = nowPlayerData.isTutorial;
+
+        NowPlayerDataClear();
     }
 
     public void DataClear()

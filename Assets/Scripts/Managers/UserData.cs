@@ -19,10 +19,11 @@ public class UserData : MonoBehaviour
     public int storageIndex;
     public int shopIndex;
     public SlotType selectSlotType;
-    
+
+    public bool isTutorial = false;
     public void AddItem(ItemData itemDatas)
     {
-        if(playerInventoryItemData.Count >= 28)
+        if(playerInventoryItemData.Count >= 29)
         {
             Debug.Log("°¡µæ Ã¡½À´Ï´Ù");
             return;
@@ -57,7 +58,7 @@ public class UserData : MonoBehaviour
 
     public void StorageKeepItemData(ItemData itemDatas)
     {
-        if(storageItemData.Count >= 28)
+        if(storageItemData.Count >= 29)
         {
             Debug.Log("°¡µæ Ã¡½À´Ï´Ù");
             return;
@@ -69,7 +70,7 @@ public class UserData : MonoBehaviour
 
     public void  StorageTakeOutItemData(ItemData itemDatas)
     {
-        if(playerInventoryItemData.Count >= 28)
+        if(playerInventoryItemData.Count >= 29)
         {
             Debug.Log("°¡µæ Ã¡½À´Ï´Ù");
             return;

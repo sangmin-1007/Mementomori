@@ -90,7 +90,7 @@ public class UI_HUD : UI_Base<UI_HUD>
         maxHP = playerStats.MaxHealth;
         maxStamina = playerStats.MaxStamina;
         curHp = playerStats.CurrentHealth;
-        curStamina = playerStats.currentStamina;
+        curStamina = playerStats.CurrentStamina;
         maxExp = playerLevel.expriecneCap;
         curExp = playerLevel.expriecne;
 

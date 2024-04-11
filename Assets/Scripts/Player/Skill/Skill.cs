@@ -98,8 +98,11 @@ public class Skill : MonoBehaviour
                 }
                 break;
             case SkillData1.SkillType.DefenseSkill:
-                healthSystem = Managers.GameSceneManager.Player.GetComponent<HealthSystem>();
-                healthSystem.CurrentDefense = healthSystem.CurrentDefense + data.damages[skillLevel];
+                PlayerStatsHandler statsHandler2 = Managers.GameSceneManager.Player.GetComponent<PlayerStatsHandler>();
+                foreach (PlayerStats stat in statsModifier)
+                {
+                    statsHandler2.AddStatModifire(stat);
+                }
                 break;
             case SkillData1.SkillType.Heal:
                 healthSystem = Managers.GameSceneManager.Player.GetComponent<HealthSystem>();

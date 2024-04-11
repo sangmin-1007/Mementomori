@@ -23,12 +23,12 @@ MonoBehaviour:
   - 10
   - 10
   - 10
-  - 10
-  - 10
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
   counts: 
   projectile: {fileID: 0}

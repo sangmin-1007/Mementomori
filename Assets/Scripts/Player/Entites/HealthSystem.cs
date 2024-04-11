@@ -16,7 +16,7 @@ public class HealthSystem : MonoBehaviour
     public event Action OnInvincibilityEnd;
 
     public float CurrentHealth {  get; private set; }
-    public float MaxHealth => _statsHandler.CurrentStates.maxHealth;
+    public float MaxHealth => _statsHandler.allHealth;
     public float CurrentDefense { get; set; }
 
     private void Awake()
@@ -26,9 +26,9 @@ public class HealthSystem : MonoBehaviour
 
     private void Start()
     {
-        CurrentHealth = _statsHandler.CurrentStates.maxHealth;
-        currentStamina = _statsHandler.CurrentStates.maxStamina;
-        CurrentDefense = _statsHandler.CurrentStates.maxDefense;
+        CurrentHealth = _statsHandler.allHealth;
+        CurrentStamina = _statsHandler.CurrentStates.maxStamina;
+        CurrentDefense = _statsHandler.allDefense;
     }
 
     private void Update()
@@ -85,7 +85,7 @@ public class HealthSystem : MonoBehaviour
     }
 
     //스태미너 관련
-    public float currentStamina { get; private set; }
+    public float CurrentStamina { get; private set; }
     public float MaxStamina => _statsHandler.CurrentStates.maxStamina;
 
     [SerializeField] private float staminaRecoveryRate;
@@ -97,12 +97,12 @@ public class HealthSystem : MonoBehaviour
     {
         staminaUsed = true;
         currentRechargeTime = 0;
-        if (currentStamina - _count > 0)
+        if (CurrentStamina - _count > 0)
         {
-            currentStamina -= _count;
+            CurrentStamina -= _count;
         }
         else
-            currentStamina = 0;
+            CurrentStamina = 0;
     }
     private void SPRechargeTime()
     {
@@ -116,13 +116,13 @@ public class HealthSystem : MonoBehaviour
     }
     private void SPRecover()
     {
-        if (!staminaUsed && currentStamina < _statsHandler.CurrentStates.maxStamina)
+        if (!staminaUsed && CurrentStamina < _statsHandler.CurrentStates.maxStamina)
         {
-            currentStamina += staminaRecoveryRate * Time.deltaTime;
+            CurrentStamina += staminaRecoveryRate * Time.deltaTime;
         }
     }
     public float GetCurrentSP()
     {
-        return currentStamina;
+        return CurrentStamina;
     }
 }

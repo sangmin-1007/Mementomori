@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
+    private PlayerStatsHandler _statsHandler;
     [SerializeField] private SpriteRenderer spriteRenderer;
     private PlayerController _controller;
     private Vector2 _aimDirection = Vector2.right;
@@ -13,6 +14,7 @@ public class Attack : MonoBehaviour
     private void Awake()
     {
         _controller = GetComponent<PlayerController>();
+        _statsHandler = GetComponent<PlayerStatsHandler>();
     }
 
     // Start is called before the first frame update
@@ -62,7 +64,7 @@ public class Attack : MonoBehaviour
                 HealthSystem healthSystem = collider.GetComponent<HealthSystem>();
                 if (healthSystem != null)
                 {
-                    healthSystem.ChangeHealth(-attackSO.power);
+                    healthSystem.ChangeHealth(-_statsHandler.allAttack);
                     if (attackSO.isOnKnockback)
                     {
                         Movement movement = collider.GetComponent<Movement>();
@@ -87,7 +89,7 @@ public class Attack : MonoBehaviour
                     HealthSystem healthSystem = collider.GetComponent<HealthSystem>();
                     if(healthSystem != null )
                     {
-                        healthSystem.ChangeHealth(-attackSO.power);
+                        healthSystem.ChangeHealth(-_statsHandler.allAttack);
                         if(attackSO.isOnKnockback)
                         {
                             Movement movement = collider.GetComponent<Movement>();
@@ -112,7 +114,7 @@ public class Attack : MonoBehaviour
                     HealthSystem healthSystem = collider.GetComponent<HealthSystem>();
                     if (healthSystem != null)
                     {
-                        healthSystem.ChangeHealth(-attackSO.power);
+                        healthSystem.ChangeHealth(-_statsHandler.allAttack);
                         if (attackSO.isOnKnockback)
                         {
                             Movement movement = collider.GetComponent<Movement>();

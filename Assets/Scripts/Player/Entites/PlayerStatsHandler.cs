@@ -25,6 +25,9 @@ public class PlayerStatsHandler : MonoBehaviour
     [SerializeField] private CharacterType characterType;
 
     [SerializeField] private PlayerStats baseStats;
+    public int allHealth;
+    public float allAttack;
+    public float allDefense;
     public PlayerStats CurrentStates { get; private set; }
     public List<PlayerStats> statsModifiers = new List<PlayerStats>();
 
@@ -36,12 +39,17 @@ public class PlayerStatsHandler : MonoBehaviour
             EquipStatApply();
             Managers.PlayerEquipStatsManager.UpdateStats += EquipStatApply;
         }
-
+        FixPlayerStat();
+    }
+    private void Update()
+    {
+        FixPlayerStat();
     }
     public void AddStatModifire(PlayerStats statModifier)
     {
         statsModifiers.Add(statModifier);
         UpdatePlayerStats();
+        EquipStatApply();
     }
 
     public void RemoveStatModifier(PlayerStats statModifier)
@@ -50,7 +58,7 @@ public class PlayerStatsHandler : MonoBehaviour
         UpdatePlayerStats();
     }
     
-    private void UpdatePlayerStats()
+    public void UpdatePlayerStats()
     {
         AttackSO attackSO = null;
         if (baseStats.attackSO != null)
@@ -81,7 +89,7 @@ public class PlayerStatsHandler : MonoBehaviour
                 UpdateStats((o, o1) => o * o1, modifier);
             }
         }
-        LimitAllStats();
+        //LimitAllStats();
     }
     private void UpdateStats(Func<float, float, float> operation, PlayerStats newModofier)
     {
@@ -125,32 +133,38 @@ public class PlayerStatsHandler : MonoBehaviour
         AttackSO currentDefaultAttacks = (AttackSO)CurrentStates.attackSO;
     }
 
-    private void LimitStats(ref float stat, float minVal)
-    {
-        stat = Mathf.Max(stat, minVal);
-    }
-    private void LimitAllStats()
-    {
-        if(CurrentStates == null || CurrentStates.attackSO == null)
-        {
-            return;
-        }
+    //private void LimitStats(ref float stat, float minVal)
+    //{
+    //    stat = Mathf.Max(stat, minVal);
+    //}
+    //private void LimitAllStats()
+    //{
+    //    if(CurrentStates == null || CurrentStates.attackSO == null)
+    //    {
+    //        return;
+    //    }
 
-        LimitStats(ref CurrentStates.attackSO.delay, MinAttackDelay);
-        LimitStats(ref CurrentStates.attackSO.power, MinAttackPower);
-        LimitStats(ref CurrentStates.attackSO.size, MinAttackSize);
-        LimitStats(ref CurrentStates.attackSO.speed, MinAttackSpeed);
-        LimitStats(ref CurrentStates.speed, MinSpeed);
-        CurrentStates.maxHealth = Mathf.Max(CurrentStates.maxHealth, MinMaxHealth);
-    }
+    //    LimitStats(ref CurrentStates.attackSO.delay, MinAttackDelay);
+    //    LimitStats(ref CurrentStates.attackSO.power, MinAttackPower);
+    //    LimitStats(ref CurrentStates.attackSO.size, MinAttackSize);
+    //    LimitStats(ref CurrentStates.attackSO.speed, MinAttackSpeed);
+    //    LimitStats(ref CurrentStates.speed, MinSpeed);
+    //    CurrentStates.maxHealth = Mathf.Max(CurrentStates.maxHealth, MinMaxHealth);
+    //}
 
-    private void EquipStatApply()
+    public void EquipStatApply()
     {
-        CurrentStates.maxDefense = baseStats.maxDefense + Managers.PlayerEquipStatsManager.def;
+        CurrentStates.itemDefense = baseStats.itemDefense + Managers.PlayerEquipStatsManager.def;
         CurrentStates.speed = baseStats.speed + Managers.PlayerEquipStatsManager.speed;
         CurrentStates.attackSO.delay = Mathf.Max(baseStats.attackSO.delay - Managers.PlayerEquipStatsManager.atkSpeed, 0.1f);
-        CurrentStates.attackSO.power = baseStats.attackSO.power + Managers.PlayerEquipStatsManager.damage;
-        CurrentStates.maxHealth = baseStats.maxHealth + (int)Managers.PlayerEquipStatsManager.hp;
+        CurrentStates.itemAttack = baseStats.itemAttack + Managers.PlayerEquipStatsManager.damage;
+        CurrentStates.itemHealth = baseStats.itemHealth + (int)Managers.PlayerEquipStatsManager.hp;
         CurrentStates.maxStamina = baseStats.maxStamina + Managers.PlayerEquipStatsManager.stamina;
+    }
+    public void FixPlayerStat()
+    {
+        allHealth = CurrentStates.maxHealth + CurrentStates.itemHealth;
+        allAttack = CurrentStates.attackSO.power + CurrentStates.itemAttack;
+        allDefense = CurrentStates.maxDefense + CurrentStates.itemDefense;
     }
 }

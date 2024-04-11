@@ -80,4 +80,19 @@ public class PlayerInputController : PlayerController
             }
         }
     }
+
+    public void OnStat(InputValue value)
+    {
+        if(value.isPressed)
+        {
+            if (!Managers.UI_Manager.IsActive<UI_Stats>())
+            {
+                Managers.UI_Manager.ShowUI<UI_Stats>();
+            }
+            else
+            {
+                Managers.UI_Manager.HideUI<UI_Stats>();
+            }
+        }
+    }
 }

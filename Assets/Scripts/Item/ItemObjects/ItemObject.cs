@@ -62,7 +62,7 @@ public class ItemObject : MonoBehaviour
 
     public void Interaction()
     {
-        if(item.Type != Constants.ItemType.Consume && Managers.UserData.playerInventoryItemData.Count >= 28)
+        if(item.Type != Constants.ItemType.Consume && Managers.UserData.playerInventoryItemData.Count < 28)
         {
             Managers.UserData.AddItem(item);
             Managers.UserData.playerItemAcquired.Add(item);
@@ -71,12 +71,8 @@ public class ItemObject : MonoBehaviour
         else
         {
             Managers.ItemObjectPool.DisableItem(gameObject);
-            //Debug.Log("경험치 획득");
             Debug.Log($"경험치 : {level.expriecne}, 레벨 : {level.level}");
             level.IncreaseExprience(50);
-            //level.IncreaseExprience(item.Exp);
-            //ObjectPool
-            //경험치 
         }
       
     }

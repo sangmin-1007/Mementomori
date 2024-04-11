@@ -14,12 +14,17 @@ public class ContactAttack : MonoBehaviour
     [SerializeField] private string targetTag = "Player";
 
     private HealthSystem playerHealthSystem;
+    private float CurrentDefense;
+    private PlayerStatsHandler _statsHandler;
 
     private void Awake()
     {
         animator = GetComponentInChildren<Animator>();
         movement = GetComponent<MonsterMovement>();
         Stats = GetComponent<PlayerStatsHandler>();
+        playerHealthSystem = GetComponent<HealthSystem>();
+        _statsHandler = Managers.GameSceneManager.Player.GetComponent<PlayerStatsHandler>();
+        CurrentDefense = _statsHandler.allDefense;
     }
 
     private void Start()
@@ -31,6 +36,8 @@ public class ContactAttack : MonoBehaviour
     {
         if (!isAttacking)
             OnMove();
+        CurrentDefense = _statsHandler.allDefense;
+        _statsHandler.EquipStatApply();
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -55,9 +62,8 @@ public class ContactAttack : MonoBehaviour
         animator.SetTrigger("Attack");
         movement.speed = 0f;
 
-        HealthSystem healthSystem = Managers.GameSceneManager.Player.GetComponent<HealthSystem>();
         AttackSO attackSO = Stats.CurrentStates.attackSO;
-        bool hasBeenChanged = playerHealthSystem.ChangeHealth(-attackSO.power + (attackSO.power * healthSystem.CurrentDefense/100));
+        bool hasBeenChanged = playerHealthSystem.ChangeHealth(-attackSO.power + (attackSO.power * CurrentDefense/100));
         //Managers.SoundManager.Play("Effect/PlayerAttackFail1", Sound.Effect);
 
         yield return new WaitForSeconds(1f);

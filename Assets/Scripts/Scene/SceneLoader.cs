@@ -39,11 +39,15 @@ public class SceneLoader : MonoBehaviour
             // StartScene
             case 0:
                 Managers.UI_Manager.ShowUI<UI_StartScene>();
+                Managers.SoundManager.Play("Bgm/StartBGM", Sound.Bgm);
                 break;
             // LobbyScene
             case 1:
                 Managers.LobbySceneManager.IntializeLobbyScene();
-              
+                if(Managers.UserData.isTutorial == false)
+                {
+                    Managers.UI_Manager.ShowUI<UI_Tutorial>();
+                }
                 Managers.SoundManager.Play("Bgm/LobbyScene1", Sound.Bgm);
                 break;
             // GameScene
