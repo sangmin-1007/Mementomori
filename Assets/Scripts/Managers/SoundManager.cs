@@ -75,7 +75,7 @@ public class SoundManager :MonoBehaviour
         }
         else if(type == Sound.Effect)
         {
-
+           
             AudioClip audioclip = GetOrAddAudioClip(path);
             if (audioclip == null)
             {
@@ -85,8 +85,7 @@ public class SoundManager :MonoBehaviour
 
 
             AudioSource audioSource = audioSources[(int)Sound.Effect];
-           
-         
+     
             audioSource.volume = volume;
             audioSource.PlayOneShot(audioclip);
             audioSource.outputAudioMixerGroup = sfxMixer;
