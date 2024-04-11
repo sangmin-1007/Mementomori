@@ -91,6 +91,8 @@ public class DataManager : MonoBehaviour
         Managers.UserData.playerDeathCount = nowPlayerData.playerDeathCount;
         Managers.UserData.playerGold = nowPlayerData.playerGold;
         Managers.UserData.isTutorial = nowPlayerData.isTutorial;
+
+        NowPlayerDataClear();
     }
 
     public void DataClear()

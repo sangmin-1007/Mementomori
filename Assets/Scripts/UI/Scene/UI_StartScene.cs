@@ -30,7 +30,7 @@ public class UI_StartScene : UI_Base<UI_StartScene>
     private void Show()
     {
         var seq = DOTween.Sequence();
-        seq.Append(title.DOFade(1f, 2f)).SetDelay(4f);
+        seq.Append(title.DOFade(1f, 1.5f)).SetDelay(2f);
         
 
         seq.Play().OnComplete(() => OnStartText());

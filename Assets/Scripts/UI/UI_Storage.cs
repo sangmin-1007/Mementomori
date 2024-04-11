@@ -14,6 +14,9 @@ public class UI_Storage : UI_Base<UI_Storage>
     [SerializeField] private ItemSlotUI[] inventorySlotUI;
     [SerializeField] private ItemSlotUI[] storageSlotUI;
 
+    [SerializeField] private GameObject inventoryFullUI;
+    [SerializeField] private GameObject storageFullUI;
+
     private int inventoryIndex;
     private int storageIndex;
 
@@ -36,6 +39,7 @@ public class UI_Storage : UI_Base<UI_Storage>
     {
         base.OnEnable();
         UpdateItemData();
+        PopUpUIClear();
     }
 
     public void OnDisable()
@@ -52,9 +56,15 @@ public class UI_Storage : UI_Base<UI_Storage>
 
         if (inventoryItemData[inventoryIndex].item == null) return;
 
-        Managers.UserData.StorageKeepItemData(inventoryItemData[inventoryIndex].item);
-        UpdateItemData();
-
+        if(Managers.UserData.storageItemData.Count < 28)
+        {
+            Managers.UserData.StorageKeepItemData(inventoryItemData[inventoryIndex].item);
+            UpdateItemData();
+        }
+        else
+        {
+            storageFullUI.SetActive(true);
+        }
         Managers.UserData.inventoryIndex = 0;
 
     }
@@ -65,10 +75,23 @@ public class UI_Storage : UI_Base<UI_Storage>
 
         if (storageItemData[storageIndex].item == null) return;
 
-        Managers.UserData.StorageTakeOutItemData(storageItemData[storageIndex].item);
-        UpdateItemData();
+        if(Managers.UserData.playerInventoryItemData.Count < 28)
+        {
+            Managers.UserData.StorageTakeOutItemData(storageItemData[storageIndex].item);
+            UpdateItemData();
+        }
+        else
+        {
+            inventoryFullUI.SetActive(true);
+        }
 
         Managers.UserData.storageIndex = 0;
+    }
+
+    public void OnClickYesButton()
+    {
+        storageFullUI.SetActive(false);
+        inventoryFullUI.SetActive(false);
     }
 
 
@@ -111,5 +134,11 @@ public class UI_Storage : UI_Base<UI_Storage>
                     storageSlotUI[i].icon.gameObject.SetActive(true);
             }
         }
+    }
+
+    private void PopUpUIClear()
+    {
+        inventoryFullUI.SetActive(false);
+        storageFullUI.SetActive(false);
     }
 }
