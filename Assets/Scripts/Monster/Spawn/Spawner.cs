@@ -5,17 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class Spawner : MonoBehaviour
 {
-    static public int stage = 1;
-    float stageTimer = 0f;
-    float bossTimer = 10f;
-    static public bool boss = false;
+    static public int stage;
+    float stageTimer;
+    float bossTimer;
+    static public bool boss;
 
     public Transform[] spawnPoint;
 
     private SpawnManager _spawnManager;
 
-    float spawnTimer = 0f;
-    public static int count = 0;
+    float spawnTimer;
+    public static int count;
 
     private void Start()
     {
@@ -23,7 +23,8 @@ public class Spawner : MonoBehaviour
         stage = 1;
         boss = false;
         stageTimer = 0f;
-        bossTimer = 10f;
+        bossTimer = 20f;
+        spawnTimer = 0f;
         spawnPoint = GetComponentsInChildren<Transform>();
         if(SceneManager.GetActiveScene().name == "GameScene" || SceneManager.GetActiveScene().name == "GameScene-LIK")
         {
@@ -53,7 +54,7 @@ public class Spawner : MonoBehaviour
         if (stageTimer > 20f && boss == false)
         {
             SpawnBoss();
-            bossTimer = 10f;
+            bossTimer = 20f;
             boss = true;
         }
 
@@ -67,7 +68,7 @@ public class Spawner : MonoBehaviour
         if (bossTimer <= 0f)
         {
             boss = false;
-            bossTimer = 10f;
+            bossTimer = 20f;
             Managers.GameManager.GameOver();
         }
     }

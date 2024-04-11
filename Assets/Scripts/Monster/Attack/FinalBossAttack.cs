@@ -56,7 +56,11 @@ public class FinalBossAttack : MonoBehaviour
             phase = 3;
         else if (playerHealthSystem.CurrentHealth / Stats.CurrentStates.maxHealth < 0.6f)
             phase = 2;
-        
+        else
+            phase = 1;
+
+        Debug.Log(playerHealthSystem.CurrentHealth / Stats.CurrentStates.maxHealth);
+
         if (!isAttacking)
             OnMove();
     }
