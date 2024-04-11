@@ -15,6 +15,7 @@ public class UI_GameOver : UI_Base<UI_GameOver>
     [SerializeField] private TextMeshProUGUI gameOverText;
     [SerializeField] private TextMeshProUGUI timeText;
     [SerializeField] private TextMeshProUGUI levelText;
+    [SerializeField] private TextMeshProUGUI goldText;
     [SerializeField] private Image[] itemSprite;
 
     [SerializeField] private GameObject[] itemSpriteFrame;
@@ -27,6 +28,7 @@ public class UI_GameOver : UI_Base<UI_GameOver>
 
         Timer();
         LevelTextChange();
+        goldText.text = Managers.UserData.acquisitionGold.ToString();
 
         for (int i = 0; i < itemSprite.Length; i++)
         {
@@ -51,6 +53,8 @@ public class UI_GameOver : UI_Base<UI_GameOver>
 
     private void OnClickLobbyButton()
     {
+        Managers.UserData.playerGold += Managers.UserData.acquisitionGold;
+        Managers.UserData.acquisitionGold = 0;
         Managers.UserData.playerItemAcquired.Clear();
         Managers.UI_Manager.ShowLoadingUI("LobbyScene");
     }

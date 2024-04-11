@@ -163,8 +163,11 @@ public class PlayerStatsHandler : MonoBehaviour
     }
     public void FixPlayerStat()
     {
-        allHealth = CurrentStates.maxHealth + CurrentStates.itemHealth;
-        allAttack = CurrentStates.attackSO.power + CurrentStates.itemAttack;
-        allDefense = CurrentStates.maxDefense + CurrentStates.itemDefense;
+        if(characterType == CharacterType.Player)
+        {
+            allHealth = CurrentStates.maxHealth + CurrentStates.itemHealth;
+            allAttack = CurrentStates.attackSO.power + CurrentStates.itemAttack;
+            allDefense = CurrentStates.maxDefense + CurrentStates.itemDefense;
+        }
     }
 }
