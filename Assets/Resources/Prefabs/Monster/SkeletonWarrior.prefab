@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f97482fe437759540be38fb309e73313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _monsterType: 0
+  _monsterType: 1
 --- !u!114 &-2256514081574983931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,10 +288,16 @@ MonoBehaviour:
   baseStats:
     statsChangeType: 2
     maxHealth: 3
+    itemHealth: 0
+    itemAttack: 0
     speed: 0
     maxStamina: 0
     maxDefense: 0
+    itemDefense: 0
     attackSO: {fileID: 11400000, guid: 388283c9fe3d56e4c8543de4a2f3e198, type: 2}
+  allHealth: 0
+  allAttack: 0
+  allDefense: 0
   statsModifiers: []
 --- !u!114 &-6688142016249984125
 MonoBehaviour:
