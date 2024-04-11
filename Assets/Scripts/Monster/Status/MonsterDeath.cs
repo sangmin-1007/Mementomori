@@ -6,8 +6,11 @@ using UnityEngine;
 
 public enum MonsterType
 {
-    Normal,
-    Boss
+    SkeletonCat,
+    SkeletonWarrior,
+    SkeletonArcher,
+    Necromancer,
+    Boss,
 }
 
 public class MonsterDeath : MonoBehaviour
@@ -31,6 +34,7 @@ public class MonsterDeath : MonoBehaviour
     private void OnDie()
     {
         Managers.ItemObjectPool.SpawnItem(transform.position, 50001000);
+        TypeByAcquisitionGold(_monsterType);
         if(_monsterType == MonsterType.Boss)
         {
             Managers.ItemObjectPool.SpawnItem(transform.position, DataBase.Item.GetRandomItemID());
@@ -52,10 +56,7 @@ public class MonsterDeath : MonoBehaviour
         }
         Managers.SoundManager.Play("Effect/Monster_Die1", Sound.Effect);
         Invoke("SetDie", 1f);
-        //coll.enabled = false;
-        //rigid.simulated = false;
         Spawner.count--;
-        //Debug.Log($"감소 후 몬스터 수 : {Spawner.count}");
     }
 
     void SetDie()
@@ -73,5 +74,29 @@ public class MonsterDeath : MonoBehaviour
             component.enabled = true;
         }
         gameObject.SetActive(false);
+    }
+
+    private void TypeByAcquisitionGold(MonsterType monsterType)
+    {
+        switch(monsterType)
+        {
+            case MonsterType.SkeletonCat:
+                Managers.UserData.acquisitionGold += 1;
+                break;
+            case MonsterType.SkeletonWarrior:
+                Managers.UserData.acquisitionGold += 5;
+                break;
+            case MonsterType.SkeletonArcher:
+                Managers.UserData.acquisitionGold += 7;
+                break;
+            case MonsterType.Necromancer:
+                Managers.UserData.acquisitionGold += 10;
+                break;
+            case MonsterType.Boss:
+                Managers.UserData.acquisitionGold += 100;
+                break;
+            default:
+                break;
+        }
     }
 }

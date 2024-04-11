@@ -14,6 +14,7 @@ public class UserData : MonoBehaviour
     public int playerGold = 10000;
     public int playerDeathCount;
 
+    public int acquisitionGold = 0;
     public int inventoryIndex;
     public int equipItemIndex;
     public int storageIndex;
