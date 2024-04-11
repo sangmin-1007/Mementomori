@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class FinalBossAttack : MonoBehaviour
@@ -159,7 +158,6 @@ public class FinalBossAttack : MonoBehaviour
             case 1:
                 Collider2D[] collider2D = Physics2D.OverlapBoxAll(pos2.position, boxSize2, 0);
 
-                //피격 박스(위쪽) 데미지 계산
                 foreach (Collider2D collider in collider2D)
                 {
                     if (attackSO.target.value == (attackSO.target.value | (1 << collider.gameObject.layer)))
@@ -180,7 +178,6 @@ public class FinalBossAttack : MonoBehaviour
                     }
                 }
 
-                //피격 박스(오른쪽) 데미지 계산
                 if (spriteRenderer.flipX == false)
                 {
                     Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos1.position, boxSize1, 0);
@@ -205,7 +202,6 @@ public class FinalBossAttack : MonoBehaviour
                         }
                     }
                 }
-                //피격 박스(왼쪽) 데미지 계산
                 else if (spriteRenderer.flipX == true)
                 {
                     Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos3.position, boxSize1, 0);
@@ -235,7 +231,6 @@ public class FinalBossAttack : MonoBehaviour
             case 2:
                 Collider2D[] collider2D2 = Physics2D.OverlapBoxAll(pos5.position, boxSize5, 0);
 
-                //피격 박스(위쪽) 데미지 계산
                 foreach (Collider2D collider in collider2D2)
                 {
                     if (attackSO.target.value == (attackSO.target.value | (1 << collider.gameObject.layer)))
@@ -256,7 +251,6 @@ public class FinalBossAttack : MonoBehaviour
                     }
                 }
 
-                //피격 박스(오른쪽) 데미지 계산
                 if (spriteRenderer.flipX == false)
                 {
                     Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos4.position, boxSize4, 0);
@@ -281,7 +275,6 @@ public class FinalBossAttack : MonoBehaviour
                         }
                     }
                 }
-                //피격 박스(왼쪽) 데미지 계산
                 else if (spriteRenderer.flipX == true)
                 {
                     Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos6.position, boxSize4, 0);
@@ -311,7 +304,6 @@ public class FinalBossAttack : MonoBehaviour
             case 3:
                 Collider2D[] collider2D3 = Physics2D.OverlapBoxAll(pos8.position, boxSize8, 0);
 
-                //피격 박스(위쪽) 데미지 계산
                 foreach (Collider2D collider in collider2D3)
                 {
                     if (attackSO.target.value == (attackSO.target.value | (1 << collider.gameObject.layer)))
@@ -332,7 +324,6 @@ public class FinalBossAttack : MonoBehaviour
                     }
                 }
 
-                //피격 박스(오른쪽) 데미지 계산
                 if (spriteRenderer.flipX == false)
                 {
                     Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos7.position, boxSize7, 0);
@@ -357,7 +348,6 @@ public class FinalBossAttack : MonoBehaviour
                         }
                     }
                 }
-                //피격 박스(왼쪽) 데미지 계산
                 else if (spriteRenderer.flipX == true)
                 {
                     Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos9.position, boxSize7, 0);
