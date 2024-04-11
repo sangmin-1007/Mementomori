@@ -2284,7 +2284,7 @@ MonoBehaviour:
     itemAttack: 0
     speed: 0
     maxStamina: 0
-    maxDefense: 10
+    maxDefense: 2.5
     itemDefense: 0
     attackSO: {fileID: 0}
 --- !u!1 &3568390153698691803
