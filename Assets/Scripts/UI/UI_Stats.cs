@@ -27,7 +27,7 @@ public class UI_Stats : UI_Base<UI_Stats>
        {
             playerStats = Managers.LobbySceneManager.Player.GetComponent<PlayerStatsHandler>();
        }
-       else if(SceneManager.GetActiveScene().name == "GaemScene")
+       else if(SceneManager.GetActiveScene().name == "GameScene")
        {
             playerStats = Managers.GameSceneManager.Player.GetComponent<PlayerStatsHandler>();
        }
