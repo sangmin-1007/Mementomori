@@ -392,10 +392,16 @@ MonoBehaviour:
   baseStats:
     statsChangeType: 2
     maxHealth: 5
+    itemHealth: 0
+    itemAttack: 0
     speed: 0
     maxStamina: 0
     maxDefense: 0
-    attackSO: {fileID: 11400000, guid: 75eb98fd43efb344688d4e08549442b1, type: 2}
+    itemDefense: 0
+    attackSO: {fileID: 11400000, guid: 5e0c70fbe72034649aead24731d8c9e9, type: 2}
+  allHealth: 0
+  allAttack: 0
+  allDefense: 0
   statsModifiers: []
 --- !u!114 &8092807399071726750
 MonoBehaviour:

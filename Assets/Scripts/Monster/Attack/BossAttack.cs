@@ -6,9 +6,6 @@ using UnityEngine.UIElements;
 
 public class BossAttack : MonoBehaviour
 {
-    BossAttack bossAttack;
-    FinalBossAttack finalBossAttack;
-
     Animator animator;
 
     bool isAttacking = false;
@@ -31,8 +28,6 @@ public class BossAttack : MonoBehaviour
 
     private void Awake()
     {
-        bossAttack = GetComponent<BossAttack>();
-        finalBossAttack = GetComponent<FinalBossAttack>();
         animator = GetComponentInChildren<Animator>();
         movement = GetComponent<MonsterMovement>();
         Stats = GetComponent<PlayerStatsHandler>();
@@ -47,10 +42,6 @@ public class BossAttack : MonoBehaviour
     {
         if (!isAttacking)
             OnMove();
-        //if (finalBossAttack.finalBossAttackSC)
-        //{
-        //    bossAttack.enabled = false;
-        //}
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -81,7 +72,7 @@ public class BossAttack : MonoBehaviour
 
         OnShoot(Stats.CurrentStates.attackSO);
 
-        //yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1f);
 
         isAttacking = false;
     }
