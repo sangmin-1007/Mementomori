@@ -38,10 +38,10 @@ public class UI_ItemToolTip : UI_Base<UI_ItemToolTip>
                 inputKeyText.text = "우클릭 - 장착";
                 break;
             case SlotType.Storage:
-                inputKeyText.text = "우클릭 - 보관";
+                inputKeyText.text = "우클릭 - 꺼내기";
                 break;
             case SlotType.Storage_Inventory:
-                inputKeyText.text = "우클릭 - 꺼내기";
+                inputKeyText.text = "우클릭 - 보관";
                 break;
             case SlotType.Shop:
                 inputKeyText.text = "우클릭 - 구매하기";

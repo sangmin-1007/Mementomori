@@ -120,14 +120,8 @@ public class UI_Loading : UI_Base<UI_Loading>
         }
         else
         {
-            yield return null;
-            canvasGroup.DOFade(0f, 1f);
-        }
-
-        yield return new WaitForSeconds(2f);
-        if (!isFadein)
-        {
             CloseUI();
+            canvasGroup.alpha = 0f;
             yield break;
         }
     }
