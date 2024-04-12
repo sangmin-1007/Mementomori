@@ -42,7 +42,15 @@ public class PlayerInputController : PlayerController
     {
         if (SceneManager.GetActiveScene().name == "GameScene")
         {
-            IsAttacking = value.isPressed;
+            if(Managers.UI_Manager.IsActive<UI_Skill>())
+            {
+                IsAttacking = false;
+            }
+            else
+            {
+                IsAttacking = value.isPressed;
+            }
+            
         }
     }
 
