@@ -27,6 +27,7 @@ public class UI_Shop : UI_Base<UI_Shop>
     [SerializeField] private GameObject inventoryFullPopUpUI;
 
     [Header("бс PopUPUI Text")]
+    [SerializeField] private Text noItemSellText;
     [SerializeField] private Text sellGoldText;
     [SerializeField] private Text buyGoldText;
 
@@ -96,6 +97,7 @@ public class UI_Shop : UI_Base<UI_Shop>
 
         for(int i = 0; i < inventoryItemData.Length; i++)
         {
+
             if (i < Managers.UserData.playerInventoryItemData.Count)
             {
                 inventoryItemData[i].item = Managers.UserData.playerInventoryItemData[i];
@@ -112,6 +114,15 @@ public class UI_Shop : UI_Base<UI_Shop>
                 inventorySlotUI[i].icon.sprite = null;
                 inventorySlotUI[i].icon.gameObject.SetActive(false);
             }
+        }
+
+        if (inventoryItemData[0].item == null)
+        {
+            noItemSellText.gameObject.SetActive(true);
+        }
+        else
+        {
+            noItemSellText.gameObject.SetActive(false);
         }
     }
 

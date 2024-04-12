@@ -2612,6 +2612,7 @@ MonoBehaviour:
   sellPopUpUI: {fileID: 2242765446885739962}
   cantBuyPopUpUI: {fileID: 4292071481704125802}
   inventoryFullPopUpUI: {fileID: 2492241655385383726}
+  noItemSellText: {fileID: 2148582822953222960}
   sellGoldText: {fileID: 7856340440864406564}
   buyGoldText: {fileID: 4845041620060406515}
 --- !u!1 &2883233550612210735

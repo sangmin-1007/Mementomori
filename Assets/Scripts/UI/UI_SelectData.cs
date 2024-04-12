@@ -58,7 +58,8 @@ public class UI_SelectData : UI_Base<UI_SelectData>
             Managers.UserData.playerGold = 100000; // 초기에 플레이어 골드를 1000골드를 지급해주고
             Managers.DataManager.Save(); // 현재 정보를 저장해준다
         }
-        Managers.UI_Manager.ShowLoadingUI("LobbyScene");
+        //Managers.UI_Manager.ShowLoadingUI("LobbyScene");
+        Managers.UI_Manager.ShowUI<UI_StartMovie>();
     }
 
     private void DataSlotSetting()
