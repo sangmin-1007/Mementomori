@@ -52,7 +52,7 @@ public class Skill : MonoBehaviour
                 textDesc.text = string.Format(data.skillDesc, data.damages[skillLevel]);
                 break;
             case SkillData1.SkillType.Heal:
-                textDesc.text = string.Format(data.skillDesc);
+                textDesc.text = string.Format(data.skillDesc, data.damages[skillLevel]);
                 break;
         }
         

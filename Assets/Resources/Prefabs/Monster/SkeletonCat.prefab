@@ -283,11 +283,17 @@ MonoBehaviour:
   characterType: 0
   baseStats:
     statsChangeType: 2
-    maxHealth: 3
+    maxHealth: 100
+    itemHealth: 0
+    itemAttack: 0
     speed: 0
     maxStamina: 0
     maxDefense: 0
+    itemDefense: 0
     attackSO: {fileID: 11400000, guid: 63ad84429e044b94fb8b8885b7e5d84f, type: 2}
+  allHealth: 0
+  allAttack: 0
+  allDefense: 0
   statsModifiers: []
 --- !u!114 &959209097628157002
 MonoBehaviour:
@@ -329,7 +335,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44e9734570de7347b4ac09a927389e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1448710578124817732}
   height: 1
 --- !u!1 &3254947106602855782
 GameObject:

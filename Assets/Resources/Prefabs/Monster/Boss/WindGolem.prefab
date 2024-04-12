@@ -262,7 +262,7 @@ MonoBehaviour:
   characterType: 0
   baseStats:
     statsChangeType: 2
-    maxHealth: 100
+    maxHealth: 1000
     itemHealth: 0
     itemAttack: 0
     speed: 0

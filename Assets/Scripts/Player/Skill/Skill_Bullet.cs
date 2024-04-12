@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Skill_Bullet : MonoBehaviour
 {
@@ -9,14 +10,19 @@ public class Skill_Bullet : MonoBehaviour
 
     public int id;
     Rigidbody2D rigid;
+    PlayerStatsHandler playerStats;
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
+        if(SceneManager.GetActiveScene().name == "GameScene")
+        {
+            playerStats = Managers.GameSceneManager.Player.GetComponent<PlayerStatsHandler>();
+        }
     }
 
     public void Init(float damage, int per, Vector3 dir)
     {
-        this.damage = damage;
+        this.damage = damage + playerStats.allAttack;
         this.per = per;
 
         if(per > -1)

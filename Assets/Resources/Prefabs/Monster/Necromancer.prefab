@@ -371,7 +371,7 @@ MonoBehaviour:
   characterType: 0
   baseStats:
     statsChangeType: 2
-    maxHealth: 3
+    maxHealth: 250
     itemHealth: 0
     itemAttack: 0
     speed: 0
@@ -411,7 +411,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAttacking: 0
-  targetTag: Player
 --- !u!114 &-177603864555059669
 MonoBehaviour:
   m_ObjectHideFlags: 0
