@@ -5,6 +5,7 @@ using UnityEngine;
 public class FinalBossAttack : MonoBehaviour
 {
     PlayerStatsHandler Stats;
+    HealthSystem monsterHealthSystem;
     HealthSystem playerHealthSystem;
 
     int phase;
@@ -38,7 +39,7 @@ public class FinalBossAttack : MonoBehaviour
     private void Awake()
     {
         Stats = GetComponent<PlayerStatsHandler>();
-        playerHealthSystem = GetComponent<HealthSystem>();
+        monsterHealthSystem = GetComponent<HealthSystem>();
         animator = GetComponentInChildren<Animator>();
         movement = GetComponent<MonsterMovement>();
     }
@@ -51,14 +52,14 @@ public class FinalBossAttack : MonoBehaviour
 
     void Update()
     {
-        if (playerHealthSystem.CurrentHealth / Stats.CurrentStates.maxHealth < 0.3f)
+        if (monsterHealthSystem.CurrentHealth / Stats.CurrentStates.maxHealth < 0.3f)
             phase = 3;
-        else if (playerHealthSystem.CurrentHealth / Stats.CurrentStates.maxHealth < 0.6f)
+        else if (monsterHealthSystem.CurrentHealth / Stats.CurrentStates.maxHealth < 0.6f)
             phase = 2;
         else
             phase = 1;
 
-        Debug.Log(playerHealthSystem.CurrentHealth / Stats.CurrentStates.maxHealth);
+        Debug.Log(monsterHealthSystem.CurrentHealth / Stats.CurrentStates.maxHealth);
 
         if (!isAttacking)
             OnMove();
