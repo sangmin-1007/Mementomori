@@ -23,10 +23,10 @@ public class Spawner : MonoBehaviour
         stage = 1;
         boss = false;
         stageTimer = 0f;
-        bossTimer = 20f;
+        bossTimer = 60f;
         spawnTimer = 0f;
         spawnPoint = GetComponentsInChildren<Transform>();
-        if(SceneManager.GetActiveScene().name == "GameScene" || SceneManager.GetActiveScene().name == "GameScene-LIK")
+        if(SceneManager.GetActiveScene().name == "GameScene")
         {
             _spawnManager = Managers.GameSceneManager.MonsterSpawner.GetComponent<SpawnManager>();
         }
@@ -39,22 +39,20 @@ public class Spawner : MonoBehaviour
 
         spawnTimer += Time.deltaTime;
 
-        if (spawnTimer > 0.5f && count < 1)
+        if (spawnTimer > 0.5f && count < 100)
         {
             spawnTimer = 0f;
 
             Spawn();
             count++;
-            //Debug.Log($"증가 후 몬스터 수 : {count}");
         }
 
         stageTimer += Time.deltaTime;
-        //bossTimer = Managers.GameManager.timer;
 
-        if (stageTimer > 20f && boss == false)
+        if (stageTimer > 60f && boss == false)
         {
             SpawnBoss();
-            bossTimer = 20f;
+            bossTimer = 60f;
             boss = true;
         }
 
@@ -62,13 +60,12 @@ public class Spawner : MonoBehaviour
         {
             stageTimer = 0f;
             bossTimer -= Time.deltaTime;
-            //Debug.Log(bossTimer);
         }
 
         if (bossTimer <= 0f)
         {
             boss = false;
-            bossTimer = 20f;
+            bossTimer = 60;
             Managers.GameManager.GameOver();
         }
     }

@@ -18,7 +18,6 @@ public class RangedAttack : MonoBehaviour
 
     MonsterMovement movement;
     protected PlayerStatsHandler Stats { get; private set; }
-    [SerializeField] private string targetTag = "Player";
 
     private HealthSystem healthSystem;
     private HealthSystem playerHealthSystem;

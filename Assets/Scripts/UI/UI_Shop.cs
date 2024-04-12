@@ -67,6 +67,17 @@ public class UI_Shop : UI_Base<UI_Shop>
         PopUpUIClear();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (Managers.UI_Manager.IsActive<UI_Shop>())
+            {
+                CloseUI();
+            }
+        }
+    }
+
     public void OnDisable()
     {
         if (Managers.UI_Manager.IsActive<UI_ItemToolTip>())

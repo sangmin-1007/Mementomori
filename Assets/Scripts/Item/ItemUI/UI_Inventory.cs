@@ -60,6 +60,17 @@ public class UI_Inventory : UI_Base<UI_Inventory>
         UpdateUI();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (Managers.UI_Manager.IsActive<UI_Inventory>())
+            {
+                CloseUI();
+            }
+        }
+    }
+
     public void OnDisable()
     {
         if(Managers.UI_Manager.IsActive<UI_ItemToolTip>())

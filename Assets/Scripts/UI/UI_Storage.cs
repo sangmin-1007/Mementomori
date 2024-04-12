@@ -168,4 +168,15 @@ public class UI_Storage : UI_Base<UI_Storage>
         inventoryFullUI.SetActive(false);
         storageFullUI.SetActive(false);
     }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(Managers.UI_Manager.IsActive<UI_Storage>())
+            {
+                CloseUI();
+            }
+        }
+    }
 }

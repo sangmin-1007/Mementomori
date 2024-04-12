@@ -77,6 +77,7 @@ public class UI_GameOver : UI_Base<UI_GameOver>
         gameOverText.DOFade(0f, 2f);
         yield return new WaitForSeconds(2f);
 
+        resultCanvasGroup.gameObject.SetActive(true);
         resultCanvasGroup.DOFade(1f, 2f);
         yield break;
 

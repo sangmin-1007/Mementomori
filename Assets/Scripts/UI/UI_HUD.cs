@@ -16,8 +16,12 @@ public class UI_HUD : UI_Base<UI_HUD>
     [SerializeField] private Image staminaBar;
     [SerializeField] private Image expBar;
 
+
+
     [SerializeField] private TextMeshProUGUI levelText;
     [SerializeField] private TextMeshProUGUI timeText;
+
+    public BossHPBar bossHpBar;
 
     private HealthSystem playerStats;
     private Level playerLevel;

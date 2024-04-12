@@ -60,7 +60,6 @@ public class FinalBossAttack : MonoBehaviour
         else
             phase = 1;
 
-        Debug.Log(monsterHealthSystem.CurrentHealth / Stats.CurrentStates.maxHealth);
 
         if (!isAttacking)
             OnMove();

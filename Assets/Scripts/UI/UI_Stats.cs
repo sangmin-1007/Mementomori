@@ -35,6 +35,17 @@ public class UI_Stats : UI_Base<UI_Stats>
         UpdateStatText();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (Managers.UI_Manager.IsActive<UI_Stats>())
+            {
+                CloseUI();
+            }
+        }
+    }
+
     private void UpdateStatText()
     {
         deathCount.text = Managers.UserData.playerDeathCount.ToString();

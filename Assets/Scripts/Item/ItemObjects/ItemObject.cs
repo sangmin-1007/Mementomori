@@ -71,7 +71,6 @@ public class ItemObject : MonoBehaviour
         else
         {
             Managers.ItemObjectPool.DisableItem(gameObject);
-            Debug.Log($"경험치 : {level.expriecne}, 레벨 : {level.level}");
             level.IncreaseExprience(50);
         }
       

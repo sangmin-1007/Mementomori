@@ -56,7 +56,8 @@ public class PlayerInputController : PlayerController
 
     public void OnInventory(InputValue value)
     {
-        if (!Managers.UI_Manager.IsActive<UI_Storage>() && !Managers.UI_Manager.IsActive<UI_Shop>())
+        if (!Managers.UI_Manager.IsActive<UI_Storage>() && !Managers.UI_Manager.IsActive<UI_Shop>() &&
+            !Managers.UI_Manager.IsActive<UI_Option>() && !Managers.UI_Manager.IsActive<UI_Stats>())
         {
             if (value.isPressed)
             {
@@ -76,30 +77,39 @@ public class PlayerInputController : PlayerController
 
     public void OnOption(InputValue value)
     {
-        if (value.isPressed)
+        if(!Managers.UI_Manager.IsActive<UI_Storage>() && !Managers.UI_Manager.IsActive<UI_Shop>() &&
+            !Managers.UI_Manager.IsActive<UI_Inventory>() && !Managers.UI_Manager.IsActive<UI_Stats>())
         {
-            if (!Managers.UI_Manager.IsActive<UI_Option>())
+            if (value.isPressed)
             {
-                Managers.UI_Manager.ShowUI<UI_Option>();
-            }
-            else
-            {
-                Managers.UI_Manager.HideUI<UI_Option>();
+                if (!Managers.UI_Manager.IsActive<UI_Option>())
+                {
+                    Managers.UI_Manager.ShowUI<UI_Option>();
+                }
+                else
+                {
+                    Managers.UI_Manager.HideUI<UI_Option>();
+                }
             }
         }
+
     }
 
     public void OnStat(InputValue value)
     {
-        if(value.isPressed)
+        if(!Managers.UI_Manager.IsActive<UI_Storage>() && !Managers.UI_Manager.IsActive<UI_Shop>() &&
+            !Managers.UI_Manager.IsActive<UI_Inventory>() && !Managers.UI_Manager.IsActive<UI_Option>())
         {
-            if (!Managers.UI_Manager.IsActive<UI_Stats>())
+            if (value.isPressed)
             {
-                Managers.UI_Manager.ShowUI<UI_Stats>();
-            }
-            else
-            {
-                Managers.UI_Manager.HideUI<UI_Stats>();
+                if (!Managers.UI_Manager.IsActive<UI_Stats>())
+                {
+                    Managers.UI_Manager.ShowUI<UI_Stats>();
+                }
+                else
+                {
+                    Managers.UI_Manager.HideUI<UI_Stats>();
+                }
             }
         }
     }

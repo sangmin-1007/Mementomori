@@ -70,7 +70,6 @@ public class HealthSystem : MonoBehaviour
         {
             CallDeath();
         }
-        Debug.Log($"바뀐체력 : {change}, 현재체력 : {CurrentHealth} 최대체력 : {MaxHealth}");
         return true;
     }
 

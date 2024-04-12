@@ -19,23 +19,31 @@ public class LobbyInteract : MonoBehaviour
         switch(interactType)
         {
             case InteractType.Shop:
-                if (Managers.UI_Manager.IsActive<UI_Shop>())
-                {
-                    Managers.UI_Manager.HideUI<UI_Shop>();
-                }
-                else
-                    Managers.UI_Manager.ShowUI<UI_Shop>();
-            
                 
-                break;
+                if(!Managers.UI_Manager.IsActive<UI_Storage>() && !Managers.UI_Manager.IsActive<UI_Stats>() &&
+                    !Managers.UI_Manager.IsActive<UI_Inventory>() && !Managers.UI_Manager.IsActive<UI_Option>())
+                {
+                    if (Managers.UI_Manager.IsActive<UI_Shop>())
+                    {
+                        Managers.UI_Manager.HideUI<UI_Shop>();
+                    }
+                    else
+                        Managers.UI_Manager.ShowUI<UI_Shop>();
+                }
+             break;
 
             case InteractType.Storage:
-                if (Managers.UI_Manager.IsActive<UI_Storage>())
+                if(!Managers.UI_Manager.IsActive<UI_Shop>() && !Managers.UI_Manager.IsActive<UI_Stats>() &&
+                    !Managers.UI_Manager.IsActive<UI_Inventory>() && !Managers.UI_Manager.IsActive<UI_Option>())
                 {
-                    Managers.UI_Manager.HideUI<UI_Storage>();
+                    if (Managers.UI_Manager.IsActive<UI_Storage>())
+                    {
+                        Managers.UI_Manager.HideUI<UI_Storage>();
+                    }
+                    else
+                        Managers.UI_Manager.ShowUI<UI_Storage>();
                 }
-                else
-                    Managers.UI_Manager.ShowUI<UI_Storage>();
+
                 break;
 
             case InteractType.Door:
