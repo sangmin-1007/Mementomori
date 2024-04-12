@@ -81,11 +81,8 @@ public class NecromancerAttack : MonoBehaviour
 
         var energy = ObjectPool.GetObjectEnergy();
         var direction = (new Vector3(player.transform.position.x, player.transform.position.y) - transform.position).normalized;
-        //if (direction.x > 0)
             energy.transform.position = transform.position + direction * 0.5f;
-        //else
-            //energy.transform.position = new Vector3(transform.position.x + direction.normalized.x * 0.5f, transform.position.y + direction.normalized.y * 0.5f + 1f);
-        //energy.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg);
+        energy.EnergyDamage(Stats.allAttack);
         energy.Shoot(direction * 5f);
 
         isAttacking = false;

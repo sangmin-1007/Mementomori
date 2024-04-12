@@ -9,7 +9,10 @@ public class Arrow : MonoBehaviour
 
     string targetTag = "Player";
     HealthSystem playerHealthSystem;
-    protected PlayerStatsHandler Stats { get; private set; }
+    private PlayerStatsHandler playerStats;
+    public PlayerStatsHandler Stats { get; private set; }
+
+    private float damage;
 
     public void Shoot(Vector3 direction)
     {
@@ -27,20 +30,6 @@ public class Arrow : MonoBehaviour
         transform.Translate(direction * Time.deltaTime);
     }
 
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if(collision.tag == targetTag)
-    //    {
-    //        playerHealthSystem = collision.GetComponent<HealthSystem>();
-    //        if (Stats.CurrentStates.attackSO == null)
-    //            return;
-    //        AttackSO attackSO = Stats.CurrentStates.attackSO;
-    //        bool hasBeenChanged = playerHealthSystem.ChangeHealth(-attackSO.power);
-
-    //        DestroyArrow();
-    //    }
-    //}
-
     private void OnEnable()
     {
         Stats = GetComponent<PlayerStatsHandler>();
@@ -51,17 +40,18 @@ public class Arrow : MonoBehaviour
         if(collision.tag == targetTag)
         {
             playerHealthSystem = collision.GetComponent<HealthSystem>();
+            playerStats = collision.GetComponent<PlayerStatsHandler>();
             if (Stats.CurrentStates.attackSO == null)
                 return;
-            AttackSO attackSO = Stats.CurrentStates.attackSO;
-            bool hasBeenChanged = playerHealthSystem.ChangeHealth(-attackSO.power);
+            float blockDamage = damage - (damage * playerStats.allDefense / 100);
+            playerHealthSystem.ChangeHealth(-blockDamage);
 
             DestroyArrow();
         }
     }
 
-    //private void OnEnable()
-    //{
-    //    Stats = GetComponent<PlayerStatsHandler>();
-    //}
+    public void ArrowDamage(float monsterDamage)
+    {
+        damage = monsterDamage;
+    }
 }

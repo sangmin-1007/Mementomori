@@ -9,7 +9,9 @@ public class Energy : MonoBehaviour
 
     string targetTag = "Player";
     HealthSystem playerHealthSystem;
-    protected PlayerStatsHandler Stats { get; private set; }
+    private PlayerStatsHandler playerStats;
+    public PlayerStatsHandler Stats { get; private set; }
+    private float damage;
 
     Animator animator;
 
@@ -39,10 +41,11 @@ public class Energy : MonoBehaviour
         if (collision.tag == targetTag)
         {
             playerHealthSystem = collision.GetComponent<HealthSystem>();
-            if (Stats.CurrentStates.attackSO == null)
-                return;
-            AttackSO attackSO = Stats.CurrentStates.attackSO;
-            bool hasBeenChanged = playerHealthSystem.ChangeHealth(-attackSO.power);
+            playerStats = collision.GetComponent<PlayerStatsHandler>();
+
+            float blockDamage = damage - (damage * playerStats.allDefense / 100);
+
+            bool hasBeenChanged = playerHealthSystem.ChangeHealth(-blockDamage);
             animator.SetTrigger("IsHit");
             direction = Vector3.zero;
 
@@ -53,5 +56,10 @@ public class Energy : MonoBehaviour
     private void OnEnable()
     {
         Stats = GetComponent<PlayerStatsHandler>();
+    }
+
+    public void EnergyDamage(float monsterDamage)
+    {
+        damage = monsterDamage;
     }
 }

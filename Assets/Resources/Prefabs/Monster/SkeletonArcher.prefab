@@ -188,7 +188,7 @@ MonoBehaviour:
     maxStamina: 0
     maxDefense: 0
     itemDefense: 0
-    attackSO: {fileID: 0}
+    attackSO: {fileID: 11400000, guid: f243845437a4be94ea9c92a5af9a6be1, type: 2}
   allHealth: 0
   allAttack: 0
   allDefense: 0

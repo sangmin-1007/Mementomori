@@ -80,11 +80,13 @@ public class RangedAttack : MonoBehaviour
         yield return new WaitForSeconds(defaultAttackTime);
 
         var arrow = ObjectPool.GetObjectArrow();
+
         if(player != null)
         {
             var direction = new Vector3(player.transform.position.x, player.transform.position.y) - transform.position;
             arrow.transform.position = transform.position + direction.normalized * 0.5f;
             arrow.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg);
+            arrow.ArrowDamage(Stats.allAttack);
             arrow.Shoot(new Vector3(1, 0) * 10f);
         }
 

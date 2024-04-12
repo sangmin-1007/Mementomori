@@ -156,7 +156,7 @@ public class PlayerStatsHandler : MonoBehaviour
     {
         CurrentStates.itemDefense = baseStats.itemDefense + Managers.PlayerEquipStatsManager.def;
         CurrentStates.speed = baseStats.speed + Managers.PlayerEquipStatsManager.speed;
-        CurrentStates.attackSO.delay = Mathf.Max(baseStats.attackSO.delay - Managers.PlayerEquipStatsManager.atkSpeed, 0.1f);
+        CurrentStates.attackSO.delay = Mathf.Max(baseStats.attackSO.delay * Managers.PlayerEquipStatsManager.atkSpeed, 1f);
         CurrentStates.itemAttack = baseStats.itemAttack + Managers.PlayerEquipStatsManager.damage;
         CurrentStates.itemHealth = baseStats.itemHealth + (int)Managers.PlayerEquipStatsManager.hp;
         CurrentStates.maxStamina = baseStats.maxStamina + Managers.PlayerEquipStatsManager.stamina;
@@ -168,6 +168,12 @@ public class PlayerStatsHandler : MonoBehaviour
             allHealth = CurrentStates.maxHealth + CurrentStates.itemHealth;
             allAttack = CurrentStates.attackSO.power + CurrentStates.itemAttack;
             allDefense = CurrentStates.maxDefense + CurrentStates.itemDefense;
+        }
+        else
+        {
+            allHealth = CurrentStates.maxHealth;
+            allAttack = CurrentStates.attackSO.power;
+            allDefense = CurrentStates.maxDefense;
         }
     }
 }

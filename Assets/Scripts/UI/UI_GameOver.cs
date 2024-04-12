@@ -113,6 +113,6 @@ public class UI_GameOver : UI_Base<UI_GameOver>
     {
         playerLevel = Managers.GameSceneManager.Player.GetComponent<Level>();
 
-        levelText.text = playerLevel.level.ToString();
+        levelText.text = "Level : " + playerLevel.level.ToString();
     }
 }

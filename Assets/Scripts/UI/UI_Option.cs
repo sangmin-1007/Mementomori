@@ -42,7 +42,7 @@ public class UI_Option : UI_Base<UI_Option>
 
     void ChangeMasterSound(float volume)
     {
-        sfxMixer.SetFloat("Master", Mathf.Log10(volume) * 20);
+        //sfxMixer.SetFloat("Master", Mathf.Log10(volume) * 20);
         audioMixer.SetFloat("Master", Mathf.Log10(volume) * 20);
 
         PlayerPrefs.SetFloat(MASTER_VOLUME_KEY, volume);
@@ -59,7 +59,7 @@ public class UI_Option : UI_Base<UI_Option>
 
     void ChangeSfxSound(float volume)
     {
-        sfxMixer.SetFloat("Master", Mathf.Log10(volume) * 20);
+        audioMixer.SetFloat("SFX", Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat(SFX_VOLUME_KEY, volume);
         PlayerPrefs.Save();
     }

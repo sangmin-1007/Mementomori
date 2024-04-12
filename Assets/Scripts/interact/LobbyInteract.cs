@@ -19,7 +19,6 @@ public class LobbyInteract : MonoBehaviour
         switch(interactType)
         {
             case InteractType.Shop:
-                Managers.SoundManager.Play("Effect/StoreBell", Sound.Effect);
                 if (Managers.UI_Manager.IsActive<UI_Shop>())
                 {
                     Managers.UI_Manager.HideUI<UI_Shop>();

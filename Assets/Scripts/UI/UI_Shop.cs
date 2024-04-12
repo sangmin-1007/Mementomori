@@ -61,6 +61,7 @@ public class UI_Shop : UI_Base<UI_Shop>
     public override void OnEnable()
     {
         base.OnEnable();
+        Managers.SoundManager.Play("Effect/StoreBell", Sound.Effect);
         UpdateInventory();
         PopUpUIClear();
     }
