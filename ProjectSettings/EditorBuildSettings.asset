@@ -15,9 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/ReleaseScene/GameScene.unity
     guid: 0ea90261eea6bfd41b8b914ba5366576
   - enabled: 1
-    path: Assets/Scenes/DevelopScene/LIK/GameScene-LIK.unity
-    guid: f23693fae4190b44a98b881eba88f0a6
-  - enabled: 1
     path: Assets/Scenes/ReleaseScene/EndingScene.unity
     guid: e7ae861c32d2e3f43912fd4cfb0954fa
   m_configObjects:

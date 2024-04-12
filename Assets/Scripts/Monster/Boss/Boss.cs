@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Boss : MonoBehaviour
 {
@@ -17,5 +19,9 @@ public class Boss : MonoBehaviour
     {
         Spawner.boss = false;
         Spawner.stage++;
+        if(Spawner.stage == 5)
+        {
+            SceneManager.LoadScene("EndingScene");
+        }
     }
 }

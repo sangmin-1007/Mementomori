@@ -39,7 +39,7 @@ public class Spawner : MonoBehaviour
 
         spawnTimer += Time.deltaTime;
 
-        if (spawnTimer > 0.5f && count < 30)
+        if (spawnTimer > 0.5f && count < 1)
         {
             spawnTimer = 0f;
 

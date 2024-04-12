@@ -24,7 +24,7 @@ public class PlayerStatsHandler : MonoBehaviour
 
     [SerializeField] private CharacterType characterType;
 
-    [SerializeField] private PlayerStats baseStats;
+    public PlayerStats baseStats;
     public int allHealth;
     public float allAttack;
     public float allDefense;

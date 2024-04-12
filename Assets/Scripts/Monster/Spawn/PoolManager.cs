@@ -31,7 +31,7 @@ public class PoolManager : MonoBehaviour
     {
         GameObject select = null;
 
-        foreach (GameObject item in pools[index])
+        foreach (GameObject item in pools[Mathf.Min(index, pools.Length - 1)])
         {
             if (!item.activeSelf)
             {
@@ -43,8 +43,8 @@ public class PoolManager : MonoBehaviour
 
         if (!select)
         {
-            select = Instantiate(prefabs[index], transform);
-            pools[index].Add(select);
+            select = Instantiate(prefabs[Mathf.Min(index, pools.Length - 1)], transform);
+            pools[Mathf.Min(index, pools.Length - 1)].Add(select);
         }
 
         return select;

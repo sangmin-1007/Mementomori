@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FinalBossAttack : MonoBehaviour
 {
+    [SerializeField] private AttackSO attackSO;
     PlayerStatsHandler Stats;
     HealthSystem monsterHealthSystem;
     HealthSystem playerHealthSystem;
@@ -95,20 +96,21 @@ public class FinalBossAttack : MonoBehaviour
                 animator.SetTrigger("Attack");
                 break;
             case 2:
-                animator.SetTrigger("Attack2");
+                int randomIndex = Random.Range(0, 3);
+                RandomAttack(randomIndex);
+
                 break;
             case 3:
-                animator.SetTrigger("Attack3");
+                int randomIndex2 = Random.Range(0, 4);
+                RandomAttack(randomIndex2);
                 break;
             default:
                 break;
         }
 
-        OnShoot(Stats.CurrentStates.attackSO);
-
         yield return new WaitForSeconds(1f);
+            isAttacking = false;
 
-        isAttacking = false;
     }
 
     void OnMove()
@@ -152,9 +154,9 @@ public class FinalBossAttack : MonoBehaviour
         }
     }
 
-    private void OnShoot(AttackSO attackSO)
+    private void OnShoot(int attackType)
     {
-        switch (phase)
+        switch (attackType)
         {
             case 1:
                 Collider2D[] collider2D = Physics2D.OverlapBoxAll(pos2.position, boxSize2, 0);
@@ -373,6 +375,27 @@ public class FinalBossAttack : MonoBehaviour
                         }
                     }
                 }
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void RandomAttack(int index)
+    {
+        switch(index)
+        {
+            case 0:
+                animator.SetTrigger("Attack");
+                break;
+            case 1:
+                animator.SetTrigger("Attack2");
+                break;
+            case 2:
+                animator.SetTrigger("Attack12");
+                break;
+            case 3:
+                animator.SetTrigger("Attack3");
                 break;
             default:
                 break;
