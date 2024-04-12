@@ -17,6 +17,8 @@ public class Spawner : MonoBehaviour
     float spawnTimer;
     public static int count;
 
+    HealthSystem player;
+
     private void Start()
     {
         count = 0;
@@ -30,6 +32,7 @@ public class Spawner : MonoBehaviour
         {
             _spawnManager = Managers.GameSceneManager.MonsterSpawner.GetComponent<SpawnManager>();
         }
+        player = GetComponentInParent<HealthSystem>();
     }
 
     private void Update()
@@ -66,7 +69,7 @@ public class Spawner : MonoBehaviour
         {
             boss = false;
             bossTimer = 60;
-            Managers.GameManager.GameOver();
+            player.ChangeHealth(-10000f);
         }
     }
 
