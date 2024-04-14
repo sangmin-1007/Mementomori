@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   size: 0
   delay: 0
-  power: 5
+  power: 25
   speed: 0
   target:
     serializedVersion: 2

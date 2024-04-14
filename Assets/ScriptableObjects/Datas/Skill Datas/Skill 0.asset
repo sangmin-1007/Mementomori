@@ -15,30 +15,30 @@ MonoBehaviour:
   skillType: 2
   skillId: 0
   skillName: "\uD68C\uBCF5\uC758 \uCD95\uBCF5"
-  skillDesc: "\uCCB4\uB825 {0} \uD68C\uBCF5\n\uCD5C\uB300 \uCCB4\uB825 {0} \uC99D\uAC00"
+  skillDesc: "\uCD5C\uB300 \uCCB4\uB825 {0} \uC99D\uAC00"
   skillIcon: {fileID: 21300000, guid: 5fff8175e6b5f1d479107759560751d1, type: 3}
   baseDamage: 0
   baseCount: 0
   damages:
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
   counts: 
   projectile: {fileID: 0}
