@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,11 +18,11 @@ public class UI_HUD : UI_Base<UI_HUD>
     [SerializeField] private Image expBar;
 
 
-
     [SerializeField] private TextMeshProUGUI levelText;
     [SerializeField] private TextMeshProUGUI timeText;
 
     public BossHPBar bossHpBar;
+    public Image FadeInImage;
 
     private HealthSystem playerStats;
     private Level playerLevel;
@@ -108,5 +109,11 @@ public class UI_HUD : UI_Base<UI_HUD>
         {
             expBar.fillAmount = 0f;
         }
+    }
+
+    public void FadeInBackGround()
+    {
+        FadeInImage.gameObject.SetActive(true);
+        FadeInImage.DOFade(1f, 8f);
     }
 }

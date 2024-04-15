@@ -4,9 +4,20 @@ using System.Collections.Generic;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static Cinemachine.CinemachineCore;
+
+public enum BossType
+{
+    Dragonewt,
+    Germud,
+    CarcassesCollector,
+    Ifrit
+}
 
 public class Boss : MonoBehaviour
 {
+    [SerializeField] private BossType bossType;
+
     HealthSystem _healthSystem;
     PlayerStatsHandler stats;
     
@@ -30,9 +41,10 @@ public class Boss : MonoBehaviour
             _hud = Managers.UI_Manager.UI_List["UI_HUD"].GetComponent<UI_HUD>();
         }
 
+        BossNameChange(bossType);
+        maxHP = stats.baseStats.maxHealth;
         _hud.bossHpBar.gameObject.SetActive(true);
 
-        maxHP = stats.baseStats.maxHealth;
     }
 
     private void Update()
@@ -50,12 +62,32 @@ public class Boss : MonoBehaviour
         if(Spawner.stage == 5)
         {
             gameEnd = true;
-            Invoke("GameEnd", 5f);
+            _hud.FadeInBackGround();
+            Invoke("GameEnd", 10f);
         }
     }
 
     void GameEnd()
     {
         SceneManager.LoadScene("EndingScene");
+    }
+
+    private void BossNameChange(BossType bossType)
+    {
+        switch(bossType)
+        {
+            case BossType.Dragonewt:
+                _hud.bossHpBar.bossNameText.text = "������Ʈ";
+                break;
+            case BossType.Germud:
+                _hud.bossHpBar.bossNameText.text = "�Ը�����";
+                break;
+            case BossType.CarcassesCollector:
+                _hud.bossHpBar.bossNameText.text = "��ü ������";
+                break;
+            case BossType.Ifrit:
+                _hud.bossHpBar.bossNameText.text = "������Ʈ";
+                break;
+        }
     }
 }

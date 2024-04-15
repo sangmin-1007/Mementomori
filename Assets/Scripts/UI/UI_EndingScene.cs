@@ -45,7 +45,7 @@ public class UI_EndingScene : UI_Base<UI_EndingScene>
 
 
         endText.DOFade(1f, 8f);
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(9.5f);
 
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
