@@ -11,7 +11,7 @@ public class UserData : MonoBehaviour
 
     public List<ItemData> playerItemAcquired = new List<ItemData>();
 
-    public int playerGold = 10000;
+    public int playerGold;
     public int playerDeathCount;
 
     public int acquisitionGold = 0;
@@ -25,10 +25,7 @@ public class UserData : MonoBehaviour
     public void AddItem(ItemData itemDatas)
     {
         if(playerInventoryItemData.Count >= 29)
-        {
-            Debug.Log("°¡µæ Ã¡½À´Ï´Ù");
             return;
-        }
 
         playerInventoryItemData.Add(itemDatas);
         if(Managers.UI_Manager.IsActive<UI_Inventory>())
@@ -60,10 +57,7 @@ public class UserData : MonoBehaviour
     public void StorageKeepItemData(ItemData itemDatas)
     {
         if(storageItemData.Count >= 29)
-        {
-            Debug.Log("°¡µæ Ã¡½À´Ï´Ù");
             return;
-        }
 
         storageItemData.Add(itemDatas);
         playerInventoryItemData.Remove(itemDatas);
@@ -72,10 +66,7 @@ public class UserData : MonoBehaviour
     public void  StorageTakeOutItemData(ItemData itemDatas)
     {
         if(playerInventoryItemData.Count >= 29)
-        {
-            Debug.Log("°¡µæ Ã¡½À´Ï´Ù");
             return;
-        }
 
         storageItemData.Remove(itemDatas);
         playerInventoryItemData.Add(itemDatas);

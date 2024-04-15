@@ -8,15 +8,15 @@ using UnityEngine.UI;
 
 public class UI_SelectData : UI_Base<UI_SelectData>
 {
-    [SerializeField] private GameObject[] saveText; // 저장된 데이터가 있을때 표시될 텍스트
-    [SerializeField] private GameObject[] emptyText; // 저장된 데이터가 없을때 표시될 텍스트
+    [SerializeField] private GameObject[] saveText;
+    [SerializeField] private GameObject[] emptyText;
 
-    [SerializeField] private TextMeshProUGUI[] lastPlaytimeText; // 마지막으로 플레이한 시간을 표시하기 위한 텍스트
-    [SerializeField] private TextMeshProUGUI[] deathText; // 저장된 데이터의 플레이어가 총 몇번 죽었는지 표시하기 위한 텍스트
+    [SerializeField] private TextMeshProUGUI[] lastPlaytimeText;
+    [SerializeField] private TextMeshProUGUI[] deathText;
 
     [SerializeField] private Button[] trashButton;
 
-    private bool[] savefile = new bool[3]; // 세이브 파일 존재유무 확인
+    private bool[] savefile = new bool[3];
 
     private void Start()
     {
@@ -53,12 +53,11 @@ public class UI_SelectData : UI_Base<UI_SelectData>
 
     public void FirstGameStart()
     {
-        if (!savefile[Managers.DataManager.nowSlot]) // 현재 슬롯의 데이터가 없다면
+        if (!savefile[Managers.DataManager.nowSlot])
         {
-            Managers.UserData.playerGold = 100000; // 초기에 플레이어 골드를 1000골드를 지급해주고
-            Managers.DataManager.Save(); // 현재 정보를 저장해준다
+            Managers.UserData.playerGold = 500;
+            Managers.DataManager.Save(); 
         }
-        //Managers.UI_Manager.ShowLoadingUI("LobbyScene");
         Managers.UI_Manager.ShowUI<UI_StartMovie>();
     }
 
