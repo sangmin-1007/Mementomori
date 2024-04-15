@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditorInternal.VR;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -40,18 +41,15 @@ public class Skill : MonoBehaviour
         {
             case SkillData1.SkillType.Melee:
             case SkillData1.SkillType.Range:
-                textDesc.text = string.Format(data.skillDesc, data.damages[skillLevel], data.counts[skillLevel]);
+                textDesc.text = string.Format(data.skillDesc, data.damages[Mathf.Min(4,skillLevel)], data.counts[Mathf.Min(4,skillLevel)]);
                 break;
             case SkillData1.SkillType.Statup:
-                textDesc.text = string.Format(data.skillDesc, data.damages[skillLevel]);
-                break;
             case SkillData1.SkillType.AttackSkill:
-                textDesc.text = string.Format(data.skillDesc, data.damages[skillLevel]);
-                break;
             case SkillData1.SkillType.DefenseSkill:
+            case SkillData1.SkillType.Heal:
                 textDesc.text = string.Format(data.skillDesc, data.damages[skillLevel]);
                 break;
-            case SkillData1.SkillType.Heal:
+            default:
                 textDesc.text = string.Format(data.skillDesc, data.damages[skillLevel]);
                 break;
         }
@@ -107,6 +105,9 @@ public class Skill : MonoBehaviour
             case SkillData1.SkillType.Heal:
                 healthSystem = Managers.GameSceneManager.Player.GetComponent<HealthSystem>();
                 healthSystem.ChangeHealth(data.baseDamage);
+                break;
+            case SkillData1.SkillType.Money:
+                Managers.UserData.acquisitionGold += (int)data.damages[skillLevel];
                 break;
         }
         skillLevel++;
