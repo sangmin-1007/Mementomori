@@ -35,6 +35,7 @@ public class SoundManager :MonoBehaviour
         {
             GameObject go = new GameObject { name = soundNames[i] };
             audioSources[i] = go.AddComponent<AudioSource>();
+            audioSources[i].volume = 0.7f;
             DontDestroyOnLoad(go);
         }
      
@@ -47,7 +48,7 @@ public class SoundManager :MonoBehaviour
         if (path.Contains("Sounds/") == false)
             path =$"Sounds/{path}";
 
-
+        
         if(type == Sound.Bgm)
         {
            
@@ -68,6 +69,7 @@ public class SoundManager :MonoBehaviour
             audioSource.clip = audioclip;
 
             audioSource.outputAudioMixerGroup = bgmMixer[0];
+           
           
             audioSource.Play();
             audioSources[(int)Sound.Bgm].loop = true;
