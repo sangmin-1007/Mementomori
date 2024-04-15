@@ -26,7 +26,7 @@ public class SoundManager :MonoBehaviour
     {
       
         bgmMixer = Resources.Load<AudioMixerGroup>("Sounds/AudioMixer");
-        sfxMixer = Resources.Load<AudioMixerGroup>("Sounds/SfxMixer");
+        sfxMixer = Resources.Load<AudioMixerGroup>("Sounds/AudioMixer");
         string[] soundNames = System.Enum.GetNames(typeof(Sound));
         for (int i = 0; i < soundNames.Length - 1; i++)
         {

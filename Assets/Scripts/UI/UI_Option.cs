@@ -11,23 +11,23 @@ public class UI_Option : UI_Base<UI_Option>
     [SerializeField] private Button quitGameButton;
 
 
-    [SerializeField] private AudioMixer MasterMixer;
+
     [SerializeField] private AudioMixer audioMixer;
-    [SerializeField] private AudioMixer sfxMixer;
+  
     [SerializeField] private Slider bgmSlider;
     [SerializeField] private Slider sfxSlider;
     [SerializeField] private Slider masterSlider;
 
     private const string BGM_VOLUME_KEY = "BGMVolume";
-    private const string SFX_VOLUME_KEY = "SFXVolume";
-    private const string MASTER_VOLUME_KEY = "MasterVolume";
+    private const string Effect_VOLUME_KEY = "EffectVolume";
+    private const string Master_VOLUME_KEY = "MasterVolume";
 
 
     private void Awake()
     {
         masterSlider.onValueChanged.AddListener(ChangeMasterSound);
         bgmSlider.onValueChanged.AddListener(ChangeBgmSound);
-        sfxSlider.onValueChanged.AddListener(ChangeSfxSound);
+        sfxSlider.onValueChanged.AddListener(ChangeEffectSound);
    
     }
 
@@ -35,18 +35,17 @@ public class UI_Option : UI_Base<UI_Option>
     {
         base.OnEnable();
         bgmSlider.value = PlayerPrefs.GetFloat(BGM_VOLUME_KEY);
-        sfxSlider.value = PlayerPrefs.GetFloat(SFX_VOLUME_KEY);
-        masterSlider.value = PlayerPrefs.GetFloat(MASTER_VOLUME_KEY);
+        sfxSlider.value = PlayerPrefs.GetFloat(Effect_VOLUME_KEY);
+        masterSlider.value = PlayerPrefs.GetFloat(Master_VOLUME_KEY);
 
     }
 
     void ChangeMasterSound(float volume)
     {
-        //sfxMixer.SetFloat("Master", Mathf.Log10(volume) * 20);
         audioMixer.SetFloat("Master", Mathf.Log10(volume) * 20);
 
-        PlayerPrefs.SetFloat(MASTER_VOLUME_KEY, volume);
-        PlayerPrefs.Save();
+        PlayerPrefs.SetFloat(Master_VOLUME_KEY, volume);
+        Managers.DataManager.Save();
     }
 
     void ChangeBgmSound(float volume)
@@ -54,14 +53,14 @@ public class UI_Option : UI_Base<UI_Option>
 
         audioMixer.SetFloat("BGM", Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat(BGM_VOLUME_KEY, volume);
-        PlayerPrefs.Save();
+        Managers.DataManager.Save();
     }
 
-    void ChangeSfxSound(float volume)
+    void ChangeEffectSound(float volume)
     {
-        audioMixer.SetFloat("SFX", Mathf.Log10(volume) * 20);
-        PlayerPrefs.SetFloat(SFX_VOLUME_KEY, volume);
-        PlayerPrefs.Save();
+        audioMixer.SetFloat("Effect", Mathf.Log10(volume) * 20);
+        PlayerPrefs.SetFloat(Effect_VOLUME_KEY, volume);
+        Managers.DataManager.Save();
     }
 
     public void OnClickOptionExitButton()

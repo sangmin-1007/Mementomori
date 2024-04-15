@@ -761,7 +761,7 @@ GameObject:
   - component: {fileID: 1113462068462317933}
   - component: {fileID: 8874930659732653986}
   m_Layer: 5
-  m_Name: SFXVolume
+  m_Name: EffectVolume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -828,7 +828,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SFX Volume
+  m_Text: Effect Volume
 --- !u!1 &3684469039303385098
 GameObject:
   m_ObjectHideFlags: 0
@@ -2344,9 +2344,7 @@ MonoBehaviour:
   saveButton: {fileID: 8081218762949244337}
   exitButton: {fileID: 5689886959308482505}
   quitGameButton: {fileID: 7916969789538259200}
-  MasterMixer: {fileID: 24100000, guid: ff1f4f26d2582694c8e7f2554a0ef0c7, type: 2}
   audioMixer: {fileID: 24100000, guid: 1bd86a7dbc1649a42a09e481fac3ebc9, type: 2}
-  sfxMixer: {fileID: 24100000, guid: 691ee971a60808b42a5340b0eb9247e4, type: 2}
   bgmSlider: {fileID: 54952355996563733}
   sfxSlider: {fileID: 3347650640036057093}
   masterSlider: {fileID: 5296754289122148020}
