@@ -43,15 +43,16 @@ public class ItemDB
     public int GetRandomItemID()
     {
 
-        int randomType = UnityEngine.Random.Range(0,Enum.GetValues(typeof(ItemType)).Length - 1);
-        int randomIndex = UnityEngine.Random.Range(1, 101);
-        ItemGrade randomGrade = RandomItemGrade(randomIndex);
+        int randomType = UnityEngine.Random.Range(0, Enum.GetValues(typeof(ItemType)).Length - 1);
+        int randomGrade = UnityEngine.Random.Range(1, 101);
+        int randomIndex = UnityEngine.Random.Range(0, 3);
+        ItemGrade itemGrade = RandomItemGrade(randomGrade);
 
         foreach (var item in _items)
         {
-            if(item.Value.Type == (ItemType)randomType && item.Value.Grade == randomGrade)
+            if(item.Value.Type == (ItemType)randomType && item.Value.Grade == itemGrade)
             {
-                return item.Key;
+                return item.Key + randomIndex;
             }
         }
 
