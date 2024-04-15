@@ -56,6 +56,7 @@ public class UI_GameOver : UI_Base<UI_GameOver>
         Managers.UserData.playerGold += Managers.UserData.acquisitionGold;
         Managers.UserData.acquisitionGold = 0;
         Managers.UserData.playerItemAcquired.Clear();
+        Managers.DataManager.Save();
         Managers.UI_Manager.ShowLoadingUI("LobbyScene");
     }
 

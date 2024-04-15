@@ -71,7 +71,7 @@ public class ItemObject : MonoBehaviour
         else
         {
             Managers.ItemObjectPool.DisableItem(gameObject);
-            level.IncreaseExprience(50);
+            level.IncreaseExprience(item.Exp);
         }
       
     }

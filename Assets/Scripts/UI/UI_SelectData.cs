@@ -55,7 +55,7 @@ public class UI_SelectData : UI_Base<UI_SelectData>
     {
         if (!savefile[Managers.DataManager.nowSlot])
         {
-            Managers.UserData.playerGold = 500;
+            Managers.UserData.playerGold = 1000;
             Managers.DataManager.Save(); 
         }
         Managers.UI_Manager.ShowUI<UI_StartMovie>();
