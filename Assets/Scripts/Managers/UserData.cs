@@ -11,6 +11,12 @@ public class UserData : MonoBehaviour
 
     public List<ItemData> playerItemAcquired = new List<ItemData>();
 
+    public float Master_VOLUME_KEY = 1f;
+    public float BGM_VOLUME_KEY = 1f;
+    public float Effect_VOLUME_KEY = 1f;
+
+
+
     public int playerGold;
     public int playerDeathCount;
 

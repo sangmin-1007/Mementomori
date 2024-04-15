@@ -19,9 +19,7 @@ public class UI_Option : UI_Base<UI_Option>
     [SerializeField] private Slider effectSlider;
     [SerializeField] private Slider masterSlider;
 
-    private const string BGM_VOLUME_KEY = "BGMVolume";
-    private const string Effect_VOLUME_KEY = "EffectVolume";
-    private const string Master_VOLUME_KEY = "MasterVolume";
+
 
 
     private void Awake()
@@ -35,32 +33,34 @@ public class UI_Option : UI_Base<UI_Option>
     public override void OnEnable()
     {
         base.OnEnable();
-        bgmSlider.value = PlayerPrefs.GetFloat(BGM_VOLUME_KEY);
-        effectSlider.value = PlayerPrefs.GetFloat(Effect_VOLUME_KEY);
-        masterSlider.value = PlayerPrefs.GetFloat(Master_VOLUME_KEY);
+
+        masterSlider.value = Managers.UserData.Master_VOLUME_KEY;
+        bgmSlider.value = Managers.UserData.BGM_VOLUME_KEY;
+        effectSlider.value = Managers.UserData.Effect_VOLUME_KEY;
+   
 
     }
 
     void ChangeMasterSound(float volume)
     {
         audioMixer.SetFloat("Master", Mathf.Log10(volume) * 20);
-        PlayerPrefs.SetFloat(Master_VOLUME_KEY, volume);
-        PlayerPrefs.Save();
+        Managers.UserData.Master_VOLUME_KEY = volume;
+        
+     
     }
 
     void ChangeBgmSound(float volume)
     {
 
         audioMixer.SetFloat("BGM", Mathf.Log10(volume) * 20);
-        PlayerPrefs.SetFloat(BGM_VOLUME_KEY, volume);
-        PlayerPrefs.Save();
+        Managers.UserData.BGM_VOLUME_KEY = volume;
+
     }
 
     void ChangeEffectSound(float volume)
     {
         audioMixer.SetFloat("Effect", Mathf.Log10(volume) * 20);
-        PlayerPrefs.SetFloat(Effect_VOLUME_KEY, volume);
-        PlayerPrefs.Save();
+        Managers.UserData.Effect_VOLUME_KEY = volume;
     }
 
     public void OnClickOptionExitButton()
