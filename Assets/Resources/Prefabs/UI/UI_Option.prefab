@@ -2345,8 +2345,9 @@ MonoBehaviour:
   exitButton: {fileID: 5689886959308482505}
   quitGameButton: {fileID: 7916969789538259200}
   audioMixer: {fileID: 24100000, guid: 1bd86a7dbc1649a42a09e481fac3ebc9, type: 2}
+  effectMixer: {fileID: 24100000, guid: 1260933a3d829ce489e88e4af6d01adf, type: 2}
   bgmSlider: {fileID: 54952355996563733}
-  sfxSlider: {fileID: 3347650640036057093}
+  effectSlider: {fileID: 3347650640036057093}
   masterSlider: {fileID: 5296754289122148020}
 --- !u!1 &7358609272565207140
 GameObject:
@@ -2359,7 +2360,7 @@ GameObject:
   - component: {fileID: 5575174653848984620}
   - component: {fileID: 3347650640036057093}
   m_Layer: 5
-  m_Name: SFXSlider
+  m_Name: EffectSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

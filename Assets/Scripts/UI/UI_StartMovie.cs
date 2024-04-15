@@ -11,6 +11,7 @@ public class UI_StartMovie : UI_Base<UI_StartMovie>
     public override void OnEnable()
     {
         base.OnEnable();
+        Managers.SoundManager.AudioClear();
 
     }
 

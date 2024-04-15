@@ -13,9 +13,10 @@ public class UI_Option : UI_Base<UI_Option>
 
 
     [SerializeField] private AudioMixer audioMixer;
-  
+
+
     [SerializeField] private Slider bgmSlider;
-    [SerializeField] private Slider sfxSlider;
+    [SerializeField] private Slider effectSlider;
     [SerializeField] private Slider masterSlider;
 
     private const string BGM_VOLUME_KEY = "BGMVolume";
@@ -27,7 +28,7 @@ public class UI_Option : UI_Base<UI_Option>
     {
         masterSlider.onValueChanged.AddListener(ChangeMasterSound);
         bgmSlider.onValueChanged.AddListener(ChangeBgmSound);
-        sfxSlider.onValueChanged.AddListener(ChangeEffectSound);
+        effectSlider.onValueChanged.AddListener(ChangeEffectSound);
    
     }
 
@@ -35,7 +36,7 @@ public class UI_Option : UI_Base<UI_Option>
     {
         base.OnEnable();
         bgmSlider.value = PlayerPrefs.GetFloat(BGM_VOLUME_KEY);
-        sfxSlider.value = PlayerPrefs.GetFloat(Effect_VOLUME_KEY);
+        effectSlider.value = PlayerPrefs.GetFloat(Effect_VOLUME_KEY);
         masterSlider.value = PlayerPrefs.GetFloat(Master_VOLUME_KEY);
 
     }
@@ -43,9 +44,8 @@ public class UI_Option : UI_Base<UI_Option>
     void ChangeMasterSound(float volume)
     {
         audioMixer.SetFloat("Master", Mathf.Log10(volume) * 20);
-
         PlayerPrefs.SetFloat(Master_VOLUME_KEY, volume);
-        Managers.DataManager.Save();
+        PlayerPrefs.Save();
     }
 
     void ChangeBgmSound(float volume)
@@ -53,14 +53,14 @@ public class UI_Option : UI_Base<UI_Option>
 
         audioMixer.SetFloat("BGM", Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat(BGM_VOLUME_KEY, volume);
-        Managers.DataManager.Save();
+        PlayerPrefs.Save();
     }
 
     void ChangeEffectSound(float volume)
     {
         audioMixer.SetFloat("Effect", Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat(Effect_VOLUME_KEY, volume);
-        Managers.DataManager.Save();
+        PlayerPrefs.Save();
     }
 
     public void OnClickOptionExitButton()
