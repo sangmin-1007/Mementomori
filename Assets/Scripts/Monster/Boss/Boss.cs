@@ -9,6 +9,8 @@ public class Boss : MonoBehaviour
 {
     HealthSystem _healthSystem;
     PlayerStatsHandler stats;
+    
+    static public bool gameEnd = false;
 
     private UI_HUD _hud;
     private float maxHP, curHp;
@@ -47,7 +49,13 @@ public class Boss : MonoBehaviour
         Spawner.stage++;
         if(Spawner.stage == 5)
         {
-            SceneManager.LoadScene("EndingScene");
+            gameEnd = true;
+            Invoke("GameEnd", 5f);
         }
+    }
+
+    void GameEnd()
+    {
+        SceneManager.LoadScene("EndingScene");
     }
 }

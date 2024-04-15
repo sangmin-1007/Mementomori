@@ -14,17 +14,23 @@ public class PoolManager : MonoBehaviour
     {
         pools = new List<GameObject>[prefabs.Length];
 
-        for(int i = 0; i < pools.Length; i++)
+        for (int i = 0; i < pools.Length; i++)
         {
             pools[i] = new List<GameObject>();
         }
 
         skillPools = new List<GameObject>[skillPrefabs.Length];
 
-        for(int i =0; i < skillPrefabs.Length; i++)
+        for (int i = 0; i < skillPrefabs.Length; i++)
         {
             skillPools[i] = new List<GameObject>();
         }
+    }
+
+    private void Update()
+    {
+        if(Boss.gameEnd)
+            GameEnd();
     }
 
     public GameObject Get(int index)
@@ -71,5 +77,10 @@ public class PoolManager : MonoBehaviour
         }
 
         return select;
+    }
+
+    public void GameEnd()
+    {
+        gameObject.SetActive(false);
     }
 }
