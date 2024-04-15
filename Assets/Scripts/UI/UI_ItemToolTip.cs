@@ -21,11 +21,35 @@ public class UI_ItemToolTip : UI_Base<UI_ItemToolTip>
 
     private SlotType selectedSlotType;
 
+    private float xPos;
+    private RectTransform rt;
+
     public override void OnEnable()
     {
         base.OnEnable();
 
         InputKeyText();
+    }
+
+    private void Start()
+    {
+
+        xPos = GetComponentInParent<CanvasScaler>().referenceResolution.x * 0.5f;
+        rt = toolTip.GetComponent<RectTransform>();
+    }
+
+    private void Update()
+    {
+        toolTip.transform.position = Input.mousePosition;
+
+        if (rt.anchoredPosition.x + rt.sizeDelta.x > xPos && rt.anchoredPosition.y + rt.sizeDelta.y > -70f)
+            rt.pivot = new Vector2(1, 1);
+        else if (rt.anchoredPosition.x + rt.sizeDelta.x < xPos && rt.anchoredPosition.y + rt.sizeDelta.y > -70f)
+            rt.pivot = new Vector2(0, 1);
+        else if (rt.anchoredPosition.x + rt.sizeDelta.x > xPos && rt.anchoredPosition.y + rt.sizeDelta.y < -70f)
+            rt.pivot = new Vector2(1, 0);
+        else if (rt.anchoredPosition.y + rt.sizeDelta.y < -70f)
+            rt.pivot = new Vector2(0, 0);
     }
 
     private void InputKeyText()
@@ -55,14 +79,10 @@ public class UI_ItemToolTip : UI_Base<UI_ItemToolTip>
         }
     }
 
-    public void ItemInfoText(ItemData itemData,Vector3 _pos)
+    public void ItemInfoText(ItemData itemData)
     {
         ItemNameText.text = itemData.Name;
         descriptionText.text = itemData.Description;
-
-        _pos += new Vector3(toolTip.GetComponent<RectTransform>().rect.width * 0.5f,
-            -toolTip.GetComponent<RectTransform>().rect.height * 0.5f);
-        toolTip.transform.position = _pos;
 
         ItemNameText.color = Colors.ItemGrade[(int)itemData.Grade];
         outLine.effectColor = Colors.ItemGrade[(int)itemData.Grade];

@@ -109,27 +109,27 @@ public class ItemSlotUI : MonoBehaviour,IPointerClickHandler,IPointerEnterHandle
         {
             case SlotType.Inventory:
                 Managers.UserData.inventoryIndex = index;
-                toolTip.ItemInfoText(curSlot.item,transform.position);
+                toolTip.ItemInfoText(curSlot.item);
                 break;
             case SlotType.Equip:
                 Managers.UserData.equipItemIndex = index;
-                toolTip.ItemInfoText(curSlot.item, transform.position);
+                toolTip.ItemInfoText(curSlot.item);
                 break;
             case SlotType.Storage:
                 Managers.UserData.storageIndex = index;
-                toolTip.ItemInfoText(curSlot.item, transform.position);
+                toolTip.ItemInfoText(curSlot.item);
                 break;
             case SlotType.Storage_Inventory:
                 Managers.UserData.inventoryIndex = index;
-                toolTip.ItemInfoText(curSlot.item, transform.position);
+                toolTip.ItemInfoText(curSlot.item);
                 break;
             case SlotType.Shop:
                 Managers.UserData.shopIndex = index;
-                toolTip.ItemInfoText(curSlot.item, transform.position);
+                toolTip.ItemInfoText(curSlot.item);
                 break;
             case SlotType.Shop_Inventory:
                 Managers.UserData.inventoryIndex = index;
-                toolTip.ItemInfoText(curSlot.item, transform.position);
+                toolTip.ItemInfoText(curSlot.item);
                 break;
         }
     }
