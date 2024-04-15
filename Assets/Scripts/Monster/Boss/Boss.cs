@@ -77,16 +77,16 @@ public class Boss : MonoBehaviour
         switch(bossType)
         {
             case BossType.Dragonewt:
-                _hud.bossHpBar.bossNameText.text = "������Ʈ";
+                _hud.bossHpBar.bossNameText.text = "드라고뉴트";
                 break;
             case BossType.Germud:
-                _hud.bossHpBar.bossNameText.text = "�Ը�����";
+                _hud.bossHpBar.bossNameText.text = "게르뮈드";
                 break;
             case BossType.CarcassesCollector:
-                _hud.bossHpBar.bossNameText.text = "��ü ������";
+                _hud.bossHpBar.bossNameText.text = "시체 수집가";
                 break;
             case BossType.Ifrit:
-                _hud.bossHpBar.bossNameText.text = "������Ʈ";
+                _hud.bossHpBar.bossNameText.text = "악마 : 이프리트";
                 break;
         }
     }
