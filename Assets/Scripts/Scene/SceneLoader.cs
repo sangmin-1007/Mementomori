@@ -57,7 +57,6 @@ public class SceneLoader : MonoBehaviour
                 break;
             //EndingScene
             case 3:
-                Managers.SoundManager.Play("Bgm/EndingScene", Sound.Bgm);
                 Managers.UI_Manager.ShowUI<UI_EndingScene>();
                 break;
         }

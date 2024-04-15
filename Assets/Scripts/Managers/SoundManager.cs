@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,8 @@ public class SoundManager :MonoBehaviour
     AudioSource[] audioSources = new AudioSource[(int)Sound.MaxCount];
     Dictionary<string,AudioClip> audioClips = new Dictionary<string,AudioClip>();
     AudioMixer audioMixer;
+
+    AudioMixerGroup[] masterMixer;
     AudioMixerGroup[] bgmMixer;
     AudioMixerGroup[] effectMixer;
 
@@ -28,6 +31,7 @@ public class SoundManager :MonoBehaviour
     public void Awake()
     {
         audioMixer = Resources.Load<AudioMixer>("Sounds/AudioMixer");
+        masterMixer = audioMixer.FindMatchingGroups("Master");
         bgmMixer = audioMixer.FindMatchingGroups("BGM");
         effectMixer = audioMixer.FindMatchingGroups("Effect");
         string[] soundNames = System.Enum.GetNames(typeof(Sound));
@@ -117,6 +121,15 @@ public class SoundManager :MonoBehaviour
             audioSource.clip = null;
         }
         audioClips.Clear();
+    }
+
+    public void ChangeVolume()
+    {
+        masterMixer[0].audioMixer.SetFloat("Master", Mathf.Log10(Managers.UserData.Master_VOLUME_KEY) * 20);
+        Debug.Log(Managers.UserData.Master_VOLUME_KEY);
+        
+        bgmMixer[0].audioMixer.SetFloat("BGM", Mathf.Log10(Managers.UserData.BGM_VOLUME_KEY) * 20);
+        effectMixer[0].audioMixer.SetFloat("Effect", Mathf.Log10(Managers.UserData.Effect_VOLUME_KEY) * 20);
     }
 
  
