@@ -64,7 +64,6 @@ public class ContactAttack : MonoBehaviour
 
         AttackSO attackSO = Stats.CurrentStates.attackSO;
         bool hasBeenChanged = playerHealthSystem.ChangeHealth(-attackSO.power + (attackSO.power * CurrentDefense/100));
-        //Managers.SoundManager.Play("Effect/PlayerAttackFail1", Sound.Effect);
 
         yield return new WaitForSeconds(1f);
 

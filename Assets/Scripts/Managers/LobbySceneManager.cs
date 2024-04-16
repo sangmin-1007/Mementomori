@@ -5,8 +5,6 @@ using UnityEngine;
 public class LobbySceneManager : MonoBehaviour
 {
     public GameObject Player { get; private set; }
-
-
  
     public void IntializeLobbyScene()
     {

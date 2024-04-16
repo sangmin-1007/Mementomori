@@ -22,7 +22,7 @@ public class Managers : MonoBehaviour
     private DataManager _dataManager;
     private PlayerEquipStatsManager _playerEquipStatsManager;
 
-    // Manager Singletone
+
     public static UI_Manager UI_Manager => Instance._uiManager;
     public static GameManager GameManager => Instance._gameManager;
     public static LobbySceneManager LobbySceneManager => Instance._LobbySceneManager;
@@ -58,10 +58,6 @@ public class Managers : MonoBehaviour
 
 
 
-
-
-
-            //TODO Manager registration
             if (!go.TryGetComponent(out instance._uiManager))
             {
                 instance._uiManager = go.AddComponent<UI_Manager>();

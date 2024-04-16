@@ -27,7 +27,6 @@ public class UI_ItemToolTip : UI_Base<UI_ItemToolTip>
     public override void OnEnable()
     {
         base.OnEnable();
-
         InputKeyText();
     }
 

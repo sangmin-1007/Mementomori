@@ -23,12 +23,6 @@ public class GameManager : MonoBehaviour
         totalPlayTime += Time.unscaledDeltaTime;
     }
 
-    public void GameClear()
-    {
-        Managers.UI_Manager.ShowUI<UI_GameClear>();
-        
-    }
-
     public void GameOver()
     {
         Managers.UserData.playerDeathCount++;

@@ -35,7 +35,6 @@ public class BossMovement : MonoBehaviour
 
     void Movement()
     {
-        // Player 추적
         Vector2 direction = player.position - rigid.position;
         rigid.position += direction.normalized * speed * Time.fixedDeltaTime;
         rigid.velocity = Vector2.zero;
@@ -43,7 +42,6 @@ public class BossMovement : MonoBehaviour
 
     void Rotation(float rot)
     {
-        // 플레이어 x 좌표에 따라 방향 전환
         if (rot < 0)
             sprite.flipX = false;
         else

@@ -14,7 +14,6 @@ public class PlayerInputController : PlayerController
         _camera = Camera.main;
     }
 
-    //샌드메세지방식 실행되었을때 돌려받는 함수를 만드는것
     public void OnMove(InputValue value)
     {
         Vector2 moveInput = value.Get<Vector2>().normalized;

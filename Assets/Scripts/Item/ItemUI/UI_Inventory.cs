@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 
 
-[System.Serializable]
 public class ItemSlot 
 {
     public ItemData item;
@@ -79,16 +78,16 @@ public class UI_Inventory : UI_Base<UI_Inventory>
         }
     }
 
-    public void AddItem(ItemData item)  // 아이템 획득
+    public void AddItem(ItemData item)
     {
        
-        ItemSlot emptySlot = GetEmptySlot(); // 빈슬롯을 설정
+        ItemSlot emptySlot = GetEmptySlot(); 
         
-        if (emptySlot != null) // 만약 비었다면
+        if (emptySlot != null) 
         {
 
-            emptySlot.item = item; // 거기에 아이템 추가
-            UpdateUI(); // UI업데이트 한번 해주기
+            emptySlot.item = item; 
+            UpdateUI(); 
             return;
 
         }

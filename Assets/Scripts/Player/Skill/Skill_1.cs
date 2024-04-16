@@ -23,7 +23,6 @@ public class Skill_1 : MonoBehaviour
         _scanner = Managers.GameSceneManager.Player.GetComponent<Scanner>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         switch (id)
@@ -51,7 +50,6 @@ public class Skill_1 : MonoBehaviour
             CreatSkill();
     }
 
-    //초기화
     public void Init(SkillData1 data)
     {
         name = "Weapon " + data.skillId;
@@ -89,7 +87,6 @@ public class Skill_1 : MonoBehaviour
         {
             Transform bullet;
 
-            //기본 오브젝트 먼저 활용 -> 모자란 것 풀링하기
             if(i < transform.childCount)
             {
                 bullet = transform.GetChild(i);
@@ -100,7 +97,6 @@ public class Skill_1 : MonoBehaviour
                 bullet.parent = transform;
             }
 
-            //생성 시 위치 초기화
             bullet.localPosition = Vector3.zero;
             bullet.localRotation = Quaternion.identity;
 
@@ -108,7 +104,6 @@ public class Skill_1 : MonoBehaviour
             bullet.Rotate(rotVec);
             bullet.Translate(bullet.up * 1.5f, Space.World);
 
-            //-1은 무조건 관통
             bullet.GetComponent<Skill_Bullet>().Init(damage,-1,Vector3.zero); 
         }
     }

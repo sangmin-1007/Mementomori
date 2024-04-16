@@ -57,7 +57,7 @@ public class DeathBringerAttack : MonoBehaviour
 
         AttackSO attackSO = Stats.CurrentStates.attackSO;
         bool hasBeenChanged = playerHealthSystem.ChangeHealth(-attackSO.power);
-        //Managers.SoundManager.Play("Effect/PlayerAttackFail1", Sound.Effect);
+
 
         yield return new WaitForSeconds(1f);
 

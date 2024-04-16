@@ -25,7 +25,6 @@ public class Level : MonoBehaviour
 
     void LevelUpChecker()
     {
-        //경험치량에 도달
         if (expriecne >= expriecneCap)
         {
             level++;
@@ -35,9 +34,7 @@ public class Level : MonoBehaviour
                 HealthSystem healthSystem = Managers.GameSceneManager.Player.GetComponent<HealthSystem>();
                 healthSystem._timeSinceLastChange = 0.51f;
                 Time.timeScale = 0;
-                //StartCoroutine(StopTime());
             }
-            //현재 경험치 초기화
             expriecne -= expriecneCap;
 
             int experienceCapIncrease = 0;
@@ -51,11 +48,5 @@ public class Level : MonoBehaviour
             }
             expriecneCap += experienceCapIncrease;
         }
-    }
-    private IEnumerator StopTime()
-    {
-        yield return new WaitForSeconds(0.5f);
-        Time.timeScale = 0;
-        yield break;
     }
 }

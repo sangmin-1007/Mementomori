@@ -52,7 +52,7 @@ public class ItemSlotUI : MonoBehaviour,IPointerClickHandler,IPointerEnterHandle
         
         curSlot = slot;
         icon.gameObject.SetActive(true);
-        icon.sprite = slot.item.Sprite; // 먹은 아이템 스프라이트 불러옴;;
+        icon.sprite = slot.item.Sprite;
         
         if (outline != null)
         {

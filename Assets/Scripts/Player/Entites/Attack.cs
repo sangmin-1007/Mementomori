@@ -17,7 +17,6 @@ public class Attack : MonoBehaviour
         _statsHandler = GetComponent<PlayerStatsHandler>();
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         _controller.OnAttackEvent += OnShoot;

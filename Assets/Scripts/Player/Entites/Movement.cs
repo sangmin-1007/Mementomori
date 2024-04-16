@@ -36,7 +36,6 @@ public class Movement : MonoBehaviour
     {
         defaultSpeed = _stats.CurrentStates.speed;
         CurrentStamina = _stats.CurrentStates.maxStamina;
-        //±¸µ¶
         _controller.OnMoveEvent += Move;
     }
     private void Update()

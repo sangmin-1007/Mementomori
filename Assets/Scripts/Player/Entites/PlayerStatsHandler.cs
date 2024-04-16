@@ -51,12 +51,6 @@ public class PlayerStatsHandler : MonoBehaviour
         UpdatePlayerStats();
         EquipStatApply();
     }
-
-    public void RemoveStatModifier(PlayerStats statModifier)
-    {
-        statsModifiers.Remove(statModifier);
-        UpdatePlayerStats();
-    }
     
     public void UpdatePlayerStats()
     {
@@ -89,7 +83,6 @@ public class PlayerStatsHandler : MonoBehaviour
                 UpdateStats((o, o1) => o * o1, modifier);
             }
         }
-        //LimitAllStats();
     }
     private void UpdateStats(Func<float, float, float> operation, PlayerStats newModofier)
     {
@@ -132,25 +125,6 @@ public class PlayerStatsHandler : MonoBehaviour
     {
         AttackSO currentDefaultAttacks = (AttackSO)CurrentStates.attackSO;
     }
-
-    //private void LimitStats(ref float stat, float minVal)
-    //{
-    //    stat = Mathf.Max(stat, minVal);
-    //}
-    //private void LimitAllStats()
-    //{
-    //    if(CurrentStates == null || CurrentStates.attackSO == null)
-    //    {
-    //        return;
-    //    }
-
-    //    LimitStats(ref CurrentStates.attackSO.delay, MinAttackDelay);
-    //    LimitStats(ref CurrentStates.attackSO.power, MinAttackPower);
-    //    LimitStats(ref CurrentStates.attackSO.size, MinAttackSize);
-    //    LimitStats(ref CurrentStates.attackSO.speed, MinAttackSpeed);
-    //    LimitStats(ref CurrentStates.speed, MinSpeed);
-    //    CurrentStates.maxHealth = Mathf.Max(CurrentStates.maxHealth, MinMaxHealth);
-    //}
 
     public void EquipStatApply()
     {

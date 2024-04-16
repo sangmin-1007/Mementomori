@@ -33,7 +33,6 @@ public class UI_Skill : UI_Base<UI_Skill>
             if (ranSkill.skillLevel == ranSkill.data.damages.Length && ranSkill.data.skillId == 4)
             {
                 skills[6].gameObject.SetActive(true);
-                //skills[Random.Range(0,3)].gameObject.SetActive(true);
             }
             else if (ranSkill.skillLevel == ranSkill.data.damages.Length && ranSkill.data.skillId == 5)
             {

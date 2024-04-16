@@ -28,7 +28,6 @@ public class DataManager : MonoBehaviour
     private void Awake()
     {
         path = Application.persistentDataPath + "/save";
-        print(path);
     }
 
     public void Save()
