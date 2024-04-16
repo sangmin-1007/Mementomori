@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Skill_1 : MonoBehaviour
+public class SkillController : MonoBehaviour
 {
     public int id;
     public int prefabId;
@@ -50,7 +50,7 @@ public class Skill_1 : MonoBehaviour
             CreatSkill();
     }
 
-    public void Init(SkillData1 data)
+    public void Init(SkillSO data)
     {
         name = "Weapon " + data.skillId;
         transform.parent = Managers.GameSceneManager.Player.transform;

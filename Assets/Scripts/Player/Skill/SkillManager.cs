@@ -5,11 +5,11 @@ using UnityEditorInternal.VR;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Skill : MonoBehaviour
+public class SkillManager : MonoBehaviour
 {
-    public SkillData1 data;
+    public SkillSO data;
     public int skillLevel;
-    public Skill_1 skill_1;
+    public SkillController skill_1;
 
     [SerializeField] private List<PlayerStats> statsModifier;
     private HealthSystem healthSystem;
@@ -39,14 +39,14 @@ public class Skill : MonoBehaviour
 
         switch(data.skillType)
         {
-            case SkillData1.SkillType.Melee:
-            case SkillData1.SkillType.Range:
+            case SkillSO.SkillType.Melee:
+            case SkillSO.SkillType.Range:
                 textDesc.text = string.Format(data.skillDesc, data.damages[Mathf.Min(4,skillLevel)], data.counts[Mathf.Min(4,skillLevel)]);
                 break;
-            case SkillData1.SkillType.Statup:
-            case SkillData1.SkillType.AttackSkill:
-            case SkillData1.SkillType.DefenseSkill:
-            case SkillData1.SkillType.Heal:
+            case SkillSO.SkillType.Statup:
+            case SkillSO.SkillType.AttackSkill:
+            case SkillSO.SkillType.DefenseSkill:
+            case SkillSO.SkillType.Heal:
                 textDesc.text = string.Format(data.skillDesc, data.damages[skillLevel]);
                 break;
             default:
@@ -60,12 +60,12 @@ public class Skill : MonoBehaviour
     {
         switch (data.skillType)
         {
-            case SkillData1.SkillType.Melee:
-            case SkillData1.SkillType.Range:
+            case SkillSO.SkillType.Melee:
+            case SkillSO.SkillType.Range:
                 if(skillLevel == 0)
                 {
                     GameObject newWeapon = new GameObject();
-                    skill_1 = newWeapon.AddComponent<Skill_1>();
+                    skill_1 = newWeapon.AddComponent<SkillController>();
                     skill_1.Init(data);
                 }
                 else
@@ -79,7 +79,7 @@ public class Skill : MonoBehaviour
                     skill_1.LevelUp(nextDamage,nextCount);
                 }
                 break;
-            case SkillData1.SkillType.Statup:
+            case SkillSO.SkillType.Statup:
                 healthSystem = Managers.GameSceneManager.Player.GetComponent<HealthSystem>();
                 healthSystem.ChangeHealth(data.damages[skillLevel]);
                 PlayerStatsHandler statsHandler = Managers.GameSceneManager.Player.GetComponent<PlayerStatsHandler>();
@@ -88,25 +88,25 @@ public class Skill : MonoBehaviour
                     statsHandler.AddStatModifire(stat);
                 }
                 break;
-            case SkillData1.SkillType.AttackSkill:
+            case SkillSO.SkillType.AttackSkill:
                 PlayerStatsHandler statsHandler1 = Managers.GameSceneManager.Player.GetComponent<PlayerStatsHandler>();
                 foreach (PlayerStats stat in statsModifier)
                 {
                     statsHandler1.AddStatModifire(stat);
                 }
                 break;
-            case SkillData1.SkillType.DefenseSkill:
+            case SkillSO.SkillType.DefenseSkill:
                 PlayerStatsHandler statsHandler2 = Managers.GameSceneManager.Player.GetComponent<PlayerStatsHandler>();
                 foreach (PlayerStats stat in statsModifier)
                 {
                     statsHandler2.AddStatModifire(stat);
                 }
                 break;
-            case SkillData1.SkillType.Heal:
+            case SkillSO.SkillType.Heal:
                 healthSystem = Managers.GameSceneManager.Player.GetComponent<HealthSystem>();
                 healthSystem.ChangeHealth(data.baseDamage);
                 break;
-            case SkillData1.SkillType.Money:
+            case SkillSO.SkillType.Money:
                 Managers.UserData.acquisitionGold += (int)data.damages[skillLevel];
                 break;
         }

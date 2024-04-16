@@ -5,15 +5,15 @@ using UnityEngine;
 
 public class UI_Skill : UI_Base<UI_Skill>
 {
-    Skill[] skills;
+    SkillManager[] skills;
 
     private void Awake()
     {
-        skills = GetComponentsInChildren<Skill>(true);
+        skills = GetComponentsInChildren<SkillManager>(true);
     }
     public void Next()
     {
-        foreach (Skill skill in skills)
+        foreach (SkillManager skill in skills)
         {
             skill.gameObject.SetActive(false);
         }
@@ -29,7 +29,7 @@ public class UI_Skill : UI_Base<UI_Skill>
         }
         for (int index = 0; index < ran.Length; index++)
         {
-            Skill ranSkill = skills[ran[index]];
+            SkillManager ranSkill = skills[ran[index]];
             if (ranSkill.skillLevel == ranSkill.data.damages.Length && ranSkill.data.skillId == 4)
             {
                 skills[6].gameObject.SetActive(true);
