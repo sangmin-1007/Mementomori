@@ -19,7 +19,9 @@ public class BossAttack : MonoBehaviour
     [SerializeField] private string targetTag = "Player";
 
     private HealthSystem playerHealthSystem;
+    private PlayerStatsHandler playerStats;
 
+    private float CurrentDefense;
 
     public SpriteRenderer spriteRenderer;
 
@@ -36,6 +38,9 @@ public class BossAttack : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         movement = GetComponent<MonsterMovement>();
         Stats = GetComponent<PlayerStatsHandler>();
+        playerStats = Managers.GameSceneManager.Player.GetComponent<PlayerStatsHandler>();
+
+        CurrentDefense = playerStats.allDefense;
     }
 
     private void Start()
@@ -112,7 +117,7 @@ public class BossAttack : MonoBehaviour
                 HealthSystem healthSystem = collider.GetComponent<HealthSystem>();
                 if (healthSystem != null)
                 {
-                    healthSystem.ChangeHealth(-attackSO.power);
+                    healthSystem.ChangeHealth(-attackSO.power + (attackSO.power * CurrentDefense / 100));
                 }
             }
         }
@@ -128,7 +133,7 @@ public class BossAttack : MonoBehaviour
                     HealthSystem healthSystem = collider.GetComponent<HealthSystem>();
                     if (healthSystem != null)
                     {
-                        healthSystem.ChangeHealth(-attackSO.power);
+                        healthSystem.ChangeHealth(-attackSO.power + (attackSO.power * CurrentDefense / 100));
                     }
                 }
             }
@@ -145,7 +150,7 @@ public class BossAttack : MonoBehaviour
                     HealthSystem healthSystem = collider.GetComponent<HealthSystem>();
                     if (healthSystem != null)
                     {
-                        healthSystem.ChangeHealth(-attackSO.power);
+                        healthSystem.ChangeHealth(-attackSO.power + (attackSO.power * CurrentDefense / 100));
                     }
                 }
             }

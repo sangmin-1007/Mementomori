@@ -9,6 +9,9 @@ public class FinalBossAttack : MonoBehaviour
     HealthSystem monsterHealthSystem;
     HealthSystem playerHealthSystem;
 
+    private PlayerStatsHandler playerStats;
+    private float currentDefense;
+
     int phase;
 
     Animator animator;
@@ -43,6 +46,9 @@ public class FinalBossAttack : MonoBehaviour
         monsterHealthSystem = GetComponent<HealthSystem>();
         animator = GetComponentInChildren<Animator>();
         movement = GetComponent<MonsterMovement>();
+        playerStats = Managers.GameSceneManager.Player.GetComponent<PlayerStatsHandler>();
+
+        currentDefense = playerStats.allDefense;
     }
 
     void Start()
@@ -167,7 +173,7 @@ public class FinalBossAttack : MonoBehaviour
                         HealthSystem healthSystem = collider.GetComponent<HealthSystem>();
                         if (healthSystem != null)
                         {
-                            healthSystem.ChangeHealth(-attackSO.power);
+                            healthSystem.ChangeHealth(-attackSO.power + (attackSO.power * currentDefense / 100));
                         }
                     }
                 }
@@ -183,7 +189,7 @@ public class FinalBossAttack : MonoBehaviour
                             HealthSystem healthSystem = collider.GetComponent<HealthSystem>();
                             if (healthSystem != null)
                             {
-                                healthSystem.ChangeHealth(-attackSO.power);
+                                healthSystem.ChangeHealth(-attackSO.power + (attackSO.power * currentDefense / 100));
 
                             }
                         }
@@ -200,7 +206,7 @@ public class FinalBossAttack : MonoBehaviour
                             HealthSystem healthSystem = collider.GetComponent<HealthSystem>();
                             if (healthSystem != null)
                             {
-                                healthSystem.ChangeHealth(-attackSO.power);
+                                healthSystem.ChangeHealth(-attackSO.power + (attackSO.power * currentDefense / 100));
                             }
                         }
                     }
@@ -217,7 +223,7 @@ public class FinalBossAttack : MonoBehaviour
                         HealthSystem healthSystem = collider.GetComponent<HealthSystem>();
                         if (healthSystem != null)
                         {
-                            healthSystem.ChangeHealth(-attackSO.power*2);
+                            healthSystem.ChangeHealth(-((attackSO.power + (attackSO.power * currentDefense / 100)) * 2));
                         }
                     }
                 }
@@ -233,7 +239,7 @@ public class FinalBossAttack : MonoBehaviour
                             HealthSystem healthSystem = collider.GetComponent<HealthSystem>();
                             if (healthSystem != null)
                             {
-                                healthSystem.ChangeHealth(-attackSO.power*2);
+                                healthSystem.ChangeHealth(-((attackSO.power + (attackSO.power * currentDefense / 100)) * 2));
                             }
                         }
                     }
@@ -249,7 +255,7 @@ public class FinalBossAttack : MonoBehaviour
                             HealthSystem healthSystem = collider.GetComponent<HealthSystem>();
                             if (healthSystem != null)
                             {
-                                healthSystem.ChangeHealth(-attackSO.power * 2);
+                                healthSystem.ChangeHealth(-((attackSO.power + (attackSO.power * currentDefense / 100)) * 2));
                             }
                         }
                     }
@@ -266,7 +272,7 @@ public class FinalBossAttack : MonoBehaviour
                         HealthSystem healthSystem = collider.GetComponent<HealthSystem>();
                         if (healthSystem != null)
                         {
-                            healthSystem.ChangeHealth(-attackSO.power * 3);
+                            healthSystem.ChangeHealth(-((attackSO.power + (attackSO.power * currentDefense / 100)) * 3));
                         }
                     }
                 }
@@ -282,7 +288,7 @@ public class FinalBossAttack : MonoBehaviour
                             HealthSystem healthSystem = collider.GetComponent<HealthSystem>();
                             if (healthSystem != null)
                             {
-                                healthSystem.ChangeHealth(-attackSO.power * 3);
+                                healthSystem.ChangeHealth(-((attackSO.power + (attackSO.power * currentDefense / 100)) * 3));
                             }
                         }
                     }
@@ -298,7 +304,7 @@ public class FinalBossAttack : MonoBehaviour
                             HealthSystem healthSystem = collider.GetComponent<HealthSystem>();
                             if (healthSystem != null)
                             {
-                                healthSystem.ChangeHealth(-attackSO.power * 3);
+                                healthSystem.ChangeHealth(-((attackSO.power + (attackSO.power * currentDefense / 100)) * 3));
                             }
                         }
                     }

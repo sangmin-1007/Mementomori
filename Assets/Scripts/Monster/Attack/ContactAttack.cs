@@ -14,7 +14,7 @@ public class ContactAttack : MonoBehaviour
     [SerializeField] private string targetTag = "Player";
 
     private HealthSystem playerHealthSystem;
-    private float CurrentDefense;
+    private float currentDefense;
     private PlayerStatsHandler _statsHandler;
 
     private void Awake()
@@ -24,7 +24,7 @@ public class ContactAttack : MonoBehaviour
         Stats = GetComponent<PlayerStatsHandler>();
         playerHealthSystem = GetComponent<HealthSystem>();
         _statsHandler = Managers.GameSceneManager.Player.GetComponent<PlayerStatsHandler>();
-        CurrentDefense = _statsHandler.allDefense;
+        currentDefense = _statsHandler.allDefense;
     }
 
     private void Start()
@@ -36,7 +36,7 @@ public class ContactAttack : MonoBehaviour
     {
         if (!isAttacking)
             OnMove();
-        CurrentDefense = _statsHandler.allDefense;
+        currentDefense = _statsHandler.allDefense;
         _statsHandler.EquipStatApply();
     }
 
@@ -63,7 +63,7 @@ public class ContactAttack : MonoBehaviour
         movement.speed = 0f;
 
         AttackSO attackSO = Stats.CurrentStates.attackSO;
-        bool hasBeenChanged = playerHealthSystem.ChangeHealth(-attackSO.power + (attackSO.power * CurrentDefense/100));
+        bool hasBeenChanged = playerHealthSystem.ChangeHealth(-attackSO.power + (attackSO.power * currentDefense/100));
 
         yield return new WaitForSeconds(1f);
 
