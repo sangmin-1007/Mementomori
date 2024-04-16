@@ -38,6 +38,11 @@ public class RangedAttack : MonoBehaviour
         attackTime = 0f;
     }
 
+    private void OnEnable()
+    {
+        isAttacking = false;   
+    }
+
     private void Update()
     {
         if (!player)

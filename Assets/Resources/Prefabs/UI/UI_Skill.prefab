@@ -6933,7 +6933,7 @@ MonoBehaviour:
   skill_1: {fileID: 0}
   statsModifier:
   - statsChangeType: 0
-    maxHealth: 5
+    maxHealth: 20
     itemHealth: 0
     itemAttack: 0
     speed: 0

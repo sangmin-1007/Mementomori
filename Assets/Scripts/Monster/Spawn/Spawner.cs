@@ -80,6 +80,8 @@ public class Spawner : MonoBehaviour
 
     private void SpawnBoss()
     {
+
+
         if (_spawnManager.pool == null)
         {
             return;
@@ -88,16 +90,16 @@ public class Spawner : MonoBehaviour
         switch (stage)
         {
             case 1:
-                Instantiate(Dragonewt, transform);
+                Instantiate(Dragonewt, spawnPoint[Random.Range(1, spawnPoint.Length)]);
                 break;
             case 2:
-                Instantiate(Germud, transform);
+                Instantiate(Germud, spawnPoint[Random.Range(1, spawnPoint.Length)]);
                 break;
             case 3:
-                Instantiate(CarcassesCollector, transform);
+                Instantiate(CarcassesCollector, spawnPoint[Random.Range(1, spawnPoint.Length)]);
                 break;
             case 4:
-                Instantiate(Ifrit, transform);
+                Instantiate(Ifrit, spawnPoint[Random.Range(1, spawnPoint.Length)]);
                 break;
             default:
                 break;
