@@ -868,6 +868,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: []
+  Dragonewt: {fileID: 5344142885034079629, guid: 58ffebeeddc46d74e8cb84d4cc9494f1, type: 3}
+  Germud: {fileID: 5060714688137234689, guid: d896dc1bca23fb4458849d05fc9bef67, type: 3}
+  CarcassesCollector: {fileID: 6737157034021653567, guid: a6b85feedcefed149861d8dd6c7cfda3, type: 3}
+  Ifrit: {fileID: 3355002828415985944, guid: acb7ffe31ea9f7c439b810fe788e17ab, type: 3}
 --- !u!1 &6744270497602868525
 GameObject:
   m_ObjectHideFlags: 0

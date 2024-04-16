@@ -19,6 +19,11 @@ public class Spawner : MonoBehaviour
 
     HealthSystem player;
 
+    public GameObject Dragonewt;
+    public GameObject Germud;
+    public GameObject CarcassesCollector;
+    public GameObject Ifrit;
+
     private void Start()
     {
         count = 0;
@@ -42,7 +47,7 @@ public class Spawner : MonoBehaviour
 
         spawnTimer += Time.deltaTime;
 
-        if (spawnTimer > 0.5f && count < 100)
+        if (spawnTimer > 0.5f && count < 1)
         {
             spawnTimer = 0f;
 
@@ -79,8 +84,25 @@ public class Spawner : MonoBehaviour
         {
             return;
         }
-        GameObject monster = _spawnManager.pool.Get(stage + 3);
-        monster.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
+        //GameObject monster = _spawnManager.pool.Get(stage + 3);
+        //monster.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
+        switch (stage)
+        {
+            case 1:
+                Instantiate(Dragonewt, transform);
+                break;
+            case 2:
+                Instantiate(Germud, transform);
+                break;
+            case 3:
+                Instantiate(CarcassesCollector, transform);
+                break;
+            case 4:
+                Instantiate(Ifrit, transform);
+                break;
+            default:
+                break;
+        }
     }
 
     void Spawn()

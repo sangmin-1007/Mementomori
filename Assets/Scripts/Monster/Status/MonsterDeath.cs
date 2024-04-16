@@ -56,7 +56,8 @@ public class MonsterDeath : MonoBehaviour
         }
         Managers.SoundManager.Play("Effect/Monster_Die1", Sound.Effect);
         Invoke("SetDie", 1f);
-        Spawner.count--;
+        if(_monsterType != MonsterType.Boss)
+            Spawner.count--;
     }
 
     void SetDie()
