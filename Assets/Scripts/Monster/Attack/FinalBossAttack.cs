@@ -168,14 +168,6 @@ public class FinalBossAttack : MonoBehaviour
                         if (healthSystem != null)
                         {
                             healthSystem.ChangeHealth(-attackSO.power);
-                            if (attackSO.isOnKnockback)
-                            {
-                                Movement movement = collider.GetComponent<Movement>();
-                                if (movement != null)
-                                {
-                                    movement.ApplyKnockback(transform, attackSO.knockbackPower, attackSO.knockbackTime);
-                                }
-                            }
                         }
                     }
                 }
@@ -192,14 +184,7 @@ public class FinalBossAttack : MonoBehaviour
                             if (healthSystem != null)
                             {
                                 healthSystem.ChangeHealth(-attackSO.power);
-                                if (attackSO.isOnKnockback)
-                                {
-                                    Movement movement = collider.GetComponent<Movement>();
-                                    if (movement != null)
-                                    {
-                                        movement.ApplyKnockback(transform, attackSO.knockbackPower, attackSO.knockbackTime);
-                                    }
-                                }
+
                             }
                         }
                     }
@@ -216,14 +201,6 @@ public class FinalBossAttack : MonoBehaviour
                             if (healthSystem != null)
                             {
                                 healthSystem.ChangeHealth(-attackSO.power);
-                                if (attackSO.isOnKnockback)
-                                {
-                                    Movement movement = collider.GetComponent<Movement>();
-                                    if (movement != null)
-                                    {
-                                        movement.ApplyKnockback(transform, attackSO.knockbackPower, attackSO.knockbackTime);
-                                    }
-                                }
                             }
                         }
                     }
@@ -241,14 +218,6 @@ public class FinalBossAttack : MonoBehaviour
                         if (healthSystem != null)
                         {
                             healthSystem.ChangeHealth(-attackSO.power*2);
-                            if (attackSO.isOnKnockback)
-                            {
-                                Movement movement = collider.GetComponent<Movement>();
-                                if (movement != null)
-                                {
-                                    movement.ApplyKnockback(transform, attackSO.knockbackPower, attackSO.knockbackTime);
-                                }
-                            }
                         }
                     }
                 }
@@ -265,14 +234,6 @@ public class FinalBossAttack : MonoBehaviour
                             if (healthSystem != null)
                             {
                                 healthSystem.ChangeHealth(-attackSO.power*2);
-                                if (attackSO.isOnKnockback)
-                                {
-                                    Movement movement = collider.GetComponent<Movement>();
-                                    if (movement != null)
-                                    {
-                                        movement.ApplyKnockback(transform, attackSO.knockbackPower, attackSO.knockbackTime);
-                                    }
-                                }
                             }
                         }
                     }
@@ -289,14 +250,6 @@ public class FinalBossAttack : MonoBehaviour
                             if (healthSystem != null)
                             {
                                 healthSystem.ChangeHealth(-attackSO.power * 2);
-                                if (attackSO.isOnKnockback)
-                                {
-                                    Movement movement = collider.GetComponent<Movement>();
-                                    if (movement != null)
-                                    {
-                                        movement.ApplyKnockback(transform, attackSO.knockbackPower, attackSO.knockbackTime);
-                                    }
-                                }
                             }
                         }
                     }
@@ -314,14 +267,6 @@ public class FinalBossAttack : MonoBehaviour
                         if (healthSystem != null)
                         {
                             healthSystem.ChangeHealth(-attackSO.power * 3);
-                            if (attackSO.isOnKnockback)
-                            {
-                                Movement movement = collider.GetComponent<Movement>();
-                                if (movement != null)
-                                {
-                                    movement.ApplyKnockback(transform, attackSO.knockbackPower, attackSO.knockbackTime);
-                                }
-                            }
                         }
                     }
                 }
@@ -338,14 +283,6 @@ public class FinalBossAttack : MonoBehaviour
                             if (healthSystem != null)
                             {
                                 healthSystem.ChangeHealth(-attackSO.power * 3);
-                                if (attackSO.isOnKnockback)
-                                {
-                                    Movement movement = collider.GetComponent<Movement>();
-                                    if (movement != null)
-                                    {
-                                        movement.ApplyKnockback(transform, attackSO.knockbackPower, attackSO.knockbackTime);
-                                    }
-                                }
                             }
                         }
                     }
@@ -362,14 +299,6 @@ public class FinalBossAttack : MonoBehaviour
                             if (healthSystem != null)
                             {
                                 healthSystem.ChangeHealth(-attackSO.power * 3);
-                                if (attackSO.isOnKnockback)
-                                {
-                                    Movement movement = collider.GetComponent<Movement>();
-                                    if (movement != null)
-                                    {
-                                        movement.ApplyKnockback(transform, attackSO.knockbackPower, attackSO.knockbackTime);
-                                    }
-                                }
                             }
                         }
                     }

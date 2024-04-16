@@ -47,10 +47,6 @@ public class BossAttack : MonoBehaviour
     {
         if (!isAttacking)
             OnMove();
-        //if (finalBossAttack.finalBossAttackSC)
-        //{
-        //    bossAttack.enabled = false;
-        //}
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -109,7 +105,6 @@ public class BossAttack : MonoBehaviour
     {
         Collider2D[] collider2D = Physics2D.OverlapBoxAll(pos2.position, boxSize2, 0);
 
-        //피격 박스(위쪽) 데미지 계산
         foreach (Collider2D collider in collider2D)
         {
             if (attackSO.target.value == (attackSO.target.value | (1 << collider.gameObject.layer)))
@@ -118,19 +113,10 @@ public class BossAttack : MonoBehaviour
                 if (healthSystem != null)
                 {
                     healthSystem.ChangeHealth(-attackSO.power);
-                    if (attackSO.isOnKnockback)
-                    {
-                        Movement movement = collider.GetComponent<Movement>();
-                        if (movement != null)
-                        {
-                            movement.ApplyKnockback(transform, attackSO.knockbackPower, attackSO.knockbackTime);
-                        }
-                    }
                 }
             }
         }
 
-        //피격 박스(오른쪽) 데미지 계산
         if (spriteRenderer.flipX == false)
         {
             Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos1.position, boxSize1, 0);
@@ -143,19 +129,11 @@ public class BossAttack : MonoBehaviour
                     if (healthSystem != null)
                     {
                         healthSystem.ChangeHealth(-attackSO.power);
-                        if (attackSO.isOnKnockback)
-                        {
-                            Movement movement = collider.GetComponent<Movement>();
-                            if (movement != null)
-                            {
-                                movement.ApplyKnockback(transform, attackSO.knockbackPower, attackSO.knockbackTime);
-                            }
-                        }
                     }
                 }
             }
         }
-        //피격 박스(왼쪽) 데미지 계산
+
         else if (spriteRenderer.flipX == true)
         {
             Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos3.position, boxSize1, 0);
@@ -168,14 +146,6 @@ public class BossAttack : MonoBehaviour
                     if (healthSystem != null)
                     {
                         healthSystem.ChangeHealth(-attackSO.power);
-                        if (attackSO.isOnKnockback)
-                        {
-                            Movement movement = collider.GetComponent<Movement>();
-                            if (movement != null)
-                            {
-                                movement.ApplyKnockback(transform, attackSO.knockbackPower, attackSO.knockbackTime);
-                            }
-                        }
                     }
                 }
             }
