@@ -52,8 +52,12 @@ public class Attack : MonoBehaviour
 
     private void OnShoot(AttackSO attackSO)
     {
-        Managers.SoundManager.Play("Effect/PlayerAttackFail1", Sound.Effect);
         Collider2D[] collider2D = Physics2D.OverlapBoxAll(pos2.position, boxSize2, 0);
+
+        if(!_controller.IsDashing)
+        {
+            Managers.SoundManager.Play("Effect/PlayerAttackFail1", Sound.Effect);
+        }
 
 
         foreach (Collider2D collider in collider2D)

@@ -22,7 +22,7 @@ public class PlayerInputController : PlayerController
 
     public void OnDash(InputValue value)
     {
-        if (SceneManager.GetActiveScene().name == "GameScene")
+        if (SceneManager.GetActiveScene().name == "GameScene" && !Managers.UI_Manager.IsActive<UI_Skill>())
         {
             IsDashing = value.isPressed;
         }
@@ -41,7 +41,7 @@ public class PlayerInputController : PlayerController
     {
         if (SceneManager.GetActiveScene().name == "GameScene")
         {
-            if(Managers.UI_Manager.IsActive<UI_Skill>())
+            if(Managers.UI_Manager.IsActive<UI_Skill>() && IsDashing)
             {
                 IsAttacking = false;
             }
