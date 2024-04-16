@@ -10,7 +10,6 @@ public class GameMapInteract : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private PlayerController PlayerInput;
 
-    private GameMapInteract gameMapInteract;
     private Vector2 PlayerDir;
     private void Start()
     {
