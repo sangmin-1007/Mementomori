@@ -6,9 +6,9 @@ public class ItemObject : MonoBehaviour
 
     private ItemData item;
 
-    public int itemId;
+    public int itemId = 0;
 
-    private SpriteRenderer spriteRenderer;
+    [SerializeField]private SpriteRenderer spriteRenderer;
 
     private Transform playerTransform;
     private PlayerStatsHandler playerStats;
@@ -27,8 +27,11 @@ public class ItemObject : MonoBehaviour
         level = Managers.GameSceneManager.Player.GetComponent<Level>();
 
         moveSpeed = (playerStats.CurrentStates.speed + 2f);
+    }
 
-       if ( itemId != 0)
+    private void OnEnable()
+    {
+        if (itemId != 0)
         {
             ItemSetting(itemId);
 
