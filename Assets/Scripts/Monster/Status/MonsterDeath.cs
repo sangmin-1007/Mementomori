@@ -81,16 +81,16 @@ public class MonsterDeath : MonoBehaviour
         switch(monsterType)
         {
             case MonsterType.SkeletonCat:
-                Managers.UserData.acquisitionGold += 1;
-                break;
-            case MonsterType.SkeletonWarrior:
                 Managers.UserData.acquisitionGold += 5;
                 break;
-            case MonsterType.SkeletonArcher:
+            case MonsterType.SkeletonWarrior:
                 Managers.UserData.acquisitionGold += 7;
                 break;
+            case MonsterType.SkeletonArcher:
+                Managers.UserData.acquisitionGold += 11;
+                break;
             case MonsterType.Necromancer:
-                Managers.UserData.acquisitionGold += 10;
+                Managers.UserData.acquisitionGold += 15;
                 break;
             case MonsterType.Boss:
                 Managers.UserData.acquisitionGold += 100;
