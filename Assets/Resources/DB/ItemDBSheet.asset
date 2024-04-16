@@ -75,8 +75,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
     _exp: 0
-    _buyPrice: 8000
-    _sellPrice: 4000
+    _buyPrice: 4000
+    _sellPrice: 2000
   - _id: 10001005
     _grade: 1
     _type: 0
@@ -91,8 +91,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
     _exp: 0
-    _buyPrice: 9000
-    _sellPrice: 4500
+    _buyPrice: 4500
+    _sellPrice: 2250
   - _id: 10001006
     _grade: 1
     _type: 0
@@ -107,8 +107,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
     _exp: 0
-    _buyPrice: 11000
-    _sellPrice: 5500
+    _buyPrice: 5500
+    _sellPrice: 2750
   - _id: 10001007
     _grade: 2
     _type: 0
@@ -124,7 +124,7 @@ MonoBehaviour:
     _stamina: 0
     _exp: 0
     _buyPrice: 13000
-    _sellPrice: 1000
+    _sellPrice: 6500
   - _id: 10001008
     _grade: 2
     _type: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
     _stamina: 0
     _exp: 0
     _buyPrice: 15000
-    _sellPrice: 7000
+    _sellPrice: 7500
   - _id: 10001009
     _grade: 2
     _type: 0
@@ -156,7 +156,7 @@ MonoBehaviour:
     _stamina: 0
     _exp: 0
     _buyPrice: 18000
-    _sellPrice: 7500
+    _sellPrice: 9000
   - _id: 10001010
     _grade: 3
     _type: 0
@@ -266,8 +266,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
     _exp: 0
-    _buyPrice: 8000
-    _sellPrice: 4000
+    _buyPrice: 4000
+    _sellPrice: 2000
   - _id: 20001005
     _grade: 1
     _type: 1
@@ -282,8 +282,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
     _exp: 0
-    _buyPrice: 9000
-    _sellPrice: 4500
+    _buyPrice: 4500
+    _sellPrice: 2250
   - _id: 20001006
     _grade: 1
     _type: 1
@@ -298,8 +298,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
     _exp: 0
-    _buyPrice: 11000
-    _sellPrice: 5500
+    _buyPrice: 5500
+    _sellPrice: 2750
   - _id: 20001007
     _grade: 2
     _type: 1
@@ -314,7 +314,7 @@ MonoBehaviour:
     _stamina: 0
     _exp: 0
     _buyPrice: 13000
-    _sellPrice: 1000
+    _sellPrice: 6500
   - _id: 20001008
     _grade: 2
     _type: 1
@@ -330,7 +330,7 @@ MonoBehaviour:
     _stamina: 0
     _exp: 0
     _buyPrice: 15000
-    _sellPrice: 7000
+    _sellPrice: 7500
   - _id: 20001009
     _grade: 2
     _type: 1
@@ -346,7 +346,7 @@ MonoBehaviour:
     _stamina: 0
     _exp: 0
     _buyPrice: 18000
-    _sellPrice: 7500
+    _sellPrice: 9000
   - _id: 20001010
     _grade: 3
     _type: 1
@@ -456,8 +456,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
     _exp: 0
-    _buyPrice: 8000
-    _sellPrice: 4000
+    _buyPrice: 4000
+    _sellPrice: 2000
   - _id: 30001005
     _grade: 1
     _type: 2
@@ -472,8 +472,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
     _exp: 0
-    _buyPrice: 9000
-    _sellPrice: 4500
+    _buyPrice: 4500
+    _sellPrice: 2250
   - _id: 30001006
     _grade: 1
     _type: 2
@@ -488,8 +488,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
     _exp: 0
-    _buyPrice: 11000
-    _sellPrice: 5500
+    _buyPrice: 5500
+    _sellPrice: 2750
   - _id: 30001007
     _grade: 2
     _type: 2
@@ -504,7 +504,7 @@ MonoBehaviour:
     _stamina: 0
     _exp: 0
     _buyPrice: 13000
-    _sellPrice: 1000
+    _sellPrice: 6500
   - _id: 30001008
     _grade: 2
     _type: 2
@@ -520,7 +520,7 @@ MonoBehaviour:
     _stamina: 0
     _exp: 0
     _buyPrice: 15000
-    _sellPrice: 7000
+    _sellPrice: 7500
   - _id: 30001009
     _grade: 2
     _type: 2
@@ -536,7 +536,7 @@ MonoBehaviour:
     _stamina: 0
     _exp: 0
     _buyPrice: 18000
-    _sellPrice: 7500
+    _sellPrice: 9000
   - _id: 30001010
     _grade: 3
     _type: 2
@@ -646,8 +646,8 @@ MonoBehaviour:
     _speed: 1.4
     _stamina: 150
     _exp: 0
-    _buyPrice: 8000
-    _sellPrice: 4000
+    _buyPrice: 4000
+    _sellPrice: 2000
   - _id: 40001017
     _grade: 1
     _type: 3
@@ -662,8 +662,8 @@ MonoBehaviour:
     _speed: 1.4
     _stamina: 170
     _exp: 0
-    _buyPrice: 9000
-    _sellPrice: 4500
+    _buyPrice: 4500
+    _sellPrice: 2250
   - _id: 40001018
     _grade: 1
     _type: 3
@@ -678,8 +678,8 @@ MonoBehaviour:
     _speed: 1.4
     _stamina: 190
     _exp: 0
-    _buyPrice: 11000
-    _sellPrice: 5500
+    _buyPrice: 5500
+    _sellPrice: 2750
   - _id: 40001019
     _grade: 2
     _type: 3
@@ -694,7 +694,7 @@ MonoBehaviour:
     _stamina: 200
     _exp: 0
     _buyPrice: 13000
-    _sellPrice: 1000
+    _sellPrice: 6500
   - _id: 40001020
     _grade: 2
     _type: 3
@@ -710,7 +710,7 @@ MonoBehaviour:
     _stamina: 220
     _exp: 0
     _buyPrice: 15000
-    _sellPrice: 7000
+    _sellPrice: 7500
   - _id: 40001021
     _grade: 2
     _type: 3
@@ -726,7 +726,7 @@ MonoBehaviour:
     _stamina: 240
     _exp: 0
     _buyPrice: 18000
-    _sellPrice: 7500
+    _sellPrice: 9000
   - _id: 40001022
     _grade: 3
     _type: 3
