@@ -47,7 +47,7 @@ public class Spawner : MonoBehaviour
 
         spawnTimer += Time.deltaTime;
 
-        if (spawnTimer > 0.5f && count < 1)
+        if (spawnTimer > 0.5f && count < 70)
         {
             spawnTimer = 0f;
 
@@ -84,8 +84,7 @@ public class Spawner : MonoBehaviour
         {
             return;
         }
-        //GameObject monster = _spawnManager.pool.Get(stage + 3);
-        //monster.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
+
         switch (stage)
         {
             case 1:

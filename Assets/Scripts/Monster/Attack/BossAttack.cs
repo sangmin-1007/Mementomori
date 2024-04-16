@@ -40,7 +40,6 @@ public class BossAttack : MonoBehaviour
         Stats = GetComponent<PlayerStatsHandler>();
         playerStats = Managers.GameSceneManager.Player.GetComponent<PlayerStatsHandler>();
 
-        CurrentDefense = playerStats.allDefense;
     }
 
     private void Start()
@@ -80,8 +79,6 @@ public class BossAttack : MonoBehaviour
 
         animator.SetTrigger("Attack");
 
-        OnShoot(Stats.CurrentStates.attackSO);
-
         yield return new WaitForSeconds(1f);
 
         isAttacking = false;
@@ -109,6 +106,8 @@ public class BossAttack : MonoBehaviour
     private void OnShoot(AttackSO attackSO)
     {
         Collider2D[] collider2D = Physics2D.OverlapBoxAll(pos2.position, boxSize2, 0);
+
+        CurrentDefense = playerStats.allDefense;
 
         foreach (Collider2D collider in collider2D)
         {

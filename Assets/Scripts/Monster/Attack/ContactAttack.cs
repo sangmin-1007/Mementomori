@@ -32,12 +32,15 @@ public class ContactAttack : MonoBehaviour
         defaultSpeed = movement.speed;
     }
 
+    private void OnEnable()
+    {
+        isAttacking = false;
+    }
+
     private void Update()
     {
         if (!isAttacking)
             OnMove();
-        currentDefense = _statsHandler.allDefense;
-        _statsHandler.EquipStatApply();
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -63,6 +66,7 @@ public class ContactAttack : MonoBehaviour
         movement.speed = 0f;
 
         AttackSO attackSO = Stats.CurrentStates.attackSO;
+        currentDefense = _statsHandler.allDefense;
         bool hasBeenChanged = playerHealthSystem.ChangeHealth(-attackSO.power + (attackSO.power * currentDefense/100));
 
         yield return new WaitForSeconds(1f);
