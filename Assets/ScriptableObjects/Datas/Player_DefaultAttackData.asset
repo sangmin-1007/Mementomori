@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 957dcf09791503f41bfeb02433f50f2b, type: 3}
   m_Name: Player_DefaultAttackData
   m_EditorClassIdentifier: 
-  size: 1
-  delay: 0.1
-  power: 1
-  speed: 10
+  size: 0
+  delay: 1
+  power: 35
+  speed: 0
   target:
     serializedVersion: 2
     m_Bits: 64

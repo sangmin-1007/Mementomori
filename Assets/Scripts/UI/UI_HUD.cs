@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +17,12 @@ public class UI_HUD : UI_Base<UI_HUD>
     [SerializeField] private Image staminaBar;
     [SerializeField] private Image expBar;
 
+
     [SerializeField] private TextMeshProUGUI levelText;
     [SerializeField] private TextMeshProUGUI timeText;
+
+    public BossHPBar bossHpBar;
+    public Image FadeInImage;
 
     private HealthSystem playerStats;
     private Level playerLevel;
@@ -33,8 +38,7 @@ public class UI_HUD : UI_Base<UI_HUD>
         playerStats = Managers.GameSceneManager.Player.GetComponent<HealthSystem>();
         playerLevel = Managers.GameSceneManager.Player.GetComponent<Level>();
 
-        maxHP = playerStats.MaxHealth;
-        maxStamina = playerStats.MaxStamina;
+
 
         miniMapAddButton.onClick.AddListener(OnClickAddButton);
         miniMapSubButton.onClick.AddListener(OnClickSubButton);
@@ -88,8 +92,10 @@ public class UI_HUD : UI_Base<UI_HUD>
 
     private void UpdateHUD()
     {
+        maxHP = playerStats.MaxHealth;
+        maxStamina = playerStats.MaxStamina;
         curHp = playerStats.CurrentHealth;
-        curStamina = playerStats.currentStamina;
+        curStamina = playerStats.CurrentStamina;
         maxExp = playerLevel.expriecneCap;
         curExp = playerLevel.expriecne;
 
@@ -103,5 +109,11 @@ public class UI_HUD : UI_Base<UI_HUD>
         {
             expBar.fillAmount = 0f;
         }
+    }
+
+    public void FadeInBackGround()
+    {
+        FadeInImage.gameObject.SetActive(true);
+        FadeInImage.DOFade(1f, 8f);
     }
 }

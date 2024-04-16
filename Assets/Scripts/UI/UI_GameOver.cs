@@ -15,7 +15,10 @@ public class UI_GameOver : UI_Base<UI_GameOver>
     [SerializeField] private TextMeshProUGUI gameOverText;
     [SerializeField] private TextMeshProUGUI timeText;
     [SerializeField] private TextMeshProUGUI levelText;
+    [SerializeField] private TextMeshProUGUI goldText;
     [SerializeField] private Image[] itemSprite;
+
+    [SerializeField] private GameObject[] itemSpriteFrame;
 
     private Level playerLevel;
 
@@ -25,17 +28,23 @@ public class UI_GameOver : UI_Base<UI_GameOver>
 
         Timer();
         LevelTextChange();
+        goldText.text = Managers.UserData.acquisitionGold.ToString();
 
         for (int i = 0; i < itemSprite.Length; i++)
         {
-            if (Managers.DataManager.playerInventoryItemData.Count == 0 && i < Managers.DataManager.playerInventoryItemData.Count)
+            if (i < Managers.UserData.playerItemAcquired.Count)
             {
-                itemSprite[i].sprite = Managers.DataManager.playerInventoryItemData[i].Sprite;
+                itemSprite[i].sprite = Managers.UserData.playerItemAcquired[i].Sprite;
+            }
 
-                if (itemSprite[i].sprite != null)
-                {
-                    itemSprite[i].gameObject.SetActive(true);
-                }
+            if (itemSprite[i].sprite != null)
+            {
+                itemSprite[i].gameObject.SetActive(true);
+            }
+            else
+            {
+                itemSpriteFrame[i].SetActive(false);
+                itemSprite[i].gameObject.SetActive(false);
             }
         }
 
@@ -44,6 +53,10 @@ public class UI_GameOver : UI_Base<UI_GameOver>
 
     private void OnClickLobbyButton()
     {
+        Managers.UserData.playerGold += Managers.UserData.acquisitionGold;
+        Managers.UserData.acquisitionGold = 0;
+        Managers.UserData.playerItemAcquired.Clear();
+        Managers.DataManager.Save();
         Managers.UI_Manager.ShowLoadingUI("LobbyScene");
     }
 
@@ -65,6 +78,7 @@ public class UI_GameOver : UI_Base<UI_GameOver>
         gameOverText.DOFade(0f, 2f);
         yield return new WaitForSeconds(2f);
 
+        resultCanvasGroup.gameObject.SetActive(true);
         resultCanvasGroup.DOFade(1f, 2f);
         yield break;
 
@@ -101,6 +115,6 @@ public class UI_GameOver : UI_Base<UI_GameOver>
     {
         playerLevel = Managers.GameSceneManager.Player.GetComponent<Level>();
 
-        levelText.text = playerLevel.level.ToString();
+        levelText.text = "Level : " + playerLevel.level.ToString();
     }
 }

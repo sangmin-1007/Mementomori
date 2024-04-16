@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Managers : MonoBehaviour
@@ -15,33 +16,38 @@ public class Managers : MonoBehaviour
     private LobbySceneManager _LobbySceneManager;
     private GameManager _gameManager;
     private SceneLoader _sceneLoader;
-    private DataManager _dataManager;
+    private UserData _userData;
     private ItemObjectPool _itemObjectPool;
+    private SoundManager _soundManager;
+    private DataManager _dataManager;
+    private PlayerEquipStatsManager _playerEquipStatsManager;
 
-    // Manager Singletone
+
     public static UI_Manager UI_Manager => Instance._uiManager;
     public static GameManager GameManager => Instance._gameManager;
     public static LobbySceneManager LobbySceneManager => Instance._LobbySceneManager;
     public static GameSceneManager GameSceneManager => Instance._gameSceneManager;
     public static SceneLoader SceneLoader => Instance._sceneLoader;
+    public static UserData UserData => Instance._userData;
     public static DataManager DataManager => Instance._dataManager;
-
     public static ItemObjectPool ItemObjectPool => Instance._itemObjectPool;
-
+    public static SoundManager SoundManager => Instance._soundManager;
+    public static PlayerEquipStatsManager PlayerEquipStatsManager => instance._playerEquipStatsManager;
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     public static void Excute()
     {
         Initilize();
+        
     }
 
     private static void Initilize()
     {
-        if(instance == null)
+        if (instance == null)
         {
             GameObject go = GameObject.Find("@AllManagers");
 
-            if(go == null)
+            if (go == null)
             {
                 go = new GameObject("@AllManagers");
                 go.AddComponent<Managers>();
@@ -50,13 +56,14 @@ public class Managers : MonoBehaviour
             DontDestroyOnLoad(go);
             instance = go.GetComponent<Managers>();
 
-            //TODO Manager registration
-            if(!go.TryGetComponent(out instance._uiManager))
+
+
+            if (!go.TryGetComponent(out instance._uiManager))
             {
                 instance._uiManager = go.AddComponent<UI_Manager>();
             }
 
-            if(!go.TryGetComponent(out instance._gameManager))
+            if (!go.TryGetComponent(out instance._gameManager))
             {
                 instance._gameManager = go.AddComponent<GameManager>();
             }
@@ -68,7 +75,7 @@ public class Managers : MonoBehaviour
 
             if (!go.TryGetComponent(out instance._LobbySceneManager))
             {
-                instance._LobbySceneManager= go.AddComponent<LobbySceneManager>();
+                instance._LobbySceneManager = go.AddComponent<LobbySceneManager>();
             }
 
             if (!go.TryGetComponent(out instance._sceneLoader))
@@ -76,14 +83,30 @@ public class Managers : MonoBehaviour
                 instance._sceneLoader = go.AddComponent<SceneLoader>();
             }
 
-            if(!go.TryGetComponent(out instance._dataManager))
+            if (!go.TryGetComponent(out instance._userData))
+            {
+                instance._userData = go.AddComponent<UserData>();
+            }
+
+            if (!go.TryGetComponent(out instance._itemObjectPool))
+            {
+                Instance._itemObjectPool = go.AddComponent<ItemObjectPool>();
+            }
+
+            if (!go.TryGetComponent(out instance._soundManager))
+            {
+                instance._soundManager = go.AddComponent<SoundManager>();
+
+            }
+
+            if (!go.TryGetComponent(out instance._dataManager))
             {
                 instance._dataManager = go.AddComponent<DataManager>();
             }
 
-            if(!go.TryGetComponent(out instance._itemObjectPool))
+            if(!go.TryGetComponent(out instance._playerEquipStatsManager))
             {
-                Instance._itemObjectPool = go.AddComponent<ItemObjectPool>();
+                instance._playerEquipStatsManager = go.AddComponent<PlayerEquipStatsManager>();
             }
         }
     }

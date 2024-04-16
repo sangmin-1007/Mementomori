@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class EnemyHealthController : PlayerController
 {
-    //[SerializeField] private string targetTag = "Player";
     private bool _isCollidingWithTarget;
 
     private HealthSystem healthSystem;
@@ -29,9 +28,5 @@ public class EnemyHealthController : PlayerController
     {
         AttackSO attackSO = Stats.CurrentStates.attackSO;
         bool hasBeenChanged = _collidingTargetHealthSystem.ChangeHealth(-attackSO.power);
-        //if (attackSO.isOnKnockback && _collidingMovement != null)
-        //{
-        //    _collidingMovement.ApplyKnockback(transform, attackSO.knockbackPower, attackSO.knockbackTime);
-        //}
     }
 }

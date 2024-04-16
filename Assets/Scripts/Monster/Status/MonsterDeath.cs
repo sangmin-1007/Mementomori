@@ -4,12 +4,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum MonsterType
+{
+    SkeletonCat,
+    SkeletonWarrior,
+    SkeletonArcher,
+    Necromancer,
+    Boss,
+}
+
 public class MonsterDeath : MonoBehaviour
 {
     PlayerController _controller;
     HealthSystem _healthSystem;
     Collider2D coll;
     Rigidbody2D rigid;
+
+    [SerializeField] private MonsterType _monsterType;
 
     private void Awake()
     {
@@ -22,19 +33,13 @@ public class MonsterDeath : MonoBehaviour
 
     private void OnDie()
     {
-        //Managers.ItemObjectPool.SpawnItem(transform.position, 50001000);
-
-        #region 아이템 드롭 테스트
-        int dropRate = UnityEngine.Random.Range(1, 101);
-        if (dropRate <= 50)
-        {
-            Managers.ItemObjectPool.SpawnItem(transform.position, 50001000);
-        }
-        else
+        Managers.ItemObjectPool.SpawnItem(transform.position, 50001000);
+        TypeByAcquisitionGold(_monsterType);
+        if(_monsterType == MonsterType.Boss)
         {
             Managers.ItemObjectPool.SpawnItem(transform.position, DataBase.Item.GetRandomItemID());
         }
-        #endregion
+
 
         rigid.velocity = Vector3.zero;
 
@@ -49,16 +54,15 @@ public class MonsterDeath : MonoBehaviour
         {
             component.enabled = false;
         }
-
+        Managers.SoundManager.Play("Effect/Monster_Die1", Sound.Effect);
         Invoke("SetDie", 1f);
-        //coll.enabled = false;
-        //rigid.simulated = false;
-        Spawner.count--;
-        //Debug.Log($"감소 후 몬스터 수 : {Spawner.count}");
+        if(_monsterType != MonsterType.Boss)
+            Spawner.count--;
     }
 
     void SetDie()
     {
+        
         foreach (SpriteRenderer renderer in transform.GetComponentsInChildren<SpriteRenderer>())
         {
             Color color = renderer.color;
@@ -71,5 +75,29 @@ public class MonsterDeath : MonoBehaviour
             component.enabled = true;
         }
         gameObject.SetActive(false);
+    }
+
+    private void TypeByAcquisitionGold(MonsterType monsterType)
+    {
+        switch(monsterType)
+        {
+            case MonsterType.SkeletonCat:
+                Managers.UserData.acquisitionGold += 5;
+                break;
+            case MonsterType.SkeletonWarrior:
+                Managers.UserData.acquisitionGold += 7;
+                break;
+            case MonsterType.SkeletonArcher:
+                Managers.UserData.acquisitionGold += 11;
+                break;
+            case MonsterType.Necromancer:
+                Managers.UserData.acquisitionGold += 15;
+                break;
+            case MonsterType.Boss:
+                Managers.UserData.acquisitionGold += 100;
+                break;
+            default:
+                break;
+        }
     }
 }

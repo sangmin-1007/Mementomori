@@ -5,66 +5,104 @@ using UnityEngine.SceneManagement;
 
 public class Spawner : MonoBehaviour
 {
-    public int stage = 1;
+    static public int stage;
+    float stageTimer;
+    float bossTimer;
+    static public bool boss;
 
     public Transform[] spawnPoint;
 
     private SpawnManager _spawnManager;
 
-    float timer = 0f;
-    float stage_time = 0f;
-    public static int count = 0;
+    float spawnTimer;
+    public static int count;
+
+    HealthSystem player;
+
+    public GameObject Dragonewt;
+    public GameObject Germud;
+    public GameObject CarcassesCollector;
+    public GameObject Ifrit;
 
     private void Start()
     {
         count = 0;
-
-        stage = 4;
-
+        stage = 1;
+        boss = false;
+        stageTimer = 0f;
+        bossTimer = 60f;
+        spawnTimer = 0f;
         spawnPoint = GetComponentsInChildren<Transform>();
-        if(SceneManager.GetActiveScene().name == "GameScene" || SceneManager.GetActiveScene().name == "GameScene-LIK")
+        if(SceneManager.GetActiveScene().name == "GameScene")
         {
             _spawnManager = Managers.GameSceneManager.MonsterSpawner.GetComponent<SpawnManager>();
         }
-
+        player = GetComponentInParent<HealthSystem>();
     }
 
     private void Update()
     {
-        timer += Time.deltaTime;
-        //Debug.Log(timer);
-        //stage_time += Time.deltaTime;
-
-        //if (stage_time > 30f)
-        //{
-        //    SpawnBoss();
-        //    stage_time = 0f;
-        //    return;
-        //}
-
         if (_spawnManager == null)
             return;
 
-        if (timer > 0.5f && count < 50)
+        spawnTimer += Time.deltaTime;
+
+        if (spawnTimer > 0.5f && count < 70)
         {
-            timer = 0f;
+            spawnTimer = 0f;
 
             Spawn();
             count++;
-            //Debug.Log($"증가 후 몬스터 수 : {count}");
         }
 
+        stageTimer += Time.deltaTime;
+
+        if (stageTimer > 60f && boss == false)
+        {
+            SpawnBoss();
+            bossTimer = 60f;
+            boss = true;
+        }
+
+        if (boss)
+        {
+            stageTimer = 0f;
+            bossTimer -= Time.deltaTime;
+        }
+
+        if (bossTimer <= 0f)
+        {
+            boss = false;
+            bossTimer = 60;
+            player.ChangeHealth(-10000f);
+        }
     }
 
-    //private void SpawnBoss()
-    //{
-    //    if (_spawnManager.pool == null)
-    //    {
-    //        return;
-    //    }
-    //    GameObject monster = _spawnManager.pool.Get(4);
-    //    monster.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
-    //}
+    private void SpawnBoss()
+    {
+        if (_spawnManager.pool == null)
+        {
+            return;
+        }
+
+        switch (stage)
+        {
+            case 1:
+                Instantiate(Dragonewt, transform);
+                break;
+            case 2:
+                Instantiate(Germud, transform);
+                break;
+            case 3:
+                Instantiate(CarcassesCollector, transform);
+                break;
+            case 4:
+                Instantiate(Ifrit, transform);
+                break;
+            default:
+                break;
+        }
+    }
 
     void Spawn()
     {

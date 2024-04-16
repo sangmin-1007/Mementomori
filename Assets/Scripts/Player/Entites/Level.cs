@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Level : MonoBehaviour
@@ -24,11 +25,16 @@ public class Level : MonoBehaviour
 
     void LevelUpChecker()
     {
-        //경험치량에 도달
         if (expriecne >= expriecneCap)
         {
             level++;
-            //현재 경험치 초기화
+            if (!Managers.UI_Manager.IsActive<UI_Skill>())
+            {
+                Managers.UI_Manager.ShowUI<UI_Skill>().Next();
+                HealthSystem healthSystem = Managers.GameSceneManager.Player.GetComponent<HealthSystem>();
+                healthSystem._timeSinceLastChange = 0.51f;
+                Time.timeScale = 0;
+            }
             expriecne -= expriecneCap;
 
             int experienceCapIncrease = 0;

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.XR;
 using UnityEngine.SceneManagement;
 
 public enum SceneNumber
@@ -13,9 +14,11 @@ public enum SceneNumber
 
 public class SceneLoader : MonoBehaviour
 {
+
     private void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
+     
     }
 
     private void OnDestroy()
@@ -25,6 +28,7 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadScene(SceneNumber scene)
     {
+       // Managers.Clear();
         SceneManager.LoadSceneAsync((int)scene);
     }
 
@@ -35,18 +39,25 @@ public class SceneLoader : MonoBehaviour
             // StartScene
             case 0:
                 Managers.UI_Manager.ShowUI<UI_StartScene>();
+                Managers.SoundManager.Play("Bgm/StartSceneBGM", Sound.Bgm);
                 break;
             // LobbyScene
             case 1:
                 Managers.LobbySceneManager.IntializeLobbyScene();
+                if(Managers.UserData.isTutorial == false)
+                {
+                    Managers.UI_Manager.ShowUI<UI_Tutorial>();
+                }
+                Managers.SoundManager.Play("Bgm/LobbyScene1", Sound.Bgm);
                 break;
             // GameScene
             case 2:
                 Managers.GameSceneManager.InitializeGameScene();
+                Managers.SoundManager.Play("Bgm/BattleScene", Sound.Bgm);
                 break;
             //EndingScene
             case 3:
-                Managers.GameSceneManager.InitializeGameScene();
+                Managers.UI_Manager.ShowUI<UI_EndingScene>();
                 break;
         }
     }

@@ -5,14 +5,12 @@ using UnityEngine;
 
 public class UI_Manager : MonoBehaviour
 {   
-    Dictionary<string, GameObject> UI_List = new Dictionary<string, GameObject>();
+    public Dictionary<string, GameObject> UI_List = new Dictionary<string, GameObject>();
 
     [HideInInspector] public string sceneName;
 
 
-    /// <summary>
-    /// UI를 보여줍니다 받아올 UI가 없으면 생성 후 보여줍니다
-    /// </summary>
+
     public T ShowUI<T>(Transform parent = null) where T : Component
     {
         if (UI_List.ContainsKey(typeof(T).Name) && UI_List[typeof(T).Name] != null)
@@ -75,9 +73,7 @@ public class UI_Manager : MonoBehaviour
         return "Prefabs/UI/" + className;
     }
 
-    /// <summary>
-    /// LoadingUI를 보여줍니다 (가고싶은 씬 이름)
-    /// </summary>
+
     public UI_Loading ShowLoadingUI(string loadSceneName)
     {
         sceneName = loadSceneName;

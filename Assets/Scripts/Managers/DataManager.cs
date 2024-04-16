@@ -1,40 +1,115 @@
-using Constants;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
-public class DataManager : MonoBehaviour
+public class SaveData
 {
-    public List<ItemData> playerInventoryItemData = new List<ItemData>();
-    public Dictionary<ItemType,ItemData> playerEquipItemDatas = new Dictionary<ItemType,ItemData>();
+    public List<ItemData> inventoryItemData = new List<ItemData>();
+    public List<ItemData> equipItemData = new List<ItemData>();
     public List<ItemData> storageItemData = new List<ItemData>();
 
     public int playerGold;
-    
-    public void AddItem(ItemData itemDatas)
+    public int playerDeathCount;
+    public int totalPlayTime;
+    public string dateTime;
+
+    public bool isTutorial;
+}
+
+public class DataManager : MonoBehaviour
+{
+    public string path;
+    public int nowSlot;
+
+    public SaveData nowPlayerData = new SaveData();
+
+    private void Awake()
     {
-        playerInventoryItemData.Add(itemDatas);
-        if(Managers.UI_Manager.IsActive<Inventory>())
-        {
-            Inventory.instance.AddItem(itemDatas);
-        }
+        path = Application.persistentDataPath + "/save";
     }
-    public void EquipItem(ItemData itemDatas)
+
+    public void Save()
     {
-        if (playerEquipItemDatas.ContainsKey(itemDatas.Type))
+        SaveDataDelete();
+
+        nowPlayerData.playerGold = Managers.UserData.playerGold;
+
+        for (int i = 0; i < Managers.UserData.playerInventoryItemData.Count; i++)
         {
-            playerInventoryItemData.Add(playerEquipItemDatas[itemDatas.Type]);
-            playerEquipItemDatas.Remove(itemDatas.Type);
-            playerEquipItemDatas.Add(itemDatas.Type,itemDatas);
-            playerInventoryItemData.Remove(itemDatas);
-            return;
+            nowPlayerData.inventoryItemData.Add(Managers.UserData.playerInventoryItemData[i]);
         }
 
-        playerInventoryItemData.Remove(itemDatas);
-        playerEquipItemDatas.Add(itemDatas.Type,itemDatas);
+        foreach(ItemData item in Managers.UserData.playerEquipItemDatas.Values)
+        {
+            nowPlayerData.equipItemData.Add(item);
+        }
+
+        for(int i = 0; i < Managers.UserData.storageItemData.Count; i++)
+        {
+            nowPlayerData.storageItemData.Add(Managers.UserData.storageItemData[i]);
+        }
+
+        nowPlayerData.dateTime = DateTime.Now.ToString();
+        nowPlayerData.playerDeathCount = Managers.UserData.playerDeathCount;
+        nowPlayerData.totalPlayTime = (int)Managers.GameManager.totalPlayTime;
+        nowPlayerData.isTutorial = Managers.UserData.isTutorial;
+        string data = JsonUtility.ToJson(nowPlayerData);
+        File.WriteAllText(path + nowSlot.ToString(), data);
+
+        NowPlayerDataClear();
     }
-    public void StorageItemData(ItemData itemDatas)
+
+    public void Load()
     {
-        storageItemData.Add(itemDatas);
+        string data = File.ReadAllText(path + nowSlot.ToString());
+        nowPlayerData = JsonUtility.FromJson<SaveData>(data);
+    }
+
+    public void LoadDataSetting()
+    {
+        string data = File.ReadAllText(path + nowSlot.ToString());
+        nowPlayerData = JsonUtility.FromJson<SaveData>(data);
+
+        for (int i = 0; i < nowPlayerData.inventoryItemData.Count; i++)
+        {
+            Managers.UserData.playerInventoryItemData.Add(nowPlayerData.inventoryItemData[i]);
+        }
+
+        for (int i = 0; i < nowPlayerData.equipItemData.Count; i++)
+        {
+            Managers.UserData.playerEquipItemDatas.Add(nowPlayerData.equipItemData[i].Type, nowPlayerData.equipItemData[i]);
+        }
+
+        for (int i = 0; i < nowPlayerData.storageItemData.Count; i++)
+        {
+            Managers.UserData.storageItemData.Add(nowPlayerData.storageItemData[i]);
+        }
+
+        Managers.UserData.playerDeathCount = nowPlayerData.playerDeathCount;
+        Managers.UserData.playerGold = nowPlayerData.playerGold;
+        Managers.GameManager.totalPlayTime = nowPlayerData.totalPlayTime;  
+        Managers.UserData.isTutorial = nowPlayerData.isTutorial;
+
+        NowPlayerDataClear();
+    }
+
+    public void DataClear()
+    {
+        nowSlot = -1;
+        nowPlayerData = new SaveData();
+    }
+
+    private void NowPlayerDataClear()
+    {
+        nowPlayerData.inventoryItemData.Clear();
+        nowPlayerData.equipItemData.Clear();
+        nowPlayerData.storageItemData.Clear();
+    }
+
+    public void SaveDataDelete()
+    {
+        File.Delete(path + nowSlot.ToString());
     }
 }

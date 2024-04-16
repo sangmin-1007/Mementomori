@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameSceneManager : MonoBehaviour
 {
     public GameObject Player { get; private set; }
-    public GameObject MonsterSpawner { get; private set; }  
+    public GameObject MonsterSpawner { get; private set; }
 
     public void InitializeGameScene()
     {

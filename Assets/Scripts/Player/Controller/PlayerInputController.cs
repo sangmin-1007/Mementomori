@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerInputController : PlayerController
 {
@@ -13,7 +14,6 @@ public class PlayerInputController : PlayerController
         _camera = Camera.main;
     }
 
-    //샌드메세지방식 실행되었을때 돌려받는 함수를 만드는것
     public void OnMove(InputValue value)
     {
         Vector2 moveInput = value.Get<Vector2>().normalized;
@@ -22,7 +22,10 @@ public class PlayerInputController : PlayerController
 
     public void OnDash(InputValue value)
     {
-        IsDashing = value.isPressed;
+        if (SceneManager.GetActiveScene().name == "GameScene")
+        {
+            IsDashing = value.isPressed;
+        }
     }
 
     public void OnLook(InputValue value)
@@ -36,20 +39,76 @@ public class PlayerInputController : PlayerController
 
     public void OnAttack(InputValue value)
     {
-        IsAttacking = value.isPressed;
+        if (SceneManager.GetActiveScene().name == "GameScene")
+        {
+            if(Managers.UI_Manager.IsActive<UI_Skill>())
+            {
+                IsAttacking = false;
+            }
+            else
+            {
+                IsAttacking = value.isPressed;
+            }
+            
+        }
     }
 
     public void OnInventory(InputValue value)
     {
-        if (value.isPressed)
+        if (!Managers.UI_Manager.IsActive<UI_Storage>() && !Managers.UI_Manager.IsActive<UI_Shop>() &&
+            !Managers.UI_Manager.IsActive<UI_Option>() && !Managers.UI_Manager.IsActive<UI_Stats>())
         {
-            if(!Managers.UI_Manager.IsActive<Inventory>())
+            if (value.isPressed)
             {
-                Managers.UI_Manager.ShowUI<Inventory>();
+                if (!Managers.UI_Manager.IsActive<UI_Inventory>())
+                {
+                    Managers.UI_Manager.ShowUI<UI_Inventory>();
+                }
+                else
+                {
+                    Managers.UI_Manager.HideUI<UI_Inventory>();
+                }
             }
-            else
+        }
+       
+    }
+
+
+    public void OnOption(InputValue value)
+    {
+        if(!Managers.UI_Manager.IsActive<UI_Storage>() && !Managers.UI_Manager.IsActive<UI_Shop>() &&
+            !Managers.UI_Manager.IsActive<UI_Inventory>() && !Managers.UI_Manager.IsActive<UI_Stats>())
+        {
+            if (value.isPressed)
             {
-                Managers.UI_Manager.HideUI<Inventory>();
+                if (!Managers.UI_Manager.IsActive<UI_Option>())
+                {
+                    Managers.UI_Manager.ShowUI<UI_Option>();
+                }
+                else
+                {
+                    Managers.UI_Manager.HideUI<UI_Option>();
+                }
+            }
+        }
+
+    }
+
+    public void OnStat(InputValue value)
+    {
+        if(!Managers.UI_Manager.IsActive<UI_Storage>() && !Managers.UI_Manager.IsActive<UI_Shop>() &&
+            !Managers.UI_Manager.IsActive<UI_Inventory>() && !Managers.UI_Manager.IsActive<UI_Option>())
+        {
+            if (value.isPressed)
+            {
+                if (!Managers.UI_Manager.IsActive<UI_Stats>())
+                {
+                    Managers.UI_Manager.ShowUI<UI_Stats>();
+                }
+                else
+                {
+                    Managers.UI_Manager.HideUI<UI_Stats>();
+                }
             }
         }
     }

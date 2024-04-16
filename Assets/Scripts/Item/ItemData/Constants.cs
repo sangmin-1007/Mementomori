@@ -21,14 +21,14 @@ namespace Constants
         Legend
     }
 
-    //public class Colors
-    //{
-    //    public static readonly Color[] ItemGrade = new[]
-    //    {
-    //        new Color(0.7f,0.7f,0.7f),
-    //        new Color(0.8f,0.8f,0.8f),
-    //        new Color(0.9f,0.9f,0.9f),
-    //        new Color(1.0f,0.7f,0.9f)
-    //    };
-    //}
+    public class Colors
+    {
+        public static readonly Color[] ItemGrade = new[]
+       {
+            new Color(0.7f,0.7f,0.7f),
+            new Color(12/255f,23/255f,217/255f,255/255f),
+            new Color(152/255f,6/255f,255/255f,255/255f),
+            new Color(255,255,0,255)
+        };
+    }
 }

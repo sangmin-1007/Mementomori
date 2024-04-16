@@ -29,9 +29,5 @@ public class PlayerHealthController : PlayerController
     {
         AttackSO attackSO = Stats.CurrentStates.attackSO;
         bool hasBeenChanged = _collidingTargetHealthSystem.ChangeHealth(-attackSO.power);
-        //if (attackSO.isOnKnockback && _collidingMovement != null)
-        //{
-        //    _collidingMovement.ApplyKnockback(transform, attackSO.knockbackPower, attackSO.knockbackTime);
-        //}
     }
 }

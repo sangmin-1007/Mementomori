@@ -6,9 +6,9 @@ public class ItemObject : MonoBehaviour
 
     private ItemData item;
 
-    public int itemId;
+    public int itemId = 0;
 
-    private SpriteRenderer spriteRenderer;
+    [SerializeField]private SpriteRenderer spriteRenderer;
 
     private Transform playerTransform;
     private PlayerStatsHandler playerStats;
@@ -27,8 +27,11 @@ public class ItemObject : MonoBehaviour
         level = Managers.GameSceneManager.Player.GetComponent<Level>();
 
         moveSpeed = (playerStats.CurrentStates.speed + 2f);
+    }
 
-       if ( itemId != 0)
+    private void OnEnable()
+    {
+        if (itemId != 0)
         {
             ItemSetting(itemId);
 
@@ -62,20 +65,16 @@ public class ItemObject : MonoBehaviour
 
     public void Interaction()
     {
-        if(item.Type != Constants.ItemType.Consume)
+        if(item.Type != Constants.ItemType.Consume && Managers.UserData.playerInventoryItemData.Count < 28)
         {
-            Managers.DataManager.AddItem(item);
-            //Inventory.instance.AddItem(Managers.DataManager.playerItemData[0]);
+            Managers.UserData.AddItem(item);
+            Managers.UserData.playerItemAcquired.Add(item);
             Managers.ItemObjectPool.DisableItem(gameObject);
         }
         else
         {
             Managers.ItemObjectPool.DisableItem(gameObject);
-            //Debug.Log("경험치 획득");
-            Debug.Log($"경험치 : {level.expriecne}, 레벨 : {level.level}");
             level.IncreaseExprience(item.Exp);
-            //ObjectPool
-            //경험치 
         }
       
     }
