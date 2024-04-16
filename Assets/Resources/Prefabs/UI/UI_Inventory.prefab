@@ -94,23 +94,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 8464818288079477276}
   icon: {fileID: 4303254903234095884}
-  curSlot:
-    item:
-      _id: 0
-      _grade: 0
-      _type: 0
-      _name: 
-      _description: 
-      _spritePath: 
-      _atk: 0
-      _atkSpeed: 0
-      _hp: 0
-      _def: 0
-      _speed: 0
-      _stamina: 0
-      _exp: 0
-      _buyPrice: 0
-      _sellPrice: 0
   slotType: 5
   index: 0
   equipped: 0
@@ -343,23 +326,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 928308556140039081}
   icon: {fileID: 1322916045908599872}
-  curSlot:
-    item:
-      _id: 0
-      _grade: 0
-      _type: 0
-      _name: 
-      _description: 
-      _spritePath: 
-      _atk: 0
-      _atkSpeed: 0
-      _hp: 0
-      _def: 0
-      _speed: 0
-      _stamina: 0
-      _exp: 0
-      _buyPrice: 0
-      _sellPrice: 0
   slotType: 5
   index: 0
   equipped: 0
@@ -528,23 +494,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 6347994225073679272}
   icon: {fileID: 1911153340472442100}
-  curSlot:
-    item:
-      _id: 0
-      _grade: 0
-      _type: 0
-      _name: 
-      _description: 
-      _spritePath: 
-      _atk: 0
-      _atkSpeed: 0
-      _hp: 0
-      _def: 0
-      _speed: 0
-      _stamina: 0
-      _exp: 0
-      _buyPrice: 0
-      _sellPrice: 0
   slotType: 5
   index: 0
   equipped: 0
@@ -730,7 +679,6 @@ RectTransform:
   - {fileID: 3629633898584470216}
   - {fileID: 3801567230294404662}
   - {fileID: 3067377254924651394}
-  - {fileID: 9119103246244112083}
   - {fileID: 2151867050863159085}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -844,13 +792,11 @@ MonoBehaviour:
   - {fileID: 8263815750152026427}
   - {fileID: 2729442775604426067}
   - {fileID: 6148968314332641012}
-  slots: []
   equippedSlots:
   - {fileID: 1497300853301755319}
   - {fileID: 5510777509852913518}
   - {fileID: 2227825598467977241}
   - {fileID: 693037066962827280}
-  equipSlots: []
   selectedItemStatName:
   - {fileID: 0}
   - {fileID: 0}
@@ -1155,23 +1101,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 6719464612841640928}
   icon: {fileID: 1207148289437036113}
-  curSlot:
-    item:
-      _id: 0
-      _grade: 0
-      _type: 0
-      _name: 
-      _description: 
-      _spritePath: 
-      _atk: 0
-      _atkSpeed: 0
-      _hp: 0
-      _def: 0
-      _speed: 0
-      _stamina: 0
-      _exp: 0
-      _buyPrice: 0
-      _sellPrice: 0
   slotType: 5
   index: 0
   equipped: 0
@@ -1378,97 +1307,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 2071443655879868920, guid: 252d1f9f9eb6dfe46873735361f596d6, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!1 &6359042006467664878
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9119103246244112083}
-  - component: {fileID: 4947949135594792592}
-  - component: {fileID: 4878541098812014549}
-  - component: {fileID: 8590530551267073315}
-  m_Layer: 5
-  m_Name: DragSlot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &9119103246244112083
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6359042006467664878}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2260474613086222600}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4947949135594792592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6359042006467664878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1ead71760adf9b44b5e763c2e40b507, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dragSlot: {fileID: 0}
-  imageItem: {fileID: 8590530551267073315}
---- !u!222 &4878541098812014549
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6359042006467664878}
-  m_CullTransparentMesh: 1
---- !u!114 &8590530551267073315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6359042006467664878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 0
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
