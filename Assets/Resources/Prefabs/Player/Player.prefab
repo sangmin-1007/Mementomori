@@ -354,10 +354,10 @@ MonoBehaviour:
   levelRanges:
   - startLevel: 0
     endLevel: 0
-    experienceCapIncrease: 100
-  - startLevel: 1
+    experienceCapIncrease: 50
+  - startLevel: 5
     endLevel: 10
-    experienceCapIncrease: 10
+    experienceCapIncrease: 30
 --- !u!114 &3024808185978680634
 MonoBehaviour:
   m_ObjectHideFlags: 0
