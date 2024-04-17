@@ -8,7 +8,7 @@ public class Skill_Bullet : MonoBehaviour
     public float damage;
     public int per;
 
-    public int id;
+    //public int id;
     Rigidbody2D rigid;
     PlayerStatsHandler playerStats;
     private void Awake()
@@ -34,6 +34,8 @@ public class Skill_Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Enemy") || per == -1)
+            return;
+        else
         {
             HealthSystem healthSystem1 = collision.GetComponent<HealthSystem>();
             if (healthSystem1 != null)

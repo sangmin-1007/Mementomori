@@ -9,6 +9,9 @@ public class UI_Option : UI_Base<UI_Option>
     [SerializeField] private Button saveButton;
     [SerializeField] private Button exitButton;
     [SerializeField] private Button quitGameButton;
+    [SerializeField] private Button tutorialButton;
+
+
 
 
 
@@ -63,6 +66,9 @@ public class UI_Option : UI_Base<UI_Option>
         Managers.UserData.Effect_VOLUME_KEY = volume;
     }
 
+
+   
+
     public void OnClickOptionExitButton()
     {
         CloseUI();
@@ -82,8 +88,16 @@ public class UI_Option : UI_Base<UI_Option>
         Managers.DataManager.Save();
     }
 
+    public void OnClickTutorialButton()
+    {
+        OnClickOptionExitButton();
+        Managers.UserData.isTutorial = true;
+        Managers.UI_Manager.ShowUI<UI_Tutorial>();
+    }
 
 
 
- 
+
+
+
 }
