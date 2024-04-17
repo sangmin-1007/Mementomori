@@ -37,22 +37,6 @@ public class PlayerInputController : PlayerController
         CallLookEvent(newAim);
     }
 
-    public void OnAttack(InputValue value)
-    {
-        if (SceneManager.GetActiveScene().name == "GameScene")
-        {
-            if(Managers.UI_Manager.IsActive<UI_Skill>() && IsDashing)
-            {
-                IsAttacking = false;
-            }
-            else
-            {
-                IsAttacking = value.isPressed;
-            }
-            
-        }
-    }
-
     public void OnInventory(InputValue value)
     {
         if (!Managers.UI_Manager.IsActive<UI_Storage>() && !Managers.UI_Manager.IsActive<UI_Shop>() &&
@@ -72,7 +56,6 @@ public class PlayerInputController : PlayerController
         }
        
     }
-
 
     public void OnOption(InputValue value)
     {

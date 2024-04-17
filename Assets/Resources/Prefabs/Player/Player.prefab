@@ -294,7 +294,7 @@ MonoBehaviour:
   pos2: {fileID: 3312253550458596762}
   pos3: {fileID: 3420190600949914972}
   pos_3: {fileID: 2681764270428834000}
-  boxSize1: {x: 1.2, y: 1.7}
+  boxSize1: {x: 1.5, y: 1.7}
   boxSize2: {x: 1, y: 0.3}
 --- !u!114 &3189140436815241105
 MonoBehaviour:
