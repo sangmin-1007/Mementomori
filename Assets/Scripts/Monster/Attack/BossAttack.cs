@@ -7,7 +7,6 @@ using UnityEngine.UIElements;
 public class BossAttack : MonoBehaviour
 {
     BossAttack bossAttack;
-    FinalBossAttack finalBossAttack;
 
     Animator animator;
 
@@ -34,7 +33,6 @@ public class BossAttack : MonoBehaviour
     private void Awake()
     {
         bossAttack = GetComponent<BossAttack>();
-        finalBossAttack = GetComponent<FinalBossAttack>();
         animator = GetComponentInChildren<Animator>();
         movement = GetComponent<MonsterMovement>();
         Stats = GetComponent<PlayerStatsHandler>();
