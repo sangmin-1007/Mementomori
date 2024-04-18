@@ -276,6 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dc48d244ef306842992cd510aa5dbeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monsterType: 4
   targetTag: Player
   spriteRenderer: {fileID: 4536986423380594890}
   pos1: {fileID: 311343938306419155}

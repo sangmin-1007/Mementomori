@@ -37,14 +37,6 @@ public class GameMapInteract : MonoBehaviour
         switch (interactType)
         {
             case InteractType.GameMapReposition:
-                //float diffX = playerPos.x - myPos.x;
-                //float diffY = playerPos.y - myPos.y;
-
-                //float dirX = diffX < 0 ? -1 : 1;
-                //float dirY = diffY < 0 ? -1 : 1;
-
-                //diffX = Mathf.Abs(diffX);
-                //diffY = Mathf.Abs(diffY);
 
                 float dirX = playerPos.x  - myPos.x;
                 float dirY = playerPos.y - myPos.y;
@@ -60,8 +52,6 @@ public class GameMapInteract : MonoBehaviour
                 {
                     transform.Translate(Vector3.right * dirX * 80f);
                     transform.Translate(Vector3.up * dirY * 80f);
-                    Debug.Log($"x = {diffX}");
-                    Debug.Log($"y = {diffY}");
                 }
                 else if (diffX > diffY)
                 {

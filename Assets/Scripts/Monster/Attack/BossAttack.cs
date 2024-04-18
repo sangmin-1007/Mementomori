@@ -14,6 +14,8 @@ public class BossAttack : MonoBehaviour
     float defaultSpeed;
     MonsterMovement movement;
 
+    [SerializeField] MonsterType monsterType;
+
     protected PlayerStatsHandler Stats { get; private set; }
     [SerializeField] private string targetTag = "Player";
 
@@ -77,9 +79,13 @@ public class BossAttack : MonoBehaviour
 
         isAttacking = true;
         movement.speed = 0f;
+
         animator.SetTrigger("Ready");
 
-        yield return new WaitForSeconds(1f);
+        if (monsterType == MonsterType.Boss)
+        {
+            yield return new WaitForSeconds(1f);
+        }
 
         animator.SetTrigger("Attack");
 
