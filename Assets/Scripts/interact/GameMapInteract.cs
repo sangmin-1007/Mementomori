@@ -13,6 +13,8 @@ public class GameMapInteract : MonoBehaviour
 
     private Vector2 PlayerDir;
     private Vector3 upRight;
+    private Vector3 myPos;
+    private Vector3 playerPos;
     private void Start()
     {
         player = Managers.GameSceneManager.Player;
@@ -23,40 +25,51 @@ public class GameMapInteract : MonoBehaviour
         upRight = new Vector3(1, 1, 0);
     }
 
+    public void Update()
+    {
+        myPos = transform.position;
+        playerPos = player.transform.position;
+    }
+
     public void Interaction()
     {
-        Vector3 myPos = transform.position;
-        Vector3 playerPos = player.transform.position;
-
-        float dirX = playerPos.x - myPos.x;
-        float dirY = playerPos.y - myPos.y;
-
-        float diffX = Mathf.Abs(dirX);
-        float diffY = Mathf.Abs(dirY);
-
-        dirX = dirX > 0 ? 1 : -1;
-        dirY = dirY > 0 ? 1 : -1;
-
-        Debug.Log($"dirX = {dirX}");
-        Debug.Log($"dirY = {dirY}");
-
 
         switch (interactType)
         {
             case InteractType.GameMapReposition:
-                if(Mathf.Abs(diffX-diffY) <= 0.01f)
+                //float diffX = playerPos.x - myPos.x;
+                //float diffY = playerPos.y - myPos.y;
+
+                //float dirX = diffX < 0 ? -1 : 1;
+                //float dirY = diffY < 0 ? -1 : 1;
+
+                //diffX = Mathf.Abs(diffX);
+                //diffY = Mathf.Abs(diffY);
+
+                float dirX = playerPos.x  - myPos.x;
+                float dirY = playerPos.y - myPos.y;
+
+                float diffX = Mathf.Abs(dirX);
+                float diffY = Mathf.Abs(dirY);
+
+                dirX = dirX > 0 ? 1 : -1;
+                dirY = dirY > 0 ? 1 : -1;
+
+
+                if (Mathf.Abs(diffX - diffY) <= 0.1f || diffX == diffY)
                 {
                     transform.Translate(Vector3.right * dirX * 80f);
-                    transform.Translate(Vector3.up * dirY * 80);
+                    transform.Translate(Vector3.up * dirY * 80f);
+                    Debug.Log($"x = {diffX}");
+                    Debug.Log($"y = {diffY}");
                 }
-
                 else if (diffX > diffY)
                 {
-                    transform.Translate(Vector3.right * dirX * 80f);
+                    transform.Translate(Vector3.right * dirX  * 80f);
                 }
                 else if (diffX < diffY)
                 {
-                    transform.Translate(Vector3.up * dirY * 80);
+                    transform.Translate(Vector3.up * dirY  * 80f);
                 }
                 break;
             default:
