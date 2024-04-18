@@ -10,13 +10,17 @@ public class GameMapInteract : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private PlayerController PlayerInput;
 
+
     private Vector2 PlayerDir;
+    private Vector3 upRight;
     private void Start()
     {
         player = Managers.GameSceneManager.Player;
         PlayerInput = Managers.GameSceneManager.Player.GetComponent<PlayerController>();
 
         PlayerInput.OnMoveEvent += PlayerMoveDir;
+
+        upRight = new Vector3(1, 1, 0);
     }
 
     public void Interaction()
@@ -24,22 +28,35 @@ public class GameMapInteract : MonoBehaviour
         Vector3 myPos = transform.position;
         Vector3 playerPos = player.transform.position;
 
-        float diffX = Mathf.Abs(playerPos.x - myPos.x);
-        float diffY = Mathf.Abs(playerPos.y - myPos.y);
+        float dirX = playerPos.x - myPos.x;
+        float dirY = playerPos.y - myPos.y;
 
-        float dirX = PlayerDir.x < 0 ? -1 : 1;
-        float dirY = PlayerDir.y < 0 ? -1 : 1;
+        float diffX = Mathf.Abs(dirX);
+        float diffY = Mathf.Abs(dirY);
 
-        switch(interactType)
+        dirX = dirX > 0 ? 1 : -1;
+        dirY = dirY > 0 ? 1 : -1;
+
+        Debug.Log($"dirX = {dirX}");
+        Debug.Log($"dirY = {dirY}");
+
+
+        switch (interactType)
         {
             case InteractType.GameMapReposition:
-                if (diffX > diffY)
+                if(Mathf.Abs(diffX-diffY) <= 0.01f)
                 {
-                    transform.Translate(Vector3.right * dirX * 40f);
+                    transform.Translate(Vector3.right * dirX * 80f);
+                    transform.Translate(Vector3.up * dirY * 80);
+                }
+
+                else if (diffX > diffY)
+                {
+                    transform.Translate(Vector3.right * dirX * 80f);
                 }
                 else if (diffX < diffY)
                 {
-                    transform.Translate(Vector3.up * dirY * 40);
+                    transform.Translate(Vector3.up * dirY * 80);
                 }
                 break;
             default:

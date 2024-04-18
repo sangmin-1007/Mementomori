@@ -40,10 +40,16 @@ public class BossAttack : MonoBehaviour
 
     }
 
+    private void OnEnable()
+    {
+        isAttacking = false;
+    }
+
     private void Start()
     {
         defaultSpeed = movement.speed;
     }
+
 
     private void Update()
     {
