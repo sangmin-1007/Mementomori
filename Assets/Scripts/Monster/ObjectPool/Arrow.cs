@@ -14,10 +14,12 @@ public class Arrow : MonoBehaviour
 
     private float damage;
 
+    Vector3 moving;
+
     public void Shoot(Vector3 direction)
     {
         this.direction = direction;
-        Invoke("DestroyArrow", 5f);
+        moving = transform.position;
     }
 
     public void DestroyArrow()
@@ -28,6 +30,10 @@ public class Arrow : MonoBehaviour
     void Update()
     {
         transform.Translate(direction * Time.deltaTime);
+        if ((moving - transform.position).magnitude > 5f)
+        {
+            DestroyArrow();
+        }
     }
 
     private void OnEnable()

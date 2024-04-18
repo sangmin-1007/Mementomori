@@ -15,6 +15,8 @@ public class Energy : MonoBehaviour
 
     Animator animator;
 
+    Vector3 moving;
+
     private void Awake()
     {
         animator = GetComponentInChildren<Animator>();
@@ -23,7 +25,7 @@ public class Energy : MonoBehaviour
     public void Shoot(Vector3 direction)
     {
         this.direction = direction;
-        Invoke("DestroyEnergy", 5f);
+        moving = transform.position;
     }
 
     public void DestroyEnergy()
@@ -34,6 +36,10 @@ public class Energy : MonoBehaviour
     void Update()
     {
         transform.Translate(direction * Time.deltaTime);
+        if((moving - transform.position).magnitude > 3f)
+        {
+            DestroyEnergy();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
