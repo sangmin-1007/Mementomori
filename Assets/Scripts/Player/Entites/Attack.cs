@@ -11,10 +11,16 @@ public class Attack : MonoBehaviour
     private PlayerController _controller;
     private Vector2 _aimDirection = Vector2.right;
 
+    private UI_Skill _Skill;
+    private SkillManager[] skills;
+
     private void Awake()
     {
         _controller = GetComponent<PlayerController>();
         _statsHandler = GetComponent<PlayerStatsHandler>();
+        _Skill = Managers.UI_Manager.ShowUI<UI_Skill>();
+        Managers.UI_Manager.HideUI<UI_Skill>();
+        skills = _Skill.skills;
     }
 
     void Start()
@@ -69,6 +75,12 @@ public class Attack : MonoBehaviour
                 {
                     healthSystem.ChangeHealth(-_statsHandler.allAttack);
                 }
+                if (skills[6].skillLevel == 0)
+                    return;
+                else if (skills[6].skillLevel != 0)
+                {
+                    Managers.GameSceneManager.Player.GetComponent<HealthSystem>().ChangeHealth(_statsHandler.allAttack * _Skill.skills[6].data.damages[_Skill.skills[6].skillLevel]);
+                }
             }
         }
 
@@ -84,6 +96,12 @@ public class Attack : MonoBehaviour
                     if(healthSystem != null )
                     {
                         healthSystem.ChangeHealth(-_statsHandler.allAttack);
+                    }
+                    if (skills[6].skillLevel == 0)
+                        return;
+                    else if (skills[6].skillLevel != 0)
+                    {
+                        Managers.GameSceneManager.Player.GetComponent<HealthSystem>().ChangeHealth(_statsHandler.allAttack * _Skill.skills[6].data.damages[_Skill.skills[6].skillLevel]);
                     }
                 }
             }
@@ -101,6 +119,12 @@ public class Attack : MonoBehaviour
                     if (healthSystem != null)
                     {
                         healthSystem.ChangeHealth(-_statsHandler.allAttack);
+                    }
+                    if (skills[6].skillLevel == 0)
+                        return;
+                    else if (skills[6].skillLevel != 0)
+                    {
+                        Managers.GameSceneManager.Player.GetComponent<HealthSystem>().ChangeHealth(_statsHandler.allAttack * _Skill.skills[6].data.damages[_Skill.skills[6].skillLevel]);
                     }
                 }
             }

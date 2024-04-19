@@ -12,63 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4ffca180d553444eba4db3fefc39bab, type: 3}
   m_Name: Skill 6
   m_EditorClassIdentifier: 
-  skillType: 6
+  skillType: 7
   skillId: 6
-  skillName: "\uB3C8"
-  skillDesc: "{0}\uACE8\uB4DC\uB97C \uD68D\uB4DD\uD569\uB2C8\uB2E4."
-  skillIcon: {fileID: 21300000, guid: 6f1a529416cd29f4abb1f3d2f39d0149, type: 3}
+  skillName: "\uD761\uD608"
+  skillDesc: "\uD50C\uB808\uC774\uC5B4 \uAE30\uBCF8 \uACF5\uACA9 \uC2DC \uB370\uBBF8\uC9C0\uC758
+    {0}% \uCCB4\uB825 \uD68C\uBCF5"
+  skillIcon: {fileID: 21300000, guid: c2ed8da03f68f4f459201390b1e765d8, type: 3}
   baseDamage: 0
   baseCount: 0
   damages:
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
-  - 500
+  - 0.0025
+  - 0.005
+  - 0.0075
+  - 0.01
+  - 0.0125
+  - 0.015
+  - 0.0175
+  - 0.02
+  - 0.0225
+  - 0.025
+  - 0.0275
+  - 0.03
+  - 0.0325
+  - 0.035
+  - 0.0375
+  - 0.04
+  - 0.0425
+  - 0.045
+  - 0.0475
+  - 0.05
   counts: 
   projectile: {fileID: 7694221757343814933, guid: ebcccb1ca4d59dc45a7fbf57d3feef2d, type: 3}

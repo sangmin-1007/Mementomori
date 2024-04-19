@@ -48,6 +48,9 @@ public class SkillManager : MonoBehaviour
             case SkillSO.SkillType.Heal:
                 textDesc.text = string.Format(data.skillDesc, data.damages[skillLevel]);
                 break;
+            case SkillSO.SkillType.Drain:
+                textDesc.text = string.Format(data.skillDesc, data.damages[skillLevel] * 100);
+                break;
             default:
                 textDesc.text = string.Format(data.skillDesc, data.damages[skillLevel]);
                 break;
@@ -107,6 +110,8 @@ public class SkillManager : MonoBehaviour
                 break;
             case SkillSO.SkillType.Money:
                 Managers.UserData.acquisitionGold += (int)data.damages[skillLevel];
+                break;
+            case SkillSO.SkillType.Drain:
                 break;
         }
         skillLevel++;
