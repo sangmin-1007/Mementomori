@@ -22,7 +22,7 @@ public class PlayerStatsHandler : MonoBehaviour
     private const float MinSpeed = 0.8f;
     private const int MinMaxHealth = 5;
 
-    [SerializeField] private CharacterType characterType;
+    public CharacterType characterType;
 
     public PlayerStats baseStats;
     public int allHealth;

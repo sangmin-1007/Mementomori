@@ -33,6 +33,8 @@ public class UI_HUD : UI_Base<UI_HUD>
     private float curStamina, maxStamina;
     private float curExp, maxExp;
 
+    private Coroutine warningCoroutine;
+
     private void Start()
     {
         playerStats = Managers.GameSceneManager.Player.GetComponent<HealthSystem>();
@@ -105,6 +107,25 @@ public class UI_HUD : UI_Base<UI_HUD>
         staminaBar.fillAmount = Mathf.Lerp(staminaBar.fillAmount, GetPercentage(curStamina, maxStamina), Time.deltaTime * 5f);
         expBar.fillAmount = Mathf.Lerp(expBar.fillAmount, GetPercentage(curExp, maxExp), Time.deltaTime * 1.5f);
 
+        if(hpBar.fillAmount < 0.3f)
+        {
+            if (warningCoroutine == null)
+            {
+                warningCoroutine = StartCoroutine("WarningHp");
+            }
+
+        }
+        else
+        {
+            if (warningCoroutine != null) 
+            {
+                StopCoroutine(warningCoroutine);
+                warningCoroutine = null;
+            }
+            Color originalColor = hpBar.color;
+            hpBar.color = new Color(originalColor.r, originalColor.g, originalColor.b, 1f); 
+        }
+
         if (expBar.fillAmount >= 0.99f)
         {
             expBar.fillAmount = 0f;
@@ -116,4 +137,20 @@ public class UI_HUD : UI_Base<UI_HUD>
         FadeInImage.gameObject.SetActive(true);
         FadeInImage.DOFade(1f, 8f);
     }
+
+
+    IEnumerator WarningHp()
+    {
+        Color originalColor = hpBar.color;
+
+        while (true)
+        {
+            float t = Mathf.PingPong(Time.time * 5f, 1f);
+
+            Color newColor = new Color(originalColor.r, originalColor.g, originalColor.b, Mathf.Lerp(0.99f, 0.01f, t));
+            hpBar.color = newColor;
+            yield return new WaitForSeconds(0.05f);
+        }
+    }
+
 }

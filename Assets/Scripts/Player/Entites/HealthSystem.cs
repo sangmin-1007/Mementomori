@@ -65,6 +65,12 @@ public class HealthSystem : MonoBehaviour
         else
         {
             OnDamage?.Invoke();
+            if (_statsHandler.characterType == CharacterType.Player)
+            {
+                OnDamage?.Invoke();
+              
+                StartCoroutine(PlayerGetHit());
+            }
         }
         if(CurrentHealth <= 0f)
         {
@@ -72,6 +78,7 @@ public class HealthSystem : MonoBehaviour
         }
         return true;
     }
+
 
     private void OnEnable()
     {
@@ -122,5 +129,15 @@ public class HealthSystem : MonoBehaviour
     public float GetCurrentSP()
     {
         return CurrentStamina;
+    }
+
+    IEnumerator PlayerGetHit()
+    {
+        Managers.SoundManager.Play("Effect/playerGetHit", Sound.Effect);
+        SpriteRenderer spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        Color originalColor = spriteRenderer.color;
+        spriteRenderer.color = Color.red;
+        yield return new WaitForSeconds(0.5f);
+        spriteRenderer.color = originalColor;
     }
 }
