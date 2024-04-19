@@ -30,7 +30,7 @@ public class Arrow : MonoBehaviour
     void Update()
     {
         transform.Translate(direction * Time.deltaTime);
-        if ((moving - transform.position).magnitude > 5f)
+        if ((moving - transform.position).magnitude > 7f)
         {
             DestroyArrow();
         }
