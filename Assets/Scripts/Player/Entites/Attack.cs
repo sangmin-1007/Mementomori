@@ -76,12 +76,7 @@ public class Attack : MonoBehaviour
                     healthSystem.ChangeHealth(-_statsHandler.allAttack);
                 }
             }
-            if (skills[6].skillLevel == 0)
-                return;
-            else if (skills[6].skillLevel != 0)
-            {
-                Managers.GameSceneManager.Player.GetComponent<HealthSystem>().ChangeHealth(_statsHandler.allAttack * _Skill.skills[6].data.damages[_Skill.skills[6].skillLevel]);
-            }
+            
         }
 
         if (spriteRenderer.flipX == false)
@@ -97,12 +92,6 @@ public class Attack : MonoBehaviour
                     {
                         healthSystem.ChangeHealth(-_statsHandler.allAttack);
                     }
-                }
-                if (skills[6].skillLevel == 0)
-                    return;
-                else if (skills[6].skillLevel != 0)
-                {
-                    Managers.GameSceneManager.Player.GetComponent<HealthSystem>().ChangeHealth(_statsHandler.allAttack * _Skill.skills[6].data.damages[_Skill.skills[6].skillLevel]);
                 }
             }
         }
@@ -121,15 +110,13 @@ public class Attack : MonoBehaviour
                         healthSystem.ChangeHealth(-_statsHandler.allAttack);
                     }
                 }
-                if (skills[6].skillLevel == 0)
-                    return;
-                else if (skills[6].skillLevel != 0)
-                {
-                    Managers.GameSceneManager.Player.GetComponent<HealthSystem>().ChangeHealth(_statsHandler.allAttack * _Skill.skills[6].data.damages[_Skill.skills[6].skillLevel]);
-                }
             }
         }
-
-       
+        if (skills[6].skillLevel == 0)
+            return;
+        else if (skills[6].skillLevel != 0)
+        {
+            Managers.GameSceneManager.Player.GetComponent<HealthSystem>().ChangeHealth(_statsHandler.allAttack * _Skill.skills[6].data.damages[_Skill.skills[6].skillLevel]);
+        }
     }
 }
