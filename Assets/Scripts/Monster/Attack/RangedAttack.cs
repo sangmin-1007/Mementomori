@@ -91,7 +91,7 @@ public class RangedAttack : MonoBehaviour
             arrow.transform.position = transform.position + direction.normalized * 0.5f;
             arrow.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg);
             arrow.ArrowDamage(Stats.allAttack);
-            arrow.Shoot(new Vector3(1, 0) * 10f);
+            arrow.Shoot(new Vector3(1, 0) * 5f);
         }
 
 

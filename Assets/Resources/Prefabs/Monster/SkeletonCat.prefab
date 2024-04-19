@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 342a5e463498c944a9b70dd985aa5cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 3.5
 --- !u!58 &7646466974268858557
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -401,6 +401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dc48d244ef306842992cd510aa5dbeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monsterType: 0
   targetTag: Player
   spriteRenderer: {fileID: 1145941367091834197}
   pos1: {fileID: 944579027691254040}
