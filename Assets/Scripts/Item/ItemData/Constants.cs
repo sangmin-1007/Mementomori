@@ -18,7 +18,10 @@ namespace Constants
         Normal,
         Rare,
         Unique,
-        Legend
+        Legend,
+        God
+         
+
     }
 
     public class Colors
@@ -28,7 +31,8 @@ namespace Constants
             new Color(0.7f,0.7f,0.7f),
             new Color(12/255f,23/255f,217/255f,255/255f),
             new Color(152/255f,6/255f,255/255f,255/255f),
-            new Color(255,255,0,255)
+            new Color(255f,140/255f,0,255/255f),
+            new Color(255,255,0,255/255f)
         };
     }
 }

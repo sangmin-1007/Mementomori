@@ -67,22 +67,25 @@ public class ItemDB
     private ItemGrade RandomItemGrade(int randomIndex)
     {
 
-
-        if(randomIndex <= 70)
+        if (randomIndex <= 60)
         {
             return ItemGrade.Normal;
         }
-        else if(randomIndex > 70 && 85 <= randomIndex)
+        else if (randomIndex > 60 && randomIndex <= 75)
         {
             return ItemGrade.Rare;
         }
-        else if(randomIndex > 85 && randomIndex <= 95)
+        else if (randomIndex > 75 && randomIndex <= 85)
         {
             return ItemGrade.Unique;
         }
-        else
+        else if (randomIndex > 85 && randomIndex <= 90)
         {
             return ItemGrade.Legend;
+        }
+        else
+        {
+            return ItemGrade.God;
         }
 
     }
