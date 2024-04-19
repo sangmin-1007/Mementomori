@@ -137,7 +137,7 @@ public class HealthSystem : MonoBehaviour
         SpriteRenderer spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         Color originalColor = spriteRenderer.color;
         spriteRenderer.color = Color.red;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         spriteRenderer.color = originalColor;
     }
 }
