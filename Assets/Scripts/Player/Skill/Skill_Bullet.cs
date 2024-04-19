@@ -3,10 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public enum BullletType
+{
+    Long,
+    Shot
+}
+
 public class Skill_Bullet : MonoBehaviour
 {
     public float damage;
     public int per;
+    public BullletType bullletType;
 
     //public int id;
     Rigidbody2D rigid;
@@ -33,29 +40,39 @@ public class Skill_Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.CompareTag("Enemy") || per == -1)
-            return;
-        else
+        if(bullletType == BullletType.Long)
         {
-            HealthSystem healthSystem1 = collision.GetComponent<HealthSystem>();
-            if (healthSystem1 != null)
+            if (!collision.CompareTag("Enemy") || per == -1)
+                return;
+            else
             {
-                healthSystem1.ChangeHealth(-damage);
+                HealthSystem healthSystem1 = collision.GetComponent<HealthSystem>();
+                if (healthSystem1 != null)
+                {
+                    healthSystem1.ChangeHealth(-damage);
+
+                }
+            }
+            per = per - 1;
+            if (per == -1)
+            {
+                rigid.velocity = Vector2.zero;
+                gameObject.SetActive(false);
             }
         }
-
-        per--;
-
-        if (per == -1)
+        
+        if(bullletType == BullletType.Shot)
         {
-            rigid.velocity = Vector2.zero;
-            gameObject.SetActive(false);
-        }
-
-        HealthSystem healthSystem = collision.GetComponent<HealthSystem>();
-        if(healthSystem != null )
-        {
-            healthSystem.ChangeHealth(-damage);
+            if (!collision.CompareTag("Enemy"))
+                return;
+            else
+            {
+                HealthSystem healthSystem = collision.GetComponent<HealthSystem>();
+                if (healthSystem != null)
+                {
+                    healthSystem.ChangeHealth(-damage);
+                }
+            }
         }
     }
 }
