@@ -96,7 +96,6 @@ public class Attack : MonoBehaviour
                         Managers.GameSceneManager.Player.GetComponent<HealthSystem>().ChangeHealth(_statsHandler.allAttack * _Skill.skills[6].data.damages[_Skill.skills[6].skillLevel]);
                     }
                 }
-
             }
         }
 
@@ -120,7 +119,6 @@ public class Attack : MonoBehaviour
                         }
                     }
                 }
-                
             }
             foreach (Collider2D collider in collider2D)
             {
@@ -137,11 +135,8 @@ public class Attack : MonoBehaviour
                             Managers.GameSceneManager.Player.GetComponent<HealthSystem>().ChangeHealth(_statsHandler.allAttack * _Skill.skills[6].data.damages[_Skill.skills[6].skillLevel]);
                         }
                     }
-                }
-                
+                }       
             }
-            
         }
-        
     }
 }
