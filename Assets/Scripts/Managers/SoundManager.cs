@@ -42,8 +42,8 @@ public class SoundManager :MonoBehaviour
             audioSources[i].volume = 0.7f;
             DontDestroyOnLoad(go);
         }
-     
-   
+
+        ChangeVolume();
     }
 
     public void Play(string path, Sound type = Sound.Effect)
@@ -126,8 +126,6 @@ public class SoundManager :MonoBehaviour
     public void ChangeVolume()
     {
         masterMixer[0].audioMixer.SetFloat("Master", Mathf.Log10(Managers.UserData.Master_VOLUME_KEY) * 20);
-        Debug.Log(Managers.UserData.Master_VOLUME_KEY);
-        
         bgmMixer[0].audioMixer.SetFloat("BGM", Mathf.Log10(Managers.UserData.BGM_VOLUME_KEY) * 20);
         effectMixer[0].audioMixer.SetFloat("Effect", Mathf.Log10(Managers.UserData.Effect_VOLUME_KEY) * 20);
     }

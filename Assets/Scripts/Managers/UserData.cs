@@ -11,9 +11,9 @@ public class UserData : MonoBehaviour
 
     public List<ItemData> playerItemAcquired = new List<ItemData>();
 
-    public float Master_VOLUME_KEY = 1f;
-    public float BGM_VOLUME_KEY = 1f;
-    public float Effect_VOLUME_KEY = 1f;
+    public float Master_VOLUME_KEY;
+    public float BGM_VOLUME_KEY;
+    public float Effect_VOLUME_KEY;
 
 
 
@@ -28,6 +28,18 @@ public class UserData : MonoBehaviour
     public SlotType selectSlotType;
 
     public bool isTutorial = false;
+
+    private void Awake()
+    {
+        Master_VOLUME_KEY = PlayerPrefs.HasKey("Master") ? PlayerPrefs.GetFloat("Master") : 1;
+        BGM_VOLUME_KEY = PlayerPrefs.HasKey("BGM") ? PlayerPrefs.GetFloat("BGM") : 1;
+        Effect_VOLUME_KEY = PlayerPrefs.HasKey("Effect") ? PlayerPrefs.GetFloat("Effect") : 1;
+    }
+
+    private void Start()
+    {
+        Managers.SoundManager.ChangeVolume();
+    }
     public void AddItem(ItemData itemDatas)
     {
         if(playerInventoryItemData.Count >= 29)

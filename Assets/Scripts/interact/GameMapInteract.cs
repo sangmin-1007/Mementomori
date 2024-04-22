@@ -59,12 +59,12 @@ public class GameMapInteract : MonoBehaviour
                         if(curIndex_I + 1 <= 2)
                         {
                             if (tiles[curIndex_I + 1 , i].transform.position.y - transform.position.y == -20)
-                                tiles[curIndex_I + 1, i].transform.localPosition += new Vector3(0,20*3,0);
+                                tiles[curIndex_I + 1, i].transform.Translate(Vector3.up*60);
                         }
                         else
                         {
                             if (tiles[0, i].transform.position.y - transform.position.y == -20)
-                                tiles[0, i].transform.position += new Vector3(0, 20 * 3, 0);
+                                tiles[0, i].transform.Translate(Vector3.up*60);
                         }
                     }
                 }
