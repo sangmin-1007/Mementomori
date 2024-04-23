@@ -159,7 +159,6 @@ public class SkillController : MonoBehaviour
     private void Throw()
     {
         Transform bullet = _spawnManager.pool.SkillGet(prefabId).transform;
-        bullet.position = transform.position;
-        bullet.GetComponent<Skill_Bullet>().Init(count, -1, Vector3.zero);
+        bullet.GetComponent<Skill_Bullet>().Init(damage, -1, Vector3.zero);
     }
 }

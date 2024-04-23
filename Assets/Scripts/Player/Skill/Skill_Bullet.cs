@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public enum BullletType
 {
     Long,
-    Shot
+    Shot,
+    Throw
 }
 
 public class Skill_Bullet : MonoBehaviour
@@ -14,6 +15,8 @@ public class Skill_Bullet : MonoBehaviour
     public float damage;
     public int per;
     public BullletType bullletType;
+
+    public float timer;
 
     //public int id;
     Rigidbody2D rigid;
@@ -27,7 +30,13 @@ public class Skill_Bullet : MonoBehaviour
             playerStats = Managers.GameSceneManager.Player.GetComponent<PlayerStatsHandler>();
         }
     }
-
+    private void Update()
+    {
+        if(bullletType == BullletType.Long)
+        {
+            DisableSkill();
+        }
+    }
     public void Init(float damage, int per, Vector3 dir)
     {
         this.damage = damage + playerStats.allAttack;
@@ -62,7 +71,7 @@ public class Skill_Bullet : MonoBehaviour
             }
         }
         
-        if(bullletType == BullletType.Shot)
+        else if (bullletType == BullletType.Shot)
         {
             if (!collision.CompareTag("Enemy"))
                 return;
@@ -74,6 +83,30 @@ public class Skill_Bullet : MonoBehaviour
                     healthSystem.ChangeHealth(-damage);
                 }
             }
+        }
+        else if(bullletType == BullletType.Throw)
+        {
+            if (!collision.CompareTag("Enemy"))
+                return;
+            else
+            {
+                HealthSystem healthSystem = collision.GetComponent<HealthSystem>();
+                if (healthSystem != null)
+                {
+                    healthSystem.ChangeHealth(-damage);
+                }
+            }
+        }
+    }
+
+    private void DisableSkill()
+    {
+        timer += Time.deltaTime;
+
+        if (timer >= 3)
+        {
+            gameObject.SetActive(false);
+            timer = 0;
         }
     }
 }
