@@ -407,7 +407,7 @@ MonoBehaviour:
   pos1: {fileID: 944579027691254040}
   pos2: {fileID: 116909644067490111}
   pos3: {fileID: 922997485598992707}
-  boxSize1: {x: 0.6, y: 0.3}
+  boxSize1: {x: 1, y: 0.5}
   boxSize2: {x: 0, y: 0}
 --- !u!212 &1145941367091834197
 SpriteRenderer:
