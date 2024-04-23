@@ -32,15 +32,15 @@ public class UI_Skill : UI_Base<UI_Skill>
             SkillManager ranSkill = skills[ran[index]];
             if (ranSkill.skillLevel == ranSkill.data.damages.Length && ranSkill.data.skillId == 4)
             {
-                skills[7].gameObject.SetActive(true);
+                skills[8].gameObject.SetActive(true);
             }
             else if (ranSkill.skillLevel == ranSkill.data.damages.Length && ranSkill.data.skillId == 5)
             {
-                skills[8].gameObject.SetActive(true);
-            }
-            else if(ranSkill.skillLevel == ranSkill.data.damages.Length && ranSkill.data.skillId == 6)
-            {
                 skills[9].gameObject.SetActive(true);
+            }
+            else if (ranSkill.skillLevel == ranSkill.data.damages.Length && ranSkill.data.skillId == 6)
+            {
+                skills[10].gameObject.SetActive(true);
             }
             else
             {
