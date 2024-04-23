@@ -6,15 +6,17 @@ public class Skill_ThrowWeapon : MonoBehaviour
 {
     [SerializeField] private GameObject sowerd;
 
-    [SerializeField] private Sprite[] sowerdSprite;
+    public Sprite[] sowerdSprite;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float power;
     [SerializeField] private float rotate;
 
+    Transform bullet;
+
     private GameObject player;
-    private float time = 0f;
+    [SerializeField] private float time = 0f;
     private void Awake()
     {
         player = Managers.GameSceneManager.Player;
@@ -22,7 +24,7 @@ public class Skill_ThrowWeapon : MonoBehaviour
     private void OnEnable()
     {
         transform.position = player.transform.position;
-        int randIndex = Random.Range(0,sowerdSprite.Length);
+        int randIndex = Random.Range(0, sowerdSprite.Length);
         spriteRenderer.sprite = sowerdSprite[randIndex];
 
         Vector2 weaponDir = Vector2.up;
@@ -39,7 +41,7 @@ public class Skill_ThrowWeapon : MonoBehaviour
         if (!sowerd.activeSelf)
             return;
 
-        transform.Rotate(Vector3.forward * rotate * Time.deltaTime); 
+        transform.Rotate(Vector3.forward * rotate * Time.deltaTime);
         DisableSkill();
     }
 

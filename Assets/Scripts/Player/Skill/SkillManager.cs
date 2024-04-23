@@ -42,6 +42,9 @@ public class SkillManager : MonoBehaviour
             case SkillSO.SkillType.Range:
                 textDesc.text = string.Format(data.skillDesc, data.damages[Mathf.Min(4,skillLevel)], data.counts[Mathf.Min(4,skillLevel)]);
                 break;
+            case SkillSO.SkillType.Throw:
+                textDesc.text = string.Format(data.skillDesc, 5 - data.damages[Mathf.Min(4, skillLevel)], data.counts[Mathf.Min(4, skillLevel)]);
+                break;
             case SkillSO.SkillType.Statup:
             case SkillSO.SkillType.AttackSkill:
             case SkillSO.SkillType.DefenseSkill:
@@ -64,6 +67,7 @@ public class SkillManager : MonoBehaviour
         {
             case SkillSO.SkillType.Melee:
             case SkillSO.SkillType.Range:
+            case SkillSO.SkillType.Throw:
                 if(skillLevel == 0)
                 {
                     GameObject newWeapon = new GameObject();

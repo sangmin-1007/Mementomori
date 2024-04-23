@@ -12,15 +12,28 @@ public class SkillController : MonoBehaviour
     public int count;
     public float speed;
 
+    public int skilllevel;
     float timer;
  
     private SpawnManager _spawnManager;
     private Scanner _scanner;
 
+    private UI_Skill _Skill;
+    private SkillManager[] skills;
+
     private void Awake()
     {
         _spawnManager = Managers.GameSceneManager.MonsterSpawner.GetComponent<SpawnManager>();
         _scanner = Managers.GameSceneManager.Player.GetComponent<Scanner>();
+        player = Managers.GameSceneManager.Player;
+
+        _Skill = Managers.UI_Manager.ShowUI<UI_Skill>();
+        Managers.UI_Manager.HideUI<UI_Skill>();
+        skills = _Skill.skills;
+        sword = _spawnManager.pool.skillPrefabs[2];
+        swordSprite = _spawnManager.pool.skillPrefabs[2].GetComponent<Skill_ThrowWeapon>().sowerdSprite;
+        spriteRenderer = _spawnManager.pool.skillPrefabs[2].GetComponent<SpriteRenderer>();
+        rb = _spawnManager.pool.skillPrefabs[2].GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -29,6 +42,14 @@ public class SkillController : MonoBehaviour
         {
             case 5:
                 transform.Rotate(Vector3.back * speed * Time.deltaTime);
+                break;
+            case 6:
+                timer += Time.deltaTime;
+                if(timer > speed)
+                {
+                    timer = 0;
+                    Throw();
+                }
                 break;
             default:
                 timer += Time.deltaTime;
@@ -60,6 +81,7 @@ public class SkillController : MonoBehaviour
         damage = data.baseDamage;
         count = data.baseCount;
 
+
         for (int index = 0; index < _spawnManager.pool.skillPrefabs.Length; index++)
         {
             if(data.projectile == _spawnManager.pool.skillPrefabs[index])
@@ -74,6 +96,9 @@ public class SkillController : MonoBehaviour
             case 5:
                 speed = 150;
                 CreatSkill();
+                break;
+            case 6:
+                speed = 5f - _Skill.skills[6].data.damages[skilllevel];
                 break;
             default:
                 speed = 1f;
@@ -120,5 +145,21 @@ public class SkillController : MonoBehaviour
         bullet.position = transform.position;
         bullet.rotation = Quaternion.FromToRotation(Vector3.left, dir);
         bullet.GetComponent<Skill_Bullet>().Init(damage, count, dir);
+    }
+    [SerializeField] private GameObject sword;
+
+    [SerializeField] private Sprite[] swordSprite;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private float power = 400;
+    [SerializeField] private float rotate = 400;
+    private GameObject player;
+    private float time = 0f;
+    private void Throw()
+    {
+        Transform bullet = _spawnManager.pool.SkillGet(prefabId).transform;
+        bullet.position = transform.position;
+        bullet.GetComponent<Skill_Bullet>().Init(count, -1, Vector3.zero);
     }
 }

@@ -18,6 +18,7 @@ public class Skill_Bullet : MonoBehaviour
     //public int id;
     Rigidbody2D rigid;
     PlayerStatsHandler playerStats;
+
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();

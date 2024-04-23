@@ -255,7 +255,7 @@ MonoBehaviour:
     maxHealth: 200
     itemHealth: 0
     itemAttack: 0
-    speed: 5
+    speed: 4
     maxStamina: 100
     maxDefense: 0
     itemDefense: 0

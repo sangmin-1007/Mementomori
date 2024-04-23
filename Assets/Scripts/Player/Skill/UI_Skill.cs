@@ -20,9 +20,9 @@ public class UI_Skill : UI_Base<UI_Skill>
         int[] ran = new int[3];
         while (true)
         {
-            ran[0] = Random.Range(0, skills.Length - 2);
-            ran[1] = Random.Range(0, skills.Length - 2);
-            ran[2] = Random.Range(0, skills.Length - 2);
+            ran[0] = Random.Range(0, skills.Length - 3);
+            ran[1] = Random.Range(0, skills.Length - 3);
+            ran[2] = Random.Range(0, skills.Length - 3);
 
             if (ran[0] != ran[1] && ran[1] != ran[2] && ran[0] != ran[2])
                 break;
@@ -32,11 +32,15 @@ public class UI_Skill : UI_Base<UI_Skill>
             SkillManager ranSkill = skills[ran[index]];
             if (ranSkill.skillLevel == ranSkill.data.damages.Length && ranSkill.data.skillId == 4)
             {
-                skills[8].gameObject.SetActive(true);
+                skills[7].gameObject.SetActive(true);
             }
             else if (ranSkill.skillLevel == ranSkill.data.damages.Length && ranSkill.data.skillId == 5)
             {
-                skills[7].gameObject.SetActive(true);
+                skills[8].gameObject.SetActive(true);
+            }
+            else if(ranSkill.skillLevel == ranSkill.data.damages.Length && ranSkill.data.skillId == 6)
+            {
+                skills[9].gameObject.SetActive(true);
             }
             else
             {
