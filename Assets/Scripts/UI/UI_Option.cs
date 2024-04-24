@@ -9,11 +9,9 @@ public class UI_Option : UI_Base<UI_Option>
     [SerializeField] private Button saveButton;
     [SerializeField] private Button exitButton;
     [SerializeField] private Button quitGameButton;
-
-
+    [SerializeField] private Button tutorialButton;
 
     [SerializeField] private AudioMixer audioMixer;
-
 
     [SerializeField] private Slider bgmSlider;
     [SerializeField] private Slider effectSlider;
@@ -45,7 +43,8 @@ public class UI_Option : UI_Base<UI_Option>
     {
         audioMixer.SetFloat("Master", Mathf.Log10(volume) * 20);
         Managers.UserData.Master_VOLUME_KEY = volume;
-        
+
+        PlayerPrefs.SetFloat("Master", Managers.UserData.Master_VOLUME_KEY);
      
     }
 
@@ -55,13 +54,19 @@ public class UI_Option : UI_Base<UI_Option>
         audioMixer.SetFloat("BGM", Mathf.Log10(volume) * 20);
         Managers.UserData.BGM_VOLUME_KEY = volume;
 
+        PlayerPrefs.SetFloat("BGM", Managers.UserData.BGM_VOLUME_KEY);
     }
 
     void ChangeEffectSound(float volume)
     {
         audioMixer.SetFloat("Effect", Mathf.Log10(volume) * 20);
         Managers.UserData.Effect_VOLUME_KEY = volume;
+
+        PlayerPrefs.SetFloat("Effect", Managers.UserData.Effect_VOLUME_KEY);
     }
+
+
+   
 
     public void OnClickOptionExitButton()
     {
@@ -82,8 +87,16 @@ public class UI_Option : UI_Base<UI_Option>
         Managers.DataManager.Save();
     }
 
+    public void OnClickTutorialButton()
+    {
+        OnClickOptionExitButton();
+        Managers.UserData.isTutorial = true;
+        Managers.UI_Manager.ShowUI<UI_Tutorial>();
+    }
 
 
 
- 
+
+
+
 }

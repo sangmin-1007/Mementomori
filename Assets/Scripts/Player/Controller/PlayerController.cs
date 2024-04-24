@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     protected virtual void Update()
     {
         HandleAttackDelay();
+        AutoAttack();
     }
 
     private void HandleAttackDelay()
@@ -60,9 +61,19 @@ public class PlayerController : MonoBehaviour
         {
             OnAttackEvent?.Invoke(attackSO);
         }
-       
     }
 
+    private void AutoAttack()
+    {
+        if(SceneManager.GetActiveScene().name == "GameScene" && Managers.UI_Manager.IsActive<UI_Skill>()) 
+        {
+            IsAttacking = false;
+        }
+        else if(SceneManager.GetActiveScene().name == "GameScene")
+        {
+            IsAttacking = true;
+        }
+    }
  
 
 }

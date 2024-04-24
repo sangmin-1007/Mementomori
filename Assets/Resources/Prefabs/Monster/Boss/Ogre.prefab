@@ -88,7 +88,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 100
+  m_Mass: 50
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 342a5e463498c944a9b70dd985aa5cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 5
 --- !u!114 &5258863724191239705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,7 +224,7 @@ MonoBehaviour:
   characterType: 0
   baseStats:
     statsChangeType: 2
-    maxHealth: 550
+    maxHealth: 1100
     itemHealth: 0
     itemAttack: 0
     speed: 0
@@ -276,6 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dc48d244ef306842992cd510aa5dbeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monsterType: 4
   targetTag: Player
   spriteRenderer: {fileID: 4536986423380594890}
   pos1: {fileID: 311343938306419155}

@@ -11,10 +11,16 @@ public class Attack : MonoBehaviour
     private PlayerController _controller;
     private Vector2 _aimDirection = Vector2.right;
 
+    private UI_Skill _Skill;
+    private SkillManager[] skills;
+
     private void Awake()
     {
         _controller = GetComponent<PlayerController>();
         _statsHandler = GetComponent<PlayerStatsHandler>();
+        _Skill = Managers.UI_Manager.ShowUI<UI_Skill>();
+        Managers.UI_Manager.HideUI<UI_Skill>();
+        skills = _Skill.skills;
     }
 
     void Start()
@@ -59,19 +65,6 @@ public class Attack : MonoBehaviour
             Managers.SoundManager.Play("Effect/PlayerAttackFail1", Sound.Effect);
         }
 
-
-        foreach (Collider2D collider in collider2D)
-        {
-            if (attackSO.target.value == (attackSO.target.value | (1 << collider.gameObject.layer)))
-            {
-                HealthSystem healthSystem = collider.GetComponent<HealthSystem>();
-                if (healthSystem != null)
-                {
-                    healthSystem.ChangeHealth(-_statsHandler.allAttack);
-                }
-            }
-        }
-
         if (spriteRenderer.flipX == false)
         {
             Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos1.position, boxSize1, 0);
@@ -81,9 +74,26 @@ public class Attack : MonoBehaviour
                 if (attackSO.target.value == (attackSO.target.value | (1 << collider.gameObject.layer)))
                 {
                     HealthSystem healthSystem = collider.GetComponent<HealthSystem>();
-                    if(healthSystem != null )
+                    if (skills[7].skillLevel == 0)
+                        healthSystem.ChangeHealth(-_statsHandler.allAttack);
+                    else if (skills[7].skillLevel != 0)
                     {
                         healthSystem.ChangeHealth(-_statsHandler.allAttack);
+                        Managers.GameSceneManager.Player.GetComponent<HealthSystem>().ChangeHealth(_statsHandler.allAttack * _Skill.skills[7].data.damages[_Skill.skills[7].skillLevel]);
+                    }
+                }
+            }
+            foreach (Collider2D collider in collider2D)
+            {
+                if (attackSO.target.value == (attackSO.target.value | (1 << collider.gameObject.layer)))
+                {
+                    HealthSystem healthSystem = collider.GetComponent<HealthSystem>();
+                    if (skills[7].skillLevel == 0)
+                        healthSystem.ChangeHealth(-_statsHandler.allAttack);
+                    else if (skills[7].skillLevel != 0)
+                    {
+                        healthSystem.ChangeHealth(-_statsHandler.allAttack);
+                        Managers.GameSceneManager.Player.GetComponent<HealthSystem>().ChangeHealth(_statsHandler.allAttack * _Skill.skills[7].data.damages[_Skill.skills[7].skillLevel]);
                     }
                 }
             }
@@ -100,12 +110,33 @@ public class Attack : MonoBehaviour
                     HealthSystem healthSystem = collider.GetComponent<HealthSystem>();
                     if (healthSystem != null)
                     {
-                        healthSystem.ChangeHealth(-_statsHandler.allAttack);
+                        if (skills[7].skillLevel == 0)
+                            healthSystem.ChangeHealth(-_statsHandler.allAttack);
+                        else if (skills[7].skillLevel != 0)
+                        {
+                            healthSystem.ChangeHealth(-_statsHandler.allAttack);
+                            Managers.GameSceneManager.Player.GetComponent<HealthSystem>().ChangeHealth(_statsHandler.allAttack * _Skill.skills[7].data.damages[_Skill.skills[7].skillLevel]);
+                        }
                     }
                 }
             }
+            foreach (Collider2D collider in collider2D)
+            {
+                if (attackSO.target.value == (attackSO.target.value | (1 << collider.gameObject.layer)))
+                {
+                    HealthSystem healthSystem = collider.GetComponent<HealthSystem>();
+                    if (healthSystem != null)
+                    {
+                        if (skills[7].skillLevel == 0)
+                            healthSystem.ChangeHealth(-_statsHandler.allAttack);
+                        else if (skills[7].skillLevel != 0)
+                        {
+                            healthSystem.ChangeHealth(-_statsHandler.allAttack);
+                            Managers.GameSceneManager.Player.GetComponent<HealthSystem>().ChangeHealth(_statsHandler.allAttack * _Skill.skills[7].data.damages[_Skill.skills[7].skillLevel]);
+                        }
+                    }
+                }       
+            }
         }
-
-       
     }
 }

@@ -7,13 +7,14 @@ using UnityEngine.UIElements;
 public class BossAttack : MonoBehaviour
 {
     BossAttack bossAttack;
-    FinalBossAttack finalBossAttack;
 
     Animator animator;
 
     bool isAttacking = false;
     float defaultSpeed;
     MonsterMovement movement;
+
+    [SerializeField] MonsterType monsterType;
 
     protected PlayerStatsHandler Stats { get; private set; }
     [SerializeField] private string targetTag = "Player";
@@ -34,7 +35,6 @@ public class BossAttack : MonoBehaviour
     private void Awake()
     {
         bossAttack = GetComponent<BossAttack>();
-        finalBossAttack = GetComponent<FinalBossAttack>();
         animator = GetComponentInChildren<Animator>();
         movement = GetComponent<MonsterMovement>();
         Stats = GetComponent<PlayerStatsHandler>();
@@ -42,10 +42,16 @@ public class BossAttack : MonoBehaviour
 
     }
 
+    private void OnEnable()
+    {
+        isAttacking = false;
+    }
+
     private void Start()
     {
         defaultSpeed = movement.speed;
     }
+
 
     private void Update()
     {
@@ -73,9 +79,13 @@ public class BossAttack : MonoBehaviour
 
         isAttacking = true;
         movement.speed = 0f;
+
         animator.SetTrigger("Ready");
 
-        yield return new WaitForSeconds(1f);
+        if (monsterType == MonsterType.Boss)
+        {
+            yield return new WaitForSeconds(1f);
+        }
 
         animator.SetTrigger("Attack");
 

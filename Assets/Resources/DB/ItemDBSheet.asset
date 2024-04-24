@@ -53,7 +53,7 @@ MonoBehaviour:
       \uC0C1\uB300\uD558\uB294\uB370\uB294 \uBD80\uC871\uD574.."
     _spritePath: Sprite/Item/Weapon/Sword_1_S
     _atk: 21
-    _atkSpeed: 1.3
+    _atkSpeed: 1.2
     _hp: 0
     _def: 0
     _speed: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
       \uAC19\uC740\uB370..\uB09C \uC5B8\uC81C\uCBE4 \uC8FD\uC73C\uB824\uB098.."
     _spritePath: Sprite/Item/Weapon/Sword_2
     _atk: 25
-    _atkSpeed: 1.4
+    _atkSpeed: 1.3
     _hp: 0
     _def: 0
     _speed: 0
@@ -85,7 +85,7 @@ MonoBehaviour:
       \uAD1C\uCC2E\uC740 \uC0C1\uD0DC\uB97C \uBCF4\uC774\uACE0 \uC788\uAD70"
     _spritePath: Sprite/Item/Weapon/Sword_2_A
     _atk: 30
-    _atkSpeed: 1.4
+    _atkSpeed: 1.3
     _hp: 0
     _def: 0
     _speed: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
       \uC544\uB9C8 \uAF64 \uC4F8\uB9CC\uD55C \uAE30\uC0AC\uC600\uB358\uAC83 \uAC19\uAD70."
     _spritePath: Sprite/Item/Weapon/Sword_2_S
     _atk: 36
-    _atkSpeed: 1.5
+    _atkSpeed: 1.3
     _hp: 0
     _def: 0
     _speed: 0
@@ -117,14 +117,14 @@ MonoBehaviour:
       \uC798\uC4F0\uACA0\uB2E4!"
     _spritePath: Sprite/Item/Weapon/Sword_3
     _atk: 40
-    _atkSpeed: 1.6
+    _atkSpeed: 1.5
     _hp: 0
     _def: 0
     _speed: 0
     _stamina: 0
     _exp: 0
-    _buyPrice: 13000
-    _sellPrice: 6500
+    _buyPrice: 8000
+    _sellPrice: 4000
   - _id: 10001008
     _grade: 2
     _type: 0
@@ -133,14 +133,14 @@ MonoBehaviour:
       \uB098\uB85C\uC368\uB3C4..\uAC10\uB2F9\uAC00\uB2A5 \uD560\uC9C0\uB294 \uBAA8\uB974\uACA0\uAD70.."
     _spritePath: Sprite/Item/Weapon/Sword_3_A
     _atk: 45
-    _atkSpeed: 1.6
+    _atkSpeed: 1.5
     _hp: 0
     _def: 0
     _speed: 0
     _stamina: 0
     _exp: 0
-    _buyPrice: 15000
-    _sellPrice: 7500
+    _buyPrice: 9000
+    _sellPrice: 4500
   - _id: 10001009
     _grade: 2
     _type: 0
@@ -149,19 +149,19 @@ MonoBehaviour:
       \uC774\uC815\uB3C4\uBA74..!"
     _spritePath: Sprite/Item/Weapon/Sword_3_S
     _atk: 51
-    _atkSpeed: 1.7
+    _atkSpeed: 1.5
     _hp: 0
     _def: 0
     _speed: 0
     _stamina: 0
     _exp: 0
-    _buyPrice: 18000
-    _sellPrice: 9000
+    _buyPrice: 10000
+    _sellPrice: 5000
   - _id: 10001010
     _grade: 3
     _type: 0
-    _name: "\uC2E0\uC758 \uAC80"
-    _description: "\uC774\uB7F0 \uAC80\uC774 \uC544\uC9C1 \uC788\uC5C8\uB2E4\uB2C8..\uB9C8\uC655\uD55C\uD14C\uB3C4
+    _name: "\uC804\uC124 \uAC80"
+    _description: "\uC804\uC124\uB85C\uB9CC \uB4E3\uB358 \uAC80\uC774\u2026!!\uB9C8\uC655\uD55C\uD14C\uB3C4
       \uD1B5\uD560\uAC83\uAC19\uC544!"
     _spritePath: Sprite/Item/Weapon/Sword_4
     _atk: 55
@@ -171,12 +171,12 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
     _exp: 0
-    _buyPrice: 20000
-    _sellPrice: 10000
+    _buyPrice: 14000
+    _sellPrice: 7000
   - _id: 10001011
     _grade: 3
     _type: 0
-    _name: "\uC2E0\uC758 \uAC80(A)"
+    _name: "\uC804\uC124 \uAC80(A)"
     _description: "\uC774 \uBCF4\uB2E4 \uC88B\uC740 \uAC80\uC740 \uC138\uC0C1\uC5D0
       \uC5C6\uC744\uAC83\uC774\uC57C!!"
     _spritePath: Sprite/Item/Weapon/Sword_4_A
@@ -187,23 +187,72 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
     _exp: 0
-    _buyPrice: 22000
-    _sellPrice: 11000
+    _buyPrice: 15000
+    _sellPrice: 7500
   - _id: 10001012
     _grade: 3
     _type: 0
-    _name: "\uC2E0\uC758 \uAC80(S)"
-    _description: "\uC2E0\uC774\uC2DC\uC5EC.. \uB2F9\uC2E0\uC758 \uB73B\uC744 \uBC1B\uB4E4\uACA0\uC2B5\uB2C8\uB2E4."
+    _name: "\uC804\uC124 \uAC80(S)"
+    _description: "\uC608\uC804 \uC120\uC870\uBD84\uB4E4\uC774 \uC774 \uAC80\uC73C\uB85C
+      \uC545\uB9C8\uB97C \uC370\uC5C8\uB2E4\uACE0\uD558\uC9C0.."
     _spritePath: Sprite/Item/Weapon/Sword_4_S
     _atk: 81
+    _atkSpeed: 1.8
+    _hp: 0
+    _def: 0
+    _speed: 0
+    _stamina: 0
+    _exp: 0
+    _buyPrice: 18000
+    _sellPrice: 9000
+  - _id: 10001013
+    _grade: 4
+    _type: 0
+    _name: "\uC2E0\uC758 \uAC80"
+    _description: "\uC2E0\uC774 \uB0B4\uB824\uC900 \uAC80\uC774\uB2E4. \uADF8 \uC5B4\uB5A4
+      \uBB3C\uCCB4\uB77C\uB3C4 \uBCA0\uC5B4 \uB0BC \uC218 \uC788\uC744\uAC83\uAC19\uB2E4."
+    _spritePath: Sprite/Item/Weapon/Sword_5
+    _atk: 90
     _atkSpeed: 2
     _hp: 0
     _def: 0
     _speed: 0
     _stamina: 0
     _exp: 0
-    _buyPrice: 25000
-    _sellPrice: 12500
+    _buyPrice: 19000
+    _sellPrice: 9500
+  - _id: 10001014
+    _grade: 4
+    _type: 0
+    _name: "\uC2E0\uC758 \uAC80(A)"
+    _description: "\uC2E0\uC774 \uB0B4\uB824\uC900 \uAC80\uC774\uB2E4. \uC601\uD63C\uB9C8\uC800\uB3C4
+      \uBCA0\uC5B4 \uB0BC \uC218 \uC788\uC744\uAC83\uAC19\uB2E4."
+    _spritePath: Sprite/Item/Weapon/Sword_5_A
+    _atk: 95
+    _atkSpeed: 2
+    _hp: 0
+    _def: 0
+    _speed: 0
+    _stamina: 0
+    _exp: 0
+    _buyPrice: 20000
+    _sellPrice: 10000
+  - _id: 10001015
+    _grade: 4
+    _type: 0
+    _name: "\uC2E0\uC758 \uAC80(S)"
+    _description: "\uACC4\uC18D \uC2E4\uD328\uD558\uB294 \uB2F9\uC2E0\uC744 \uBCF4\uBA70,
+      \uC2E0\uC774 \uB0B4\uB9B0 \uAE30\uC801"
+    _spritePath: Sprite/Item/Weapon/Sword_5_S
+    _atk: 100
+    _atkSpeed: 2
+    _hp: 0
+    _def: 0
+    _speed: 0
+    _stamina: 0
+    _exp: 0
+    _buyPrice: 22000
+    _sellPrice: 11000
   - _id: 20001001
     _grade: 0
     _type: 1
@@ -313,8 +362,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
     _exp: 0
-    _buyPrice: 13000
-    _sellPrice: 6500
+    _buyPrice: 8000
+    _sellPrice: 4000
   - _id: 20001008
     _grade: 2
     _type: 1
@@ -329,8 +378,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
     _exp: 0
-    _buyPrice: 15000
-    _sellPrice: 7500
+    _buyPrice: 9000
+    _sellPrice: 4500
   - _id: 20001009
     _grade: 2
     _type: 1
@@ -345,12 +394,12 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
     _exp: 0
-    _buyPrice: 18000
-    _sellPrice: 9000
+    _buyPrice: 10000
+    _sellPrice: 5000
   - _id: 20001010
     _grade: 3
     _type: 1
-    _name: "\uC2E0\uC758 \uAC11\uC637"
+    _name: "\uC804\uC124 \uAC11\uC637"
     _description: "\uC774\uB7F0 \uAC11\uC637\uC774 \uC544\uC9C1 \uC788\uC5C8\uB2E4\uB2C8..\uB9C8\uC655\uC758
       \uACF5\uACA9\uC744 \uBC84\uD168\uC904 \uC218 \uC788\uC744 \uAC83 \uAC19\uC544."
     _spritePath: Sprite/Item/Armor/Armor_4
@@ -361,12 +410,12 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
     _exp: 0
-    _buyPrice: 20000
-    _sellPrice: 10000
+    _buyPrice: 14000
+    _sellPrice: 7000
   - _id: 20001011
     _grade: 3
     _type: 1
-    _name: "\uC2E0\uC758 \uAC11\uC637(A)"
+    _name: "\uC804\uC124 \uAC11\uC637(A)"
     _description: "\uC774 \uBCF4\uB2E4 \uC88B\uC740 \uAC11\uC637\uC740 \uC138\uC0C1\uC5D0
       \uC5C6\uC744\uAC83\uC774\uC57C!!"
     _spritePath: Sprite/Item/Armor/Armor_4_A
@@ -377,12 +426,12 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
     _exp: 0
-    _buyPrice: 22000
-    _sellPrice: 11000
+    _buyPrice: 15000
+    _sellPrice: 7500
   - _id: 20001012
     _grade: 3
     _type: 1
-    _name: "\uC2E0\uC758 \uAC11\uC637(S)"
+    _name: "\uC804\uC124 \uAC11\uC637(S)"
     _description: "\uC2E0\uC774\uC2DC\uC5EC.. \uB2F9\uC2E0\uC758 \uB73B\uC744 \uBC1B\uB4E4\uACA0\uC2B5\uB2C8\uB2E4."
     _spritePath: Sprite/Item/Armor/Armor_4_S
     _atk: 0
@@ -392,8 +441,56 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
     _exp: 0
-    _buyPrice: 25000
-    _sellPrice: 12500
+    _buyPrice: 18000
+    _sellPrice: 9000
+  - _id: 20001013
+    _grade: 4
+    _type: 1
+    _name: "\uC2E0\uC758 \uAC11\uC637"
+    _description: "\uC2E0\uC774 \uB0B4\uB824\uC900 \uAC11\uC637\uC774\uB2E4. \uADF8
+      \uC5B4\uB5A4 \uACF5\uACA9\uB3C4 \uBC29\uC5B4\uD560 \uC218 \uC788\uC744 \uAC83\uAC19\uB2E4."
+    _spritePath: Sprite/Item/Armor/Armor_5
+    _atk: 0
+    _atkSpeed: 0
+    _hp: 220
+    _def: 0
+    _speed: 0
+    _stamina: 0
+    _exp: 0
+    _buyPrice: 19000
+    _sellPrice: 9500
+  - _id: 20001014
+    _grade: 4
+    _type: 1
+    _name: "\uC2E0\uC758 \uAC11\uC637(A)"
+    _description: "\uC2E0\uC774 \uB0B4\uB824\uC900 \uAC11\uC637\uC774\uB2E4. \uC2E0\uC758\uAC80\uC5D0
+      \uCC14\uB9AC\uBA74 \uC5B4\uB5BB\uAC8C\uB418\uB294\uAC70\uC9C0..?"
+    _spritePath: Sprite/Item/Armor/Armor_5_A
+    _atk: 0
+    _atkSpeed: 0
+    _hp: 240
+    _def: 0
+    _speed: 0
+    _stamina: 0
+    _exp: 0
+    _buyPrice: 20000
+    _sellPrice: 10000
+  - _id: 20001015
+    _grade: 4
+    _type: 1
+    _name: "\uC2E0\uC758 \uAC11\uC637(S)"
+    _description: "\uACC4\uC18D \uC2E4\uD328\uD558\uB294 \uB2F9\uC2E0\uC744 \uBCF4\uBA70,
+      \uC2E0\uC774 \uB0B4\uB9B0 \uAE30\uC801"
+    _spritePath: Sprite/Item/Armor/Armor_5_S
+    _atk: 0
+    _atkSpeed: 0
+    _hp: 260
+    _def: 0
+    _speed: 0
+    _stamina: 0
+    _exp: 0
+    _buyPrice: 22000
+    _sellPrice: 11000
   - _id: 30001001
     _grade: 0
     _type: 2
@@ -503,8 +600,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
     _exp: 0
-    _buyPrice: 13000
-    _sellPrice: 6500
+    _buyPrice: 8000
+    _sellPrice: 4000
   - _id: 30001008
     _grade: 2
     _type: 2
@@ -519,8 +616,8 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
     _exp: 0
-    _buyPrice: 15000
-    _sellPrice: 7500
+    _buyPrice: 9000
+    _sellPrice: 4500
   - _id: 30001009
     _grade: 2
     _type: 2
@@ -535,12 +632,12 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
     _exp: 0
-    _buyPrice: 18000
-    _sellPrice: 9000
+    _buyPrice: 10000
+    _sellPrice: 5000
   - _id: 30001010
     _grade: 3
     _type: 2
-    _name: "\uC2E0\uC758 \uBC29\uD328"
+    _name: "\uC804\uC124 \uBC29\uD328"
     _description: "\uC774\uB7F0 \uBC29\uD328\uC774 \uC544\uC9C1 \uC788\uC5C8\uB2E4\uB2C8..\uB9C8\uC655\uC758
       \uACF5\uACA9\uC744 \uBC84\uD168\uC904 \uC218 \uC788\uC744 \uAC83 \uAC19\uC544."
     _spritePath: Sprite/Item/Shield/Shield_4
@@ -551,12 +648,12 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
     _exp: 0
-    _buyPrice: 20000
-    _sellPrice: 10000
+    _buyPrice: 14000
+    _sellPrice: 7000
   - _id: 30001011
     _grade: 3
     _type: 2
-    _name: "\uC2E0\uC758 \uBC29\uD328(A)"
+    _name: "\uC804\uC124 \uBC29\uD328(A)"
     _description: "\uC774 \uBCF4\uB2E4 \uC88B\uC740 \uBC29\uD328\uC740 \uC138\uC0C1\uC5D0
       \uC5C6\uC744\uAC83\uC774\uC57C!!"
     _spritePath: Sprite/Item/Shield/Shield_4_A
@@ -567,12 +664,12 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
     _exp: 0
-    _buyPrice: 22000
-    _sellPrice: 11000
+    _buyPrice: 15000
+    _sellPrice: 7500
   - _id: 30001012
     _grade: 3
     _type: 2
-    _name: "\uC2E0\uC758 \uBC29\uD328(S)"
+    _name: "\uC804\uC124 \uBC29\uD328(S)"
     _description: "\uC2E0\uC774\uC2DC\uC5EC.. \uB2F9\uC2E0\uC758 \uB73B\uC744 \uBC1B\uB4E4\uACA0\uC2B5\uB2C8\uB2E4."
     _spritePath: Sprite/Item/Shield/Shield_4_S
     _atk: 0
@@ -582,9 +679,57 @@ MonoBehaviour:
     _speed: 0
     _stamina: 0
     _exp: 0
-    _buyPrice: 25000
-    _sellPrice: 12500
-  - _id: 40001013
+    _buyPrice: 18000
+    _sellPrice: 9000
+  - _id: 30001013
+    _grade: 4
+    _type: 2
+    _name: "\uC2E0\uC758 \uBC29\uD328"
+    _description: "\uC2E0\uC774 \uB0B4\uB824\uC900 \uBC29\uD328\uC774\uB2E4. \uADF8
+      \uC5B4\uB5A4 \uACF5\uACA9\uB3C4 \uBC29\uC5B4\uD560 \uC218 \uC788\uC744 \uAC83\uAC19\uB2E4."
+    _spritePath: Sprite/Item/Shield/Shield_5
+    _atk: 0
+    _atkSpeed: 0
+    _hp: 0
+    _def: 35
+    _speed: 0
+    _stamina: 0
+    _exp: 0
+    _buyPrice: 19000
+    _sellPrice: 9500
+  - _id: 30001014
+    _grade: 4
+    _type: 2
+    _name: "\uC2E0\uC758 \uBC29\uD328(A)"
+    _description: "\uC2E0\uC774 \uB0B4\uB824\uC900 \uBC29\uD328\uC774\uB2E4. \uC2E0\uC758\uAC80\uC5D0
+      \uCC14\uB9AC\uBA74 \uC5B4\uB5BB\uAC8C\uB418\uB294\uAC70\uC9C0..?"
+    _spritePath: Sprite/Item/Shield/Shield_5_A
+    _atk: 0
+    _atkSpeed: 0
+    _hp: 0
+    _def: 38
+    _speed: 0
+    _stamina: 0
+    _exp: 0
+    _buyPrice: 20000
+    _sellPrice: 10000
+  - _id: 30001015
+    _grade: 4
+    _type: 2
+    _name: "\uC2E0\uC758 \uBC29\uD328(S)"
+    _description: "\uACC4\uC18D \uC2E4\uD328\uD558\uB294 \uB2F9\uC2E0\uC744 \uBCF4\uBA70,
+      \uC2E0\uC774 \uB0B4\uB9B0 \uAE30\uC801"
+    _spritePath: Sprite/Item/Shield/Shield_5_S
+    _atk: 0
+    _atkSpeed: 0
+    _hp: 0
+    _def: 42
+    _speed: 0
+    _stamina: 0
+    _exp: 0
+    _buyPrice: 22000
+    _sellPrice: 11000
+  - _id: 40001001
     _grade: 0
     _type: 3
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uBD80\uCE20"
@@ -600,7 +745,7 @@ MonoBehaviour:
     _exp: 0
     _buyPrice: 1000
     _sellPrice: 500
-  - _id: 40001014
+  - _id: 40001002
     _grade: 0
     _type: 3
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uBD80\uCE20(A)"
@@ -616,7 +761,7 @@ MonoBehaviour:
     _exp: 0
     _buyPrice: 1500
     _sellPrice: 750
-  - _id: 40001015
+  - _id: 40001003
     _grade: 0
     _type: 3
     _name: "\uC0AC\uB0E5\uAFBC\uC758 \uBD80\uCE20(S)"
@@ -632,7 +777,7 @@ MonoBehaviour:
     _exp: 0
     _buyPrice: 1800
     _sellPrice: 900
-  - _id: 40001016
+  - _id: 40001004
     _grade: 1
     _type: 3
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBD80\uCE20"
@@ -648,7 +793,7 @@ MonoBehaviour:
     _exp: 0
     _buyPrice: 4000
     _sellPrice: 2000
-  - _id: 40001017
+  - _id: 40001005
     _grade: 1
     _type: 3
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBD80\uCE20(A)"
@@ -664,7 +809,7 @@ MonoBehaviour:
     _exp: 0
     _buyPrice: 4500
     _sellPrice: 2250
-  - _id: 40001018
+  - _id: 40001006
     _grade: 1
     _type: 3
     _name: "\uACAC\uC2B5\uAE30\uC0AC\uC758 \uBD80\uCE20(S)"
@@ -680,7 +825,7 @@ MonoBehaviour:
     _exp: 0
     _buyPrice: 5500
     _sellPrice: 2750
-  - _id: 40001019
+  - _id: 40001007
     _grade: 2
     _type: 3
     _name: "\uB9C8\uC2A4\uD130\uC758 \uBD80\uCE20"
@@ -693,9 +838,9 @@ MonoBehaviour:
     _speed: 1.6
     _stamina: 200
     _exp: 0
-    _buyPrice: 13000
-    _sellPrice: 6500
-  - _id: 40001020
+    _buyPrice: 8000
+    _sellPrice: 4000
+  - _id: 40001008
     _grade: 2
     _type: 3
     _name: "\uB9C8\uC2A4\uD130\uC758 \uBD80\uCE20(A)"
@@ -709,9 +854,9 @@ MonoBehaviour:
     _speed: 1.6
     _stamina: 220
     _exp: 0
-    _buyPrice: 15000
-    _sellPrice: 7500
-  - _id: 40001021
+    _buyPrice: 9000
+    _sellPrice: 4500
+  - _id: 40001009
     _grade: 2
     _type: 3
     _name: "\uB9C8\uC2A4\uD130\uC758 \uBD80\uCE20(S)"
@@ -725,12 +870,12 @@ MonoBehaviour:
     _speed: 1.6
     _stamina: 240
     _exp: 0
-    _buyPrice: 18000
-    _sellPrice: 9000
-  - _id: 40001022
+    _buyPrice: 10000
+    _sellPrice: 5000
+  - _id: 40001010
     _grade: 3
     _type: 3
-    _name: "\uC2E0\uC758 \uBD80\uCE20"
+    _name: "\uC804\uC124 \uBD80\uCE20"
     _description: "\uC774\uB7F0 \uBD80\uCE20\uAC00 \uC544\uC9C1 \uC788\uC5C8\uB2E4\uB2C8..\uB9C8\uC655\uC758
       \uACF5\uACA9\uC744 \uD53C\uD560 \uC218 \uC788\uC744 \uAC83 \uAC19\uC544."
     _spritePath: Sprite/Item/Boots/Boots_4
@@ -738,15 +883,15 @@ MonoBehaviour:
     _atkSpeed: 0
     _hp: 0
     _def: 0
-    _speed: 2
+    _speed: 1.8
     _stamina: 250
     _exp: 0
-    _buyPrice: 20000
-    _sellPrice: 10000
-  - _id: 40001023
+    _buyPrice: 14000
+    _sellPrice: 7000
+  - _id: 40001011
     _grade: 3
     _type: 3
-    _name: "\uC2E0\uC758 \uBD80\uCE20(A)"
+    _name: "\uC804\uC124 \uBD80\uCE20(A)"
     _description: "\uC774 \uBCF4\uB2E4 \uC88B\uC740 \uBD80\uCE20\uC740 \uC138\uC0C1\uC5D0
       \uC5C6\uC744\uAC83\uC774\uC57C!!"
     _spritePath: Sprite/Item/Boots/Boots_4_A
@@ -754,26 +899,74 @@ MonoBehaviour:
     _atkSpeed: 0
     _hp: 0
     _def: 0
-    _speed: 2
+    _speed: 1.8
     _stamina: 270
     _exp: 0
-    _buyPrice: 22000
-    _sellPrice: 11000
-  - _id: 40001024
+    _buyPrice: 15000
+    _sellPrice: 7500
+  - _id: 40001012
     _grade: 3
     _type: 3
-    _name: "\uC2E0\uC758 \uBD80\uCE20(S)"
+    _name: "\uC804\uC124 \uBD80\uCE20(S)"
     _description: "\uC2E0\uC774\uC2DC\uC5EC.. \uB2F9\uC2E0\uC758 \uB73B\uC744 \uBC1B\uB4E4\uACA0\uC2B5\uB2C8\uB2E4."
     _spritePath: Sprite/Item/Boots/Boots_4_S
     _atk: 0
     _atkSpeed: 0
     _hp: 0
     _def: 0
-    _speed: 2
+    _speed: 1.8
     _stamina: 300
     _exp: 0
-    _buyPrice: 25000
-    _sellPrice: 12500
+    _buyPrice: 18000
+    _sellPrice: 9000
+  - _id: 40001013
+    _grade: 4
+    _type: 3
+    _name: "\uC2E0\uC758 \uBD80\uCE20"
+    _description: "\uC2E0\uC774 \uB0B4\uB824\uC900 \uBD80\uCE20\uC774\uB2E4. \uC774\uAC74\u2026\uB9C8\uCE58
+      \uBAB8\uC5D0 \uB0A0\uAC1C\uAC00 \uB2EC\uB9B0\uAC83 \uAC19\uAD70.."
+    _spritePath: Sprite/Item/Boots/Boots_5
+    _atk: 0
+    _atkSpeed: 0
+    _hp: 0
+    _def: 0
+    _speed: 2
+    _stamina: 330
+    _exp: 0
+    _buyPrice: 19000
+    _sellPrice: 9500
+  - _id: 40001014
+    _grade: 4
+    _type: 3
+    _name: "\uC2E0\uC758 \uBD80\uCE20(A)"
+    _description: "\uC2E0\uC774 \uB0B4\uB824\uC900 \uBD80\uCE20\uC774\uB2E4. \uC774\uAC70..
+      \uAC8C\uC784\uC774 \uB108\uBB34 \uC26C\uC6CC\uC9C0\uB294\uAC70 \uC544\uB2D0\uAE4C?"
+    _spritePath: Sprite/Item/Boots/Boots_5_A
+    _atk: 0
+    _atkSpeed: 0
+    _hp: 0
+    _def: 0
+    _speed: 2
+    _stamina: 350
+    _exp: 0
+    _buyPrice: 20000
+    _sellPrice: 10000
+  - _id: 40001015
+    _grade: 4
+    _type: 3
+    _name: "\uC2E0\uC758 \uBD80\uCE20(S)"
+    _description: "\uACC4\uC18D \uC2E4\uD328\uD558\uB294 \uB2F9\uC2E0\uC744 \uBCF4\uBA70,
+      \uC2E0\uC774 \uB0B4\uB9B0 \uAE30\uC801"
+    _spritePath: Sprite/Item/Boots/Boots_5_S
+    _atk: 0
+    _atkSpeed: 0
+    _hp: 0
+    _def: 0
+    _speed: 2
+    _stamina: 380
+    _exp: 0
+    _buyPrice: 22000
+    _sellPrice: 11000
   - _id: 50001000
     _grade: 0
     _type: 4

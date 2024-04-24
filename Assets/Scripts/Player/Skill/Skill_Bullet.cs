@@ -3,14 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public enum BullletType
+{
+    Long,
+    Shot,
+    Throw
+}
+
 public class Skill_Bullet : MonoBehaviour
 {
     public float damage;
     public int per;
+    public BullletType bullletType;
 
-    public int id;
+    public float timer;
+
+    //public int id;
     Rigidbody2D rigid;
     PlayerStatsHandler playerStats;
+
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -19,7 +30,13 @@ public class Skill_Bullet : MonoBehaviour
             playerStats = Managers.GameSceneManager.Player.GetComponent<PlayerStatsHandler>();
         }
     }
-
+    private void Update()
+    {
+        if(bullletType == BullletType.Long)
+        {
+            DisableSkill();
+        }
+    }
     public void Init(float damage, int per, Vector3 dir)
     {
         this.damage = damage + playerStats.allAttack;
@@ -33,27 +50,63 @@ public class Skill_Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.CompareTag("Enemy") || per == -1)
+        if(bullletType == BullletType.Long)
         {
-            HealthSystem healthSystem1 = collision.GetComponent<HealthSystem>();
-            if (healthSystem1 != null)
+            if (!collision.CompareTag("Enemy") || per == -1)
+                return;
+            else
             {
-                healthSystem1.ChangeHealth(-damage);
+                HealthSystem healthSystem1 = collision.GetComponent<HealthSystem>();
+                if (healthSystem1 != null)
+                {
+                    healthSystem1.ChangeHealth(-damage);
+
+                }
+            }
+            per = per - 1;
+            if (per == -1)
+            {
+                rigid.velocity = Vector2.zero;
+                gameObject.SetActive(false);
             }
         }
-
-        per--;
-
-        if (per == -1)
+        
+        else if (bullletType == BullletType.Shot)
         {
-            rigid.velocity = Vector2.zero;
-            gameObject.SetActive(false);
+            if (!collision.CompareTag("Enemy"))
+                return;
+            else
+            {
+                HealthSystem healthSystem = collision.GetComponent<HealthSystem>();
+                if (healthSystem != null)
+                {
+                    healthSystem.ChangeHealth(-damage);
+                }
+            }
         }
-
-        HealthSystem healthSystem = collision.GetComponent<HealthSystem>();
-        if(healthSystem != null )
+        else if(bullletType == BullletType.Throw)
         {
-            healthSystem.ChangeHealth(-damage);
+            if (!collision.CompareTag("Enemy"))
+                return;
+            else
+            {
+                HealthSystem healthSystem = collision.GetComponent<HealthSystem>();
+                if (healthSystem != null)
+                {
+                    healthSystem.ChangeHealth(-damage);
+                }
+            }
+        }
+    }
+
+    private void DisableSkill()
+    {
+        timer += Time.deltaTime;
+
+        if (timer >= 3)
+        {
+            gameObject.SetActive(false);
+            timer = 0;
         }
     }
 }

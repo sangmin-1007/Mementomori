@@ -42,11 +42,17 @@ public class SkillManager : MonoBehaviour
             case SkillSO.SkillType.Range:
                 textDesc.text = string.Format(data.skillDesc, data.damages[Mathf.Min(4,skillLevel)], data.counts[Mathf.Min(4,skillLevel)]);
                 break;
+            case SkillSO.SkillType.Throw:
+                textDesc.text = string.Format(data.skillDesc, 5 - data.damages[Mathf.Min(4, skillLevel)], data.counts[Mathf.Min(4, skillLevel)]);
+                break;
             case SkillSO.SkillType.Statup:
             case SkillSO.SkillType.AttackSkill:
             case SkillSO.SkillType.DefenseSkill:
             case SkillSO.SkillType.Heal:
                 textDesc.text = string.Format(data.skillDesc, data.damages[skillLevel]);
+                break;
+            case SkillSO.SkillType.Drain:
+                textDesc.text = string.Format(data.skillDesc, data.damages[skillLevel] * 100);
                 break;
             default:
                 textDesc.text = string.Format(data.skillDesc, data.damages[skillLevel]);
@@ -61,6 +67,7 @@ public class SkillManager : MonoBehaviour
         {
             case SkillSO.SkillType.Melee:
             case SkillSO.SkillType.Range:
+            case SkillSO.SkillType.Throw:
                 if(skillLevel == 0)
                 {
                     GameObject newWeapon = new GameObject();
@@ -107,6 +114,8 @@ public class SkillManager : MonoBehaviour
                 break;
             case SkillSO.SkillType.Money:
                 Managers.UserData.acquisitionGold += (int)data.damages[skillLevel];
+                break;
+            case SkillSO.SkillType.Drain:
                 break;
         }
         skillLevel++;

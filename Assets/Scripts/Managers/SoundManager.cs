@@ -42,8 +42,8 @@ public class SoundManager :MonoBehaviour
             audioSources[i].volume = 0.7f;
             DontDestroyOnLoad(go);
         }
-     
-   
+
+        ChangeVolume();
     }
 
     public void Play(string path, Sound type = Sound.Effect)
@@ -101,19 +101,19 @@ public class SoundManager :MonoBehaviour
     }
 
 
-    AudioClip GetOrAddAudioClip(string path) //위에 Effect부분을 계속해서 Path로 불러오면 비효율일까봐
+    AudioClip GetOrAddAudioClip(string path) 
     {
         AudioClip audioClip = null;
-        if (audioClips.TryGetValue(path, out audioClip) == false) //만약 오디오클립을 찾는중에 path 가없으면 
+        if (audioClips.TryGetValue(path, out audioClip) == false) 
         {
             audioClip = Resources.Load<AudioClip>(path);
-            audioClips.Add(path, audioClip); // 딕셔너리에 추가
+            audioClips.Add(path, audioClip); 
         } 
-            return audioClip;//만약 오디오클립을 찾는중에 path 가있으면 그 오디오클립을 틀어주고
+            return audioClip;
 
     }
 
-    public void AudioClear() // 딕셔너리에 있는 클립들 초기화 (무한 씬이동으로 누적되면.. 터지기방지)
+    public void AudioClear() 
     {
         foreach (AudioSource audioSource in audioSources)
         {
@@ -126,8 +126,6 @@ public class SoundManager :MonoBehaviour
     public void ChangeVolume()
     {
         masterMixer[0].audioMixer.SetFloat("Master", Mathf.Log10(Managers.UserData.Master_VOLUME_KEY) * 20);
-        Debug.Log(Managers.UserData.Master_VOLUME_KEY);
-        
         bgmMixer[0].audioMixer.SetFloat("BGM", Mathf.Log10(Managers.UserData.BGM_VOLUME_KEY) * 20);
         effectMixer[0].audioMixer.SetFloat("Effect", Mathf.Log10(Managers.UserData.Effect_VOLUME_KEY) * 20);
     }

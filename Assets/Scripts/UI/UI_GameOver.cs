@@ -9,6 +9,7 @@ public class UI_GameOver : UI_Base<UI_GameOver>
 {
     [SerializeField] private Image backGround;
     [SerializeField] private Button LobbyButton;
+    [SerializeField] private Button ContinueButton;
 
     [SerializeField] private CanvasGroup resultCanvasGroup;
 
@@ -25,6 +26,7 @@ public class UI_GameOver : UI_Base<UI_GameOver>
     private void Start()
     {
         LobbyButton.onClick.AddListener(OnClickLobbyButton);
+        ContinueButton.onClick.AddListener(OnClickContinueButton);
 
         Timer();
         LevelTextChange();
@@ -58,6 +60,15 @@ public class UI_GameOver : UI_Base<UI_GameOver>
         Managers.UserData.playerItemAcquired.Clear();
         Managers.DataManager.Save();
         Managers.UI_Manager.ShowLoadingUI("LobbyScene");
+    }
+
+    private void OnClickContinueButton()
+    {
+        Managers.UserData.playerGold += Managers.UserData.acquisitionGold;
+        Managers.UserData.acquisitionGold = 0;
+        Managers.UserData.playerItemAcquired.Clear();
+        Managers.DataManager.Save();
+        Managers.UI_Manager.ShowLoadingUI("GameScene");
     }
 
     private void OnDisable()
