@@ -16,9 +16,10 @@ public class Death : MonoBehaviour
 
     void OnDeath()
     {
-        Managers.GameManager.GameOver();
-
-
+        if(!Managers.UI_Manager.IsActive<UI_Loading>())
+        {
+            Managers.GameManager.GameOver();
+        }
         _rigidbody.velocity = Vector3.zero;
 
         foreach (SpriteRenderer renderer in transform.GetComponentsInChildren<SpriteRenderer>())

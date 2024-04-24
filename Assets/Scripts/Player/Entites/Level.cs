@@ -25,7 +25,7 @@ public class Level : MonoBehaviour
 
     void LevelUpChecker()
     {
-        if(Managers.UI_Manager.IsActive<UI_GameOver>())
+        if(Managers.UI_Manager.IsActive<UI_GameOver>() || Managers.UI_Manager.IsActive<UI_Loading>())
         return;
 
         if (expriecne >= expriecneCap)
