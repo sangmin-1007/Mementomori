@@ -52,7 +52,7 @@ public class GameMapInteract : MonoBehaviour
         switch (interactType)
         {
             case InteractType.GameMapReposition:
-                if (-45 <= angle && 45 >= angle) // À§
+                if (-45 <= angle && 45 >= angle)
                 {
                     for(int i = 0; i < 3; i++)
                     {
@@ -68,7 +68,7 @@ public class GameMapInteract : MonoBehaviour
                         }
                     }
                 }
-                else if (45 <= angle && angle <= 135) // ¿Þ
+                else if (45 <= angle && angle <= 135)
                 {
                     for(int i = 0; i < 3; i++)
                     {
@@ -84,7 +84,7 @@ public class GameMapInteract : MonoBehaviour
                         }
                     }
                 }
-                else if (-135 >= angle || 135 <= angle) // ¾Æ·¡
+                else if (-135 >= angle || 135 <= angle)
                 {
                     for (int i = 0; i < 3; i++)
                     {
@@ -100,7 +100,7 @@ public class GameMapInteract : MonoBehaviour
                         }
                     }
                 }
-                else if (-135 <= angle && angle <= -45) // ¿À
+                else if (-135 <= angle && angle <= -45)
                 {
                     for(int i = 0; i < 3; i++)
                     {

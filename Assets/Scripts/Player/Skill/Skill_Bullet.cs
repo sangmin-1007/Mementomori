@@ -18,7 +18,6 @@ public class Skill_Bullet : MonoBehaviour
 
     public float timer;
 
-    //public int id;
     Rigidbody2D rigid;
     PlayerStatsHandler playerStats;
 

@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class PlayerHealthController : PlayerController
 {
-    //[SerializeField] private string targetTag = "Player";
     private bool _isCollidingWithTarget;
 
     private HealthSystem healthSystem;
