@@ -25,15 +25,10 @@ public class SkillController : MonoBehaviour
     {
         _spawnManager = Managers.GameSceneManager.MonsterSpawner.GetComponent<SpawnManager>();
         _scanner = Managers.GameSceneManager.Player.GetComponent<Scanner>();
-        player = Managers.GameSceneManager.Player;
 
         _Skill = Managers.UI_Manager.ShowUI<UI_Skill>();
         Managers.UI_Manager.HideUI<UI_Skill>();
         skills = _Skill.skills;
-        sword = _spawnManager.pool.skillPrefabs[2];
-        swordSprite = _spawnManager.pool.skillPrefabs[2].GetComponent<Skill_ThrowWeapon>().sowerdSprite;
-        spriteRenderer = _spawnManager.pool.skillPrefabs[2].GetComponent<SpriteRenderer>();
-        rb = _spawnManager.pool.skillPrefabs[2].GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -146,16 +141,7 @@ public class SkillController : MonoBehaviour
         bullet.rotation = Quaternion.FromToRotation(Vector3.left, dir);
         bullet.GetComponent<Skill_Bullet>().Init(damage, count, dir);
     }
-    [SerializeField] private GameObject sword;
 
-    [SerializeField] private Sprite[] swordSprite;
-    [SerializeField] private SpriteRenderer spriteRenderer;
-
-    [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private float power = 400;
-    [SerializeField] private float rotate = 400;
-    private GameObject player;
-    private float time = 0f;
     private void Throw()
     {
         Transform bullet = _spawnManager.pool.SkillGet(prefabId).transform;
